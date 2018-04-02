@@ -301,12 +301,19 @@
           
             <h4 id="XPath"><a href="#XPath" class="headerlink" title="XPath"></a>XPath</h4><h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><blockquote>
 <p>XML 文档中查信息的语言， XML 文档中对元素和属性进行遍历</p>
-<h5 id="七类节点node-XML最小单元"><a href="#七类节点node-XML最小单元" class="headerlink" title="七类节点node XML最小单元"></a>七类节点node XML最小单元</h5><p>element、attribute、text、namespace、processing-instruction、comment、root</p>
-<h5 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h5><p>选取节点：路径表达式 [XPath教程][<a href="http://www.w3school.com.cn/xpath/index.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/xpath/index.asp</a> ]<br>nodename 选取此node所有子节点<br>/ 文档根下节点 // 文档里任何位置的节点<br>. 当前节点  .. 当前节点父节点<br>@选属性<br>[] 谓语 找特定节点或包含特定值节点</p>
+</blockquote>
+<h5 id="七类节点node-XML最小单元"><a href="#七类节点node-XML最小单元" class="headerlink" title="七类节点node XML最小单元"></a>七类节点node XML最小单元</h5><blockquote>
+<p>element、attribute、text、namespace、processing-instruction、comment、root</p>
+</blockquote>
+<h5 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h5><p>选取节点：路径表达式 [XPath教程][<a href="http://www.w3school.com.cn/xpath/index.asp" target="_blank" rel="noopener">http://www.w3school.com.cn/xpath/index.asp</a> ]</p>
+<blockquote>
+<p>nodename 选取此node所有子节点<br>/ 文档根下节点 // 文档里任何位置的节点<br>. 当前节点  .. 当前节点父节点<br>@选属性<br>[] 谓语 找特定节点或包含特定值节点</p>
 <ul>
-<li>匹配任何元素节点 @* 匹配任何属性节点  node() 匹配任何类型节点<br>| 选取若干路径<br>绝对路径和相对路径：前者以“/”起始<h5 id="查看网页XPath路径记录"><a href="#查看网页XPath路径记录" class="headerlink" title="查看网页XPath路径记录"></a>查看网页XPath路径记录</h5>右击标题，选检查，elements下查看，右击copy XPath，ctrl+F，ctrl+V，之前粘贴部分被高亮，高亮部分为XPath路径示例，具体语法参照上面<br>//div[@class=”text”]/em/a/text() 取内容<br>div[@class=”text”] 选取所有拥有名为class=”text” 的属性的div 元素<br>a/@href 取属性<h4 id="requesets"><a href="#requesets" class="headerlink" title="requesets"></a>requesets</h4>One.请求网页 [requesets详解参考][<a href="https://blog.csdn.net/shanzhizi/article/details/50903748" target="_blank" rel="noopener">https://blog.csdn.net/shanzhizi/article/details/50903748</a>]<br>Two.获取返回状态200和网页编码格式’GB2312’ -&gt; .content显示内容 -&gt; import etree;XPath抓取标题;用text-&gt;传递参数wd和rn -&gt; 超时时间 -&gt;添加代理 -&gt;请求头内容  [etree和XPath][<a href="https://www.biaodianfu.com/python-lxml-xpath.html" target="_blank" rel="noopener">https://www.biaodianfu.com/python-lxml-xpath.html</a>]<br>Three…..</li>
+<li>匹配任何元素节点 @* 匹配任何属性节点  node() 匹配任何类型节点<br>| 选取若干路径<br>绝对路径和相对路径：前者以“/”起始</li>
 </ul>
 </blockquote>
+<h5 id="查看网页XPath路径记录"><a href="#查看网页XPath路径记录" class="headerlink" title="查看网页XPath路径记录"></a>查看网页XPath路径记录</h5><p>右击标题，选检查，elements下查看，右击copy XPath，ctrl+F，ctrl+V，之前粘贴部分被高亮，高亮部分为XPath路径示例，具体语法参照上面<br>//div[@class=”text”]/em/a/text() 取内容<br>div[@class=”text”] 选取所有拥有名为class=”text” 的属性的div 元素<br>a/@href 取属性</p>
+<h4 id="requesets"><a href="#requesets" class="headerlink" title="requesets"></a>requesets</h4><p>One.请求网页 [requesets详解参考][<a href="https://blog.csdn.net/shanzhizi/article/details/50903748" target="_blank" rel="noopener">https://blog.csdn.net/shanzhizi/article/details/50903748</a>]<br>Two.获取返回状态200和网页编码格式’GB2312’ -&gt; .content显示内容 -&gt; import etree;XPath抓取标题;用text-&gt;传递参数wd和rn -&gt; 超时时间 -&gt;添加代理 -&gt;请求头内容  [etree和XPath][<a href="https://www.biaodianfu.com/python-lxml-xpath.html" target="_blank" rel="noopener">https://www.biaodianfu.com/python-lxml-xpath.html</a>]<br>Three…..</p>
 <p>视频还提及豆瓣最热电影评论爬取示例、链家爬取案例</p>
 <p><strong><em><a href="www.xiniuedu.com">稀牛学院</a>数据科学实训营 助教寒小阳老师爬虫课程 学习整理</em></strong></p>
 
