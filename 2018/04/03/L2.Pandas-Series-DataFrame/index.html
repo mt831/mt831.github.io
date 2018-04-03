@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="XPath定义 XML 文档中查信息的语言， XML 文档中对元素和属性进行遍历  七类节点node XML最小单元 element、attribute、text、namespace、processing-instruction、comment、root  语法选取节点：路径表达式XPath教程  nodename 选取此node所有子节点/ 文档根下节点 // 文档里任何位置的节点. 当前节点">
+<meta name="description" content="Series 一维数组构建初始化：可用list构建（dict也可），默认用0-n为Series的index，也可指定位置索引/名称索引：s[[1,2,3]] 内为列表数学运算（广播特性）：list不可（list相加并在一起），基于索引进行计算（list相加并在一起）in判断是否在索引内    .get看值是否有    条件索引取值统计计算：min max mean等    可和numpy结合使用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="爬虫：静态网站数据获取">
-<meta property="og:url" content="http://yoursite.com/2018/04/02/爬虫：静态网站数据获取/index.html">
+<meta property="og:title" content="L2 Pandas Series &amp; DataFrame">
+<meta property="og:url" content="http://yoursite.com/2018/04/03/L2.Pandas-Series-DataFrame/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="XPath定义 XML 文档中查信息的语言， XML 文档中对元素和属性进行遍历  七类节点node XML最小单元 element、attribute、text、namespace、processing-instruction、comment、root  语法选取节点：路径表达式XPath教程  nodename 选取此node所有子节点/ 文档根下节点 // 文档里任何位置的节点. 当前节点">
-<meta property="og:updated_time" content="2018-04-03T03:21:19.563Z">
+<meta property="og:description" content="Series 一维数组构建初始化：可用list构建（dict也可），默认用0-n为Series的index，也可指定位置索引/名称索引：s[[1,2,3]] 内为列表数学运算（广播特性）：list不可（list相加并在一起），基于索引进行计算（list相加并在一起）in判断是否在索引内    .get看值是否有    条件索引取值统计计算：min max mean等    可和numpy结合使用">
+<meta property="og:updated_time" content="2018-04-03T13:54:36.050Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="爬虫：静态网站数据获取">
-<meta name="twitter:description" content="XPath定义 XML 文档中查信息的语言， XML 文档中对元素和属性进行遍历  七类节点node XML最小单元 element、attribute、text、namespace、processing-instruction、comment、root  语法选取节点：路径表达式XPath教程  nodename 选取此node所有子节点/ 文档根下节点 // 文档里任何位置的节点. 当前节点">
+<meta name="twitter:title" content="L2 Pandas Series &amp; DataFrame">
+<meta name="twitter:description" content="Series 一维数组构建初始化：可用list构建（dict也可），默认用0-n为Series的index，也可指定位置索引/名称索引：s[[1,2,3]] 内为列表数学运算（广播特性）：list不可（list相加并在一起），基于索引进行计算（list相加并在一起）in判断是否在索引内    .get看值是否有    条件索引取值统计计算：min max mean等    可和numpy结合使用">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/02/爬虫：静态网站数据获取/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/03/L2.Pandas-Series-DataFrame/"/>
 
 
 
 
 
-  <title>爬虫：静态网站数据获取 | Hexo</title>
+  <title>L2 Pandas Series & DataFrame | Hexo</title>
   
 
 
@@ -231,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/02/爬虫：静态网站数据获取/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/03/L2.Pandas-Series-DataFrame/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -248,7 +248,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">爬虫：静态网站数据获取</h1>
+          <h1 class="post-title" itemprop="name headline">L2 Pandas Series & DataFrame</h1>
         
 
         <div class="post-meta">
@@ -260,8 +260,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-02T18:29:09+08:00">
-                2018-04-02
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-03T19:43:53+08:00">
+                2018-04-03
               </time>
             
 
@@ -298,20 +298,11 @@
       
 
       
-        <h4 id="XPath"><a href="#XPath" class="headerlink" title="XPath"></a>XPath</h4><h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><blockquote>
-<p>XML 文档中查信息的语言， XML 文档中对元素和属性进行遍历</p>
-</blockquote>
-<h5 id="七类节点node-XML最小单元"><a href="#七类节点node-XML最小单元" class="headerlink" title="七类节点node XML最小单元"></a>七类节点node XML最小单元</h5><blockquote>
-<p>element、attribute、text、namespace、processing-instruction、comment、root</p>
-</blockquote>
-<h5 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h5><p>选取节点：路径表达式<br><a href="http://www.w3school.com.cn/xpath/index.asp" target="_blank" rel="noopener">XPath教程</a></p>
-<blockquote>
-<p>nodename 选取此node所有子节点<br>/ 文档根下节点 // 文档里任何位置的节点<br>. 当前节点  .. 当前节点父节点<br>@选属性<br>[] 谓语 找特定节点或包含特定值节点<br>星号 匹配任何元素节点 @* 匹配任何属性节点  node() 匹配任何类型节点<br>| 选取若干路径<br>绝对路径和相对路径：前者以“/”起始</p>
-</blockquote>
-<h5 id="查看网页XPath路径记录"><a href="#查看网页XPath路径记录" class="headerlink" title="查看网页XPath路径记录"></a>查看网页XPath路径记录</h5><p>右击标题，选检查，elements下查看，右击copy XPath，ctrl+F，ctrl+V，之前粘贴部分被高亮，高亮部分为XPath路径示例，具体语法参照上面<br>//div[@class=”text”]/em/a/text() 取内容<br>div[@class=”text”] 选取所有拥有名为class=”text” 的属性的div 元素<br>a/@href 取属性</p>
-<h4 id="requesets"><a href="#requesets" class="headerlink" title="requesets"></a>requesets</h4><p>One.请求网页 <a href="https://blog.csdn.net/shanzhizi/article/details/50903748" target="_blank" rel="noopener">requesets详解</a><br>Two.获取返回状态200和网页编码格式’GB2312’ -&gt; .content显示内容 -&gt; import etree;XPath抓取标题;用text-&gt;传递参数wd和rn -&gt; 超时时间 -&gt;添加代理 -&gt;请求头内容<br><a href="https://www.biaodianfu.com/python-lxml-xpath.html" target="_blank" rel="noopener">etree和XPath</a><br>Three…..</p>
-<p>豆瓣最热电影评论爬取示例、链家爬取案例，码上练习</p>
-<p><strong><em><a href="www.xiniuedu.com">稀牛学院</a>数据科学实训营 助教寒小阳老师爬虫课程 学习整理</em></strong></p>
+        <h5 id="Series-一维数组"><a href="#Series-一维数组" class="headerlink" title="Series 一维数组"></a>Series 一维数组</h5><p>构建初始化：可用list构建（dict也可），默认用0-n为Series的index，也可指定<br>位置索引/名称索引：s[[1,2,3]] 内为列表<br>数学运算（广播特性）：list不可（list相加并在一起），基于索引进行计算（list相加并在一起）<br>in判断是否在索引内    .get看值是否有    条件索引取值<br>统计计算：min max mean等    可和numpy结合使用 如np.log()<br>赋值：可和条件索引结合使用<br>数据缺失：notnull() isnull()    expense[expense.isnull()] = expense.mean()</p>
+<h5 id="DataFrame-二维数组"><a href="#DataFrame-二维数组" class="headerlink" title="DataFrame 二维数组"></a>DataFrame 二维数组</h5><p>构建：给列名列元素    columns调整列的顺序    index可重定义    可由Series构建<br>取值：下为取列，注意区分    <strong>.loc取行</strong>(传入list或类似切片用法)（[参考][<a href="https://blog.csdn.net/hecongqing/article/details/61927615]）" target="_blank" rel="noopener">https://blog.csdn.net/hecongqing/article/details/61927615]）</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">type(df[&apos;apt&apos;])</span><br><span class="line">pandas.core.series.Series</span><br><span class="line">type(df[[&apos;apt&apos;]])</span><br><span class="line">pandas.core.frame.DataFrame</span><br></pre></td></tr></table></figure></p>
+<p>df.T 转置<br>df.shape 、df.info()：行列信息    df.describe():mean、分位数等信息<br>.isin[参考][<a href="https://blog.csdn.net/qq_28219759/article/details/49160073" target="_blank" rel="noopener">https://blog.csdn.net/qq_28219759/article/details/49160073</a>]<br>缺失值处理：.fillna</p>
+<h5 id="Index-csv文件的读写"><a href="#Index-csv文件的读写" class="headerlink" title="Index csv文件的读写"></a>Index csv文件的读写</h5><p>.read_csv: index_col parse_dates<br>[参考][<a href="https://blog.csdn.net/newbiemath/article/details/61432073" target="_blank" rel="noopener">https://blog.csdn.net/newbiemath/article/details/61432073</a>]<br>.to_csv()<br><strong>.index</strong><br>%matplotlib inline 绘图<br>数据选择 | &amp; !</p>
+<p><strong><em>以上整理自<a href="www.xiniuedu.com">稀牛学院</a>数据科学实训营 寒小阳老师关于pandas的讲解</em></strong></p>
 
       
     </div>
@@ -336,8 +327,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/01/实战1-QQ答疑/" rel="next" title="实战1.QQ答疑">
-                <i class="fa fa-chevron-left"></i> 实战1.QQ答疑
+              <a href="/2018/04/02/爬虫：静态网站数据获取/" rel="next" title="爬虫：静态网站数据获取">
+                <i class="fa fa-chevron-left"></i> 爬虫：静态网站数据获取
               </a>
             
           </div>
@@ -346,8 +337,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/04/03/L2.Pandas-Series-DataFrame/" rel="prev" title="L2 Pandas Series & DataFrame">
-                L2 Pandas Series & DataFrame <i class="fa fa-chevron-right"></i>
+              <a href="/2018/04/03/爬虫：模拟登陆和动态网站抓取/" rel="prev" title="爬虫：模拟登陆和动态网站抓取">
+                爬虫：模拟登陆和动态网站抓取 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -462,7 +453,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#XPath"><span class="nav-number">1.</span> <span class="nav-text">XPath</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#定义"><span class="nav-number">1.1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#七类节点node-XML最小单元"><span class="nav-number">1.2.</span> <span class="nav-text">七类节点node XML最小单元</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#语法"><span class="nav-number">1.3.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#查看网页XPath路径记录"><span class="nav-number">1.4.</span> <span class="nav-text">查看网页XPath路径记录</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#requesets"><span class="nav-number">2.</span> <span class="nav-text">requesets</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#Series-一维数组"><span class="nav-number">1.</span> <span class="nav-text">Series 一维数组</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#DataFrame-二维数组"><span class="nav-number">2.</span> <span class="nav-text">DataFrame 二维数组</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Index-csv文件的读写"><span class="nav-number">3.</span> <span class="nav-text">Index csv文件的读写</span></a></li></ol></div>
             
 
           </div>
