@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="python正则不熟悉要点记录r 表示不转义(\1) 引用前面一个分组\w   匹配任何字母数字字符(?P…) 创建分组并命名(?i)忽略大小写.group()返回匹配结果中一个或多个group  .group和.findall参考1234re.search(&amp;apos;abc(?!def)&amp;apos;,&amp;apos;abcdef&amp;apos;) #为NONE所以没有.group()re.findal">
+<meta name="description" content="#####">
 <meta property="og:type" content="article">
-<meta property="og:title" content="实战2.python正则讲解">
-<meta property="og:url" content="http://yoursite.com/2018/04/04/实战2-python正则讲解/index.html">
+<meta property="og:title" content="L3.Pandas复杂统计与机器学习特征工程">
+<meta property="og:url" content="http://yoursite.com/2018/04/10/L3-Pandas复杂统计与机器学习特征工程/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="python正则不熟悉要点记录r 表示不转义(\1) 引用前面一个分组\w   匹配任何字母数字字符(?P…) 创建分组并命名(?i)忽略大小写.group()返回匹配结果中一个或多个group  .group和.findall参考1234re.search(&amp;apos;abc(?!def)&amp;apos;,&amp;apos;abcdef&amp;apos;) #为NONE所以没有.group()re.findal">
-<meta property="og:updated_time" content="2018-04-05T08:00:23.273Z">
+<meta property="og:description" content="#####">
+<meta property="og:updated_time" content="2018-04-10T11:47:35.689Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="实战2.python正则讲解">
-<meta name="twitter:description" content="python正则不熟悉要点记录r 表示不转义(\1) 引用前面一个分组\w   匹配任何字母数字字符(?P…) 创建分组并命名(?i)忽略大小写.group()返回匹配结果中一个或多个group  .group和.findall参考1234re.search(&amp;apos;abc(?!def)&amp;apos;,&amp;apos;abcdef&amp;apos;) #为NONE所以没有.group()re.findal">
+<meta name="twitter:title" content="L3.Pandas复杂统计与机器学习特征工程">
+<meta name="twitter:description" content="#####">
 
 
 
@@ -118,13 +118,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/04/实战2-python正则讲解/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/10/L3-Pandas复杂统计与机器学习特征工程/"/>
 
 
 
 
 
-  <title>实战2.python正则讲解 | Hexo</title>
+  <title>L3.Pandas复杂统计与机器学习特征工程 | Hexo</title>
   
 
 
@@ -231,7 +231,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/04/实战2-python正则讲解/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/10/L3-Pandas复杂统计与机器学习特征工程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="John Doe">
@@ -248,7 +248,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">实战2.python正则讲解</h1>
+          <h1 class="post-title" itemprop="name headline">L3.Pandas复杂统计与机器学习特征工程</h1>
         
 
         <div class="post-meta">
@@ -260,8 +260,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T18:54:01+08:00">
-                2018-04-04
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-10T19:47:17+08:00">
+                2018-04-10
               </time>
             
 
@@ -298,11 +298,7 @@
       
 
       
-        <h5 id="python正则不熟悉要点记录"><a href="#python正则不熟悉要点记录" class="headerlink" title="python正则不熟悉要点记录"></a>python正则不熟悉要点记录</h5><p>r 表示不转义<br>(\1) 引用前面一个分组<br>\w   匹配任何字母数字字符<br>(?P<name>…) 创建分组并命名<br>(?i)忽略大小写<br>.group()返回匹配结果中一个或多个group  <a href="https://blog.csdn.net/jeryjeryjery/article/details/77196497" target="_blank" rel="noopener">.group和.findall参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">re.search(&apos;abc(?!def)&apos;,&apos;abcdef&apos;) #为NONE所以没有.group()</span><br><span class="line">re.findall(r&apos;(?i)sam&apos;, &apos;sam Sam&apos;) #.findall</span><br><span class="line">re.search(r&apos;(?i)sam&apos;, &apos;sam Sam&apos;).group()#注意区分.findall .group</span><br><span class="line">re.match #只检测起始位置</span><br></pre></td></tr></table></figure></name></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 匹配&apos;数字abc&apos;后面是数字或abc的字符串</span><br><span class="line">print (re.search(r&apos;(\d)abc(?(1)\d|abc)&apos;, &apos;1abc1 abcabc&apos;).group())</span><br></pre></td></tr></table></figure>
-<p>(?P=name)引用name的分组，和（?P<name>）一起使用</name></p>
-<p>还需多练习</p>
-<p><strong><em>以上来自<a href="www.xiniuedu.com">稀牛学院</a>数据科学实训营 助教大菜菜老师的正则直播讲解</em></strong></p>
+        <p>#####</p>
 
       
     </div>
@@ -327,8 +323,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/04/03/爬虫：模拟登陆和动态网站抓取/" rel="next" title="爬虫：模拟登陆和动态网站抓取 要点记录">
-                <i class="fa fa-chevron-left"></i> 爬虫：模拟登陆和动态网站抓取 要点记录
+              <a href="/2018/04/10/Test1-python-part/" rel="next" title="Test1.python part">
+                <i class="fa fa-chevron-left"></i> Test1.python part
               </a>
             
           </div>
@@ -336,10 +332,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/10/Test1-python-part/" rel="prev" title="Test1.python part">
-                Test1.python part <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -391,17 +383,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -443,22 +426,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-5"><a class="nav-link" href="#python正则不熟悉要点记录"><span class="nav-number">1.</span> <span class="nav-text">python正则不熟悉要点记录</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
