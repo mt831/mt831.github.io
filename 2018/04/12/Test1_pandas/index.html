@@ -81,13 +81,13 @@
 
 <meta name="description" content="Test1 pandas部分步骤1. 载入需要的库12import pandas as pdimport numpy as np 步骤2. 导入数据12chipo = pd.read_csv(&amp;apos;https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv&amp;apos;, sep=&amp;apos;\t&amp;ap">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Test1.pandas part">
 <meta property="og:url" content="http://yoursite.com/2018/04/12/Test1_pandas/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Test1 pandas部分步骤1. 载入需要的库12import pandas as pdimport numpy as np 步骤2. 导入数据12chipo = pd.read_csv(&amp;apos;https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv&amp;apos;, sep=&amp;apos;\t&amp;ap">
-<meta property="og:updated_time" content="2018-04-12T11:30:35.194Z">
+<meta property="og:updated_time" content="2018-04-12T11:33:39.150Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Test1.pandas part">
 <meta name="twitter:description" content="Test1 pandas部分步骤1. 载入需要的库12import pandas as pdimport numpy as np 步骤2. 导入数据12chipo = pd.read_csv(&amp;apos;https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv&amp;apos;, sep=&amp;apos;\t&amp;ap">
 
 
@@ -124,7 +124,7 @@
 
 
 
-  <title> | Hexo</title>
+  <title>Test1.pandas part | Hexo</title>
   
 
 
@@ -184,7 +184,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -194,7 +194,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -248,7 +248,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">Test1.pandas part</h1>
         
 
         <div class="post-meta">
@@ -258,7 +258,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-12T19:13:50+08:00">
                 2018-04-12
@@ -304,7 +304,7 @@
 <h3 id="问题2-有记录的这段时间总收入是？"><a href="#问题2-有记录的这段时间总收入是？" class="headerlink" title="问题2. 有记录的这段时间总收入是？"></a>问题2. 有记录的这段时间总收入是？</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chipo[<span class="string">'new_price'</span>] = chipo[<span class="string">'item_price'</span>].str.split(<span class="string">'$'</span>).str[<span class="number">1</span>].astype(np.float64) <span class="comment">#取出价格 float</span></span><br><span class="line">chipo[<span class="string">'expense'</span>] = chipo[<span class="string">'quantity'</span>]*chipo[<span class="string">'new_price'</span>]</span><br><span class="line">chipo[<span class="string">'expense'</span>].sum() <span class="comment">#总收入美元</span></span><br></pre></td></tr></table></figure>
 <h3 id="问题3-有多少东西价格超过-10-00"><a href="#问题3-有多少东西价格超过-10-00" class="headerlink" title="问题3. 有多少东西价格超过 $10.00?"></a>问题3. 有多少东西价格超过 $10.00?</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = chipo[[<span class="string">'item_name'</span>,<span class="string">'new_price'</span>]][chipo[<span class="string">'new_price'</span>] &gt; <span class="number">10</span>].groupby(<span class="string">'item_name'</span>)</span><br><span class="line">len(df[<span class="string">'item_name'</span>].unique())</span><br></pre></td></tr></table></figure>
 <h3 id="问题4-顾客点多于一罐Canned-Soda的次数是？"><a href="#问题4-顾客点多于一罐Canned-Soda的次数是？" class="headerlink" title="问题4. 顾客点多于一罐Canned Soda的次数是？"></a>问题4. 顾客点多于一罐Canned Soda的次数是？</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = chipo[(chipo[<span class="string">'item_name'</span>] == <span class="string">'Canned Soda'</span>) &amp; (chipo[<span class="string">'quantity'</span>] &gt;<span class="number">1</span>)]</span><br><span class="line">df.shape <span class="comment"># 20</span></span><br></pre></td></tr></table></figure>
-<p>###回答问题5 ~ 6请从导入数据，给该数据分配一个变量users<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">users = pd.read_csv(<span class="string">'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/u.user'</span>, sep=<span class="string">'|'</span>)</span><br><span class="line">users.head(<span class="number">5</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="回答问题5-6请从导入数据，给该数据分配一个变量users"><a href="#回答问题5-6请从导入数据，给该数据分配一个变量users" class="headerlink" title="回答问题5 ~ 6请从导入数据，给该数据分配一个变量users"></a>回答问题5 ~ 6请从导入数据，给该数据分配一个变量users</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">users = pd.read_csv(<span class="string">'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/u.user'</span>, sep=<span class="string">'|'</span>)</span><br><span class="line">users.head(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="问题5-每个职业男性和女性的平均年龄分别是？"><a href="#问题5-每个职业男性和女性的平均年龄分别是？" class="headerlink" title="问题5.  每个职业男性和女性的平均年龄分别是？"></a>问题5.  每个职业男性和女性的平均年龄分别是？</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">users.groupby([<span class="string">'occupation'</span>,<span class="string">'gender'</span>])[[<span class="string">'age'</span>]].mean()</span><br></pre></td></tr></table></figure>
 <h3 id="问题6-每个职业中男性的比例是？"><a href="#问题6-每个职业中男性的比例是？" class="headerlink" title="问题6.  每个职业中男性的比例是？"></a>问题6.  每个职业中男性的比例是？</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = users[[<span class="string">'gender'</span>,<span class="string">'occupation'</span>]][users[<span class="string">'gender'</span>]==<span class="string">'F'</span>]</span><br><span class="line">df[<span class="string">'occupation'</span>].value_counts(normalize=<span class="keyword">True</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="回答问题7-8导入数据，给该数据分配一个变量df"><a href="#回答问题7-8导入数据，给该数据分配一个变量df" class="headerlink" title="回答问题7 ~ 8导入数据，给该数据分配一个变量df"></a>回答问题7 ~ 8导入数据，给该数据分配一个变量df</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data = pd.read_html(<span class="string">'https://github.com/guipsamora/pandas_exercises/blob/master/04_Apply/Students_Alcohol_Consumption/student-mat.csv'</span>,header=<span class="number">0</span>)[<span class="number">0</span>]</span><br><span class="line">df = data.iloc[:,<span class="number">1</span>:]</span><br><span class="line">df.columns = data.columns.delete(<span class="number">-1</span>)</span><br></pre></td></tr></table></figure>
@@ -413,10 +413,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            Inhaltsverzeichnis
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            Übersicht
           </li>
         </ul>
       
@@ -437,7 +437,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">10</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -473,7 +473,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Test1-pandas部分"><span class="nav-number">1.</span> <span class="nav-text">Test1 pandas部分</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤1-载入需要的库"><span class="nav-number"></span> <span class="nav-text">步骤1. 载入需要的库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤2-导入数据"><span class="nav-number"></span> <span class="nav-text">步骤2. 导入数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题1-被点最多的食物是哪个？"><span class="nav-number"></span> <span class="nav-text">问题1. 被点最多的食物是哪个？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题2-有记录的这段时间总收入是？"><span class="nav-number"></span> <span class="nav-text">问题2. 有记录的这段时间总收入是？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题3-有多少东西价格超过-10-00"><span class="nav-number"></span> <span class="nav-text">问题3. 有多少东西价格超过 $10.00?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题4-顾客点多于一罐Canned-Soda的次数是？"><span class="nav-number"></span> <span class="nav-text">问题4. 顾客点多于一罐Canned Soda的次数是？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题5-每个职业男性和女性的平均年龄分别是？"><span class="nav-number"></span> <span class="nav-text">问题5.  每个职业男性和女性的平均年龄分别是？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题6-每个职业中男性的比例是？"><span class="nav-number"></span> <span class="nav-text">问题6.  每个职业中男性的比例是？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回答问题7-8导入数据，给该数据分配一个变量df"><span class="nav-number"></span> <span class="nav-text">回答问题7 ~ 8导入数据，给该数据分配一个变量df</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题7-请把Mjob和Fjob两列中数据都变成全部大写字母，查看df，如果df中这两列数据确实变成大写，说明操作成功"><span class="nav-number"></span> <span class="nav-text">问题7. 请把Mjob和Fjob两列中数据都变成全部大写字母，查看df，如果df中这两列数据确实变成大写，说明操作成功</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题8-把df中所有数值都乘以10"><span class="nav-number"></span> <span class="nav-text">问题8. 把df中所有数值都乘以10</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回答问题9-13导入数据给该数据分配一个变量"><span class="nav-number"></span> <span class="nav-text">回答问题9 ~ 13导入数据给该数据分配一个变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题9-data中2061年有误，应为1961年。请改正。"><span class="nav-number"></span> <span class="nav-text">问题9. data中2061年有误，应为1961年。请改正。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题10-将正确的日期设为index。要求：index的dtype为datetime64-ns"><span class="nav-number"></span> <span class="nav-text">问题10. 将正确的日期设为index。要求：index的dtype为datetime64[ns]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题11-请分别统计每个地点总共缺失了多少数据。"><span class="nav-number"></span> <span class="nav-text">问题11. 请分别统计每个地点总共缺失了多少数据。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题12-请创建两个dataframe，一个统计每个地点所有日期风速的最小值、最大值、均值、标准差；第二个统计每日所有地点的风速的最小值、最大值、均值、标准差。"><span class="nav-number"></span> <span class="nav-text">问题12. 请创建两个dataframe，一个统计每个地点所有日期风速的最小值、最大值、均值、标准差；第二个统计每日所有地点的风速的最小值、最大值、均值、标准差。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题13-将数据下采样，每地每年只保留一个样本数据-待解决"><span class="nav-number"></span> <span class="nav-text">问题13. 将数据下采样，每地每年只保留一个样本数据 待解决</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回答问题14-17导入数据，给该数据分配一个变量iris"><span class="nav-number"></span> <span class="nav-text">回答问题14~17导入数据，给该数据分配一个变量iris.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题14-该数据中缺失了列名，请按照下面给出的名称添加。"><span class="nav-number"></span> <span class="nav-text">问题14. 该数据中缺失了列名，请按照下面给出的名称添加。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题15-1）将10-29行-‘petal-length’列数据设为Nan；2）再将其设为1-0-【请分步操作，保留第1）步结果】"><span class="nav-number"></span> <span class="nav-text">问题15. 1）将10 ~ 29行 ‘petal_length’列数据设为Nan；2）再将其设为1.0 【请分步操作，保留第1）步结果】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题16-删掉class列"><span class="nav-number"></span> <span class="nav-text">问题16. 删掉class列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题17-1）将前3行所有数值设为Nan；2）删掉有缺失值的行【请分步操作，保留第1）步结果】"><span class="nav-number"></span> <span class="nav-text">问题17. 1）将前3行所有数值设为Nan；2）删掉有缺失值的行【请分步操作，保留第1）步结果】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回答问题18-20导入数据‘06-US-Baby-Names-right-csv’，给该数据分配一个变量baby-names"><span class="nav-number"></span> <span class="nav-text">回答问题18 ~ 20导入数据‘06_US_Baby_Names_right.csv’，给该数据分配一个变量baby_names.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题18-男性名字多还是女性名字多"><span class="nav-number"></span> <span class="nav-text">问题18. 男性名字多还是女性名字多?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题19-最常见的名字是？"><span class="nav-number"></span> <span class="nav-text">问题19. 最常见的名字是？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题20-最少见的名字出现了多少次？有多少个名字是最少见的？"><span class="nav-number"></span> <span class="nav-text">问题20. 最少见的名字出现了多少次？有多少个名字是最少见的？</span></a></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Test1-pandas部分"><span class="nav-number">1.</span> <span class="nav-text">Test1 pandas部分</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤1-载入需要的库"><span class="nav-number"></span> <span class="nav-text">步骤1. 载入需要的库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤2-导入数据"><span class="nav-number"></span> <span class="nav-text">步骤2. 导入数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题1-被点最多的食物是哪个？"><span class="nav-number"></span> <span class="nav-text">问题1. 被点最多的食物是哪个？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题2-有记录的这段时间总收入是？"><span class="nav-number"></span> <span class="nav-text">问题2. 有记录的这段时间总收入是？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题3-有多少东西价格超过-10-00"><span class="nav-number"></span> <span class="nav-text">问题3. 有多少东西价格超过 $10.00?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题4-顾客点多于一罐Canned-Soda的次数是？"><span class="nav-number"></span> <span class="nav-text">问题4. 顾客点多于一罐Canned Soda的次数是？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回答问题5-6请从导入数据，给该数据分配一个变量users"><span class="nav-number"></span> <span class="nav-text">回答问题5 ~ 6请从导入数据，给该数据分配一个变量users</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题5-每个职业男性和女性的平均年龄分别是？"><span class="nav-number"></span> <span class="nav-text">问题5.  每个职业男性和女性的平均年龄分别是？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题6-每个职业中男性的比例是？"><span class="nav-number"></span> <span class="nav-text">问题6.  每个职业中男性的比例是？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回答问题7-8导入数据，给该数据分配一个变量df"><span class="nav-number"></span> <span class="nav-text">回答问题7 ~ 8导入数据，给该数据分配一个变量df</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题7-请把Mjob和Fjob两列中数据都变成全部大写字母，查看df，如果df中这两列数据确实变成大写，说明操作成功"><span class="nav-number"></span> <span class="nav-text">问题7. 请把Mjob和Fjob两列中数据都变成全部大写字母，查看df，如果df中这两列数据确实变成大写，说明操作成功</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题8-把df中所有数值都乘以10"><span class="nav-number"></span> <span class="nav-text">问题8. 把df中所有数值都乘以10</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回答问题9-13导入数据给该数据分配一个变量"><span class="nav-number"></span> <span class="nav-text">回答问题9 ~ 13导入数据给该数据分配一个变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题9-data中2061年有误，应为1961年。请改正。"><span class="nav-number"></span> <span class="nav-text">问题9. data中2061年有误，应为1961年。请改正。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题10-将正确的日期设为index。要求：index的dtype为datetime64-ns"><span class="nav-number"></span> <span class="nav-text">问题10. 将正确的日期设为index。要求：index的dtype为datetime64[ns]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题11-请分别统计每个地点总共缺失了多少数据。"><span class="nav-number"></span> <span class="nav-text">问题11. 请分别统计每个地点总共缺失了多少数据。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题12-请创建两个dataframe，一个统计每个地点所有日期风速的最小值、最大值、均值、标准差；第二个统计每日所有地点的风速的最小值、最大值、均值、标准差。"><span class="nav-number"></span> <span class="nav-text">问题12. 请创建两个dataframe，一个统计每个地点所有日期风速的最小值、最大值、均值、标准差；第二个统计每日所有地点的风速的最小值、最大值、均值、标准差。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题13-将数据下采样，每地每年只保留一个样本数据-待解决"><span class="nav-number"></span> <span class="nav-text">问题13. 将数据下采样，每地每年只保留一个样本数据 待解决</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回答问题14-17导入数据，给该数据分配一个变量iris"><span class="nav-number"></span> <span class="nav-text">回答问题14~17导入数据，给该数据分配一个变量iris.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题14-该数据中缺失了列名，请按照下面给出的名称添加。"><span class="nav-number"></span> <span class="nav-text">问题14. 该数据中缺失了列名，请按照下面给出的名称添加。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题15-1）将10-29行-‘petal-length’列数据设为Nan；2）再将其设为1-0-【请分步操作，保留第1）步结果】"><span class="nav-number"></span> <span class="nav-text">问题15. 1）将10 ~ 29行 ‘petal_length’列数据设为Nan；2）再将其设为1.0 【请分步操作，保留第1）步结果】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题16-删掉class列"><span class="nav-number"></span> <span class="nav-text">问题16. 删掉class列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题17-1）将前3行所有数值设为Nan；2）删掉有缺失值的行【请分步操作，保留第1）步结果】"><span class="nav-number"></span> <span class="nav-text">问题17. 1）将前3行所有数值设为Nan；2）删掉有缺失值的行【请分步操作，保留第1）步结果】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回答问题18-20导入数据‘06-US-Baby-Names-right-csv’，给该数据分配一个变量baby-names"><span class="nav-number"></span> <span class="nav-text">回答问题18 ~ 20导入数据‘06_US_Baby_Names_right.csv’，给该数据分配一个变量baby_names.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题18-男性名字多还是女性名字多"><span class="nav-number"></span> <span class="nav-text">问题18. 男性名字多还是女性名字多?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题19-最常见的名字是？"><span class="nav-number"></span> <span class="nav-text">问题19. 最常见的名字是？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题20-最少见的名字出现了多少次？有多少个名字是最少见的？"><span class="nav-number"></span> <span class="nav-text">问题20. 最少见的名字出现了多少次？有多少个名字是最少见的？</span></a></div>
             
 
           </div>
@@ -503,7 +503,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 

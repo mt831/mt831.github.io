@@ -181,7 +181,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Home
+            Startseite
           </a>
         </li>
       
@@ -191,7 +191,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archives
+            Archiv
           </a>
         </li>
       
@@ -247,7 +247,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/04/12/Test1_pandas/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2018/04/12/Test1_pandas/" itemprop="url">Test1.pandas part</a></h1>
         
 
         <div class="post-meta">
@@ -257,7 +257,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-12T19:13:50+08:00">
                 2018-04-12
@@ -305,7 +305,7 @@
 <h3 id="问题2-有记录的这段时间总收入是？"><a href="#问题2-有记录的这段时间总收入是？" class="headerlink" title="问题2. 有记录的这段时间总收入是？"></a>问题2. 有记录的这段时间总收入是？</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chipo[<span class="string">'new_price'</span>] = chipo[<span class="string">'item_price'</span>].str.split(<span class="string">'$'</span>).str[<span class="number">1</span>].astype(np.float64) <span class="comment">#取出价格 float</span></span><br><span class="line">chipo[<span class="string">'expense'</span>] = chipo[<span class="string">'quantity'</span>]*chipo[<span class="string">'new_price'</span>]</span><br><span class="line">chipo[<span class="string">'expense'</span>].sum() <span class="comment">#总收入美元</span></span><br></pre></td></tr></table></figure>
 <h3 id="问题3-有多少东西价格超过-10-00"><a href="#问题3-有多少东西价格超过-10-00" class="headerlink" title="问题3. 有多少东西价格超过 $10.00?"></a>问题3. 有多少东西价格超过 $10.00?</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = chipo[[<span class="string">'item_name'</span>,<span class="string">'new_price'</span>]][chipo[<span class="string">'new_price'</span>] &gt; <span class="number">10</span>].groupby(<span class="string">'item_name'</span>)</span><br><span class="line">len(df[<span class="string">'item_name'</span>].unique())</span><br></pre></td></tr></table></figure>
 <h3 id="问题4-顾客点多于一罐Canned-Soda的次数是？"><a href="#问题4-顾客点多于一罐Canned-Soda的次数是？" class="headerlink" title="问题4. 顾客点多于一罐Canned Soda的次数是？"></a>问题4. 顾客点多于一罐Canned Soda的次数是？</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = chipo[(chipo[<span class="string">'item_name'</span>] == <span class="string">'Canned Soda'</span>) &amp; (chipo[<span class="string">'quantity'</span>] &gt;<span class="number">1</span>)]</span><br><span class="line">df.shape <span class="comment"># 20</span></span><br></pre></td></tr></table></figure>
-<p>###回答问题5 ~ 6请从导入数据，给该数据分配一个变量users<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">users = pd.read_csv(<span class="string">'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/u.user'</span>, sep=<span class="string">'|'</span>)</span><br><span class="line">users.head(<span class="number">5</span>)</span><br></pre></td></tr></table></figure></p>
+<h3 id="回答问题5-6请从导入数据，给该数据分配一个变量users"><a href="#回答问题5-6请从导入数据，给该数据分配一个变量users" class="headerlink" title="回答问题5 ~ 6请从导入数据，给该数据分配一个变量users"></a>回答问题5 ~ 6请从导入数据，给该数据分配一个变量users</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">users = pd.read_csv(<span class="string">'https://raw.githubusercontent.com/justmarkham/DAT8/master/data/u.user'</span>, sep=<span class="string">'|'</span>)</span><br><span class="line">users.head(<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="问题5-每个职业男性和女性的平均年龄分别是？"><a href="#问题5-每个职业男性和女性的平均年龄分别是？" class="headerlink" title="问题5.  每个职业男性和女性的平均年龄分别是？"></a>问题5.  每个职业男性和女性的平均年龄分别是？</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">users.groupby([<span class="string">'occupation'</span>,<span class="string">'gender'</span>])[[<span class="string">'age'</span>]].mean()</span><br></pre></td></tr></table></figure>
 <h3 id="问题6-每个职业中男性的比例是？"><a href="#问题6-每个职业中男性的比例是？" class="headerlink" title="问题6.  每个职业中男性的比例是？"></a>问题6.  每个职业中男性的比例是？</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">df = users[[<span class="string">'gender'</span>,<span class="string">'occupation'</span>]][users[<span class="string">'gender'</span>]==<span class="string">'F'</span>]</span><br><span class="line">df[<span class="string">'occupation'</span>].value_counts(normalize=<span class="keyword">True</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="回答问题7-8导入数据，给该数据分配一个变量df"><a href="#回答问题7-8导入数据，给该数据分配一个变量df" class="headerlink" title="回答问题7 ~ 8导入数据，给该数据分配一个变量df"></a>回答问题7 ~ 8导入数据，给该数据分配一个变量df</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">data = pd.read_html(<span class="string">'https://github.com/guipsamora/pandas_exercises/blob/master/04_Apply/Students_Alcohol_Consumption/student-mat.csv'</span>,header=<span class="number">0</span>)[<span class="number">0</span>]</span><br><span class="line">df = data.iloc[:,<span class="number">1</span>:]</span><br><span class="line">df.columns = data.columns.delete(<span class="number">-1</span>)</span><br></pre></td></tr></table></figure>
@@ -405,7 +405,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-11T20:33:41+08:00">
                 2018-04-11
@@ -529,7 +529,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-10T19:47:17+08:00">
                 2018-04-10
@@ -656,7 +656,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-10T19:45:01+08:00">
                 2018-04-10
@@ -806,7 +806,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-04T18:54:01+08:00">
                 2018-04-04
@@ -930,7 +930,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-03T19:48:07+08:00">
                 2018-04-03
@@ -1055,7 +1055,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-03T19:43:53+08:00">
                 2018-04-03
@@ -1179,7 +1179,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-02T18:29:09+08:00">
                 2018-04-02
@@ -1312,7 +1312,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-01T21:13:58+08:00">
                 2018-04-01
@@ -1437,7 +1437,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Posted on</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-01T18:01:46+08:00">
                 2018-04-01
@@ -1586,7 +1586,7 @@
                 <a href="/archives/">
               
                   <span class="site-state-item-count">10</span>
-                  <span class="site-state-item-name">posts</span>
+                  <span class="site-state-item-name">Artikel</span>
                 </a>
               </div>
             
@@ -1636,7 +1636,7 @@
 </div>
 
 
-  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
 
 
