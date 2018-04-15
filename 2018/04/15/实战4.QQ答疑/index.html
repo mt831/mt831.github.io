@@ -85,7 +85,7 @@
 <meta property="og:url" content="http://yoursite.com/2018/04/15/实战4.QQ答疑/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Q1.有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格原表格    Name Sex 1 2 3     A F 6 G F   B M 6 G F   B M 6 G F   C F 6 G F   C F 6 G F   C F 6 G F   … … … … …    新表格    Name Sex 1 2 3 Count     A F 6 G F">
-<meta property="og:updated_time" content="2018-04-15T13:26:36.986Z">
+<meta property="og:updated_time" content="2018-04-15T14:03:24.869Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
 <meta name="twitter:description" content="Q1.有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格原表格    Name Sex 1 2 3     A F 6 G F   B M 6 G F   B M 6 G F   C F 6 G F   C F 6 G F   C F 6 G F   … … … … …    新表格    Name Sex 1 2 3 Count     A F 6 G F">
@@ -450,9 +450,11 @@
 </tr>
 </tbody>
 </table>
-<p>2.用groupby([‘Name’,’Sex’]).size()计算出了不同Name和Sex对应的次数，然后加上了后三行。不知是否有其他简便可行的方法推荐？</p>
-<h5 id="Q2-合并Q1中格式的多个表格，比如1000个，有没有什么方法推荐？"><a href="#Q2-合并Q1中格式的多个表格，比如1000个，有没有什么方法推荐？" class="headerlink" title="Q2.合并Q1中格式的多个表格，比如1000个，有没有什么方法推荐？"></a>Q2.合并Q1中格式的多个表格，比如1000个，有没有什么方法推荐？</h5><p>我用的循环读入单个表格然后写入新文件</p>
-<h5 id="Q3-关于可视化，是否能画4个circles以上的维恩图，R中是有对应包的，不确定python是否也有"><a href="#Q3-关于可视化，是否能画4个circles以上的维恩图，R中是有对应包的，不确定python是否也有" class="headerlink" title="Q3.关于可视化，是否能画4个circles以上的维恩图，R中是有对应包的，不确定python是否也有?"></a>Q3.关于可视化，是否能画4个circles以上的维恩图，R中是有对应包的，不确定python是否也有?</h5>
+<p>2.用groupby([‘Name’,’Sex’]).size()计算出了不同Name和Sex对应的次数，然后加上了后三行。不知是否有其他简便可行的方法推荐？<br><strong>分开写两个函数</strong></p>
+<h5 id="Q2-合并Q1中格式的多个表格，比如1000个，有没有什么方法推荐？"><a href="#Q2-合并Q1中格式的多个表格，比如1000个，有没有什么方法推荐？" class="headerlink" title="Q2.合并Q1中格式的多个表格，比如1000个，有没有什么方法推荐？"></a>Q2.合并Q1中格式的多个表格，比如1000个，有没有什么方法推荐？</h5><p>我用的循环读入单个表格然后写入新文件<br><strong>merge函数</strong></p>
+<h5 id="Q3-关于可视化，是否能画4个circles以上的维恩图，R中是有对应包的，不确定python是否也有"><a href="#Q3-关于可视化，是否能画4个circles以上的维恩图，R中是有对应包的，不确定python是否也有" class="headerlink" title="Q3.关于可视化，是否能画4个circles以上的维恩图，R中是有对应包的，不确定python是否也有?"></a>Q3.关于可视化，是否能画4个circles以上的维恩图，R中是有对应包的，不确定python是否也有?</h5><p><strong>seaborn</strong></p>
+<p><strong><em>以上来自<a href="www.xiniuedu.com">稀牛学院</a>数据科学实训营 助教田老师及学员们的QQ答疑</em></strong></p>
+
       
     </div>
     
