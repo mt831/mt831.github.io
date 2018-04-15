@@ -79,16 +79,16 @@
 
 
 
-<meta name="description" content="Q1.有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格原表格|      Name|      Sex|      1|      2|      3|| —- | —- | —- | —- | —- ||      A|      F|      6|      G|      F||      B|      M|      6|      G|">
+<meta name="description" content="Q1.有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格原表格    Name Sex 1 2 3     A F 6 G F   B M 6 G F   B M 6 G F   C F 6 G F   C F 6 G F   C F 6 G F   … … … … …    新表格    Name Sex 1 2 3 Count     A F 6 G F">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://yoursite.com/2018/04/15/实战4.QQ答疑/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Q1.有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格原表格|      Name|      Sex|      1|      2|      3|| —- | —- | —- | —- | —- ||      A|      F|      6|      G|      F||      B|      M|      6|      G|">
-<meta property="og:updated_time" content="2018-04-13T07:04:32.642Z">
+<meta property="og:description" content="Q1.有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格原表格    Name Sex 1 2 3     A F 6 G F   B M 6 G F   B M 6 G F   C F 6 G F   C F 6 G F   C F 6 G F   … … … … …    新表格    Name Sex 1 2 3 Count     A F 6 G F">
+<meta property="og:updated_time" content="2018-04-15T13:26:36.986Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-<meta name="twitter:description" content="Q1.有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格原表格|      Name|      Sex|      1|      2|      3|| —- | —- | —- | —- | —- ||      A|      F|      6|      G|      F||      B|      M|      6|      G|">
+<meta name="twitter:description" content="Q1.有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格原表格    Name Sex 1 2 3     A F 6 G F   B M 6 G F   B M 6 G F   C F 6 G F   C F 6 G F   C F 6 G F   … … … … …    新表格    Name Sex 1 2 3 Count     A F 6 G F">
 
 
 
@@ -298,7 +298,70 @@
       
 
       
-        <h5 id="Q1-有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格"><a href="#Q1-有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格" class="headerlink" title="Q1.有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格"></a>Q1.有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格</h5><p>原表格<br>|      Name|      Sex|      1|      2|      3|<br>| —- | —- | —- | —- | —- |<br>|      A|      F|      6|      G|      F|<br>|      B|      M|      6|      G|      F|<br>|      B|      M|      6|      G|      F|<br>|      C|      F|      6|      G|      F|<br>|      C|      F|      6|      G|      F|<br>|      C|      F|      6|      G|      F|<br>|      …|      …|      …|      …|      …|<br>新表格</p>
+        <h5 id="Q1-有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格"><a href="#Q1-有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格" class="headerlink" title="Q1.有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格"></a>Q1.有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格</h5><p>原表格</p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Sex</th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>F</td>
+<td>6</td>
+<td>G</td>
+<td>F</td>
+</tr>
+<tr>
+<td>B</td>
+<td>M</td>
+<td>6</td>
+<td>G</td>
+<td>F</td>
+</tr>
+<tr>
+<td>B</td>
+<td>M</td>
+<td>6</td>
+<td>G</td>
+<td>F</td>
+</tr>
+<tr>
+<td>C</td>
+<td>F</td>
+<td>6</td>
+<td>G</td>
+<td>F</td>
+</tr>
+<tr>
+<td>C</td>
+<td>F</td>
+<td>6</td>
+<td>G</td>
+<td>F</td>
+</tr>
+<tr>
+<td>C</td>
+<td>F</td>
+<td>6</td>
+<td>G</td>
+<td>F</td>
+</tr>
+<tr>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+<td>…</td>
+</tr>
+</tbody>
+</table>
+<p>新表格</p>
 <table>
 <thead>
 <tr>
