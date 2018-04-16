@@ -1,304 +1,161 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="Test1 pandas部分步骤1. 载入需要的库12import pandas as pdimport numpy as np 步骤2. 导入数据12chipo = pd.read_csv(&amp;apos;https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv&amp;apos;, sep=&amp;apos;\t&amp;ap">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Test1.pandas part">
-<meta property="og:url" content="http://yoursite.com/2018/04/12/Test1_pandas/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Test1 pandas部分步骤1. 载入需要的库12import pandas as pdimport numpy as np 步骤2. 导入数据12chipo = pd.read_csv(&amp;apos;https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv&amp;apos;, sep=&amp;apos;\t&amp;ap">
-<meta property="og:updated_time" content="2018-04-15T06:57:42.783Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Test1.pandas part">
-<meta name="twitter:description" content="Test1 pandas部分步骤1. 载入需要的库12import pandas as pdimport numpy as np 步骤2. 导入数据12chipo = pd.read_csv(&amp;apos;https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv&amp;apos;, sep=&amp;apos;\t&amp;ap">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/2018/04/12/Test1_pandas/"/>
-
-
-
-
-
-  <title>Test1.pandas part | Hexo</title>
-  
-
-
-
-
-
-
-
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
-
-  
-  
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-  
-
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
     
+    
+    
+    <meta name="keywords" content="python, R, math, bioinformatics">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
 
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>Test1.pandas part | Hexo</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang=""  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Hexo</a></h1>
+        <h2 class="subtitle"></h2>
+      </div>
+      <div class="logo">
+        <img src="/images/ARIA_logo.png" alt="logo">
+      </div>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Startseite
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archiv
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
+    
+<nav id="nav" class="nav">
+  <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
+  <ul id="menu">
+    
+    <li><a href="/">Home</a></li>
+    
+    <li><a href="/archives/">Archives</a></li>
+    
+    <li><a href="/categories/">Categories</a></li>
+    
+    <li><a href="/tags/">Tags</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
+  </ul>
 </nav>
 
 
+  </div>
+</header>
 
- </div>
-    </header>
 
     <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
             
-
-  <div id="posts" class="posts-expand">
-    
-
+<section id="post" class="post">
   
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/12/Test1_pandas/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
+  <article class="post-container card " itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/12/Test1_pandas/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="John Doe">
+       <meta itemprop="description" content="">
+       <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Hexo">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+       <span class="">Test1.pandas part</span>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-12T19:13:50+08:00">2018-04-12</time>
+        </span>
         
         
-          <h1 class="post-title" itemprop="name headline">Test1.pandas part</h1>
         
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-12T19:13:50+08:00">
-                2018-04-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h4 id="Test1-pandas部分"><a href="#Test1-pandas部分" class="headerlink" title="Test1 pandas部分"></a>Test1 pandas部分</h4><h3 id="步骤1-载入需要的库"><a href="#步骤1-载入需要的库" class="headerlink" title="步骤1. 载入需要的库"></a>步骤1. 载入需要的库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br></pre></td></tr></table></figure>
+        
+        <span class="post-meta-divider"> | </span>
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-body" itemprop="articleBody">
+      <h4 id="Test1-pandas部分"><a href="#Test1-pandas部分" class="headerlink" title="Test1 pandas部分"></a>Test1 pandas部分</h4><h3 id="步骤1-载入需要的库"><a href="#步骤1-载入需要的库" class="headerlink" title="步骤1. 载入需要的库"></a>步骤1. 载入需要的库</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import numpy as np</span><br></pre></td></tr></table></figure>
 <h3 id="步骤2-导入数据"><a href="#步骤2-导入数据" class="headerlink" title="步骤2. 导入数据"></a>步骤2. 导入数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">chipo = pd.read_csv(&apos;https://raw.githubusercontent.com/justmarkham/DAT8/master/data/chipotle.tsv&apos;, sep=&apos;\t&apos;)</span><br><span class="line">chipo.head(5)</span><br></pre></td></tr></table></figure>
 <h3 id="问题1-被点最多的食物是哪个？"><a href="#问题1-被点最多的食物是哪个？" class="headerlink" title="问题1. 被点最多的食物是哪个？"></a>问题1. 被点最多的食物是哪个？</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chipo[[<span class="string">'item_name'</span>,<span class="string">'quantity'</span>]].groupby(chipo[<span class="string">'item_name'</span>]).sum().sort_values(by=[<span class="string">'quantity'</span>],ascending=<span class="keyword">False</span>)</span><br></pre></td></tr></table></figure>
 <h3 id="问题2-有记录的这段时间总收入是？"><a href="#问题2-有记录的这段时间总收入是？" class="headerlink" title="问题2. 有记录的这段时间总收入是？"></a>问题2. 有记录的这段时间总收入是？</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">chipo[<span class="string">'new_price'</span>] = chipo[<span class="string">'item_price'</span>].str.split(<span class="string">'$'</span>).str[<span class="number">1</span>].astype(np.float64) <span class="comment">#取出价格 float</span></span><br><span class="line">chipo[<span class="string">'expense'</span>] = chipo[<span class="string">'quantity'</span>]*chipo[<span class="string">'new_price'</span>]</span><br><span class="line">chipo[<span class="string">'expense'</span>].sum() <span class="comment">#总收入美元</span></span><br></pre></td></tr></table></figure>
@@ -328,359 +185,176 @@
 <p><strong>部分答案还需校正更改</strong></p>
 <p><strong><em>题目以上来自<a href="www.xiniuedu.com">稀牛学院</a>数据科学实训营 </em></strong></p>
 
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
+    </main>
     <footer class="post-footer">
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/04/11/实战3-QQ答疑/" rel="next" title="实战3.QQ答疑">
-                <i class="fa fa-chevron-left"></i> 实战3.QQ答疑
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/15/L4-链家网房价数据分析/" rel="prev" title="L4.链家网房价数据分析 要点记录">
-                L4.链家网房价数据分析 要点记录 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
       
       
     </footer>
-  </div>
-  
-  
-  
   </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
   
-
-
-
-        </div>
-        
-          
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
+  <div class="post-nav">
     
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">John Doe</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">12</span>
-                  <span class="site-state-item-name">Artikel</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Test1-pandas部分"><span class="nav-number">1.</span> <span class="nav-text">Test1 pandas部分</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤1-载入需要的库"><span class="nav-number"></span> <span class="nav-text">步骤1. 载入需要的库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#步骤2-导入数据"><span class="nav-number"></span> <span class="nav-text">步骤2. 导入数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题1-被点最多的食物是哪个？"><span class="nav-number"></span> <span class="nav-text">问题1. 被点最多的食物是哪个？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题2-有记录的这段时间总收入是？"><span class="nav-number"></span> <span class="nav-text">问题2. 有记录的这段时间总收入是？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题3-有多少东西价格超过-10-00"><span class="nav-number"></span> <span class="nav-text">问题3. 有多少东西价格超过 $10.00?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题4-顾客点多于一罐Canned-Soda的次数是？"><span class="nav-number"></span> <span class="nav-text">问题4. 顾客点多于一罐Canned Soda的次数是？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回答问题5-6请从导入数据，给该数据分配一个变量users"><span class="nav-number"></span> <span class="nav-text">回答问题5 ~ 6请从导入数据，给该数据分配一个变量users</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题5-每个职业男性和女性的平均年龄分别是？"><span class="nav-number"></span> <span class="nav-text">问题5.  每个职业男性和女性的平均年龄分别是？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题6-每个职业中男性的比例是？"><span class="nav-number"></span> <span class="nav-text">问题6.  每个职业中男性的比例是？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回答问题7-8导入数据，给该数据分配一个变量df"><span class="nav-number"></span> <span class="nav-text">回答问题7 ~ 8导入数据，给该数据分配一个变量df</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题7-请把Mjob和Fjob两列中数据都变成全部大写字母，查看df，如果df中这两列数据确实变成大写，说明操作成功"><span class="nav-number"></span> <span class="nav-text">问题7. 请把Mjob和Fjob两列中数据都变成全部大写字母，查看df，如果df中这两列数据确实变成大写，说明操作成功</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题8-把df中所有数值都乘以10"><span class="nav-number"></span> <span class="nav-text">问题8. 把df中所有数值都乘以10</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回答问题9-13导入数据给该数据分配一个变量"><span class="nav-number"></span> <span class="nav-text">回答问题9 ~ 13导入数据给该数据分配一个变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题9-data中2061年有误，应为1961年。请改正。"><span class="nav-number"></span> <span class="nav-text">问题9. data中2061年有误，应为1961年。请改正。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题10-将正确的日期设为index。要求：index的dtype为datetime64-ns"><span class="nav-number"></span> <span class="nav-text">问题10. 将正确的日期设为index。要求：index的dtype为datetime64[ns]</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题11-请分别统计每个地点总共缺失了多少数据。"><span class="nav-number"></span> <span class="nav-text">问题11. 请分别统计每个地点总共缺失了多少数据。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题12-请创建两个dataframe，一个统计每个地点所有日期风速的最小值、最大值、均值、标准差；第二个统计每日所有地点的风速的最小值、最大值、均值、标准差。"><span class="nav-number"></span> <span class="nav-text">问题12. 请创建两个dataframe，一个统计每个地点所有日期风速的最小值、最大值、均值、标准差；第二个统计每日所有地点的风速的最小值、最大值、均值、标准差。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题13-将数据下采样，每地每年只保留一个样本数据-待解决"><span class="nav-number"></span> <span class="nav-text">问题13. 将数据下采样，每地每年只保留一个样本数据 待解决</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回答问题14-17导入数据，给该数据分配一个变量iris"><span class="nav-number"></span> <span class="nav-text">回答问题14~17导入数据，给该数据分配一个变量iris.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题14-该数据中缺失了列名，请按照下面给出的名称添加。"><span class="nav-number"></span> <span class="nav-text">问题14. 该数据中缺失了列名，请按照下面给出的名称添加。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题15-1）将10-29行-‘petal-length’列数据设为Nan；2）再将其设为1-0-【请分步操作，保留第1）步结果】"><span class="nav-number"></span> <span class="nav-text">问题15. 1）将10 ~ 29行 ‘petal_length’列数据设为Nan；2）再将其设为1.0 【请分步操作，保留第1）步结果】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题16-删掉class列"><span class="nav-number"></span> <span class="nav-text">问题16. 删掉class列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题17-1）将前3行所有数值设为Nan；2）删掉有缺失值的行【请分步操作，保留第1）步结果】"><span class="nav-number"></span> <span class="nav-text">问题17. 1）将前3行所有数值设为Nan；2）删掉有缺失值的行【请分步操作，保留第1）步结果】</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回答问题18-20导入数据‘06-US-Baby-Names-right-csv’，给该数据分配一个变量baby-names"><span class="nav-number"></span> <span class="nav-text">回答问题18 ~ 20导入数据‘06_US_Baby_Names_right.csv’，给该数据分配一个变量baby_names.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题18-男性名字多还是女性名字多"><span class="nav-number"></span> <span class="nav-text">问题18. 男性名字多还是女性名字多?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题19-最常见的名字是？"><span class="nav-number"></span> <span class="nav-text">问题19. 最常见的名字是？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#问题20-最少见的名字出现了多少次？有多少个名字是最少见的？"><span class="nav-number"></span> <span class="nav-text">问题20. 最少见的名字出现了多少次？有多少个名字是最少见的？</span></a></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
+    <div class="post-nav-next post-nav-item">
+      <a href="/2018/04/11/实战3-QQ答疑/" rel="next" title="实战3.QQ答疑">
+        <i class="fas fa-angle-left"></i>
+        <span class="nav-title">实战3.QQ答疑</span>
+      </a>
     </div>
-  </aside>
+    
+    
+    <div class="post-nav-prev post-nav-item">
+      <a href="/2018/04/15/L4-链家网房价数据分析/" rel="prev" title="L4.链家网房价数据分析 要点记录">
+        <span class="nav-title">L4.链家网房价数据分析 要点记录</span>
+        <i class="fas fa-angle-right"></i>
+      </a>
+    </div>
+    
+  </div>
+  
+  
+  
 
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
-
+<div class="comments" id="comments">
   
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
+  
+</section>
 
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
+    </div>
   </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
+  <div class="search-result-box" id="search-result"></div>
   
   
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+<div class="info sidebar-item" id="info">
   
-
+  <img class="author-avatar" src="/images/avatar.png" alt="John Doe">
   
+  <p class="author-name">John Doe</p>
+  <p class="author-description"> </p>
+  <div class="site-count">
+    
+    <div class="archives-count">
+      <p>Archives</p>
+      <p><a href="/archives/">12</a></p>
+    </div>
+    
+    
+    
+    <span class="site-count-divider"> | </span>
+    
+    <div class="categories-count">
+      <p>Categories</p>
+      <p><a href="/categories/">0</a></p>
+    </div>
+    
+    
+    
+    <span class="site-count-divider"> | </span>
+    
+    <div class="tags-count">
+      <p>Tags</p>
+      <p><a href="/tags/">0</a></p>
+    </div>
+    
+  </div>
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i> RSS</a>
+  </div>
   
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
+</div>
 
 
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
+  <div class="sidebar-sticky">
+    
+    
 
 
 
 
-	
+<hr>
+<div class="post-toc sidebar-item" id="toc-div">
+  <p><i class="fas fa-list-ol"></i> Table of Contents</p>
+  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Test1-pandas部分"><span class="toc-text">Test1 pandas部分</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#步骤1-载入需要的库"><span class="toc-text">步骤1. 载入需要的库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#步骤2-导入数据"><span class="toc-text">步骤2. 导入数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题1-被点最多的食物是哪个？"><span class="toc-text">问题1. 被点最多的食物是哪个？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题2-有记录的这段时间总收入是？"><span class="toc-text">问题2. 有记录的这段时间总收入是？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题3-有多少东西价格超过-10-00"><span class="toc-text">问题3. 有多少东西价格超过 $10.00?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题4-顾客点多于一罐Canned-Soda的次数是？"><span class="toc-text">问题4. 顾客点多于一罐Canned Soda的次数是？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回答问题5-6请从导入数据，给该数据分配一个变量users"><span class="toc-text">回答问题5 ~ 6请从导入数据，给该数据分配一个变量users</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题5-每个职业男性和女性的平均年龄分别是？"><span class="toc-text">问题5.  每个职业男性和女性的平均年龄分别是？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题6-每个职业中男性的比例是？"><span class="toc-text">问题6.  每个职业中男性的比例是？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回答问题7-8导入数据，给该数据分配一个变量df"><span class="toc-text">回答问题7 ~ 8导入数据，给该数据分配一个变量df</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题7-请把Mjob和Fjob两列中数据都变成全部大写字母，查看df，如果df中这两列数据确实变成大写，说明操作成功"><span class="toc-text">问题7. 请把Mjob和Fjob两列中数据都变成全部大写字母，查看df，如果df中这两列数据确实变成大写，说明操作成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题8-把df中所有数值都乘以10"><span class="toc-text">问题8. 把df中所有数值都乘以10</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回答问题9-13导入数据给该数据分配一个变量"><span class="toc-text">回答问题9 ~ 13导入数据给该数据分配一个变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题9-data中2061年有误，应为1961年。请改正。"><span class="toc-text">问题9. data中2061年有误，应为1961年。请改正。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题10-将正确的日期设为index。要求：index的dtype为datetime64-ns"><span class="toc-text">问题10. 将正确的日期设为index。要求：index的dtype为datetime64[ns]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题11-请分别统计每个地点总共缺失了多少数据。"><span class="toc-text">问题11. 请分别统计每个地点总共缺失了多少数据。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题12-请创建两个dataframe，一个统计每个地点所有日期风速的最小值、最大值、均值、标准差；第二个统计每日所有地点的风速的最小值、最大值、均值、标准差。"><span class="toc-text">问题12. 请创建两个dataframe，一个统计每个地点所有日期风速的最小值、最大值、均值、标准差；第二个统计每日所有地点的风速的最小值、最大值、均值、标准差。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题13-将数据下采样，每地每年只保留一个样本数据-待解决"><span class="toc-text">问题13. 将数据下采样，每地每年只保留一个样本数据 待解决</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回答问题14-17导入数据，给该数据分配一个变量iris"><span class="toc-text">回答问题14~17导入数据，给该数据分配一个变量iris.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题14-该数据中缺失了列名，请按照下面给出的名称添加。"><span class="toc-text">问题14. 该数据中缺失了列名，请按照下面给出的名称添加。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题15-1）将10-29行-‘petal-length’列数据设为Nan；2）再将其设为1-0-【请分步操作，保留第1）步结果】"><span class="toc-text">问题15. 1）将10 ~ 29行 ‘petal_length’列数据设为Nan；2）再将其设为1.0 【请分步操作，保留第1）步结果】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题16-删掉class列"><span class="toc-text">问题16. 删掉class列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题17-1）将前3行所有数值设为Nan；2）删掉有缺失值的行【请分步操作，保留第1）步结果】"><span class="toc-text">问题17. 1）将前3行所有数值设为Nan；2）删掉有缺失值的行【请分步操作，保留第1）步结果】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回答问题18-20导入数据‘06-US-Baby-Names-right-csv’，给该数据分配一个变量baby-names"><span class="toc-text">回答问题18 ~ 20导入数据‘06_US_Baby_Names_right.csv’，给该数据分配一个变量baby_names.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题18-男性名字多还是女性名字多"><span class="toc-text">问题18. 男性名字多还是女性名字多?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题19-最常见的名字是？"><span class="toc-text">问题19. 最常见的名字是？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题20-最少见的名字出现了多少次？有多少个名字是最少见的？"><span class="toc-text">问题20. 最少见的名字出现了多少次？有多少个名字是最少见的？</span></a></div>
+</div>
 
 
 
+    
+    
+    
+<hr>
+<div class="social-link sidebar-item">
+  <p><i class="far fa-address-card"></i> Social Links</p>
+  <ul>
+    
+    <li><i class="fab fa-github"></i> <a href="https://github.com/mt831" target="_blank">GitHub</a></li>
+    
+  </ul>
+</div>
 
 
-  
+    
+    
+  </div>
+</aside>
 
 
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="back-to-top">
+      <a id="back-to-top"><i class="fas fa-angle-double-up"></i></a>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">John Doe</span>
+          <span class="year"><i class="far fa-copyright"></i> 2018-4-1 - 2018</span>
+          
+        </div>
+        
+        
+<div class="busuanzi">
+  <span id="busuanzi_container_site_pv"><i class="fas fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+  <span id="busuanzi_container_site_uv"><i class="fas fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+  <span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i> <span id="busuanzi_value_page_pv"></span></span>
+</div>
 
 
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于 <i class="fab fa-github-alt"></i> <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-</body>
+  </body>
 </html>

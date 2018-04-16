@@ -1,663 +1,337 @@
 <!DOCTYPE html>
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-
-
-<meta name="description" content="实战1.一起来打怪之 python 基础与进阶练习题 QQ答疑关于竞赛Q：竞赛情况A：竞赛最有名的是Kaggle，国内是阿里天池。获奖情况每个比赛不一样，有的前10，有的前6。一般能到前1%就很不错了。竞赛爬取结果: 土豆的github 如何学习Q：边听课边在实验室环境里的notebook上做笔记，两个窗口不能同时开着，只能切换运行A：可同时打开notebook同时做笔记。但是建议注意力放在听课上">
-<meta property="og:type" content="article">
-<meta property="og:title" content="实战1.QQ答疑">
-<meta property="og:url" content="http://yoursite.com/2018/04/01/实战1-QQ答疑/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="实战1.一起来打怪之 python 基础与进阶练习题 QQ答疑关于竞赛Q：竞赛情况A：竞赛最有名的是Kaggle，国内是阿里天池。获奖情况每个比赛不一样，有的前10，有的前6。一般能到前1%就很不错了。竞赛爬取结果: 土豆的github 如何学习Q：边听课边在实验室环境里的notebook上做笔记，两个窗口不能同时开着，只能切换运行A：可同时打开notebook同时做笔记。但是建议注意力放在听课上">
-<meta property="og:updated_time" content="2018-04-04T11:00:43.292Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="实战1.QQ答疑">
-<meta name="twitter:description" content="实战1.一起来打怪之 python 基础与进阶练习题 QQ答疑关于竞赛Q：竞赛情况A：竞赛最有名的是Kaggle，国内是阿里天池。获奖情况每个比赛不一样，有的前10，有的前6。一般能到前1%就很不错了。竞赛爬取结果: 土豆的github 如何学习Q：边听课边在实验室环境里的notebook上做笔记，两个窗口不能同时开着，只能切换运行A：可同时打开notebook同时做笔记。但是建议注意力放在听课上">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/2018/04/01/实战1-QQ答疑/"/>
-
-
-
-
-
-  <title>实战1.QQ答疑 | Hexo</title>
-  
-
-
-
-
-
-
-
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="">
-
-  
-  
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     
-  
-
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
     
+    
+    
+    <meta name="keywords" content="python, R, math, bioinformatics">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
 
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>实战1.QQ答疑 | Hexo</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang=""  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">Hexo</a></h1>
+        <h2 class="subtitle"></h2>
+      </div>
+      <div class="logo">
+        <img src="/images/ARIA_logo.png" alt="logo">
+      </div>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Startseite
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archiv
-          </a>
-        </li>
-      
-
-      
-    </ul>
-  
-
-  
+    
+<nav id="nav" class="nav">
+  <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
+  <ul id="menu">
+    
+    <li><a href="/">Home</a></li>
+    
+    <li><a href="/archives/">Archives</a></li>
+    
+    <li><a href="/categories/">Categories</a></li>
+    
+    <li><a href="/tags/">Tags</a></li>
+    
+    <li><a href="/about/">About</a></li>
+    
+  </ul>
 </nav>
 
 
+  </div>
+</header>
 
- </div>
-    </header>
 
     <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
             
-
-  <div id="posts" class="posts-expand">
-    
-
+<section id="post" class="post">
   
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/01/实战1-QQ答疑/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
+  <article class="post-container card " itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/01/实战1-QQ答疑/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="John Doe">
+       <meta itemprop="description" content="">
+       <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="Hexo">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+       <span class="">实战1.QQ答疑</span>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-01T21:13:58+08:00">2018-04-01</time>
+        </span>
         
         
-          <h1 class="post-title" itemprop="name headline">实战1.QQ答疑</h1>
         
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Veröffentlicht am</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-01T21:13:58+08:00">
-                2018-04-01
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <h4 id="实战1-一起来打怪之-python-基础与进阶练习题-QQ答疑"><a href="#实战1-一起来打怪之-python-基础与进阶练习题-QQ答疑" class="headerlink" title="实战1.一起来打怪之 python 基础与进阶练习题 QQ答疑"></a>实战1.一起来打怪之 python 基础与进阶练习题 QQ答疑</h4><h5 id="关于竞赛"><a href="#关于竞赛" class="headerlink" title="关于竞赛"></a>关于竞赛</h5><p>Q：竞赛情况<br>A：竞赛最有名的是Kaggle，国内是阿里天池。获奖情况每个比赛不一样，有的前10，有的前6。一般能到前1%就很不错了。竞赛爬取结果: <a href="https://github.com/iphysresearch/DataSciComp" target="_blank" rel="noopener">土豆的github</a></p>
+        
+        <span class="post-meta-divider"> | </span>
+        
+        
+        
+      </div>
+    </header>
+    <main class="post-body" itemprop="articleBody">
+      <h4 id="实战1-一起来打怪之-python-基础与进阶练习题-QQ答疑"><a href="#实战1-一起来打怪之-python-基础与进阶练习题-QQ答疑" class="headerlink" title="实战1.一起来打怪之 python 基础与进阶练习题 QQ答疑"></a>实战1.一起来打怪之 python 基础与进阶练习题 QQ答疑</h4><h5 id="关于竞赛"><a href="#关于竞赛" class="headerlink" title="关于竞赛"></a>关于竞赛</h5><p>Q：竞赛情况<br>A：竞赛最有名的是Kaggle，国内是阿里天池。获奖情况每个比赛不一样，有的前10，有的前6。一般能到前1%就很不错了。竞赛爬取结果: <a href="https://github.com/iphysresearch/DataSciComp" target="_blank" rel="noopener">土豆的github</a></p>
 <h5 id="如何学习"><a href="#如何学习" class="headerlink" title="如何学习"></a>如何学习</h5><p>Q：边听课边在实验室环境里的notebook上做笔记，两个窗口不能同时开着，只能切换运行<br>A：可同时打开notebook同时做笔记。但是建议注意力放在听课上面，用笔和纸速记。可用markdown做笔记。<br>A：问题出现，先google,bing检索，常见社区Stack Overflow</p>
 <h5 id="运行平台"><a href="#运行平台" class="headerlink" title="运行平台"></a>运行平台</h5><p>Q：jupyter notebook执行ternimal无法显示<br>A：广告拦截软件拦截，关掉广告拦截软件或者换一个浏览器试试。chrome和firefox都能很好的运行稀牛的实验环境。<br>Q：只要能用anaconda里的jupyter打开发的ipynb的文件就说明配置没错吗<br>A：anaconda应该没有什么需要编辑的，只要装上了，就能启动jupyter<br>Q：jupyter里面有类似上下键翻录历史命令/代码的快捷键？<br>A：shift+enter ctrl+enter<br>Q：在terminal里面输入dir，然后下一条命令还要输入dir，winh和linux下都可以用键盘上下翻的键显示，ipython也可以，notebook里面不知道有没有<br>A：木有<br>Q：将notebook里的cell 转换为markdown格式是什么快捷键<br>A：选中单元格+m<br>Q：本地安装了jupyter ，但是terminal里运行jupyter notebook 每次给出本地地址，需要手动复制到浏览器运行，难道不应该是直接弹出浏览器运行吗？ 怎么设置，是要修改环境变量吗？怎么设置？<br>A：打开失败了，检查一下里面浏览器的设置<br>Q：在jupter里写的markdown可以变成文本吗<br>A：可以点左上角，file——&gt;download as，里面有很多选项<br>Q：shell查看文件<br>A：!head</p>
 <h5 id="python基础"><a href="#python基础" class="headerlink" title="python基础"></a>python基础</h5><p>Q：文件读取多语言的文件怎么处理<br>A：建议使用python3，python3对中文支持要好一些，特别爬虫的时候感觉最明显。如果还不行的话建议，在写入文件和读取文件的时候，跟上字符编码。未解决，可能和win10系统相关。<br>Q：input 可以输入字符串列表吗<br>A：input来输入int，raw_input来输入string。可参考：<a href="https://blog.csdn.net/qingquanyingyue/article/details/77964990" target="_blank" rel="noopener">Python输入字符串转列表</a><br>Q：导入了seaborn，为什么画出来的图还是matplotlib默认风格的<br>A：代码用的pylot，sns.set()执行以下，再绘图<br>Q：不定长度参数的函数中 * 号是指针的意思？<br>A：不是，廖学峰的官方网站python3: <a href="https://www.liaoxuefeng.com/wiki/001374738125095c955c1e6d8bb493182103fac9270762a000/001374738449338c8a122a7f2e047899fc162f4a7205ea3000" target="_blank" rel="noopener">参数小结</a></p>
 <h5 id="爬虫"><a href="#爬虫" class="headerlink" title="爬虫"></a>爬虫</h5><p>Q：静态数据获取视频中查看元素之后在filter里填了东西是回车就可以找到了吗 xpath表达式<br>A：取东西一般有两种类型。一种是文本，最后需要接一个text()来取文本。另外一种是取属性。可查看：<a href="http://www.w3school.com.cn/xpath/xpath_syntax.asp" target="_blank" rel="noopener">xpath语法</a><br>Q：浏览器打开检查元素，是直接在filter里填xpath就回高亮就会跳到我要找的文本或属性吗？<br>A：是的，只要写对了，就会高亮。直接使用chrome右键copy xpath得到的，可读性不高，可用性不强。<br>Q：怎样的xpath算是可读性比较强的<br>A：简洁、高效。</p>
 <p><strong><em>以上来自<a href="www.xiniuedu.com">稀牛学院</a>数据科学实训营 助教易龙老师及学员们的QQ答疑</em></strong></p>
 
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
+    </main>
     <footer class="post-footer">
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2018/04/01/L1.来自google的专业python指南/" rel="next" title="来自google的专业python指南">
-                <i class="fa fa-chevron-left"></i> 来自google的专业python指南
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/02/爬虫：静态网站数据获取/" rel="prev" title="爬虫：静态网站数据获取">
-                爬虫：静态网站数据获取 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
       
       
     </footer>
-  </div>
-  
-  
-  
   </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-          </div>
-          
-
-
-          
-
   
-
-
-
-        </div>
-        
-          
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
+  <div class="post-nav">
     
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Inhaltsverzeichnis
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Übersicht
-          </li>
-        </ul>
-      
-
-      <section class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <p class="site-author-name" itemprop="name">John Doe</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">12</span>
-                  <span class="site-state-item-name">Artikel</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-
-          </nav>
-
-          
-
-          
-
-          
-          
-
-          
-          
-
-          
-
-        </div>
-      </section>
-
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#实战1-一起来打怪之-python-基础与进阶练习题-QQ答疑"><span class="nav-number">1.</span> <span class="nav-text">实战1.一起来打怪之 python 基础与进阶练习题 QQ答疑</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#关于竞赛"><span class="nav-number">1.1.</span> <span class="nav-text">关于竞赛</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#如何学习"><span class="nav-number">1.2.</span> <span class="nav-text">如何学习</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#运行平台"><span class="nav-number">1.3.</span> <span class="nav-text">运行平台</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#python基础"><span class="nav-number">1.4.</span> <span class="nav-text">python基础</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#爬虫"><span class="nav-number">1.5.</span> <span class="nav-text">爬虫</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
-      
-
-      
-
+    <div class="post-nav-next post-nav-item">
+      <a href="/2018/04/01/L1.来自google的专业python指南/" rel="next" title="来自google的专业python指南">
+        <i class="fas fa-angle-left"></i>
+        <span class="nav-title">来自google的专业python指南</span>
+      </a>
     </div>
-  </aside>
+    
+    
+    <div class="post-nav-prev post-nav-item">
+      <a href="/2018/04/02/爬虫：静态网站数据获取/" rel="prev" title="爬虫：静态网站数据获取">
+        <span class="nav-title">爬虫：静态网站数据获取</span>
+        <i class="fas fa-angle-right"></i>
+      </a>
+    </div>
+    
+  </div>
+  
+  
+  
 
-
-        
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
-
+<div class="comments" id="comments">
   
 </div>
 
 
-  <div class="powered-by">Erstellt mit  <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
 
+  
+</section>
 
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
-
-
-
-
-        
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
-        
-      </div>
-    
-
-    
-
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
+    </div>
   </div>
-
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
+  <div class="search-result-box" id="search-result"></div>
   
   
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+<div class="info sidebar-item" id="info">
   
-
+  <img class="author-avatar" src="/images/avatar.png" alt="John Doe">
   
+  <p class="author-name">John Doe</p>
+  <p class="author-description"> </p>
+  <div class="site-count">
+    
+    <div class="archives-count">
+      <p>Archives</p>
+      <p><a href="/archives/">12</a></p>
+    </div>
+    
+    
+    
+    <span class="site-count-divider"> | </span>
+    
+    <div class="categories-count">
+      <p>Categories</p>
+      <p><a href="/categories/">0</a></p>
+    </div>
+    
+    
+    
+    <span class="site-count-divider"> | </span>
+    
+    <div class="tags-count">
+      <p>Tags</p>
+      <p><a href="/tags/">0</a></p>
+    </div>
+    
+  </div>
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i> RSS</a>
+  </div>
   
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
+</div>
 
 
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
+  <div class="sidebar-sticky">
+    
+    
 
 
 
 
-	
+<hr>
+<div class="post-toc sidebar-item" id="toc-div">
+  <p><i class="fas fa-list-ol"></i> Table of Contents</p>
+  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#实战1-一起来打怪之-python-基础与进阶练习题-QQ答疑"><span class="toc-text">实战1.一起来打怪之 python 基础与进阶练习题 QQ答疑</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#关于竞赛"><span class="toc-text">关于竞赛</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#如何学习"><span class="toc-text">如何学习</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#运行平台"><span class="toc-text">运行平台</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#python基础"><span class="toc-text">python基础</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#爬虫"><span class="toc-text">爬虫</span></a></li></ol></li></ol></div>
+</div>
 
 
 
+    
+    
+    
+<hr>
+<div class="social-link sidebar-item">
+  <p><i class="far fa-address-card"></i> Social Links</p>
+  <ul>
+    
+    <li><i class="fab fa-github"></i> <a href="https://github.com/mt831" target="_blank">GitHub</a></li>
+    
+  </ul>
+</div>
 
 
-  
+    
+    
+  </div>
+</aside>
 
 
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="back-to-top">
+      <a id="back-to-top"><i class="fas fa-angle-double-up"></i></a>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">John Doe</span>
+          <span class="year"><i class="far fa-copyright"></i> 2018-4-1 - 2018</span>
+          
+        </div>
+        
+        
+<div class="busuanzi">
+  <span id="busuanzi_container_site_pv"><i class="fas fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+  <span id="busuanzi_container_site_uv"><i class="fas fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+  <span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i> <span id="busuanzi_value_page_pv"></span></span>
+</div>
 
 
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+          托管于 <i class="fab fa-github-alt"></i> <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>
+          
+        </div>
+        <div class="powered-by">
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 
-
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
-</body>
+  </body>
 </html>
