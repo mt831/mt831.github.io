@@ -3,6 +3,15 @@
   
     
     <entry>
+      <title>L5.matplotlib可视化</title>
+      <link href="/2018/04/22/L5-matplotlib%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+      <url>/2018/04/22/L5-matplotlib%E5%8F%AF%E8%A7%86%E5%8C%96/</url>
+      <content type="html"><![CDATA[<h5 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h5><p>关联分析、数值比较：散点图、曲线图<br>分布分析：灰度图、密度图<br>涉及分类的分析：柱状图、箱式图</p><p><strong>写Test2部分加深理解</strong></p>]]></content>
+      
+      
+    </entry>
+    
+    <entry>
       <title></title>
       <link href="/2018/04/15/%E5%AE%9E%E6%88%984.QQ%E7%AD%94%E7%96%91/"/>
       <url>/2018/04/15/%E5%AE%9E%E6%88%984.QQ%E7%AD%94%E7%96%91/</url>
