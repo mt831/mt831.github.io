@@ -123,6 +123,69 @@
   
   <article class="index-post card" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/03/爬虫：模拟登陆和动态网站抓取/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="mt">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Hexo">
+      </span>
+    </div>
+    <header class="post-header">
+      <h2 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2018/04/03/爬虫：模拟登陆和动态网站抓取/" itemprop="url">爬虫：模拟登陆和动态网站抓取 要点记录</a>
+      </h2>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-03T19:48:07+08:00">2018-04-03</time>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+          
+          <span class="post-comment-count">
+            <i class="far fa-comments"></i> <a href="/2018/04/03/爬虫：模拟登陆和动态网站抓取/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/03/爬虫：模拟登陆和动态网站抓取/" itemprop="commentsCount"></span></a>
+          </span>
+          
+        
+      </div>
+    </header>
+    <main class="post-body" itemprop="articleBody">
+      
+      <h5 id="豆瓣模拟登录（google浏览器）"><a href="#豆瓣模拟登录（google浏览器）" class="headerlink" title="豆瓣模拟登录（google浏览器）"></a>豆瓣模拟登录（google浏览器）</h5><p><strong>存在问题？</strong> 登录账号和密码、保持登录状态（跨请求地保持某些参数）、图形验证码<br><strong>操作</strong>：在检查项的Network下查看登录信息，点击login，Header下From data内有表单信息</p>
+<blockquote>
+<p>source: None<br>redir: <a href="https://www.douban.com/" target="_blank" rel="noopener">https://www.douban.com/</a> #登陆页面<br>form_email: test2 #用户邮箱<br>form_password: 111111 #密码<br>captcha-solution: potato #验证码，豆瓣有验证码图库，比对图片ID号<br>captcha-id: tljqzo0Gv3aYUpIarqXaDBAg:en #验证码ID XPath去取<br>login: 登录</p>
+</blockquote>
+<p>captcha_img_url = selector.xpath(‘//img[@id=”captcha_image”]//@src’)<br><strong>结果为空，待解决</strong></p>
+<h5 id="scrapy-命令行端执行脚本"><a href="#scrapy-命令行端执行脚本" class="headerlink" title="scrapy 命令行端执行脚本"></a>scrapy 命令行端执行脚本</h5><p><strong>待练习</strong><br>[Scrapy简单入门及实例讲解][<a href="https://www.cnblogs.com/kongzhagen/p/6549053.html" target="_blank" rel="noopener">https://www.cnblogs.com/kongzhagen/p/6549053.html</a>]<br>[Scrapy安装、爬虫入门教程、爬虫实例（豆瓣电影爬虫）][<a href="http://www.cnblogs.com/Shirlies/p/4536880.html" target="_blank" rel="noopener">http://www.cnblogs.com/Shirlies/p/4536880.html</a>]</p>
+
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/python/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> python</a>
+        
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/03/L2.Pandas-Series-DataFrame/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="mt">
@@ -167,6 +230,18 @@
       
     </main>
     <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/python/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> python</a>
+        
+        
+      </div>
       
     </footer>
   </article>
@@ -227,6 +302,18 @@
     </main>
     <footer class="post-footer">
       
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/python/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> python</a>
+        
+        
+      </div>
+      
     </footer>
   </article>
   
@@ -277,6 +364,18 @@
       
     </main>
     <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/python/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> python</a>
+        
+        
+      </div>
       
     </footer>
   </article>
@@ -347,6 +446,234 @@
       
     </main>
     <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/python/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> python</a>
+        
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/05/一个MeDIP-seq实战/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="mt">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Hexo">
+      </span>
+    </div>
+    <header class="post-header">
+      <h2 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2017/09/05/一个MeDIP-seq实战/" itemprop="url">一个MeDIP-seq实战</a>
+      </h2>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-09-05T19:10:14+08:00">2017-09-05</time>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+          
+          <span class="post-comment-count">
+            <i class="far fa-comments"></i> <a href="/2017/09/05/一个MeDIP-seq实战/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2017/09/05/一个MeDIP-seq实战/" itemprop="commentsCount"></span></a>
+          </span>
+          
+        
+      </div>
+    </header>
+    <main class="post-body" itemprop="articleBody">
+      
+      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">wget ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP018/SRP018845/SRR764931/SRR764931.sra</span><br><span class="line">wget ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP018/SRP018845/SRR764932/SRR764932.sra</span><br><span class="line">ls *sra |while read id; do fastq-dump --gzip --split-3 -A $id;done</span><br><span class="line">bowtie2 -p 6 -x /home/tingm/refdata/biotree_refdata/bowtie2_index/mm10/mm10 -U SRR764931.sra.fastq.gz | /home/tingm/software/samtools-1.3.1/samtools sort -O bam -o shGFP.bam</span><br><span class="line">bowtie2 -p 6 -x /home/tingm/refdata/biotree_refdata/bowtie2_index/mm10/mm10 -U SRR764932.sra.fastq.gz | /home/tingm/software/samtools-1.3.1/samtools sort -O bam -o shDnmt3L.bam</span><br><span class="line"></span><br><span class="line">/home/tingm/software/samtools-1.3.1/samtools index shDnmt3L.bam</span><br><span class="line">/home/tingm/software/samtools-1.3.1/samtools index shGFP.bam</span><br><span class="line"></span><br><span class="line">macs2 callpeak -t shDnmt3L.bam -m 10 30 -p 1e-5 -f BAM -g mm -n shDnmt3L 2&gt;shDnmt3L.masc2.log</span><br><span class="line">macs2 callpeak -t shGFP.bam -m 10 30 -p 1e-5 -f BAM -g mm -n shGFP 2&gt;shGFP.masc2.log</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">~/.local/bin/bamCoverage -b shDnmt3L.bam -o shDnmt3L.bw #-p 10 --normalizeUsingRPKM</span><br><span class="line">~/.local/bin/bamCoverage -b shGFP.bam -o shGFP.bw #-p 10 --normalizeUsingRPKM</span><br><span class="line"></span><br><span class="line">~/.local/bin/computeMatrix reference-point --referencePoint TSS -b 10000 -a 10000 -R /home/tingm/refdata/biotree_refdata/bowtie2_index/mm10_refSeq.bed -S shDnmt3L.bw --skipZeros -o matrix1_shDnmt3L_TSS.gz</span><br><span class="line">~/.local/bin/plotHeatmap -m matrix1_shDnmt3L_TSS.gz -out shDnmt3L.png</span><br><span class="line"></span><br><span class="line">~/.local/bin/computeMatrix reference-point --referencePoint TSS -b 10000 -a 10000 -R /home/tingm/refdata/biotree_refdata/bowtie2_index/mm10_refSeq.bed -S shGFP.bw --skipZeros -o matrix1_shGFP_TSS.gz</span><br><span class="line">~/.local/bin/plotHeatmap -m matrix1_shGFP_TSS.gz -out shGFP.png</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-411a344663d438d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="all files"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-6a55ccb7f1d36457.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="shDnmt3L.png"><br>不知道结果对不对</p>
+<blockquote>
+<p>MeDIP-seq 跟ChIP-seq的分析手段是一模一样的，同理hMeDIP-seq，caMeDIP-seq等等，都没有本质上的区别，只是用的抗体不一样而已<br><a href="http://www.bio-info-trainee.com/2352.html" target="_blank" rel="noopener">一个MeDIP-seq实战</a></p>
+</blockquote>
+
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
+        
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/02/一个ChIP-seq实战/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="mt">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Hexo">
+      </span>
+    </div>
+    <header class="post-header">
+      <h2 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2017/09/02/一个ChIP-seq实战/" itemprop="url">一个ChIP-seq实战</a>
+      </h2>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-09-02T20:10:00+08:00">2017-09-02</time>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+          
+          <span class="post-comment-count">
+            <i class="far fa-comments"></i> <a href="/2017/09/02/一个ChIP-seq实战/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2017/09/02/一个ChIP-seq实战/" itemprop="commentsCount"></span></a>
+          </span>
+          
+        
+      </div>
+    </header>
+    <main class="post-body" itemprop="articleBody">
+      
+      <p>###软件准备<br>已有sratoolkit,fastqc,bowtie2,samtools,htseq-count,bedtools,R,Rstudio<br>下载macs2,deeptools</p>
+<blockquote>
+<p><a href="https://bedtools.readthedocs.io/en/latest/content/installation.html" target="_blank" rel="noopener">bedtools官方下载参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#download bedtools</span><br><span class="line">wget https://github.com/arq5x/bedtools2/releases/download/v2.25.0/bedtools-2.25.0.tar.gz</span><br><span class="line">tar -zxvf bedtools-2.25.0.tar.gz</span><br><span class="line">cd bedtools2</span><br><span class="line">make</span><br><span class="line">echo &apos;PATH=$PATH:/home/tingm/practise/biosoft/bedtools2/bin&apos; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br><span class="line">su yum install BEDTools #root</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#download pyBigWig</span><br><span class="line">pip install pyBigWig --user</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><a href="https://github.com/fidelram/deepTools" target="_blank" rel="noopener">deeptools官方网址</a><br><a href="https://deeptools.readthedocs.io/en/latest/content/example_usage.html" target="_blank" rel="noopener">deeptools官方使用教程</a><br><a href="http://www.bio-info-trainee.com/2136.html" target="_blank" rel="noopener">中文教程</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#download deeptools </span><br><span class="line">conda install deeptools #conda</span><br><span class="line">git clone https://github.com/fidelram/deepTools</span><br><span class="line">cd deepTools</span><br><span class="line">python setup.py install --user</span><br><span class="line">~/.local/bin/deeptools</span><br></pre></td></tr></table></figure></p>
+<p>centos本身python为2.6版本，且无pip 进行以下操作<br>参考 <a href="https://my.oschina.net/vaero/blog/210486" target="_blank" rel="noopener">https://my.oschina.net/vaero/blog/210486</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#download pip 先安装python2.7并设置软连接，指定yum</span><br><span class="line">python</span><br><span class="line">#安装setuptools</span><br><span class="line">wget https://pypi.python.org/packages/26/d1/dc7fe14ce4a3ff3faebf1ac11350de4104ea2d2a80c98393b55c84362b0c/setuptools-32.1.0.tar.gz</span><br><span class="line">tar zxvf setuptools-32.1.0.tar.gz</span><br><span class="line">cd setuptools-32.1.0/</span><br><span class="line">python setup.py build</span><br><span class="line">sudo python setup.py install</span><br><span class="line">#安装pip 参考https://my.oschina.net/vaero/blog/210486</span><br><span class="line">wget --no-check-certificate  https://pypi.python.org/packages/11/b6/abcb525026a4be042b486df43905d6893fb04f05aac21c32c638e939e447/pip-9.0.1.tar.gz</span><br><span class="line">tar zxvf pip-9.0.1.tar.gz</span><br><span class="line">cd pip-9.0.1</span><br><span class="line">python setup.py install(error)</span><br><span class="line">yum install openssl openssl-devel -y</span><br><span class="line">make  # Python-2.7.6目录</span><br><span class="line">make install</span><br><span class="line">easy_install -i http://pypi.douban.com/simple pip</span><br><span class="line">sudo python setup.py install</span><br><span class="line">pip</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://liulab.dfci.harvard.edu/MACS/" target="_blank" rel="noopener">MACS2官方网址</a><br><a href="https://pypi.python.org/pypi/MACS2/2.1.1.20160309" target="_blank" rel="noopener">https://pypi.python.org/pypi/MACS2/2.1.1.20160309</a><br><a href="http://www.bio-info-trainee.com/680.html" target="_blank" rel="noopener">MACS2中文教程</a><br>centos python 2.6 上未安装成功<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">pip install MACS2 #error</span><br><span class="line">wget https://pypi.python.org/packages/9f/99/a8ac96b357f6b0a6f559fe0f5a81bcae12b98579551620ce07c5183aee2c/MACS2-2.1.1.20160309.tar.gz</span><br><span class="line">tar zxvf MACS2-2.1.1.20160309.tar.gz</span><br><span class="line">cd MACS2-2.1.1.20160309</span><br><span class="line">python setup.py install --user </span><br><span class="line">#error CRITICAL:Numpy must be installed!</span><br><span class="line">pip install numpy # python 2.7存在问题</span><br><span class="line">~/.local/bin/macs2 --help #未安装成功</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<p>###bed下载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl &apos;https://genome.ucsc.edu/cgi-bin/hgTables?hgsid=603641571_MKLxB78UAcjaI3oj5YiFCA0Ms86o&amp;boolshad.hgta_printCustomTrackHeaders=0&amp;hgta_ctName=tb_refGene&amp;hgta_ctDesc=table+browser+query+on+refGene&amp;hgta_ctVis=pack&amp;hgta_ctUrl=&amp;fbQual=whole&amp;fbUpBases=200&amp;fbExonBases=0&amp;fbIntronBases=0&amp;fbDownBases=200&amp;hgta_doGetBed=get+BED&apos; &gt; mm10_refSeq.bed</span><br></pre></td></tr></table></figure></p>
+<p>###分析过程 bowtie索引下载要注意，重新下载解压后未报错<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for x in $(seq 4 9);do ascp -T -l 200M -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh --host=ftp-private.ncbi.nlm.nih.gov --user=anonftp --mode=recv /sra/sra-instant/reads/ByStudy/sra/SRP/SRP017/SRP017311/SRR62020&quot;$x&quot;/SRR62020&quot;$x&quot;.sra . ;done</span><br><span class="line">for i in `seq 4 9`;do fastq-dump --gzip --split-3 -A SRR62020$&#123;i&#125;.sra;done</span><br><span class="line">mkdir fastqc_out</span><br><span class="line">fastqc -o fastqc_out --extract *.fastq.gz</span><br><span class="line">ls *.fastq.gz |while read id;do (bowtie2 -p 6 -3 5 --local -x /home/tingm/refdata/biotree_refdata/bowtie2_index/mm10/mm10 -U $&#123;id&#125;| /home/tingm/software/samtools-1.3.1/samtools sort -O bam -o $&#123;id%%.*&#125;.bam);done</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-799435398bc98a86.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="sra"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-1a1409af497bbe9f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="fastq.gz"></p>
+<p>###peaking calling<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">macs2 callpeak -c IgGold.bam -t suz12.bam -m 10 30 -p 1e-5 -f BAM -g mm -n suz12 2&gt;suz12.masc2.log</span><br><span class="line">macs2 callpeak -c IgGold.bam -t ring1B.bam -m 10 30 -p 1e-5 -f BAM -g mm -n ring1B 2&gt;ring1B.masc2.log</span><br><span class="line">macs2 callpeak -c IgG.bam -t cbx7.bam -m 10 30 -p 1e-5 -f BAM -g mm -n cbx7 2&gt;cbx7.masc2.log</span><br><span class="line">macs2 callpeak -c IgG.bam -t RYBP.bam -m 10 30 -p 1e-5 -f BAM -g mm -n RYBP 2&gt;RYBP.masc2.log</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-653ad38751fdd141.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="bed 比参考资料大很多原因？"></p>
+<p>####bam转换成bw文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">ls *.bam | while read id</span><br><span class="line">do</span><br><span class="line">file=$(basename $id )</span><br><span class="line">sample=$&#123;file%%.*&#125;</span><br><span class="line">echo $sample</span><br><span class="line">/home/tingm/software/samtools-1.3.1/samtools index $id $id.bai</span><br><span class="line">~/.local/bin/bamCoverage -b $id -o $sample.bw ## 这里有个参数，-p 10 --normalizeUsingRPKM</span><br><span class="line">~/.local/bin/computeMatrix reference-point --referencePoint TSS -b 10000 -a 10000 -R /home/tingm/refdata/biotree_refdata/bowtie2_index/mm10_refSeq.bed -S $sample.bw --skipZeros -o matrix1_$&#123;sample&#125;_TSS.gz --outFileSortedRegions regions1_$&#123;sample&#125;_genes.bed</span><br><span class="line">~/.local/bin/plotHeatmap -m matrix1_$&#123;sample&#125;_TSS.gz -out $&#123;sample&#125;.png</span><br><span class="line">done</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-d600963c06989821.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="bw"></p>
+<p>####画基因的TSS附近的和genebody附近的profile和heatmap图<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">~/.local/bin/computeMatrix reference-point -p 10 --referencePoint TSS -b 2000 -a 2000 -S *bw -R /home/tingm/refdata/biotree_refdata/bowtie2_index/mm10_refSeq.bed --skipZeros -o tmp4.mat.gz</span><br><span class="line">~/.local/bin/plotHeatmap -m tmp4.mat.gz -out tmp4.merge.png</span><br><span class="line">~/.local/bin/plotProfile --dpi 720 -m tmp4.mat.gz -out tmp4.profile.pdf --plotFileFormat pdf --perGroup</span><br><span class="line">~/.local/bin/plotHeatmap --dpi 720 -m tmp4.mat.gz -out tmp4.merge.pdf --plotFileFormat pdf</span><br><span class="line">修改了bed文件地址</span><br><span class="line">~/.local/bin/computeMatrix scale-regions -p 6 -S *bw -R /home/tingm/my_refdata/biotree_refdata/bowtie2_index/mm10_refSeq.bed -b 3000 -a 3000 -m 5000 --skipZeros -o tmp5.mat.gz</span><br><span class="line">~/.local/bin/plotHeatmap -m tmp5.mat.gz -out tmp5.merge.png</span><br><span class="line">~/.local/bin/plotProfile --dpi 720 -m tmp5.mat.gz -out tmp5.profile.pdf --plotFileFormat pdf --perGroup</span><br><span class="line">~/.local/bin/plotHeatmap --dpi 720 -m tmp5.mat.gz -out tmp5.merge.pdf --plotFileFormat pdf</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-31b32871a5651511.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="profile"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-197a1c9d806d58ae.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tmp4.merge.png"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-cac3a547fc9a9b63.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="profile"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-002424d613ddd9a1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="tmp5.merge.png"></p>
+<blockquote>
+<p><a href="https://my.oschina.net/vaero/blog/210486" target="_blank" rel="noopener">CentOS升级Python2.7及安装pip</a><br><a href="https://mp.weixin.qq.com/s/iHnogzM6QSu8tlImE26_Wg" target="_blank" rel="noopener">一文学会ChIP-Seq数据分析（想想也不可能）</a><br><a href="https://mp.weixin.qq.com/s/_A0rHldzEgVk7bgwt457qQ" target="_blank" rel="noopener">ChIP-seq实战分析</a><br><a href="https://mp.weixin.qq.com/s/SK6GVqSTAwZCirMP1GlRHQ" target="_blank" rel="noopener">生物信息学常见1000个软件的安装代码！</a><br><a href="http://www.biotrainee.com/thread-2013-1-1.html" target="_blank" rel="noopener">ChIP-seq基础入门传送门</a></p>
+</blockquote>
+
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
+        
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/28/一个RNA-seq实战/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="mt">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Hexo">
+      </span>
+    </div>
+    <header class="post-header">
+      <h2 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2017/08/28/一个RNA-seq实战/" itemprop="url">一个RNA-seq实战</a>
+      </h2>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-08-28T20:09:43+08:00">2017-08-28</time>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+          
+          <span class="post-comment-count">
+            <i class="far fa-comments"></i> <a href="/2017/08/28/一个RNA-seq实战/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2017/08/28/一个RNA-seq实战/" itemprop="commentsCount"></span></a>
+          </span>
+          
+        
+      </div>
+    </header>
+    <main class="post-body" itemprop="articleBody">
+      
+      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#! usr/bin/bash</span><br><span class="line">set -u</span><br><span class="line">set -e</span><br><span class="line">set -o pipefail</span><br><span class="line">hg19_ref=~/fastq/hisat2_index/hg19/genome</span><br><span class="line">for x in `seq 677 680`;do ascp -T -l 200M -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh --host=ftp-private.ncbi.nlm.nih.gov --user=anonftp --mode=recv /sra/sra-instant/reads/ByStudy/sra/SRP/SRP029/SRP029245/SRR957&quot;$x&quot;/SRR957&quot;$x&quot;.sra .;done</span><br><span class="line">##ls *sra |while read id; do fastq-dump --split-3 $id;done</span><br><span class="line">ls *sra |while read id; do fastq-dump --gzip --split-3 -A $id ;done</span><br><span class="line">## ls *fastq |xargs fastqc -t 10</span><br><span class="line">ls *.fastq.gz|while read id;do(hisat2 -t -p 5 -x $hg19_ref -U $id 2&gt;$&#123;id%%.*&#125;.map.log | /home/tingm/software/samtools-1.3.1/samtools view -Sb  - &gt;$&#123;id%%.*&#125;.bam);done</span><br><span class="line">ls *.bam|while read id;do /home/tingm/software/samtools-1.3.1/samtools sort -n -@ 5 $id -o $&#123;id%%.*&#125;.Nsorted.bam;done</span><br><span class="line">ls *.Nsorted.bam |while read id;do htseq-count -f bam -s no -i gene_name $id ~/fastq/refdata/Genecode/gencode.v26lift37.annotation.gff3 1&gt;$&#123;id%%.*&#125;.geneCounts 2&gt;$&#123;id%%.*&#125;.HTseq.log;done</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-ef5cc558fa035ea6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="sra"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-ae125a7bba77e247.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="gz"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-4686ec7c0e85f6d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="map.log"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-f6963429b31bd0dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="bam Nsort.bam"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-db82a63d605483a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="genecounts"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-bcf87ea38bdef212.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="genecounts"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line">#download deseq</span><br><span class="line">source(&quot;http://bioconductor.org/biocLite.R&quot;)</span><br><span class="line">biocLite(&quot;DESeq&quot;)</span><br><span class="line">#载入R示范数据</span><br><span class="line">biocLite(&quot;pasilla&quot;)</span><br><span class="line">#查看r下载位置</span><br><span class="line">.libPaths()</span><br><span class="line">#转到pasilla下载位置</span><br><span class="line">setwd(&quot;/home/tingm/R/x86_64-pc-linux-gnu-library/3.2/pasilla/&quot;)</span><br><span class="line">#设置路径</span><br><span class="line">datafile =system.file(&quot;extdata/pasilla_gene_counts.tsv&quot;,package=&quot;pasilla&quot;)                                              </span><br><span class="line">#读入数据</span><br><span class="line">pasillaCounttable=read.table(datafile,header=TRUE,row.names=1)  </span><br><span class="line">dim(pasillaCounttable)      </span><br><span class="line">#差异分析</span><br><span class="line">pasillaDesign = data.frame(row.names = colnames(pasillaCounttable),condition = c(&quot;untreated&quot;,&quot;untreated&quot;,&quot;untreated&quot;,&quot;untreated&quot;,&quot;treated&quot;,&quot;treated&quot;,&quot;treated&quot;),libType = c(&quot;single-end&quot;,&quot;single-end&quot;,&quot;paired-end&quot;,&quot;paired-end&quot;,&quot;single-end&quot;,&quot;paired-end&quot;,&quot;paired-end&quot;)) </span><br><span class="line">de = newCountDataSet(pasillaCounttable,pasillaDesign[,1]) </span><br><span class="line">de=estimateSizeFactors(de)</span><br><span class="line">de=estimateDispersions(de)</span><br><span class="line">#res是表达量检测结果</span><br><span class="line">res=nbinomTest(de,&quot;untreated&quot;,&quot;treated&quot;)</span><br><span class="line">uniq=na.omit(res)</span><br><span class="line">#输出差异显著值</span><br><span class="line">sum(na.omit(res$padj&lt;0.05))</span><br><span class="line">#输出表格</span><br><span class="line">write.table(res,file=&quot;file.csv&quot;,sep=&quot;,&quot;)</span><br><span class="line"></span><br><span class="line">#数据分析代码</span><br><span class="line">library(DESeq)</span><br><span class="line">C1=read.table(&quot;control_1.geneCounts&quot;,row.names=1)</span><br><span class="line">C2=read.table(&quot;control_2.geneCounts&quot;,row.names=1)</span><br><span class="line">S1=read.table(&quot;siSUZ12_1.geneCounts&quot;,row.names=1)</span><br><span class="line">S2=read.table(&quot;siSUZ12_2.geneCounts&quot;,row.names=1)</span><br><span class="line">data=cbind(C1,C2,S1,S2)</span><br><span class="line">n=nrow(data)</span><br><span class="line">#删除后四行</span><br><span class="line">data&lt;-data[-c(58523:58527),]</span><br><span class="line">#差异分析</span><br><span class="line">colnames(data)=c(&quot;C1&quot;,&quot;C2&quot;,&quot;S1&quot;,&quot;S2&quot;)</span><br><span class="line">type=rep(c(&quot;C&quot;,&quot;S&quot;),c(2,2))</span><br><span class="line">de=newCountDataSet(data,type)</span><br><span class="line">de=estimateSizeFactors(de)#locfunc = genefilter :: shorth数据集中0太多</span><br><span class="line">de=estimateDispersions(de)</span><br><span class="line">res=nbinomTest(de,&quot;C&quot;,&quot;S&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># DESeq2 </span><br><span class="line">source(&quot;http://bioconductor.org/biocLite.R&quot;)</span><br><span class="line">biocLite(&quot;DESeq2&quot;)</span><br><span class="line">library(DESeq2)</span><br><span class="line">biocLite(&quot;limma&quot;)</span><br><span class="line">library(limma)</span><br><span class="line">library(pasilla)</span><br><span class="line">data(pasillaGenes)</span><br><span class="line">exprSet=counts(pasillaGenes)  ##做好表达矩阵</span><br><span class="line">group_list=pasillaGenes$condition##做好分组因子即可</span><br><span class="line">colData &lt;- data.frame(row.names=colnames(exprSet), group_list=group_list)</span><br><span class="line">dds &lt;- DESeqDataSetFromMatrix(countData = exprSet,</span><br><span class="line">colData = colData,design = ~ group_list)</span><br><span class="line">dds2 &lt;- DESeq(dds)  ##第二步，直接用DESeq函数即可</span><br><span class="line">resultsNames(dds2)</span><br><span class="line">res &lt;-  results(dds2, contrast=c(&quot;group_list&quot;,&quot;treated&quot;,&quot;untreated&quot;))</span><br><span class="line">## 提取你想要的差异分析结果，我们这里是treated组对untreated组进行比较</span><br><span class="line">resOrdered &lt;- res[order(res$padj),]</span><br><span class="line">resOrdered=as.data.frame(resOrdered)</span><br><span class="line"></span><br><span class="line">#实战数据分析</span><br><span class="line">source(&quot;http://bioconductor.org/biocLite.R&quot;)</span><br><span class="line">biocLite(&quot;org.Hs.eg.db&quot;)</span><br><span class="line">library(org.Hs.eg.db)</span><br><span class="line">keytypes(org.Hs.eg.db)</span><br><span class="line">tmp=select(org.Hs.eg.db,keys=res$id,columns=c(&quot;SYMBOL&quot;,&quot;ENTREZID&quot;,&quot;GENENAME&quot;,&quot;ENSEMBL&quot;), keytype=&quot;SYMBOL&quot;)</span><br><span class="line">#合并res和tmp</span><br><span class="line">res=merge(tmp,res,by.x=&quot;SYMBOL&quot;,by.y=&quot;id&quot;,all=TRUE)</span><br><span class="line">#go</span><br><span class="line">tmp=select(org.Hs.eg.db, keys=res$ENSEMBL, columns=&quot;GO&quot;, keytype=&quot;ENSEMBL&quot;)</span><br><span class="line">ensembl_go=unlist(tapply(tmp[,2],as.factor(tmp[,1]),function(x) paste(x,collapse =&quot;|&quot;),simplify =F))</span><br><span class="line">#为res加入go注释，</span><br><span class="line">res$go=ensembl_go[res$ENSEMBL]#为res加入一列go</span><br><span class="line">#写入all——data</span><br><span class="line">all_res=res</span><br><span class="line">write.csv(res,file=&quot;all_data.csv&quot;,row.names =F)</span><br><span class="line">uniq=na.omit(res)#删除无效基因</span><br><span class="line">sort_uniq=uniq[order(uniq$padj),]#按照矫正p值排序</span><br><span class="line">#写入排序后的all_data</span><br><span class="line">write.csv(res,file=&quot;all_data.csv&quot;,row.names =F)</span><br><span class="line">#标记上下调基因</span><br><span class="line">sort_uniq$up_down=ifelse(sort_uniq$baseMeanA&gt;sort_uniq$baseMeanB,&quot;up&quot;,&quot;down&quot;)</span><br><span class="line">#交换上下调基因列位置</span><br><span class="line">final_res=sort_uniq[,c(12,1:11)]</span><br><span class="line">#写出最后数据</span><br><span class="line">write.csv(final_res,file=&quot;final_annotation_gene_bedtools_sort_uniq.csv&quot;,row.names =F)</span><br><span class="line">#然后挑选出padj值小于0.05的数据来做富集</span><br><span class="line">tmp=select(org.Hs.eg.db, keys=sort_uniq[sort_uniq$padj&lt;0.05,1], columns=&quot;ENTREZID&quot;, keytype=&quot;SYMBOL&quot;)</span><br><span class="line">diff_ENTREZID=tmp$ENTREZID</span><br><span class="line">diff_SYMBOL=tmp$SYMBOL</span><br><span class="line">source(&quot;http://bioconductor.org/biocLite.R&quot;)</span><br><span class="line">biocLite(&quot;DOSE&quot;)</span><br><span class="line">biocLite(&quot;clusterProfiler&quot;)</span><br><span class="line">require(DOSE)</span><br><span class="line">require(clusterProfiler)</span><br><span class="line">diff_ENTREZID=na.omit(diff_ENTREZID)</span><br><span class="line">diff_SYMBOL=na.omit(diff_SYMBOL)</span><br><span class="line">ego &lt;-enrichGO(gene=diff_ENTREZID,OrgDb=org.Hs.eg.db,ont=&quot;CC&quot;,pvalueCutoff=0.05)  ##error</span><br><span class="line">ekk &lt;- enrichKEGG(gene=diff_ENTREZID,organism = &apos;hsa&apos;,pvalueCutoff = 0.05)</span><br><span class="line">write.csv(summary(ekk),&quot;KEGG-enrich.csv&quot;,row.names =F)</span><br><span class="line">write.csv(summary(ego),&quot;GO-enrich.csv&quot;,row.names =F)</span><br></pre></td></tr></table></figure>
+<p>###goenrich有错误 后续差异分析如何进行得到的结果？</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-5b18f8068dc254cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<blockquote>
+<p>R语言DESeq找差异基因 <a href="http://www.bio-info-trainee.com/741.html" target="_blank" rel="noopener">http://www.bio-info-trainee.com/741.html</a><br>用DESeq进行差异分析的源代码 <a href="http://www.bio-info-trainee.com/867.html" target="_blank" rel="noopener">http://www.bio-info-trainee.com/867.html</a><br>用R语言的DESeq2包来对RNA-seq数据做差异分析 <a href="http://www.bio-info-trainee.com/1533.html#more-1533" target="_blank" rel="noopener">http://www.bio-info-trainee.com/1533.html#more-1533</a><br>Bioconductor annotation packages <a href="https://davetang.org/muse/2013/12/16/bioconductor-annotation-packages/" target="_blank" rel="noopener">https://davetang.org/muse/2013/12/16/bioconductor-annotation-packages/</a><br>clusterProfiler <a href="https://bioconductor.org/packages/release/bioc/vignettes/clusterProfiler/inst/doc/clusterProfiler.html" target="_blank" rel="noopener">https://bioconductor.org/packages/release/bioc/vignettes/clusterProfiler/inst/doc/clusterProfiler.html</a></p>
+</blockquote>
+
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
+        
+        
+      </div>
       
     </footer>
   </article>
@@ -485,326 +812,6 @@
     </footer>
   </article>
   
-  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/15/转录组入门——6/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="mt">
-        <meta itemprop="description" content="">
-        <meta itemprop="image" content="/images/avatar.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Hexo">
-      </span>
-    </div>
-    <header class="post-header">
-      <h2 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2017/08/15/转录组入门——6/" itemprop="url">转录组入门——6</a>
-      </h2>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-08-15T20:37:18+08:00">2017-08-15</time>
-        </span>
-        
-        
-        
-        
-        <span class="post-meta-divider"> | </span>
-        
-          
-          <span class="post-comment-count">
-            <i class="far fa-comments"></i> <a href="/2017/08/15/转录组入门——6/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2017/08/15/转录组入门——6/" itemprop="commentsCount"></span></a>
-          </span>
-          
-        
-      </div>
-    </header>
-    <main class="post-body" itemprop="articleBody">
-      
-      <h5 id="实现reads计数的软件教程"><a href="#实现reads计数的软件教程" class="headerlink" title="实现reads计数的软件教程"></a>实现reads计数的软件教程</h5><blockquote>
-<p>map后获得了每条read比对到基因组上的位置，后面需要把基因组的位置对应到基因。这个提供基因位置的注释文件通常以GTF或GFF3格式呈现。基因表达量最直接的分析手段就是计算比对到每个基因的reads有多少条，在转录组测序中，我们通常称这个数字为count<br>对每个基因计数之后得到的count matrix再后续的分析中，要注意标准化的问题。<br>比较同一个样本(within-sample)不同基因之间的表达情况，需要考虑到转录本长度，因为转录本越长，那么检测的片段也会更多。比较不同样本（across sample）同一个基因的表达情况，不必在意转录本长度，但要考虑到测序深度（sequence depth)，测序深度越高，检测到的概率越大。除这两因素外，还需考虑GC%导致的偏差及测序仪器的系统偏差。<br>目前对read count标准化的算法有RPKM（SE）, FPKM（PE），TPM, TMM等。但是，有一些下游分析的软件会要求是输入的count matrix是原始数据，未经标准化，比如说DESeq2，这个时候你需要注意你上一步所用软件会不会进行标准化。<br>计数分为三个水平： gene-level, transcript-level, exon-usage-level<br>标准化方法： FPKM RPKM TMM TPM</p>
-</blockquote>
-<h5 id="Gene-level"><a href="#Gene-level" class="headerlink" title="Gene-level"></a>Gene-level</h5><blockquote>
-<p>HTSeq <a href="https://htseq.readthedocs.io/en/release_0.9.1/" target="_blank" rel="noopener">官方网址</a> <a href="http://www.chenlianfu.com/?p=2438" target="_blank" rel="noopener">中文教程</a><br>featureCounts <a href="http://bioinf.wehi.edu.au/featureCounts/" target="_blank" rel="noopener">官方网址</a> Rsubread <a href="https://bioconductor.org/packages/release/bioc/html/Rsubread.html" target="_blank" rel="noopener">官方网址</a><br>bedtools multicov <a href="https://bedtools.readthedocs.io/en/latest/" target="_blank" rel="noopener">官方网址</a> <a href="http://www.biotrainee.com/thread-153-1-1.html" target="_blank" rel="noopener">中文教程</a><br>Qualimap <a href="http://qualimap.bioinfo.cipf.es/" target="_blank" rel="noopener">官方网址</a> <a href="http://blog.sciencenet.cn/blog-2970729-1070459.html" target="_blank" rel="noopener">中文教程</a><br>GenomicRanges <a href="https://bioconductor.org/packages/release/bioc/html/GenomicRanges.html" target="_blank" rel="noopener">官方网址</a></p>
-</blockquote>
-<h5 id="Transcript-level"><a href="#Transcript-level" class="headerlink" title="Transcript-level"></a>Transcript-level</h5><blockquote>
-<p>cufflink <a href="https://cole-trapnell-lab.github.io/cufflinks/" target="_blank" rel="noopener">官方网址</a> <a href="http://www.chenlianfu.com/?p=623" target="_blank" rel="noopener">中文教程</a><br>stringtie <a href="https://ccb.jhu.edu/software/stringtie/" target="_blank" rel="noopener">官方网址</a> <a href="http://www.bio-info-trainee.com/2073.html" target="_blank" rel="noopener">中文教程</a><br>上述软件都是alignment-based<br>alignment-free软件，如kallisto, silfish, salmon，能够省去比对这一步，直接得到read count，在运行效率上更高。不过最近一篇文献Gaining comprehensive biological insight into the transcriptome by performing a broad-spectrum RNA-seq analysis指出这类方法在估计丰度时存在样本特异性和读长偏差<br>salmon</p>
-</blockquote>
-<h5 id="Exon-usage-level"><a href="#Exon-usage-level" class="headerlink" title="Exon-usage-level"></a>Exon-usage-level</h5><blockquote>
-<p>和基因水平的统计类似。但是值得注意的是为了更好的计数，我们需要提供无重叠的外显子区域的gtf文件Detecting differential usage of exons from RNA-seq data。用于分析差异外显子使用的DEXSeq提供了一个Python脚本（dexseq_prepare_annotation.py）执行这个任务。</p>
-</blockquote>
-<h5 id="基因表达量归一算法"><a href="#基因表达量归一算法" class="headerlink" title="基因表达量归一算法"></a>基因表达量归一算法</h5><p>待续 <a href="https://zhuanlan.zhihu.com/p/26750663" target="_blank" rel="noopener">参考</a></p>
-<h5 id="htseq-count"><a href="#htseq-count" class="headerlink" title="htseq-count"></a>htseq-count</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ls Homo*.Nsorted.bam|while read id;do(htseq-count -f bam -i gene_name -s no $id $hg19_gff &gt; $&#123;id%_*&#125;.geneCounts 2&gt; $&#123;id%_*&#125;.HTseq.log);done</span><br><span class="line">ls Mus*.Nsorted.bam|while read id;do(htseq-count -f bam -i gene_name -s no $id $mm10_gff &gt; $&#123;id%_*&#125;.geneCounts 2&gt; $&#123;id%_*&#125;.HTseq.log);done</span><br><span class="line">wc -l Homo*.geneCounts </span><br><span class="line">head -n 4 Homo*.geneCounts</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>-f bam/sam： 指定输入文件格式，默认SAM<br>-r name/pos: 你需要利用samtool sort对数据根据read name或者位置进行排序，默认是name<br>-s yes/no/reverse: 数据是否来自于strand-specific assay。DNA是双链的，所以需要判断到底来自于哪条链。如果选择了no， 那么每一条read都会跟正义链和反义链进行比较。默认的yes对于双端测序表示第一个read都在同一个链上，第二个read则在另一条链上。<br>-a 最低质量， 剔除低于阈值的read<br>-m 模式 union（默认）, intersection-strict and intersection-nonempty。一般而言就用默认的，作者也是这样认为的。<br>-i id attribute: 在GTF文件的最后一栏里，会有这个基因的多个命名方式（如下）， RNA-Seq数据分析常用的是gene_id， 当然你可以写一个脚本替换成其他命名方式。</p>
-</blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/2116382-6aaf8956467c4fb6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="homo.genecounts"></p>
-<h5 id="编写脚本合并所有的样本为表达矩阵"><a href="#编写脚本合并所有的样本为表达矩阵" class="headerlink" title="编写脚本合并所有的样本为表达矩阵"></a>编写脚本合并所有的样本为表达矩阵</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">sed -i &apos;$d&apos; *geneCounts</span><br><span class="line">perl -lne &apos;if($ARGV=~/Homo_(.*).geneCounts/)&#123;print &quot;$1\t$_&quot;&#125;&apos; *|grep -v Homo_sapiens&gt;hg.count</span><br><span class="line">perl -lne &apos;if($ARGV=~/Mus_(.*).geneCounts/)&#123;print &quot;$1\t$_&quot;&#125;&apos; *|grep -v Mus &gt;mus.count</span><br><span class="line"></span><br><span class="line">hg &lt;- read.csv(file = &quot;hg.count&quot;,header = F,sep = &quot;\t&quot;)</span><br><span class="line">colnames(hg) &lt;- c(&apos;sample&apos;,&apos;gene&apos;,&apos;count&apos;)</span><br><span class="line">library(reshape2)</span><br><span class="line">hg_reads &lt;- dcast(hg,formula = gene ~ sample)</span><br><span class="line">write.table(hg_reads,file = &quot;hg_join.count&quot;,sep = &quot;\t&quot;,quote = FALSE,row.names = FALSE)</span><br><span class="line"></span><br><span class="line">mus &lt;- read.csv(file = &quot;mus.count&quot;,header = F,sep = &quot;\t&quot;)</span><br><span class="line">colnames(mus) &lt;- c(&apos;sample&apos;,&apos;gene&apos;,&apos;count&apos;)</span><br><span class="line">library(reshape2)</span><br><span class="line">mus_reads &lt;- dcast(mus,formula = gene ~ sample)</span><br><span class="line">write.table(mus_reads,file = &quot;mus_join.count&quot;,sep = &quot;\t&quot;,quote = FALSE,row.names = FALSE)</span><br></pre></td></tr></table></figure>
-<p><img src="http://upload-images.jianshu.io/upload_images/2116382-bf2396936c8bb516.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="homo_table"></p>
-<h5 id="对表达矩阵可进行简单的探索"><a href="#对表达矩阵可进行简单的探索" class="headerlink" title="对表达矩阵可进行简单的探索"></a>对表达矩阵可进行简单的探索</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">summary(hg_reads) </span><br><span class="line">summary(mus_reads) </span><br><span class="line">row.names(hg_reads) &lt;- hg_reads$gene</span><br><span class="line">GAPDH &lt;- hg_reads[rownames(hg_reads)==&quot;GAPDH&quot;,]</span><br><span class="line"></span><br><span class="line">source(&quot;http://bioconductor.org/biocLite.R&quot;)</span><br><span class="line">biocLite(&quot;dplyr&quot;)</span><br><span class="line">library(dplyr)</span><br><span class="line">sample_mean &lt;- group_by(hg,sample)%&gt;% summarize(mean=mean(count))</span><br><span class="line">gene_mean &lt;- group_by(hg,gene)%&gt;% summarize(mean=mean(count)) </span><br><span class="line">tmp &lt;- full_join(hg,gene_mean,by=&apos;gene&apos;)</span><br><span class="line">write.table(tmp,file = &quot;tmp.count&quot;,sep = &quot;\t&quot;,quote = FALSE,row.names = FALSE)</span><br></pre></td></tr></table></figure>
-<p><img src="http://upload-images.jianshu.io/upload_images/2116382-3a0f908f6e1b3a5d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="summary"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2116382-79ab4164d01877a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<h5 id="另一种"><a href="#另一种" class="headerlink" title="另一种"></a>另一种</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">options(stringsAsFactors = FALSE)</span><br><span class="line">#导入数据</span><br><span class="line">homo_control &lt;- read.table(&quot;Homo_SRR3589956.geneCounts&quot;,sep=&quot;\t&quot;, col.names = c(&quot;gene_symbol&quot;,&quot;homo_control&quot;))</span><br><span class="line">homo_rep1 &lt;- read.table(&quot;Homo_SRR3589957.geneCounts&quot;,sep=&quot;\t&quot;, col.names = c(&quot;gene_symbol&quot;,&quot;homo_rep1&quot;))</span><br><span class="line">homo_rep2 &lt;- read.table(&quot;Homo_SRR3589958.geneCounts&quot;,sep=&quot;\t&quot;,col.names = c(&quot;gene_symbol&quot;,&quot;rep2&quot;))</span><br><span class="line">mus_control1 &lt;- read.table(&quot;Mus_SRR3589959.geneCounts&quot;, sep=&quot;\t&quot;, col.names = c(&quot;gene_symbol&quot;,&quot;mus_control1&quot;))</span><br><span class="line">mus_control2 &lt;- read.table(&quot;Mus_SRR3589960.geneCounts&quot;, sep=&quot;\t&quot;, col.names = c(&quot;gene_symbol&quot;,&quot;mus_control2&quot;)) </span><br><span class="line">mus_rep1 &lt;- read.table(&quot;Mus_SRR3589961.geneCounts&quot;, sep=&quot;\t&quot;, col.names = c(&quot;gene_symbol&quot;,&quot;mus_rep1&quot;)) </span><br><span class="line">mus_rep2 &lt;- read.table(&quot;Mus_SRR3589962.geneCounts&quot;, sep=&quot;\t&quot;,col.names = c(&quot;gene_symbol&quot;,&quot;mus_rep2&quot;))</span><br><span class="line">#去除后五行</span><br><span class="line">homo_control &lt;- homo_control[-58523:-58527,]</span><br><span class="line">homo_rep1 &lt;- homo_rep1[-58523:-58527,]</span><br><span class="line">homo_rep2 &lt;- homo_rep2[-58523:-58527,]</span><br><span class="line">mus_control1 &lt;- mus_control1[-48322:-48326,]</span><br><span class="line">mus_control2 &lt;- mus_control2[-48322:-48326,]</span><br><span class="line">mus_rep1 &lt;- mus_rep1[-48322:-48326,]</span><br><span class="line">mus_rep2 &lt;- mus_rep2[-48322:-48326,]</span><br><span class="line">#整合</span><br><span class="line">homo_raw_count &lt;- merge(merge(homo_control, homo_rep1, by=&quot;gene_symbol&quot;), homo_rep2, by=&quot;gene_symbol&quot;)</span><br><span class="line">mus_raw_count &lt;- merge(merge(mus_control1, mus_control2, by=&quot;gene_symbol&quot;), merge(mus_rep1,mus_rep2, by=&quot;gene_symbol&quot;))</span><br><span class="line">summary(homo_raw_count)</span><br><span class="line">summary(mus_raw_count)</span><br><span class="line">row.names(homo_raw_count) &lt;- homo_raw_count$gene_symbol</span><br><span class="line">row.names(mus_raw_count) &lt;- mus_raw_count$gene_symbol</span><br><span class="line">gapdh &lt;- homo_raw_count[rownames(homo_raw_count)==&quot;GAPDH&quot;,]</span><br><span class="line">gapdh &lt;- mus_raw_count[rownames(mus_raw_count)==&quot;GAPDH&quot;,]</span><br><span class="line"></span><br><span class="line">#因为我们无法在EBI数据库上直接搜索找到ENSMUSG00000024045.5这样的基因，只能是ENSMUSG00000024045的整数，没有小数点，所以需要进一步替换为整数的形式</span><br><span class="line">#第一步将匹配到的.以及后面的数字连续匹配并替换为空，并赋值给ENSEMBL</span><br><span class="line">#ENSEMBL &lt;- gsub(&quot;\\.\\d*&quot;, &quot;&quot;, raw_count_filt1$gene_id) </span><br><span class="line">#将ENSEMBL重新添加到raw_count_filt1矩阵</span><br><span class="line">#row.names(raw_count_filter) &lt;- ENSEMBL</span><br></pre></td></tr></table></figure>
-<p><img src="http://upload-images.jianshu.io/upload_images/2116382-8ee1f5c36ac2faa3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="gapdh"><br>以上两种都有两个问题：AKAP95未找到 小鼠第一列不是gene name<br>和sort是否为reads name无关，htseq count -i 参数去掉则默认为gene id</p>
-<h5 id="看生物学意义特殊的基因表现如何如GAPDH-β-ACTIN"><a href="#看生物学意义特殊的基因表现如何如GAPDH-β-ACTIN" class="headerlink" title="看生物学意义特殊的基因表现如何如GAPDH,β-ACTIN"></a>看生物学意义特殊的基因表现如何如GAPDH,β-ACTIN</h5><p><img src="http://upload-images.jianshu.io/upload_images/2116382-e29d08dec77d3ec7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="gapdh"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#! usr/bin/bash</span><br><span class="line">set -u</span><br><span class="line">set -e</span><br><span class="line">set -o pipefail</span><br><span class="line">hg19_ref=~/fastq/hisat2_index/hg19/genome</span><br><span class="line">mm10_ref=~/fastq/hisat2_index/mm10/genome</span><br><span class="line">hg19_gff=~/fastq/refdata/Genecode/gencode.v26lift37.annotation.gff3</span><br><span class="line">mm10_gff=~/fastq/refdata/Genecode/gencode.vM10.annotation.gtf</span><br><span class="line">ls Homo*.sorted.bam|while read id;do(htseq-count -f bam -r pos -s no $id $hg19_gff &gt; $&#123;id%%.*&#125;.sgeneCounts 2&gt; $&#123;id%%.*&#125;.sHTseq.log);done</span><br><span class="line">ls Mus*.sorted.bam|while read id;do(htseq-count -f bam -r pos -s no $id $mm10_gff &gt; $&#123;id%%.*&#125;.sgeneCounts 2&gt; $&#123;id%%.*&#125;.sHTseq.log);done</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">options(stringsAsFactors = FALSE)</span><br><span class="line">homo_control &lt;- read.table(&quot;Homo_SRR3589956.sgeneCounts&quot;,sep=&quot;\t&quot;, col.names = c(&quot;gene_id&quot;,&quot;homo_control&quot;))</span><br><span class="line">homo_rep1 &lt;- read.table(&quot;Homo_SRR3589957.sgeneCounts&quot;,sep=&quot;\t&quot;, col.names = c(&quot;gene_id&quot;,&quot;homo_rep1&quot;))</span><br><span class="line">homo_rep2 &lt;- read.table(&quot;Homo_SRR3589958.sgeneCounts&quot;,sep=&quot;\t&quot;,col.names = c(&quot;gene_id&quot;,&quot;rep2&quot;))</span><br><span class="line">mus_control1 &lt;- read.table(&quot;Mus_SRR3589959.sgeneCounts&quot;, sep=&quot;\t&quot;, col.names = c(&quot;gene_id&quot;,&quot;mus_control1&quot;))</span><br><span class="line">mus_control2 &lt;- read.table(&quot;Mus_SRR3589960.sgeneCounts&quot;, sep=&quot;\t&quot;, col.names = c(&quot;gene_id&quot;,&quot;mus_control2&quot;)) </span><br><span class="line">mus_rep1 &lt;- read.table(&quot;Mus_SRR3589961.sgeneCounts&quot;, sep=&quot;\t&quot;, col.names = c(&quot;gene_id&quot;,&quot;mus_rep1&quot;)) </span><br><span class="line">mus_rep2 &lt;- read.table(&quot;Mus_SRR3589962.sgeneCounts&quot;, sep=&quot;\t&quot;,col.names = c(&quot;gene_id&quot;,&quot;mus_rep2&quot;))</span><br><span class="line">homo_control &lt;- homo_control[-60472:-60476,]</span><br><span class="line">homo_rep1 &lt;- homo_rep1[-60472:-60476,]</span><br><span class="line">homo_rep2 &lt;- homo_rep2[-60472:-60476,]</span><br><span class="line">mus_control1 &lt;- mus_control1[-48441:-48445,]</span><br><span class="line">mus_control2 &lt;- mus_control2[-48441:-48445,]</span><br><span class="line">mus_rep1 &lt;- mus_rep1[-48441:-48445,]</span><br><span class="line">mus_rep2 &lt;- mus_rep2[-48441:-48445,]</span><br><span class="line">homo_raw_count &lt;- merge(merge(homo_control, homo_rep1, by=&quot;gene_id&quot;), homo_rep2, by=&quot;gene_id&quot;)</span><br><span class="line">mus_raw_count &lt;- merge(merge(mus_control1, mus_control2, by=&quot;gene_id&quot;), merge(mus_rep1,mus_rep2, by=&quot;gene_id&quot;))</span><br><span class="line">ENSEMBL &lt;- gsub(&quot;\\.\\d*_\\d*&quot;, &quot;&quot;, homo_raw_count$gene_id)</span><br><span class="line">row.names(homo_raw_count) &lt;- ENSEMBL # error</span><br><span class="line">ENSEMBL &lt;- gsub(&quot;\\.\\d*&quot;, &quot;&quot;, mus_raw_count$gene_id) </span><br><span class="line">row.names(mus_raw_count) &lt;- ENSEMBL</span><br><span class="line">summary(homo_raw_count)</span><br><span class="line">summary(mus_raw_count)</span><br><span class="line">#在UniProt数据库找到AKAP95的id</span><br><span class="line">MUS_AKAP95 &lt;- mus_raw_count[rownames(mus_raw_count)==&quot;ENSMUSG00000024045&quot;,] #reads很大</span><br></pre></td></tr></table></figure>
-<p>最开始未加 -r pos 有问题 reads数目不同，后续计数没有大问题<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">count.matrix&lt;-function()</span><br><span class="line">&#123;</span><br><span class="line">  .libPaths(&quot;/home/tingm/R/x86_64-pc-linux-gnu-library/3.2&quot;)</span><br><span class="line">  library(limma)</span><br><span class="line">  library(edgeR)</span><br><span class="line">    #change</span><br><span class="line">    path&lt;-&quot;/home/tingm/fastq/homo_result_count/&quot;</span><br><span class="line">    #change</span><br><span class="line">      samples&lt;-read.table(&quot;samples.list.txt&quot;,header=F,sep=&quot;\t&quot;)</span><br><span class="line">      samples&lt;-samples[,1]</span><br><span class="line">      #change</span><br><span class="line">      data.raw&lt;-read.table(&quot;Homo_SRR3589956.sgeneCounts&quot;,header=F,sep=&quot;\t&quot;,col.names = c(&quot;gene_id&quot;,&quot;Homo_SRR3589956.sgeneCounts&quot;))</span><br><span class="line">      for(sample in samples)</span><br><span class="line">      &#123;</span><br><span class="line">        print(sample)</span><br><span class="line">        file&lt;-paste(path,sample,sep=&quot;&quot;)</span><br><span class="line">        data.new&lt;-read.table(file,header=F,sep=&quot;\t&quot;,col.names = c(&quot;gene_id&quot;,sample))</span><br><span class="line">        data.raw&lt;-merge(data.new,data.raw,by=&quot;gene_id&quot;)</span><br><span class="line">      &#125;</span><br><span class="line">     data.raw&lt;-data.raw[-1:-5,]</span><br><span class="line">     #ENSEMBL &lt;- gsub(&quot;\\.\\d*_\\d*&quot;, &quot;&quot;, data.raw$gene_id)</span><br><span class="line">     #row.names(data.raw) &lt;- ENSEMBL</span><br><span class="line">     # ENSEMBL &lt;- gsub(&quot;\\.\\d*&quot;, &quot;&quot;, mus_raw_count$gene_id)</span><br><span class="line">     write.table(data.raw,&quot;count.matix.csv&quot;,row.names=F,quote=F)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p>参考引用来自以下资料<br><a href="https://mp.weixin.qq.com/s/V32iruEVRKJ_1RubuS_lUQ" target="_blank" rel="noopener">PANDA姐的转录组入门(6)：reads计数</a><br><a href="https://mp.weixin.qq.com/s/RolngZkua6GJboHQMfP52w" target="_blank" rel="noopener">生信媛 转录组入门(6)： reads计数</a><br><a href="http://www.jianshu.com/p/24cf44b610a7" target="_blank" rel="noopener">lxmic转录组入门(6)： reads计数</a></p>
-</blockquote>
-
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        
-        
-        
-        
-        
-        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
-        
-        
-      </div>
-      
-    </footer>
-  </article>
-  
-  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/14/转录组入门——5/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="mt">
-        <meta itemprop="description" content="">
-        <meta itemprop="image" content="/images/avatar.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Hexo">
-      </span>
-    </div>
-    <header class="post-header">
-      <h2 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2017/08/14/转录组入门——5/" itemprop="url">转录组入门——5</a>
-      </h2>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-08-14T18:21:01+08:00">2017-08-14</time>
-        </span>
-        
-        
-        
-        
-        <span class="post-meta-divider"> | </span>
-        
-          
-          <span class="post-comment-count">
-            <i class="far fa-comments"></i> <a href="/2017/08/14/转录组入门——5/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2017/08/14/转录组入门——5/" itemprop="commentsCount"></span></a>
-          </span>
-          
-        
-      </div>
-    </header>
-    <main class="post-body" itemprop="articleBody">
-      
-      <h5 id="比对软件简介"><a href="#比对软件简介" class="headerlink" title="比对软件简介"></a>比对软件简介</h5><blockquote>
-<p><a href="http://www.jianshu.com/p/681e02e7f9af" target="_blank" rel="noopener">比对软件比较</a><br>Bowtie1 <a href="http://bowtie-bio.sourceforge.net/index.shtml" target="_blank" rel="noopener">官方网址</a><br>Bowtie2 <a href="http://bowtie-bio.sourceforge.net/bowtie2/index.shtml" target="_blank" rel="noopener">官方网址</a> <a href="http://blog.leanote.com/post/songtaogui/Bowtie2%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8" target="_blank" rel="noopener">中文教程</a> <a href="http://blog.leanote.com/post/375952584@qq.com/Bowtie2%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8" target="_blank" rel="noopener">中文教程</a><br><a href="https://cncbi.github.io/Bowtie2-Manual-CN/" target="_blank" rel="noopener">中文教程</a> <a href="http://fhqdddddd.blog.163.com/blog/static/18699154201422735644352/" target="_blank" rel="noopener">中文教程</a><br>Bowtie1 Bowtie2 <a href="http://blog.csdn.net/soyabean555999/article/details/62235577" target="_blank" rel="noopener">二者区别</a><br><a href="http://www.cnblogs.com/wq242424/p/7025946.html" target="_blank" rel="noopener">Bowtie 安装</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#下载bowtie2-2.3.2-linux-x86_64.zip解压后有错误 未解决 tbb需要Python2.7</span><br><span class="line">find ./ -name libtbbmalloc_proxy.so.2</span><br><span class="line">echo $LD_LIBRARY_PATH</span><br><span class="line">export LD_LIBRARY_PATH=~/biosoft/tbb2017_20170604oss/lib/:$LD_LIBRARY_PATH</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://blog.sina.com.cn/s/blog_83f77c940102wp28.html" target="_blank" rel="noopener">TBB下载地址</a><br><a href="http://www.linuxidc.com/Linux/2014-01/94717.htm" target="_blank" rel="noopener">Linux LD_LIBRARY_PATH</a><br><a href="https://stackoverflow.com/questions/32592956/apt-get-command-not-found" target="_blank" rel="noopener">apt-get 和 yum install</a><br>Tophat <a href="https://ccb.jhu.edu/software/tophat/manual.shtml" target="_blank" rel="noopener">官方网址</a> <a href="http://www.chenlianfu.com/?p=910" target="_blank" rel="noopener">中文教程</a><br>Hisat2 <a href="https://ccb.jhu.edu/software/hisat2/index.shtml" target="_blank" rel="noopener">官方网址</a> <a href="http://blog.biochen.com/archives/337" target="_blank" rel="noopener">中文教程</a><br>STAR <a href="http://www.bio-info-trainee.com/727.html" target="_blank" rel="noopener">中文教程</a> <a href="http://www.cnblogs.com/daimakun/p/5081638.html" target="_blank" rel="noopener">中文教程</a><br>其他比对软件 <a href="http://www.jianshu.com/p/93f96e7538da" target="_blank" rel="noopener">参考</a></p>
-</blockquote>
-<h5 id="hisat2-下载index"><a href="#hisat2-下载index" class="headerlink" title="hisat2 下载index"></a>hisat2 下载index</h5><blockquote>
-<p><a href="http://www.biotrainee.com/thread-26-1-1.html" target="_blank" rel="noopener">bowtie原理</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">wget ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/data/hg19.tar.gz</span><br><span class="line">wget ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/data/mm10.tar.gz</span><br><span class="line">tar -zxvf *.tar.gz</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<h5 id="hiat2-Map，sam转bam，name-sort"><a href="#hiat2-Map，sam转bam，name-sort" class="headerlink" title="hiat2 Map，sam转bam，name-sort"></a>hiat2 Map，sam转bam，name-sort</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#! usr/bin/bash</span><br><span class="line">set -u</span><br><span class="line">set -e</span><br><span class="line">set -o pipefail</span><br><span class="line">hg19_ref=~/fastq/hisat2_index/hg19/genome</span><br><span class="line">mm10_ref=~/fastq/hisat2_index/mm10/genome</span><br><span class="line">hg19_gff=~/fastq/refdata/Genecode/gencode.v26lift37.annotation.gff3</span><br><span class="line">mm10_gff=~/fastq/refdata/Genecode/gencode.vM10.annotation.gtf</span><br><span class="line">data_path=~/fastq</span><br><span class="line">ls Homo*.fastq.gz|while read id;do(hisat2 -t -p 5 -x $hg19_ref -1 $data_path/$&#123;id%_*&#125;_1.fastq.gz -2 $data_path/$&#123;id%_*&#125;_2.fastq.gz 2&gt;$&#123;id%_*&#125;_map.log | /home/tingm/software/samtools-1.3.1/samtools view -Sb  - &gt;$&#123;id%_*&#125;.bam);done</span><br><span class="line">ls Mus*.fastq.gz|while read id;do(hisat2 -t -p 5 -x $mm10_ref -1 $data_path/$&#123;id%_*&#125;_1.fastq.gz -2 $data_path/$&#123;id%_*&#125;_2.fastq.gz 2&gt;$&#123;id%_*&#125;_map.log | /home/tingm/software/samtools-1.3.1/samtools view -Sb  -  &gt;$&#123;id%_*&#125;.bam);done</span><br><span class="line">ls *.bam|while read id;do(/home/tingm/software/samtools-1.3.1/samtools sort -n -@ 5 $id  -o $&#123;id%%.*&#125;.Nsorted.bam);done</span><br><span class="line">#ls Homo*.Nsorted.bam|while read id;do(htseq-count -f bam -i gene_name -s no $id $hg19_gff &gt; $&#123;id%%.*&#125;.geneCounts 2&gt; $&#123;id%%.*&#125;.HTseq.log);done</span><br><span class="line">#ls Mus*.Nsorted.bam|while read id;do(htseq-count -f bam -i gene_name -s no $id $mm10_gff &gt; $&#123;id%%.*&#125;.geneCounts 2&gt; $&#123;id%%.*&#125;.HTseq.log);done</span><br></pre></td></tr></table></figure>
-<p><img src="http://upload-images.jianshu.io/upload_images/2116382-614c3461111f4783.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="bam"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2116382-14e7421d4dbb7c5c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="name-sorted bam"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2116382-ffab566ae8f0b434.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="sorted bam"></p>
-<h5 id="BWA"><a href="#BWA" class="headerlink" title="BWA"></a>BWA</h5><p><a href="https://starsyi.github.io/2016/05/24/BWA-%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/" target="_blank" rel="noopener">中文参考</a></p>
-<h5 id="Samtools"><a href="#Samtools" class="headerlink" title="Samtools"></a>Samtools</h5><p><a href="http://samtools.sourceforge.net/" target="_blank" rel="noopener">官方网址</a><br><a href="http://www.bio-info-trainee.com/518.html" target="_blank" rel="noopener">下载参考</a><br><a href="http://blog.csdn.net/sinat_38163598/article/details/72910115" target="_blank" rel="noopener">中文教程</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/samtools/samtools/releases/download/1.5/samtools-1.5.tar.bz2</span><br><span class="line">tar jxf samtools-1.5.tar.bz2</span><br><span class="line">cd samtools-1.5</span><br><span class="line">make</span><br><span class="line">echo &apos;PATH=$PATH:~/biosoft/samtools-1.5/&apos; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure></p>
-<h5 id="两种排序方式及索引-默认排序是根据染色体位置-n-reads名称进行排序"><a href="#两种排序方式及索引-默认排序是根据染色体位置-n-reads名称进行排序" class="headerlink" title="两种排序方式及索引(默认排序是根据染色体位置 -n reads名称进行排序)"></a>两种排序方式及索引(默认排序是根据染色体位置 -n reads名称进行排序)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ls *.sra.bam|while read id;do(/home/tingm/software/samtools-1.3.1/samtools sort -@ 5 $id -o $&#123;id%%.*&#125;.sorted.bam);done</span><br><span class="line">ls *.sorted.bam|while read id;do(/home/tingm/software/samtools-1.3.1/samtools index $&#123;id%%.*&#125;.sorted.bam;done</span><br><span class="line">#head -1000 Homo_SRR3589956.sra.bam &gt; test.bam</span><br><span class="line">#samtools view test.bam | head</span><br><span class="line">#head -1000 Homo_SRR3589956.Nsorted.bam &gt; test.nsorted.bam</span><br><span class="line">#samtools view test.nsorted.bam | head</span><br><span class="line">#head -1000 Homo_SRR3589956.sorted.bam &gt; test.sorted.bam</span><br><span class="line">#samtools view test.sorted.bam | head</span><br></pre></td></tr></table></figure>
-<p><img src="http://upload-images.jianshu.io/upload_images/2116382-1126ea86c945546c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="bam"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2116382-65746a73521c7f0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="reads name"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2116382-f50f20d61159b837.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="chr"></p>
-<h5 id="IGV-载入bam文件及其index-如何查看，理解结果？"><a href="#IGV-载入bam文件及其index-如何查看，理解结果？" class="headerlink" title="IGV 载入bam文件及其index  如何查看，理解结果？"></a>IGV 载入bam文件及其index  如何查看，理解结果？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">igv.sh</span><br></pre></td></tr></table></figure>
-<p><img src="http://upload-images.jianshu.io/upload_images/2116382-f0e2a6fa977e4068.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="sort.bam"></p>
-<h5 id="质量控制"><a href="#质量控制" class="headerlink" title="质量控制"></a>质量控制</h5><blockquote>
-<p>常用工具有<br>Picard <a href="https://broadinstitute.github.io/picard/" target="_blank" rel="noopener">https://broadinstitute.github.io/picard/</a><br>RSeQC <a href="http://rseqc.sourceforge.net/" target="_blank" rel="noopener">http://rseqc.sourceforge.net/</a><br>Qualimap <a href="http://qualimap.bioinfo.cipf.es/" target="_blank" rel="noopener">http://qualimap.bioinfo.cipf.es/</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"># Python2.7环境下</span><br><span class="line">pip install RSeQC</span><br><span class="line"># 先对bam文件进行统计分析， 从结果上看是符合70~90的比对率要求</span><br><span class="line">bam_stat.py -i Homo_SRR3589956.sorted.bam</span><br><span class="line"># 基因组覆盖率的QC需要提供bed文件，可以直接RSeQC的网站下载，或者可以用gtf转换</span><br><span class="line">wget https://sourceforge.net/projects/rseqc/files/BED/Human_Homo_sapiens/hg19_RefSeq.bed.gz/download -O hg19_RefSeq.bed.gz</span><br><span class="line">gzip -d hg19_RefSeq.bed.gz</span><br><span class="line">read_distribution.py -i Homo_SRR3589956.sorted.bam -r ~/fastq/refdata/hg19_RefSeq.bed</span><br></pre></td></tr></table></figure></p>
-</blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/2116382-43015f11229d4941.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="bam文件进行统计分析"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2116382-0ae3b95e94e3037b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="基因组覆盖率的QC"></p>
-<blockquote>
-<p>参考资料<br><a href="https://mp.weixin.qq.com/s/C66OKH08mjWvHOmq-s8V1A" target="_blank" rel="noopener">PANDA姐的转录组入门(5)：序列比对</a><br><a href="http://www.jianshu.com/p/681e02e7f9af" target="_blank" rel="noopener">hoptop 转录组入门（5）： 序列比对</a><br><a href="http://www.jianshu.com/p/93f96e7538da" target="_blank" rel="noopener">lxmic转录组入门（5）： 序列比对</a></p>
-</blockquote>
-<h5 id="Picard"><a href="#Picard" class="headerlink" title="Picard"></a>Picard</h5><p><a href="https://github.com/broadinstitute/picard/releases/tag/2.11.0" target="_blank" rel="noopener">下载参考2</a><br><a href="https://github.com/broadinstitute/picard/releases/tag/1.141" target="_blank" rel="noopener">下载版本较旧 因需java1.8 放弃旧版本</a><br><a href="https://github.com/broadinstitute/picard" target="_blank" rel="noopener">下载参考1 java需1.8</a><br><a href="https://java.com/zh_CN/download/help/linux_x64_install.xml#download" target="_blank" rel="noopener">java8下载</a><br><a href="http://www.cnblogs.com/OA-maque/p/4835040.html" target="_blank" rel="noopener">下载参考</a><br><a href="http://www.bioinfo-scrounger.com/archives/183" target="_blank" rel="noopener">终版下载参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/broadinstitute/picard/releases/download/2.11.0/picard.jar</span><br><span class="line">java -jar picard.jar -h</span><br></pre></td></tr></table></figure></p>
-<p><a href="https://cncbi.github.io/Picard-Manual-CN/" target="_blank" rel="noopener">使用参考</a><br><a href="http://blog.sina.com.cn/s/blog_6721167201018jik.html" target="_blank" rel="noopener">使用参考</a></p>
-
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        
-        
-        
-        
-        
-        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
-        
-        
-      </div>
-      
-    </footer>
-  </article>
-  
-  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/11/转录组入门——4/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="mt">
-        <meta itemprop="description" content="">
-        <meta itemprop="image" content="/images/avatar.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Hexo">
-      </span>
-    </div>
-    <header class="post-header">
-      <h2 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2017/08/11/转录组入门——4/" itemprop="url">转录组入门——4</a>
-      </h2>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-08-11T22:08:50+08:00">2017-08-11</time>
-        </span>
-        
-        
-        
-        
-        <span class="post-meta-divider"> | </span>
-        
-          
-          <span class="post-comment-count">
-            <i class="far fa-comments"></i> <a href="/2017/08/11/转录组入门——4/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2017/08/11/转录组入门——4/" itemprop="commentsCount"></span></a>
-          </span>
-          
-        
-      </div>
-    </header>
-    <main class="post-body" itemprop="articleBody">
-      
-      <h4 id="参考基因组-hg19-下载"><a href="#参考基因组-hg19-下载" class="headerlink" title="参考基因组(hg19)下载"></a>参考基因组(hg19)下载</h4><blockquote>
-<p>NCBI     UCSC   ENSEMBL数据库 对应关系<br>GRCh36  hg18     ENSEMBL release_52<br>GRCh37  hg19     ENSEMBL release_59/61/64/68/69/75<br>GRCh38  hg38     ENSEMBL  release_76/77/78/80/81/82</p>
-</blockquote>
-<h5 id="NCBI"><a href="#NCBI" class="headerlink" title="NCBI"></a>NCBI</h5><p><a href="https://ftp.ncbi.nlm.nih.gov/genomes/H_sapiens/ARCHIVE/BUILD.37.3/Assembled_chromosomes/seq/" target="_blank" rel="noopener">https://ftp.ncbi.nlm.nih.gov/genomes/H_sapiens/ARCHIVE/BUILD.37.3/Assembled_chromosomes/seq/</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#! /bin/bash</span><br><span class="line">file=$1</span><br><span class="line">chrs=`awk &apos;&#123;print $1&#125;&apos; $file`</span><br><span class="line">for i in $&#123;chrs[@]&#125;;</span><br><span class="line">do echo $i;</span><br><span class="line">wget https://ftp.ncbi.nlm.nih.gov/genomes/H_sapiens/ARCHIVE/BUILD.37.3/Assembled_chromosomes/seq/hs_ref_GRCh37.p5_$&#123;i&#125;.fa.gz;</span><br><span class="line">done</span><br><span class="line">gunzip *.gz</span><br><span class="line">for i in $&#123;chrs[@]&#125;;</span><br><span class="line">do cat hs_ref_GRCh37.p5_$&#123;i&#125;.fa &gt;&gt; hg19.fasta;</span><br><span class="line">done</span><br><span class="line">rm -fr *.fa</span><br></pre></td></tr></table></figure></p>
-<h5 id="Emsembl-过于大-应该为3G大小？"><a href="#Emsembl-过于大-应该为3G大小？" class="headerlink" title="Emsembl 过于大 应该为3G大小？"></a>Emsembl 过于大 应该为3G大小？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup wget ftp://ftp.ensembl.org/pub/release-75/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.75.dna.toplevel.fa.gz &amp;</span><br></pre></td></tr></table></figure>
-<h5 id="UCSC"><a href="#UCSC" class="headerlink" title="UCSC"></a>UCSC</h5><p><a href="https://www.jianshu.com/p/f101c9238fc5" target="_blank" rel="noopener">lxmic 转录组入门（4）：了解参考基因组及基因注释</a><br><img src="http://upload-images.jianshu.io/upload_images/2116382-88c008789cd1dd51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 1 select Downloads —&gt; select genome data"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-2e1ade36ab2e236d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 2-1 choose hg38"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-d94fcaa75393bf9c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 2-2 download"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-f4d4898048b1b2a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 3-1 choose hg19"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-9ab848763bf29e4f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 3-2 download"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">nohup wget http://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/chromFa.tar.gz &amp;</span><br><span class="line">jobs</span><br><span class="line">fg %1</span><br><span class="line">bg %1</span><br><span class="line">kill %1</span><br><span class="line">tar -zxvf chromFa.tar.gz</span><br><span class="line">cat *.fa &gt; hg19.fa</span><br><span class="line">rm -rf chr*</span><br></pre></td></tr></table></figure></p>
-<h4 id="参考基因组注释下载"><a href="#参考基因组注释下载" class="headerlink" title="参考基因组注释下载"></a>参考基因组注释下载</h4><h5 id="NCBI-1"><a href="#NCBI-1" class="headerlink" title="NCBI"></a>NCBI</h5><p><img src="http://upload-images.jianshu.io/upload_images/2116382-02d615eeeb235c1b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="进入NCBI的Genome数据库"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-30b4ca74609e930f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Download/FTP"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-75b1fba61ea288b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="选择物种：人"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-98122c5892131b89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="进入下载hg38GTF注释文件"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-40eefc8f0afdd683.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="hg38GTF注释文件"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-eedc1feedef01e9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="其他版本"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nohup wget https://ftp.ncbi.nlm.nih.gov/genomes/H_sapiens/GFF/ref_GRCh38.p7_top_level.gff3.gz &amp;</span><br><span class="line">gzip -d ref_GRCh38.p7_top_level.gff3.gz</span><br></pre></td></tr></table></figure></p>
-<h5 id="Ensembl"><a href="#Ensembl" class="headerlink" title="Ensembl"></a>Ensembl</h5><p><a href="http://www.bio-info-trainee.com/1469.html" target="_blank" rel="noopener">生信菜鸟团 基因组各种版本对应关系</a><br><img src="http://upload-images.jianshu.io/upload_images/2116382-78260f48c383e5d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Downloads"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-8e63dca8af3c1054.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="select"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-64ee6b0553666966.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="FTP site"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-45b8166f6b848095.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="release-75"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-7b9911c2b8cd58ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="GTF"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-27b6ef4681c23204.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Homo sapiens"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-6a2c9ddd309802a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="download"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nohup wget ftp://ftp.ensembl.org/pub/release-75/gtf/homo_sapiens/Homo_sapiens.GRCh37.75.gtf.gz &amp;</span><br><span class="line">gzip -d Homo_sapiens.GRCh37.75.gtf.gz</span><br></pre></td></tr></table></figure></p>
-<h5 id="UCSC-1"><a href="#UCSC-1" class="headerlink" title="UCSC"></a>UCSC</h5><p><img src="http://upload-images.jianshu.io/upload_images/2116382-5cf747fa93b9d9b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="choose Table Browser"></p>
-<blockquote>
-<p>Navigate to <a href="http://genome.ucsc.edu/cgi-bin/hgTables" target="_blank" rel="noopener">http://genome.ucsc.edu/cgi-bin/hgTables</a><br>Select the following options:<br>clade: Mammal<br>genome: Human<br>assembly: Feb. 2009 (GRCh37/hg19)<br>group: Genes and Gene Predictions<br>track: UCSC Genes<br>table: knownGene<br>region: Select “genome” for the entire genome.<br>output format: GTF - gene transfer format<br>output file: enter a file name to save your results to a file, or leave blank to display results in the browser<br>Click ‘get output’.</p>
-</blockquote>
-<h5 id="Genecode"><a href="#Genecode" class="headerlink" title="Genecode"></a>Genecode</h5><p><a href="http://www.jianshu.com/p/f101c9238fc5" target="_blank" rel="noopener">转录组入门4-了解参考基因组及基因注释</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget ftp://ftp.sanger.ac.uk/pub/gencode/Gencode_human/release_26/GRCh37_mapping/gencode.v26lift37.annotation.gtf.gz</span><br><span class="line">wget ftp://ftp.sanger.ac.uk/pub/gencode/Gencode_human/release_26/GRCh37_mapping/gencode.v26lift37.annotation.gff3.gz</span><br><span class="line">gunzip *.gz </span><br><span class="line">rm -rf *.gz</span><br></pre></td></tr></table></figure></p>
-<h5 id="IGV"><a href="#IGV" class="headerlink" title="IGV"></a>IGV</h5><p><a href="http://www.biotrainee.com/thread-1998-1-1.html" target="_blank" rel="noopener">转录组作业（四）：来自零基础的小白</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">![软件自带基因组-TP53](http://upload-images.jianshu.io/upload_images/2116382-35124fbd81c8bdab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</span><br><span class="line">![hg19.fa 蓝色带没有变化？？](http://upload-images.jianshu.io/upload_images/2116382-75961165acf84dd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</span><br><span class="line"></span><br><span class="line">***问题：linux服务器未安装上IGV；自行下载的hg19比对结果和软件自带不一致***</span><br></pre></td></tr></table></figure></p>
-<p>sudo apt-get install glib-networking-common<br>```</p>
-<blockquote>
-<p>其他参考资料<br><a href="http://blog.sina.com.cn/s/blog_3d37a5690100wne7.html" target="_blank" rel="noopener">ncbi中的基因组genome全序列下载 </a><br><a href="http://www.bio-info-trainee.com/1985.html" target="_blank" rel="noopener">参考基因组下载及index建立</a><br><a href="http://www.bio-info-trainee.com/1469.html" target="_blank" rel="noopener">基因组各种版本对应关系</a><br><a href="https://www.yaolibio.com/2016/09/01/retrieve-genome-data-from-ucsc/" target="_blank" rel="noopener">从UCSC获取基因组序列及基因注释</a><br><a href="http://www.jianshu.com/p/f101c9238fc5" target="_blank" rel="noopener">转录组入门4-了解参考基因组及基因注释</a><br><a href="http://www.cnblogs.com/Demo1589/p/6950196.html" target="_blank" rel="noopener">关于基因组注释文件GTF的解释</a><br><a href="http://www.jianshu.com/p/48b5a0972301" target="_blank" rel="noopener">GTF/GFF文件的差异及其看相互转换</a><br><a href="http://mp.weixin.qq.com/s/mq--yW_vmm2C2ZpnYiPq-A" target="_blank" rel="noopener">ensembel及NCBI注释文件下载</a></p>
-</blockquote>
-
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        
-        
-        
-        
-        
-        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
-        
-        
-      </div>
-      
-    </footer>
-  </article>
-  
-  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/10/转录组入门——3/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="mt">
-        <meta itemprop="description" content="">
-        <meta itemprop="image" content="/images/avatar.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Hexo">
-      </span>
-    </div>
-    <header class="post-header">
-      <h2 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2017/08/10/转录组入门——3/" itemprop="url">转录组入门——3</a>
-      </h2>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-08-10T19:34:02+08:00">2017-08-10</time>
-        </span>
-        
-        
-        
-        
-        <span class="post-meta-divider"> | </span>
-        
-          
-          <span class="post-comment-count">
-            <i class="far fa-comments"></i> <a href="/2017/08/10/转录组入门——3/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2017/08/10/转录组入门——3/" itemprop="commentsCount"></span></a>
-          </span>
-          
-        
-      </div>
-    </header>
-    <main class="post-body" itemprop="articleBody">
-      
-      <h5 id="SRA-Toolkit-软件"><a href="#SRA-Toolkit-软件" class="headerlink" title="SRA Toolkit 软件"></a>SRA Toolkit 软件</h5><p><a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc" target="_blank" rel="noopener">官方网址</a></p>
-<h5 id="软件下载（CentOS-6-8）"><a href="#软件下载（CentOS-6-8）" class="headerlink" title="软件下载（CentOS 6.8）"></a>软件下载（CentOS 6.8）</h5><p><a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc&amp;f=std#s-2" target="_blank" rel="noopener">官方参考</a><br><a href="http://www.jianshu.com/p/6a4855023330" target="_blank" rel="noopener">中文参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#下载软件包</span><br><span class="line">wget ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2-1/sratoolkit.2.8.2-1-centos_linux64.tar.gz</span><br><span class="line">#解压</span><br><span class="line">tar -zxf sratoolkit.2.8.2-1-centos_linux64.tar.gz </span><br><span class="line">#解压后文件夹移动到biosoft目录下</span><br><span class="line">mv sratoolkit.2.8.2-1-centos_linux64/ biosoft/</span><br><span class="line">#设置绝对路径</span><br><span class="line">echo &apos;PATH=$PATH:~/biosoft/sratoolkit.2.8.2-1-centos_linux64/bin&apos; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br><span class="line">#测试安装</span><br><span class="line">fastq-dump -h</span><br></pre></td></tr></table></figure></p>
-<h5 id="fastq-dump参数"><a href="#fastq-dump参数" class="headerlink" title="fastq-dump参数"></a>fastq-dump参数</h5><p><a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc&amp;f=fastq-dump" target="_blank" rel="noopener">官方参考</a><br><a href="http://www.biotrainee.com/forum.php?mod=viewthread&amp;tid=1885&amp;fromuid=1685" target="_blank" rel="noopener">中文参考</a><br>–split-3 如果是双端测序数据，则输出两个文件，如果不是则只输出一个文件<br>-O 指定输出路径<br>–gzip 指定输出格式为gzip压缩格式<br>-A –accession 输入sra文件可以是绝对路径</p>
-<h5 id="SRA文件转换为fastq文件-仅关注RNA-Seq数据"><a href="#SRA文件转换为fastq文件-仅关注RNA-Seq数据" class="headerlink" title="SRA文件转换为fastq文件(仅关注RNA-Seq数据)"></a>SRA文件转换为fastq文件(仅关注RNA-Seq数据)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for i in `seq 56 62`;do fastq-dump --gzip --split-3 -O ~/fastq/ -A ~/ncbi/public/sra/SRR35899$&#123;i&#125;.sra;done</span><br></pre></td></tr></table></figure>
-<p><img src="http://upload-images.jianshu.io/upload_images/2116382-f592e2a5c22a432f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="gz"></p>
-<h5 id="生信名词理解"><a href="#生信名词理解" class="headerlink" title="生信名词理解"></a>生信名词理解</h5><p>测序reads：高通量测序平台产生的序列标签就称为reads<br>GC含量：<a href="https://zh.wikipedia.org/wiki/GC%E5%90%AB%E9%87%8F" target="_blank" rel="noopener">中文参考</a><br>质量值：每测一个碱基会有相应的质量值，质量值用于衡量测序准确度<a href="http://www.cnblogs.com/daimakun/p/5092312.html" target="_blank" rel="noopener">中文参考</a><a href="https://en.wikipedia.org/wiki/FASTQ_format" target="_blank" rel="noopener">英文参考</a><br>adapter：接头是一段短的序列已知的核酸链，用于连接序列未知的目标测序片段<br>index：索引序列，是一段很短的寡居核酸链，用于在多个样品混合测序时，标记不同的样品，为区分不同样本而构建<a href="http://www.itwendao.com/article/detail/467548.html" target="_blank" rel="noopener">参考</a></p>
-<h5 id="FastQC-软件"><a href="#FastQC-软件" class="headerlink" title="FastQC 软件"></a>FastQC 软件</h5><p><a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank" rel="noopener">官方网址</a></p>
-<h5 id="软件下载（CentOS-6-8）-1"><a href="#软件下载（CentOS-6-8）-1" class="headerlink" title="软件下载（CentOS 6.8）"></a>软件下载（CentOS 6.8）</h5><p><a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/INSTALL.txt" target="_blank" rel="noopener">官方参考</a><br><a href="http://www.jianshu.com/p/6a4855023330" target="_blank" rel="noopener">中文参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br><span class="line">wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip</span><br><span class="line">unzip fastqc_v0.11.5.zip</span><br><span class="line">mv FastQC/ biosoft/</span><br><span class="line">cd ~/biosoft/FastQC</span><br><span class="line">chmod 755 fastqc</span><br><span class="line">echo &apos;PATH=$PATH:~/biosoft/FastQC/&apos; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br><span class="line">fastqc -h</span><br></pre></td></tr></table></figure></p>
-<h5 id="fastqc"><a href="#fastqc" class="headerlink" title="fastqc"></a>fastqc</h5><p>-o 输出目录，需自己创建目录<br>–extract 是否解压输出文件，默认自动解压缩zip文件<br>-f 指定输入文件的类型，支持fastq|bam|sam三种格式的文件，默认自动识别<br>-t 同时处理的文件数目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastqc -o fastqc_out --extract *.fastq.gz</span><br></pre></td></tr></table></figure></p>
-<h5 id="fastqc质控结果"><a href="#fastqc质控结果" class="headerlink" title="fastqc质控结果"></a>fastqc质控结果</h5><p><a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/" target="_blank" rel="noopener">官方参考</a><br><a href="http://www.jianshu.com/p/14fd4de54402" target="_blank" rel="noopener">中文参考</a><br><a href="http://fbb84b26.wiz03.com/share/s/3XK4IC0cm4CL22pU-r1HPcQQ2irG2836uQYm2iZAyh1Zwf3_" target="_blank" rel="noopener">中文参考</a></p>
-<h5 id="批量查看MultiQC"><a href="#批量查看MultiQC" class="headerlink" title="批量查看MultiQC"></a>批量查看MultiQC</h5><p><a href="http://multiqc.info/docs/" target="_blank" rel="noopener">官方网址</a><br><a href="http://fbb84b26.wiz03.com/share/s/3XK4IC0cm4CL22pU-r1HPcQQ1iRTvV2GwkwL2AaxYi2fXHP7" target="_blank" rel="noopener">中文参考</a></p>
-<h5 id="软件下载及使用"><a href="#软件下载及使用" class="headerlink" title="软件下载及使用"></a>软件下载及使用</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda install -c bioconda multiqc</span><br><span class="line">#进入对应文件，扫描zip文件，忽略html文件</span><br><span class="line">multiqc ~/fastq/fastqc_out/*fastqc.zip --ignore *.html</span><br></pre></td></tr></table></figure>
-<h5 id="结果查看-重点关注的部分参考"><a href="#结果查看-重点关注的部分参考" class="headerlink" title="结果查看 重点关注的部分参考"></a>结果查看 重点关注的部分参考</h5><p><a href="https://zhuanlan.zhihu.com/p/27985781" target="_blank" rel="noopener">青山屋主 转录组入门3-测序数据质量检查</a></p>
-
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        
-        
-        
-        
-        
-        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
-        
-        
-      </div>
-      
-    </footer>
-  </article>
-  
   
   <nav class="pagination">
     <a class="extend prev" rel="prev" href="/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fas fa-angle-right"></i></a>
@@ -866,7 +873,7 @@
     
     <div class="archives-count">
       <p>Archives</p>
-      <p><a href="/archives/">22</a></p>
+      <p><a href="/archives/">26</a></p>
     </div>
     
     
@@ -884,7 +891,7 @@
     
     <div class="tags-count">
       <p>Tags</p>
-      <p><a href="/tags/">1</a></p>
+      <p><a href="/tags/">2</a></p>
     </div>
     
   </div>

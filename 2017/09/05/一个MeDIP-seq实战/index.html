@@ -78,7 +78,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>实战4.QQ答疑 | Hexo</title>
+    <title>一个MeDIP-seq实战 | Hexo</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang=""  data-spy="scroll" data-target=".list-group">
     
@@ -125,7 +125,7 @@
   
   <article class="post-container card " itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/15/实战4.QQ答疑/">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/05/一个MeDIP-seq实战/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
        <meta itemprop="name" content="mt">
        <meta itemprop="description" content="">
@@ -137,12 +137,12 @@
     </div>
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-       <span class="">实战4.QQ答疑</span>
+       <span class="">一个MeDIP-seq实战</span>
       </h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-15T21:21:51+08:00">2018-04-15</time>
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-09-05T19:10:14+08:00">2017-09-05</time>
         </span>
         
         
@@ -152,169 +152,19 @@
         
         
         <span class="post-comment-count">
-          <i class="far fa-comments"></i> <a href="/2018/04/15/实战4.QQ答疑/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/15/实战4.QQ答疑/" itemprop="commentsCount"></span></a>
+          <i class="far fa-comments"></i> <a href="/2017/09/05/一个MeDIP-seq实战/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2017/09/05/一个MeDIP-seq实战/" itemprop="commentsCount"></span></a>
         </span>
         
         
       </div>
     </header>
     <main class="post-body" itemprop="articleBody">
-      <h5 id="Q1-有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格"><a href="#Q1-有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格" class="headerlink" title="Q1.有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格"></a>Q1.有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格</h5><p>原表格</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Sex</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A</td>
-<td>F</td>
-<td>6</td>
-<td>G</td>
-<td>F</td>
-</tr>
-<tr>
-<td>B</td>
-<td>M</td>
-<td>6</td>
-<td>G</td>
-<td>F</td>
-</tr>
-<tr>
-<td>B</td>
-<td>M</td>
-<td>6</td>
-<td>G</td>
-<td>F</td>
-</tr>
-<tr>
-<td>C</td>
-<td>F</td>
-<td>6</td>
-<td>G</td>
-<td>F</td>
-</tr>
-<tr>
-<td>C</td>
-<td>F</td>
-<td>6</td>
-<td>G</td>
-<td>F</td>
-</tr>
-<tr>
-<td>C</td>
-<td>F</td>
-<td>6</td>
-<td>G</td>
-<td>F</td>
-</tr>
-<tr>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-</tr>
-</tbody>
-</table>
-<p>新表格</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Sex</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-<th>Count</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A</td>
-<td>F</td>
-<td>6</td>
-<td>G</td>
-<td>F</td>
-<td>1</td>
-</tr>
-<tr>
-<td>B</td>
-<td>M</td>
-<td>6</td>
-<td>G</td>
-<td>F</td>
-<td>2</td>
-</tr>
-<tr>
-<td>C</td>
-<td>F</td>
-<td>6</td>
-<td>G</td>
-<td>F</td>
-<td>3</td>
-</tr>
-<tr>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-</tr>
-</tbody>
-</table>
-<p>1.drop.duplicate()能得到去除重复行的新表格，不知是否能同时计算出重复行数目？</p>
-<table>
-<thead>
-<tr>
-<th>Name</th>
-<th>Sex</th>
-<th>1</th>
-<th>2</th>
-<th>3</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>A</td>
-<td>F</td>
-<td>6</td>
-<td>G</td>
-<td>F</td>
-</tr>
-<tr>
-<td>B</td>
-<td>M</td>
-<td>6</td>
-<td>G</td>
-<td>F</td>
-</tr>
-<tr>
-<td>C</td>
-<td>F</td>
-<td>6</td>
-<td>G</td>
-<td>F</td>
-</tr>
-<tr>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-<td>…</td>
-</tr>
-</tbody>
-</table>
-<p>2.用groupby([‘Name’,’Sex’]).size()计算出了不同Name和Sex对应的次数，然后加上了后三行。不知是否有其他简便可行的方法推荐？<br><strong>分开写两个函数</strong></p>
-<h5 id="Q2-合并Q1中格式的多个表格，比如1000个，有没有什么方法推荐？"><a href="#Q2-合并Q1中格式的多个表格，比如1000个，有没有什么方法推荐？" class="headerlink" title="Q2.合并Q1中格式的多个表格，比如1000个，有没有什么方法推荐？"></a>Q2.合并Q1中格式的多个表格，比如1000个，有没有什么方法推荐？</h5><p>我用的循环读入单个表格然后写入新文件<br><strong>merge函数</strong></p>
-<h5 id="Q3-关于可视化，是否能画4个circles以上的维恩图，R中是有对应包的，不确定python是否也有"><a href="#Q3-关于可视化，是否能画4个circles以上的维恩图，R中是有对应包的，不确定python是否也有" class="headerlink" title="Q3.关于可视化，是否能画4个circles以上的维恩图，R中是有对应包的，不确定python是否也有?"></a>Q3.关于可视化，是否能画4个circles以上的维恩图，R中是有对应包的，不确定python是否也有?</h5><p><strong>seaborn</strong></p>
-<p><strong><em>以上来自<a href="www.xiniuedu.com">稀牛学院</a>数据科学实训营 助教田老师及学员们的QQ答疑</em></strong></p>
+      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">wget ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP018/SRP018845/SRR764931/SRR764931.sra</span><br><span class="line">wget ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sra-instant/reads/ByStudy/sra/SRP/SRP018/SRP018845/SRR764932/SRR764932.sra</span><br><span class="line">ls *sra |while read id; do fastq-dump --gzip --split-3 -A $id;done</span><br><span class="line">bowtie2 -p 6 -x /home/tingm/refdata/biotree_refdata/bowtie2_index/mm10/mm10 -U SRR764931.sra.fastq.gz | /home/tingm/software/samtools-1.3.1/samtools sort -O bam -o shGFP.bam</span><br><span class="line">bowtie2 -p 6 -x /home/tingm/refdata/biotree_refdata/bowtie2_index/mm10/mm10 -U SRR764932.sra.fastq.gz | /home/tingm/software/samtools-1.3.1/samtools sort -O bam -o shDnmt3L.bam</span><br><span class="line"></span><br><span class="line">/home/tingm/software/samtools-1.3.1/samtools index shDnmt3L.bam</span><br><span class="line">/home/tingm/software/samtools-1.3.1/samtools index shGFP.bam</span><br><span class="line"></span><br><span class="line">macs2 callpeak -t shDnmt3L.bam -m 10 30 -p 1e-5 -f BAM -g mm -n shDnmt3L 2&gt;shDnmt3L.masc2.log</span><br><span class="line">macs2 callpeak -t shGFP.bam -m 10 30 -p 1e-5 -f BAM -g mm -n shGFP 2&gt;shGFP.masc2.log</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">~/.local/bin/bamCoverage -b shDnmt3L.bam -o shDnmt3L.bw #-p 10 --normalizeUsingRPKM</span><br><span class="line">~/.local/bin/bamCoverage -b shGFP.bam -o shGFP.bw #-p 10 --normalizeUsingRPKM</span><br><span class="line"></span><br><span class="line">~/.local/bin/computeMatrix reference-point --referencePoint TSS -b 10000 -a 10000 -R /home/tingm/refdata/biotree_refdata/bowtie2_index/mm10_refSeq.bed -S shDnmt3L.bw --skipZeros -o matrix1_shDnmt3L_TSS.gz</span><br><span class="line">~/.local/bin/plotHeatmap -m matrix1_shDnmt3L_TSS.gz -out shDnmt3L.png</span><br><span class="line"></span><br><span class="line">~/.local/bin/computeMatrix reference-point --referencePoint TSS -b 10000 -a 10000 -R /home/tingm/refdata/biotree_refdata/bowtie2_index/mm10_refSeq.bed -S shGFP.bw --skipZeros -o matrix1_shGFP_TSS.gz</span><br><span class="line">~/.local/bin/plotHeatmap -m matrix1_shGFP_TSS.gz -out shGFP.png</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-411a344663d438d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="all files"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-6a55ccb7f1d36457.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="shDnmt3L.png"><br>不知道结果对不对</p>
+<blockquote>
+<p>MeDIP-seq 跟ChIP-seq的分析手段是一模一样的，同理hMeDIP-seq，caMeDIP-seq等等，都没有本质上的区别，只是用的抗体不一样而已<br><a href="http://www.bio-info-trainee.com/2352.html" target="_blank" rel="noopener">一个MeDIP-seq实战</a></p>
+</blockquote>
 
     </main>
     <footer class="post-footer">
@@ -327,7 +177,7 @@
         
         
         
-        <a class="post-tag button" href="/tags/python/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> python</a>
+        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
         
         
       </div>
@@ -339,16 +189,16 @@
   <div class="post-nav">
     
     <div class="post-nav-next post-nav-item">
-      <a href="/2018/04/15/L4-链家网房价数据分析/" rel="next" title="L4.链家网房价数据分析 要点记录">
+      <a href="/2017/09/02/一个ChIP-seq实战/" rel="next" title="一个ChIP-seq实战">
         <i class="fas fa-angle-left"></i>
-        <span class="nav-title">L4.链家网房价数据分析 要点记录</span>
+        <span class="nav-title">一个ChIP-seq实战</span>
       </a>
     </div>
     
     
     <div class="post-nav-prev post-nav-item">
-      <a href="/2018/04/22/L5-matplotlib可视化/" rel="prev" title="L5.matplotlib可视化">
-        <span class="nav-title">L5.matplotlib可视化</span>
+      <a href="/2018/04/01/L1.来自google的专业python指南/" rel="prev" title="来自google的专业python指南">
+        <span class="nav-title">来自google的专业python指南</span>
         <i class="fas fa-angle-right"></i>
       </a>
     </div>
@@ -367,7 +217,7 @@
   _hcwp = window._hcwp || [];
   _hcwp.push({ "widget": "Bloggerstream", "widget_id": "tingm831@gmail.com", "selector": ".hc-comment-count", "label": "{\%COUNT%\}" });
   
-  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2018/04/15/实战4.QQ答疑/" });
+  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2017/09/05/一个MeDIP-seq实战/" });
   
   (function() {
     if ("HC_LOAD_INIT" in window) {
@@ -451,12 +301,6 @@
 
 
 
-
-<hr>
-<div class="post-toc sidebar-item" id="toc-div">
-  <p><i class="fas fa-list-ol"></i> Table of Contents</p>
-  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#Q1-有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格"><span class="toc-text">Q1.有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Q2-合并Q1中格式的多个表格，比如1000个，有没有什么方法推荐？"><span class="toc-text">Q2.合并Q1中格式的多个表格，比如1000个，有没有什么方法推荐？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Q3-关于可视化，是否能画4个circles以上的维恩图，R中是有对应包的，不确定python是否也有"><span class="toc-text">Q3.关于可视化，是否能画4个circles以上的维恩图，R中是有对应包的，不确定python是否也有?</span></a></li></ol></div>
-</div>
 
 
 
