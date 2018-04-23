@@ -78,7 +78,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>L3.Pandas复杂统计与机器学习特征工程 | Hexo</title>
+    <title>转录组入门——1 软件下载 | Hexo</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang=""  data-spy="scroll" data-target=".list-group">
     
@@ -125,7 +125,7 @@
   
   <article class="post-container card " itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/10/L3-Pandas复杂统计与机器学习特征工程/">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/23/转录组入门——1 软件下载/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
        <meta itemprop="name" content="mt">
        <meta itemprop="description" content="">
@@ -137,12 +137,12 @@
     </div>
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-       <span class="">L3.Pandas复杂统计与机器学习特征工程</span>
+       <span class="">转录组入门——1 软件下载</span>
       </h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-10T19:47:17+08:00">2018-04-10</time>
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-23T14:46:27+08:00">2018-04-23</time>
         </span>
         
         
@@ -152,21 +152,15 @@
         
         
         <span class="post-comment-count">
-          <i class="far fa-comments"></i> <a href="/2018/04/10/L3-Pandas复杂统计与机器学习特征工程/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/10/L3-Pandas复杂统计与机器学习特征工程/" itemprop="commentsCount"></span></a>
+          <i class="far fa-comments"></i> <a href="/2018/04/23/转录组入门——1 软件下载/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/23/转录组入门——1 软件下载/" itemprop="commentsCount"></span></a>
         </span>
         
         
       </div>
     </header>
     <main class="post-body" itemprop="articleBody">
-      <h5 id="分组groupby-聚合agg"><a href="#分组groupby-聚合agg" class="headerlink" title="分组groupby() 聚合agg()"></a>分组groupby() 聚合agg()</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">group_by_name = salaries.groupby(&apos;Name&apos;) #分组</span><br><span class="line">#分组后统计操作</span><br><span class="line">group_by_name.sum() #求和</span><br><span class="line">group_by_name.mean() #均值</span><br><span class="line">salaries.groupby(&apos;Name&apos;).median() #中位数</span><br><span class="line">salaries.groupby(&apos;Name&apos;).size() #频次</span><br><span class="line">salaries.groupby(&apos;Name&apos;,sort=False).sum() #默认先读到哪个</span><br><span class="line">salaries.groupby(&apos;Name&apos;,sort=True).sum()  #按照Name排序</span><br><span class="line">salaries.groupby(&apos;Name&apos;).describe() #分组查看统计信息</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#继续挑选后统计计算</span><br><span class="line">group_by_name[[&apos;Bonus&apos;,&apos;Salary&apos;]].sum() </span><br><span class="line">salaries.groupby(&apos;Name&apos;).agg([&apos;sum&apos;,&apos;mean&apos;,&apos;std&apos;,&apos;median&apos;]) #分组基础上聚合</span><br><span class="line">salaries.groupby(&apos;Name&apos;)[[&apos;Bonus&apos;,&apos;Salary&apos;]].agg([&apos;sum&apos;,&apos;mean&apos;,&apos;std&apos;,&apos;median&apos;]) #根据名字分组选bouns和salary进行后续统计</span><br><span class="line">salaries.groupby(&apos;Name&apos;)[[&apos;Bonus&apos;,&apos;Salary&apos;]].agg([np.sum,np.mean,np.std,np.median]) #np</span><br><span class="line">salaries.groupby(&apos;Name&apos;)[[&apos;Bonus&apos;]].agg([np.sum,np.mean,np.std,np.median]) #[[&apos;Bonus&apos;]] dataframe</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#实例</span><br><span class="line">nvda = pd.read_csv(&apos;data/NVDA.csv&apos;, index_col=0,parse_dates=[&apos;Date&apos;])</span><br><span class="line">nvda.loc[:,&apos;year&apos;] = nvda.index.year #加入year这一列</span><br><span class="line">nvda[&apos;year&apos;].unique() #某一列有多少不同的取值 对series操作</span><br><span class="line">nvda[&apos;year&apos;].value_counts() #不同取值和出现次数 对series操作</span><br><span class="line">tmp = nvda[&apos;year&apos;].value_counts().to_frame() </span><br><span class="line">tmp = tmp.reset_index()</span><br><span class="line">tmp.columns = [&apos;year&apos;,&apos;count&apos;]</span><br><span class="line">tmp.head()</span><br><span class="line">tmp.sort_values(by=&apos;year&apos;).head()</span><br><span class="line">nvda.groupby(&apos;year&apos;).agg([&apos;mean&apos;,&apos;std&apos;]) #分组统计</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#transform 变换</span><br><span class="line">def my_transform(x):</span><br><span class="line">    return (x - x.mean())/x.std()</span><br><span class="line">tmp_arr = np.array(range(10))</span><br><span class="line">my_transform(tmp_arr)</span><br><span class="line">transformed = nvda.groupby(&apos;year&apos;).transform(my_transform)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">salaries.loc[:,&apos;new_name&apos;] = salaries[&apos;Name&apos;].apply(lambda x: &apos;HanXiao&apos; if x ==&apos;Han&apos; else x) #apply和匿名函数</span><br></pre></td></tr></table></figure>
-<h5 id="拼接concat-append"><a href="#拼接concat-append" class="headerlink" title="拼接concat append"></a>拼接concat append</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">results = pd.concat([df1,df2,df3])  #列</span><br><span class="line">test1 = pd.concat([df1,df2,df3], axis=1)#行对齐去拼接</span><br><span class="line">test2 = pd.concat([df1,df2,df3], axis=0)#列对齐拼接</span><br><span class="line">df1.append(df1)#append 追加</span><br></pre></td></tr></table></figure>
-<h5 id="合并merge-join"><a href="#合并merge-join" class="headerlink" title="合并merge join"></a>合并merge join</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pd.merge(results,new_df,on=[&apos;new_apts&apos;],how=&apos;inner&apos;) #left right注意区分</span><br><span class="line">.join #基于索引</span><br></pre></td></tr></table></figure>
-<p><strong><em>以上整理自<a href="www.xiniuedu.com">稀牛学院</a>数据科学实训营 寒小阳老师关于pandas的讲解</em></strong></p>
+      <h5 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h5><p>CentOS 6.8（虚拟机之前就已安装好，所以不是推荐安装的ubuntu）</p>
+<h5 id="软件安装参考"><a href="#软件安装参考" class="headerlink" title="软件安装参考"></a>软件安装参考</h5><p><a href="http://www.biotrainee.com/thread-1742-1-1.html" target="_blank" rel="noopener">Jimmy转录组入门(1)：计算机资源的准备</a><br><a href="http://www.biotrainee.com/thread-1796-1-1.html" target="_blank" rel="noopener">青山屋主转录组入门(1)-作业</a><br><a href="http://www.chenlianfu.com/?p=2438" target="_blank" rel="noopener">HTSeq中文教程</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"># download miniconda2</span><br><span class="line">wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh </span><br><span class="line">bash Miniconda2-latest-Linux-x86_64.sh</span><br><span class="line">source ~/.bashrc</span><br><span class="line"></span><br><span class="line"># sratoolkit</span><br><span class="line">conda install -c jfear sratoolkit=2.8.1</span><br><span class="line">fastq-dump</span><br><span class="line"></span><br><span class="line"># fastqc</span><br><span class="line">conda install -c bioconda fastqc=0.11.5</span><br><span class="line">fastqc</span><br><span class="line"></span><br><span class="line"># hisat2</span><br><span class="line">conda install -c bioconda hisat2</span><br><span class="line">hisat2</span><br><span class="line"></span><br><span class="line"># samtools</span><br><span class="line">conda install -c bioconda samtools=1.5 </span><br><span class="line"># error</span><br><span class="line"># samtools: error while loading shared libraries: libbz2.so.1.0: cannot open shared object file: No such file or directory</span><br><span class="line"># 错误解决参考 https://www.biostars.org/p/266111/</span><br><span class="line">conda install -c conda-forge -c bioconda samtools bzip2</span><br><span class="line">samtools</span><br><span class="line"></span><br><span class="line"># htseq-count</span><br><span class="line">conda install -c bioconda htseq=0.7.2</span><br><span class="line">python</span><br><span class="line">&gt;&gt;&gt;import HTSeq</span><br><span class="line"></span><br><span class="line"># R</span><br><span class="line">sudo yum install epel-release</span><br><span class="line">sudo yum install R</span><br><span class="line">R</span><br><span class="line"></span><br><span class="line"># Rstudio</span><br><span class="line">conda install rstudio</span><br><span class="line">rstudio</span><br></pre></td></tr></table></figure></p>
 
     </main>
     <footer class="post-footer">
@@ -179,16 +173,16 @@
   <div class="post-nav">
     
     <div class="post-nav-next post-nav-item">
-      <a href="/2018/04/10/Test1-python-part/" rel="next" title="Test1.python part">
+      <a href="/2018/04/22/L5-matplotlib可视化/" rel="next" title="L5.matplotlib可视化">
         <i class="fas fa-angle-left"></i>
-        <span class="nav-title">Test1.python part</span>
+        <span class="nav-title">L5.matplotlib可视化</span>
       </a>
     </div>
     
     
     <div class="post-nav-prev post-nav-item">
-      <a href="/2018/04/11/实战3-QQ答疑/" rel="prev" title="实战3.QQ答疑">
-        <span class="nav-title">实战3.QQ答疑</span>
+      <a href="/2018/04/23/转录组入门——2/" rel="prev" title="转录组入门——2">
+        <span class="nav-title">转录组入门——2</span>
         <i class="fas fa-angle-right"></i>
       </a>
     </div>
@@ -207,7 +201,7 @@
   _hcwp = window._hcwp || [];
   _hcwp.push({ "widget": "Bloggerstream", "widget_id": "tingm831@gmail.com", "selector": ".hc-comment-count", "label": "{\%COUNT%\}" });
   
-  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2018/04/10/L3-Pandas复杂统计与机器学习特征工程/" });
+  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2018/04/23/转录组入门——1 软件下载/" });
   
   (function() {
     if ("HC_LOAD_INIT" in window) {
@@ -295,7 +289,7 @@
 <hr>
 <div class="post-toc sidebar-item" id="toc-div">
   <p><i class="fas fa-list-ol"></i> Table of Contents</p>
-  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#分组groupby-聚合agg"><span class="toc-text">分组groupby() 聚合agg()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#拼接concat-append"><span class="toc-text">拼接concat append</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#合并merge-join"><span class="toc-text">合并merge join</span></a></li></ol></div>
+  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#系统环境"><span class="toc-text">系统环境</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#软件安装参考"><span class="toc-text">软件安装参考</span></a></li></ol></div>
 </div>
 
 

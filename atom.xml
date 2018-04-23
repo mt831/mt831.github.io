@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-22T12:05:47.313Z</updated>
+  <updated>2018-04-23T07:15:28.370Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,73 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>bioinformatics软件下载及简单使用</title>
+    <link href="http://yoursite.com/2018/04/23/%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD/"/>
+    <id>http://yoursite.com/2018/04/23/软件下载/</id>
+    <published>2018-04-23T07:05:45.617Z</published>
+    <updated>2018-04-23T07:15:28.370Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;Aspera&quot;&gt;&lt;a href=&quot;#Aspera&quot; class=&quot;headerlink&quot; title=&quot;Aspera&quot;&gt;&lt;/a&gt;Aspera&lt;/h5&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>转录组入门——2</title>
+    <link href="http://yoursite.com/2018/04/23/%E8%BD%AC%E5%BD%95%E7%BB%84%E5%85%A5%E9%97%A8%E2%80%94%E2%80%942/"/>
+    <id>http://yoursite.com/2018/04/23/转录组入门——2/</id>
+    <published>2018-04-23T06:58:40.038Z</published>
+    <updated>2018-04-23T07:03:41.213Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;CentOS-release-6-5-Final&quot;&gt;&lt;a href=&quot;#CentOS-release-6-5-Final&quot; class=&quot;headerlink&quot; title=&quot;CentOS release 6.5 (Final)&quot;&gt;&lt;/a&gt;CentOS
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>转录组入门——1 软件下载</title>
+    <link href="http://yoursite.com/2018/04/23/%E8%BD%AC%E5%BD%95%E7%BB%84%E5%85%A5%E9%97%A8%E2%80%94%E2%80%941%20%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD/"/>
+    <id>http://yoursite.com/2018/04/23/转录组入门——1 软件下载/</id>
+    <published>2018-04-23T06:46:27.624Z</published>
+    <updated>2018-04-23T06:57:18.046Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;系统环境&quot;&gt;&lt;a href=&quot;#系统环境&quot; class=&quot;headerlink&quot; title=&quot;系统环境&quot;&gt;&lt;/a&gt;系统环境&lt;/h5&gt;&lt;p&gt;CentOS 6.8（虚拟机之前就已安装好，所以不是推荐安装的ubuntu）&lt;/p&gt;
+&lt;h5 id=&quot;软件安装参考&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>L5.matplotlib可视化</title>
