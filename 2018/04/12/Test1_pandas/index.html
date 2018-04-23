@@ -90,7 +90,7 @@
         <h2 class="subtitle"></h2>
       </div>
       <div class="logo">
-        <img src="/images/ARIA_logo.png" alt="logo">
+        <img src="/images/dna_logo.png" alt="logo">
       </div>
     </div>
     
@@ -98,15 +98,15 @@
   <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
   <ul id="menu">
     
-    <li><a href="/">首页</a></li>
+    <li><a href="/">Home</a></li>
     
-    <li><a href="/archives/">归档</a></li>
+    <li><a href="/archives/">Archives</a></li>
     
-    <li><a href="/categories/">分类</a></li>
+    <li><a href="/categories/">Categories</a></li>
     
-    <li><a href="/tags/">标签</a></li>
+    <li><a href="/tags/">Tags</a></li>
     
-    <li><a href="/about/">关于</a></li>
+    <li><a href="/about/">About</a></li>
     
   </ul>
 </nav>
@@ -284,7 +284,7 @@
   
   <div class="search">
     <div class="form-group">
-      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
     </div>
   </div>
   <div class="search-result-box" id="search-result"></div>
@@ -299,7 +299,7 @@
   <div class="site-count">
     
     <div class="archives-count">
-      <p>归档</p>
+      <p>Archives</p>
       <p><a href="/archives/">26</a></p>
     </div>
     
@@ -308,7 +308,7 @@
     <span class="site-count-divider"> | </span>
     
     <div class="categories-count">
-      <p>分类</p>
+      <p>Categories</p>
       <p><a href="/categories/">3</a></p>
     </div>
     
@@ -317,7 +317,7 @@
     <span class="site-count-divider"> | </span>
     
     <div class="tags-count">
-      <p>标签</p>
+      <p>Tags</p>
       <p><a href="/tags/">2</a></p>
     </div>
     
@@ -339,7 +339,7 @@
 
 <hr>
 <div class="post-toc sidebar-item" id="toc-div">
-  <p><i class="fas fa-list-ol"></i> 文章目录</p>
+  <p><i class="fas fa-list-ol"></i> Table of Contents</p>
   <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#Test1-pandas部分"><span class="toc-text">Test1 pandas部分</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#步骤1-载入需要的库"><span class="toc-text">步骤1. 载入需要的库</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#步骤2-导入数据"><span class="toc-text">步骤2. 导入数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题1-被点最多的食物是哪个？"><span class="toc-text">问题1. 被点最多的食物是哪个？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题2-有记录的这段时间总收入是？"><span class="toc-text">问题2. 有记录的这段时间总收入是？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题3-有多少东西价格超过-10-00"><span class="toc-text">问题3. 有多少东西价格超过 $10.00?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题4-顾客点多于一罐Canned-Soda的次数是？"><span class="toc-text">问题4. 顾客点多于一罐Canned Soda的次数是？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回答问题5-6请从导入数据，给该数据分配一个变量users"><span class="toc-text">回答问题5 ~ 6请从导入数据，给该数据分配一个变量users</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题5-每个职业男性和女性的平均年龄分别是？"><span class="toc-text">问题5.  每个职业男性和女性的平均年龄分别是？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题6-每个职业中男性的比例是？"><span class="toc-text">问题6.  每个职业中男性的比例是？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回答问题7-8导入数据，给该数据分配一个变量df"><span class="toc-text">回答问题7 ~ 8导入数据，给该数据分配一个变量df</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题7-请把Mjob和Fjob两列中数据都变成全部大写字母，查看df，如果df中这两列数据确实变成大写，说明操作成功"><span class="toc-text">问题7. 请把Mjob和Fjob两列中数据都变成全部大写字母，查看df，如果df中这两列数据确实变成大写，说明操作成功</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题8-把df中所有数值都乘以10"><span class="toc-text">问题8. 把df中所有数值都乘以10</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回答问题9-13导入数据给该数据分配一个变量"><span class="toc-text">回答问题9 ~ 13导入数据给该数据分配一个变量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题9-data中2061年有误，应为1961年。请改正。"><span class="toc-text">问题9. data中2061年有误，应为1961年。请改正。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题10-将正确的日期设为index。要求：index的dtype为datetime64-ns"><span class="toc-text">问题10. 将正确的日期设为index。要求：index的dtype为datetime64[ns]</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题11-请分别统计每个地点总共缺失了多少数据。"><span class="toc-text">问题11. 请分别统计每个地点总共缺失了多少数据。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题12-请创建两个dataframe，一个统计每个地点所有日期风速的最小值、最大值、均值、标准差；第二个统计每日所有地点的风速的最小值、最大值、均值、标准差。"><span class="toc-text">问题12. 请创建两个dataframe，一个统计每个地点所有日期风速的最小值、最大值、均值、标准差；第二个统计每日所有地点的风速的最小值、最大值、均值、标准差。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题13-将数据下采样，每地每年只保留一个样本数据-待解决"><span class="toc-text">问题13. 将数据下采样，每地每年只保留一个样本数据 待解决</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回答问题14-17导入数据，给该数据分配一个变量iris"><span class="toc-text">回答问题14~17导入数据，给该数据分配一个变量iris.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题14-该数据中缺失了列名，请按照下面给出的名称添加。"><span class="toc-text">问题14. 该数据中缺失了列名，请按照下面给出的名称添加。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题15-1）将10-29行-‘petal-length’列数据设为Nan；2）再将其设为1-0-【请分步操作，保留第1）步结果】"><span class="toc-text">问题15. 1）将10 ~ 29行 ‘petal_length’列数据设为Nan；2）再将其设为1.0 【请分步操作，保留第1）步结果】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题16-删掉class列"><span class="toc-text">问题16. 删掉class列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题17-1）将前3行所有数值设为Nan；2）删掉有缺失值的行【请分步操作，保留第1）步结果】"><span class="toc-text">问题17. 1）将前3行所有数值设为Nan；2）删掉有缺失值的行【请分步操作，保留第1）步结果】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#回答问题18-20导入数据‘06-US-Baby-Names-right-csv’，给该数据分配一个变量baby-names"><span class="toc-text">回答问题18 ~ 20导入数据‘06_US_Baby_Names_right.csv’，给该数据分配一个变量baby_names.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题18-男性名字多还是女性名字多"><span class="toc-text">问题18. 男性名字多还是女性名字多?</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题19-最常见的名字是？"><span class="toc-text">问题19. 最常见的名字是？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#问题20-最少见的名字出现了多少次？有多少个名字是最少见的？"><span class="toc-text">问题20. 最少见的名字出现了多少次？有多少个名字是最少见的？</span></a></div>
 </div>
 
@@ -350,7 +350,7 @@
     
 <hr>
 <div class="social-link sidebar-item">
-  <p><i class="far fa-address-card"></i> 社交链接</p>
+  <p><i class="far fa-address-card"></i> Social Links</p>
   <ul>
     
     <li><i class="fab fa-github"></i> <a href="https://github.com/mt831" target="_blank">GitHub</a></li>
@@ -398,7 +398,7 @@
           
         </div>
         <div class="powered-by">
-          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
         </div>
       </div>
     </div>
