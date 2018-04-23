@@ -78,7 +78,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>L4.链家网房价数据分析 要点记录 | Hexo</title>
+    <title>转录组入门——1 | Hexo</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang=""  data-spy="scroll" data-target=".list-group">
     
@@ -125,7 +125,7 @@
   
   <article class="post-container card " itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/15/L4-链家网房价数据分析/">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/09/转录组入门——1/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
        <meta itemprop="name" content="mt">
        <meta itemprop="description" content="">
@@ -137,12 +137,12 @@
     </div>
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-       <span class="">L4.链家网房价数据分析 要点记录</span>
+       <span class="">转录组入门——1</span>
       </h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-15T15:17:30+08:00">2018-04-15</time>
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-08-09T16:22:38+08:00">2017-08-09</time>
         </span>
         
         
@@ -152,18 +152,31 @@
         
         
         <span class="post-comment-count">
-          <i class="far fa-comments"></i> <a href="/2018/04/15/L4-链家网房价数据分析/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/15/L4-链家网房价数据分析/" itemprop="commentsCount"></span></a>
+          <i class="far fa-comments"></i> <a href="/2017/08/09/转录组入门——1/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2017/08/09/转录组入门——1/" itemprop="commentsCount"></span></a>
         </span>
         
         
       </div>
     </header>
     <main class="post-body" itemprop="articleBody">
-      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#改列名</span><br><span class="line">lj_data.columns = [&apos;district&apos;, &apos;address&apos;...]</span><br><span class="line">#最便宜和最贵</span><br><span class="line">lj_data[lj_data[&apos;price&apos;]==lj_data[&apos;price&apos;].min()] #min()</span><br><span class="line">lj_data.sort_values(by=&apos;price&apos;).head(1) #by和ascending</span><br><span class="line">#to_frame和reset_index</span><br><span class="line">lj_data[&apos;view_num&apos;].value_counts().to_frame().reset_index()</span><br><span class="line">#loc和apply</span><br><span class="line">lj_data.loc[:,&apos;area&apos;] = lj_data[&apos;area&apos;].apply(lambda x:x[:-2]).apply(lambda x:float(x))</span><br><span class="line">#groupby</span><br><span class="line">pop_dire = lj_data.groupby(&apos;direction&apos;)[[&apos;view_num&apos;]].sum().reset_index()</span><br><span class="line">#agg</span><br><span class="line">tmp = lj_data.groupby(&apos;house_type&apos;).agg(&#123;&apos;view_num&apos;:&apos;sum&apos;&#125;).reset_index()</span><br></pre></td></tr></table></figure>
+      <h5 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h5><p>CentOS 6.8（虚拟机之前就已安装好，所以不是推荐安装的ubuntu）</p>
+<h5 id="软件安装参考"><a href="#软件安装参考" class="headerlink" title="软件安装参考"></a>软件安装参考</h5><p><a href="http://www.biotrainee.com/thread-1742-1-1.html" target="_blank" rel="noopener">Jimmy转录组入门(1)：计算机资源的准备</a><br><a href="http://www.biotrainee.com/thread-1796-1-1.html" target="_blank" rel="noopener">青山屋主转录组入门(1)-作业</a><br><a href="http://www.chenlianfu.com/?p=2438" target="_blank" rel="noopener">HTSeq中文教程</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"># download miniconda2</span><br><span class="line">wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh </span><br><span class="line">bash Miniconda2-latest-Linux-x86_64.sh</span><br><span class="line">source ~/.bashrc</span><br><span class="line"></span><br><span class="line"># sratoolkit</span><br><span class="line">conda install -c jfear sratoolkit=2.8.1</span><br><span class="line">fastq-dump</span><br><span class="line"></span><br><span class="line"># fastqc</span><br><span class="line">conda install -c bioconda fastqc=0.11.5</span><br><span class="line">fastqc</span><br><span class="line"></span><br><span class="line"># hisat2</span><br><span class="line">conda install -c bioconda hisat2</span><br><span class="line">hisat2</span><br><span class="line"></span><br><span class="line"># samtools</span><br><span class="line">conda install -c bioconda samtools=1.5 </span><br><span class="line"># error</span><br><span class="line"># samtools: error while loading shared libraries: libbz2.so.1.0: cannot open shared object file: No such file or directory</span><br><span class="line"># 错误解决参考 https://www.biostars.org/p/266111/</span><br><span class="line">conda install -c conda-forge -c bioconda samtools bzip2</span><br><span class="line">samtools</span><br><span class="line"></span><br><span class="line"># htseq-count</span><br><span class="line">conda install -c bioconda htseq=0.7.2</span><br><span class="line">python</span><br><span class="line">&gt;&gt;&gt;import HTSeq</span><br><span class="line"></span><br><span class="line"># R</span><br><span class="line">sudo yum install epel-release</span><br><span class="line">sudo yum install R</span><br><span class="line">R</span><br><span class="line"></span><br><span class="line"># Rstudio</span><br><span class="line">conda install rstudio</span><br><span class="line">rstudio</span><br></pre></td></tr></table></figure></p>
 
     </main>
     <footer class="post-footer">
       
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
+        
+        
+      </div>
       
     </footer>
   </article>
@@ -171,17 +184,10 @@
   
   <div class="post-nav">
     
-    <div class="post-nav-next post-nav-item">
-      <a href="/2018/04/12/Test1_pandas/" rel="next" title="Test1.pandas part">
-        <i class="fas fa-angle-left"></i>
-        <span class="nav-title">Test1.pandas part</span>
-      </a>
-    </div>
-    
     
     <div class="post-nav-prev post-nav-item">
-      <a href="/2018/04/15/实战4.QQ答疑/" rel="prev" title="">
-        <span class="nav-title"></span>
+      <a href="/2017/08/09/转录组入门——2/" rel="prev" title="转录组入门——2">
+        <span class="nav-title">转录组入门——2</span>
         <i class="fas fa-angle-right"></i>
       </a>
     </div>
@@ -200,7 +206,7 @@
   _hcwp = window._hcwp || [];
   _hcwp.push({ "widget": "Bloggerstream", "widget_id": "tingm831@gmail.com", "selector": ".hc-comment-count", "label": "{\%COUNT%\}" });
   
-  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2018/04/15/L4-链家网房价数据分析/" });
+  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2017/08/09/转录组入门——1/" });
   
   (function() {
     if ("HC_LOAD_INIT" in window) {
@@ -284,6 +290,12 @@
 
 
 
+
+<hr>
+<div class="post-toc sidebar-item" id="toc-div">
+  <p><i class="fas fa-list-ol"></i> Table of Contents</p>
+  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#系统环境"><span class="toc-text">系统环境</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#软件安装参考"><span class="toc-text">软件安装参考</span></a></li></ol></div>
+</div>
 
 
 

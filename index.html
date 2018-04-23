@@ -172,99 +172,17 @@
     </main>
     <footer class="post-footer">
       
-    </footer>
-  </article>
-  
-  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/23/转录组入门——2/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="mt">
-        <meta itemprop="description" content="">
-        <meta itemprop="image" content="/images/avatar.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Hexo">
-      </span>
-    </div>
-    <header class="post-header">
-      <h2 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/04/23/转录组入门——2/" itemprop="url">转录组入门——2</a>
-      </h2>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-23T14:58:40+08:00">2018-04-23</time>
-        </span>
+      <div class="post-tags">
         
         
         
         
-        <span class="post-meta-divider"> | </span>
         
-          
-          <span class="post-comment-count">
-            <i class="far fa-comments"></i> <a href="/2018/04/23/转录组入门——2/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/23/转录组入门——2/" itemprop="commentsCount"></span></a>
-          </span>
-          
+        
+        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
+        
         
       </div>
-    </header>
-    <main class="post-body" itemprop="articleBody">
-      
-      <h5 id="CentOS-release-6-5-Final"><a href="#CentOS-release-6-5-Final" class="headerlink" title="CentOS release 6.5 (Final)"></a>CentOS release 6.5 (Final)</h5><h5 id="GEO-SRA数据库的数据存放形式参考"><a href="#GEO-SRA数据库的数据存放形式参考" class="headerlink" title="GEO/SRA数据库的数据存放形式参考"></a>GEO/SRA数据库的数据存放形式参考</h5><p><a href="http://www.biotrainee.com/forum.php?mod=viewthread&amp;tid=1884&amp;fromuid=1685" target="_blank" rel="noopener">青山屋主 转录组入门(2)-作业</a><br><a href="http://www.biotrainee.com/forum.php?mod=viewthread&amp;tid=1829&amp;fromuid=1685" target="_blank" rel="noopener">hoptop 转录组入门（二）读文献下数据</a></p>
-<h5 id="软件及参数"><a href="#软件及参数" class="headerlink" title="软件及参数"></a>软件及参数</h5><p>比对：TopHat (v2.0.13) 参考基因组：GRCh37/hg19 GTF文件：GTF version GRCh37.70 去除MQ&gt;30的reads<br>计算平均插入大小和标准差：Picard-tools（v1.126）<br>计算reads count：HTSeq (v0.6.0)<br>差异表达：DESeq (v3.0) 差异外显子：DEXSeq (v3.1)<br>normalize Bigwig files to per million reads：BEDTools (v2.17.0), bedGraphToBigWig tool (v4)<br>统计分析和作图： R (v3.1.1) (<a href="http://www.r-project.org/" target="_blank" rel="noopener">http://www.r-project.org/</a>)<br>GO富集分析：DAVID (<a href="http://david.ncifcrf.gov/" target="_blank" rel="noopener">http://david.ncifcrf.gov/</a>)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># download Aspera</span><br><span class="line">wget http://download.asperasoft.com/download/sw/connect/3.6.2/aspera-connect-3.6.2.117442-linux-64.tar.gz</span><br><span class="line">tar zxf aspera-connect-3.6.2.117442-linux-64.tar.gz</span><br><span class="line">sh aspera-connect-3.6.2.117442-linux-64.sh</span><br><span class="line">echo &apos;PATH=$PATH:/home/tma/.aspera/connect/bin&apos; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br><span class="line">ascp</span><br><span class="line"># download data</span><br><span class="line">for x in $(seq 48 62);do ascp -T -l 200M -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh --host=ftp-private.ncbi.nlm.nih.gov --user=anonftp --mode=recv /sra/sra-instant/reads/ByStudy/sra/SRP/SRP075/SRP075747/SRR35899&quot;$x&quot;/SRR35899&quot;$x&quot;.sra . ;done</span><br><span class="line"></span><br><span class="line"># sratoolkit prefetch</span><br><span class="line">for x in $(seq 48 62);do prefetch SRR35899&quot;$x&quot;;done</span><br></pre></td></tr></table></figure>
-      
-    </main>
-    <footer class="post-footer">
-      
-    </footer>
-  </article>
-  
-  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/23/转录组入门——1 软件下载/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="mt">
-        <meta itemprop="description" content="">
-        <meta itemprop="image" content="/images/avatar.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="Hexo">
-      </span>
-    </div>
-    <header class="post-header">
-      <h2 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/04/23/转录组入门——1 软件下载/" itemprop="url">转录组入门——1 软件下载</a>
-      </h2>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-23T14:46:27+08:00">2018-04-23</time>
-        </span>
-        
-        
-        
-        
-        <span class="post-meta-divider"> | </span>
-        
-          
-          <span class="post-comment-count">
-            <i class="far fa-comments"></i> <a href="/2018/04/23/转录组入门——1 软件下载/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/23/转录组入门——1 软件下载/" itemprop="commentsCount"></span></a>
-          </span>
-          
-        
-      </div>
-    </header>
-    <main class="post-body" itemprop="articleBody">
-      
-      <h5 id="系统环境"><a href="#系统环境" class="headerlink" title="系统环境"></a>系统环境</h5><p>CentOS 6.8（虚拟机之前就已安装好，所以不是推荐安装的ubuntu）</p>
-<h5 id="软件安装参考"><a href="#软件安装参考" class="headerlink" title="软件安装参考"></a>软件安装参考</h5><p><a href="http://www.biotrainee.com/thread-1742-1-1.html" target="_blank" rel="noopener">Jimmy转录组入门(1)：计算机资源的准备</a><br><a href="http://www.biotrainee.com/thread-1796-1-1.html" target="_blank" rel="noopener">青山屋主转录组入门(1)-作业</a><br><a href="http://www.chenlianfu.com/?p=2438" target="_blank" rel="noopener">HTSeq中文教程</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"># download miniconda2</span><br><span class="line">wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh </span><br><span class="line">bash Miniconda2-latest-Linux-x86_64.sh</span><br><span class="line">source ~/.bashrc</span><br><span class="line"></span><br><span class="line"># sratoolkit</span><br><span class="line">conda install -c jfear sratoolkit=2.8.1</span><br><span class="line">fastq-dump</span><br><span class="line"></span><br><span class="line"># fastqc</span><br><span class="line">conda install -c bioconda fastqc=0.11.5</span><br><span class="line">fastqc</span><br><span class="line"></span><br><span class="line"># hisat2</span><br><span class="line">conda install -c bioconda hisat2</span><br><span class="line">hisat2</span><br><span class="line"></span><br><span class="line"># samtools</span><br><span class="line">conda install -c bioconda samtools=1.5 </span><br><span class="line"># error</span><br><span class="line"># samtools: error while loading shared libraries: libbz2.so.1.0: cannot open shared object file: No such file or directory</span><br><span class="line"># 错误解决参考 https://www.biostars.org/p/266111/</span><br><span class="line">conda install -c conda-forge -c bioconda samtools bzip2</span><br><span class="line">samtools</span><br><span class="line"></span><br><span class="line"># htseq-count</span><br><span class="line">conda install -c bioconda htseq=0.7.2</span><br><span class="line">python</span><br><span class="line">&gt;&gt;&gt;import HTSeq</span><br><span class="line"></span><br><span class="line"># R</span><br><span class="line">sudo yum install epel-release</span><br><span class="line">sudo yum install R</span><br><span class="line">R</span><br><span class="line"></span><br><span class="line"># Rstudio</span><br><span class="line">conda install rstudio</span><br><span class="line">rstudio</span><br></pre></td></tr></table></figure></p>
-
-      
-    </main>
-    <footer class="post-footer">
       
     </footer>
   </article>
@@ -816,9 +734,110 @@
     </footer>
   </article>
   
+  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/04/实战2-python正则讲解/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="mt">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Hexo">
+      </span>
+    </div>
+    <header class="post-header">
+      <h2 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2018/04/04/实战2-python正则讲解/" itemprop="url">实战2.python正则讲解</a>
+      </h2>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-04T18:54:01+08:00">2018-04-04</time>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+          
+          <span class="post-comment-count">
+            <i class="far fa-comments"></i> <a href="/2018/04/04/实战2-python正则讲解/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/04/实战2-python正则讲解/" itemprop="commentsCount"></span></a>
+          </span>
+          
+        
+      </div>
+    </header>
+    <main class="post-body" itemprop="articleBody">
+      
+      <h5 id="python正则不熟悉要点记录"><a href="#python正则不熟悉要点记录" class="headerlink" title="python正则不熟悉要点记录"></a>python正则不熟悉要点记录</h5><p>r 表示不转义<br>(\1) 引用前面一个分组<br>\w   匹配任何字母数字字符<br>(?P<name>…) 创建分组并命名<br>(?i)忽略大小写<br>.group()返回匹配结果中一个或多个group  <a href="https://blog.csdn.net/jeryjeryjery/article/details/77196497" target="_blank" rel="noopener">.group和.findall参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">re.search(&apos;abc(?!def)&apos;,&apos;abcdef&apos;) #为NONE所以没有.group()</span><br><span class="line">re.findall(r&apos;(?i)sam&apos;, &apos;sam Sam&apos;) #.findall</span><br><span class="line">re.search(r&apos;(?i)sam&apos;, &apos;sam Sam&apos;).group()#注意区分.findall .group</span><br><span class="line">re.match #只检测起始位置</span><br></pre></td></tr></table></figure></name></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 匹配&apos;数字abc&apos;后面是数字或abc的字符串</span><br><span class="line">print (re.search(r&apos;(\d)abc(?(1)\d|abc)&apos;, &apos;1abc1 abcabc&apos;).group())</span><br></pre></td></tr></table></figure>
+<p>(?P=name)引用name的分组，和（?P<name>）一起使用</name></p>
+<p>还需多练习</p>
+<p><strong><em>以上来自<a href="www.xiniuedu.com">稀牛学院</a>数据科学实训营 助教大菜菜老师的正则直播讲解</em></strong></p>
+
+      
+    </main>
+    <footer class="post-footer">
+      
+    </footer>
+  </article>
+  
+  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/03/爬虫：模拟登陆和动态网站抓取/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="mt">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="Hexo">
+      </span>
+    </div>
+    <header class="post-header">
+      <h2 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2018/04/03/爬虫：模拟登陆和动态网站抓取/" itemprop="url">爬虫：模拟登陆和动态网站抓取 要点记录</a>
+      </h2>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-03T19:48:07+08:00">2018-04-03</time>
+        </span>
+        
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+          
+          <span class="post-comment-count">
+            <i class="far fa-comments"></i> <a href="/2018/04/03/爬虫：模拟登陆和动态网站抓取/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/03/爬虫：模拟登陆和动态网站抓取/" itemprop="commentsCount"></span></a>
+          </span>
+          
+        
+      </div>
+    </header>
+    <main class="post-body" itemprop="articleBody">
+      
+      <h5 id="豆瓣模拟登录（google浏览器）"><a href="#豆瓣模拟登录（google浏览器）" class="headerlink" title="豆瓣模拟登录（google浏览器）"></a>豆瓣模拟登录（google浏览器）</h5><p><strong>存在问题？</strong> 登录账号和密码、保持登录状态（跨请求地保持某些参数）、图形验证码<br><strong>操作</strong>：在检查项的Network下查看登录信息，点击login，Header下From data内有表单信息</p>
+<blockquote>
+<p>source: None<br>redir: <a href="https://www.douban.com/" target="_blank" rel="noopener">https://www.douban.com/</a> #登陆页面<br>form_email: test2 #用户邮箱<br>form_password: 111111 #密码<br>captcha-solution: potato #验证码，豆瓣有验证码图库，比对图片ID号<br>captcha-id: tljqzo0Gv3aYUpIarqXaDBAg:en #验证码ID XPath去取<br>login: 登录</p>
+</blockquote>
+<p>captcha_img_url = selector.xpath(‘//img[@id=”captcha_image”]//@src’)<br><strong>结果为空，待解决</strong></p>
+<h5 id="scrapy-命令行端执行脚本"><a href="#scrapy-命令行端执行脚本" class="headerlink" title="scrapy 命令行端执行脚本"></a>scrapy 命令行端执行脚本</h5><p><strong>待练习</strong><br>[Scrapy简单入门及实例讲解][<a href="https://www.cnblogs.com/kongzhagen/p/6549053.html" target="_blank" rel="noopener">https://www.cnblogs.com/kongzhagen/p/6549053.html</a>]<br>[Scrapy安装、爬虫入门教程、爬虫实例（豆瓣电影爬虫）][<a href="http://www.cnblogs.com/Shirlies/p/4536880.html" target="_blank" rel="noopener">http://www.cnblogs.com/Shirlies/p/4536880.html</a>]</p>
+
+      
+    </main>
+    <footer class="post-footer">
+      
+    </footer>
+  </article>
+  
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-angle-right"></i></a>
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-angle-right"></i></a>
   </nav>
   
   
@@ -877,7 +896,7 @@
     
     <div class="archives-count">
       <p>Archives</p>
-      <p><a href="/archives/">16</a></p>
+      <p><a href="/archives/">22</a></p>
     </div>
     
     
@@ -895,7 +914,7 @@
     
     <div class="tags-count">
       <p>Tags</p>
-      <p><a href="/tags/">0</a></p>
+      <p><a href="/tags/">1</a></p>
     </div>
     
   </div>

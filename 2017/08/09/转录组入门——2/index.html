@@ -78,7 +78,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>L4.链家网房价数据分析 要点记录 | Hexo</title>
+    <title>转录组入门——2 | Hexo</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang=""  data-spy="scroll" data-target=".list-group">
     
@@ -125,7 +125,7 @@
   
   <article class="post-container card " itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/15/L4-链家网房价数据分析/">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/09/转录组入门——2/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
        <meta itemprop="name" content="mt">
        <meta itemprop="description" content="">
@@ -137,12 +137,12 @@
     </div>
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-       <span class="">L4.链家网房价数据分析 要点记录</span>
+       <span class="">转录组入门——2</span>
       </h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-15T15:17:30+08:00">2018-04-15</time>
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-08-09T18:58:42+08:00">2017-08-09</time>
         </span>
         
         
@@ -152,18 +152,31 @@
         
         
         <span class="post-comment-count">
-          <i class="far fa-comments"></i> <a href="/2018/04/15/L4-链家网房价数据分析/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/15/L4-链家网房价数据分析/" itemprop="commentsCount"></span></a>
+          <i class="far fa-comments"></i> <a href="/2017/08/09/转录组入门——2/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2017/08/09/转录组入门——2/" itemprop="commentsCount"></span></a>
         </span>
         
         
       </div>
     </header>
     <main class="post-body" itemprop="articleBody">
-      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#改列名</span><br><span class="line">lj_data.columns = [&apos;district&apos;, &apos;address&apos;...]</span><br><span class="line">#最便宜和最贵</span><br><span class="line">lj_data[lj_data[&apos;price&apos;]==lj_data[&apos;price&apos;].min()] #min()</span><br><span class="line">lj_data.sort_values(by=&apos;price&apos;).head(1) #by和ascending</span><br><span class="line">#to_frame和reset_index</span><br><span class="line">lj_data[&apos;view_num&apos;].value_counts().to_frame().reset_index()</span><br><span class="line">#loc和apply</span><br><span class="line">lj_data.loc[:,&apos;area&apos;] = lj_data[&apos;area&apos;].apply(lambda x:x[:-2]).apply(lambda x:float(x))</span><br><span class="line">#groupby</span><br><span class="line">pop_dire = lj_data.groupby(&apos;direction&apos;)[[&apos;view_num&apos;]].sum().reset_index()</span><br><span class="line">#agg</span><br><span class="line">tmp = lj_data.groupby(&apos;house_type&apos;).agg(&#123;&apos;view_num&apos;:&apos;sum&apos;&#125;).reset_index()</span><br></pre></td></tr></table></figure>
-
+      <h5 id="CentOS-release-6-5-Final"><a href="#CentOS-release-6-5-Final" class="headerlink" title="CentOS release 6.5 (Final)"></a>CentOS release 6.5 (Final)</h5><h5 id="GEO-SRA数据库的数据存放形式参考"><a href="#GEO-SRA数据库的数据存放形式参考" class="headerlink" title="GEO/SRA数据库的数据存放形式参考"></a>GEO/SRA数据库的数据存放形式参考</h5><p><a href="http://www.biotrainee.com/forum.php?mod=viewthread&amp;tid=1884&amp;fromuid=1685" target="_blank" rel="noopener">青山屋主 转录组入门(2)-作业</a><br><a href="http://www.biotrainee.com/forum.php?mod=viewthread&amp;tid=1829&amp;fromuid=1685" target="_blank" rel="noopener">hoptop 转录组入门（二）读文献下数据</a></p>
+<h5 id="软件及参数"><a href="#软件及参数" class="headerlink" title="软件及参数"></a>软件及参数</h5><p>比对：TopHat (v2.0.13) 参考基因组：GRCh37/hg19 GTF文件：GTF version GRCh37.70 去除MQ&gt;30的reads<br>计算平均插入大小和标准差：Picard-tools（v1.126）<br>计算reads count：HTSeq (v0.6.0)<br>差异表达：DESeq (v3.0) 差异外显子：DEXSeq (v3.1)<br>normalize Bigwig files to per million reads：BEDTools (v2.17.0), bedGraphToBigWig tool (v4)<br>统计分析和作图： R (v3.1.1) (<a href="http://www.r-project.org/" target="_blank" rel="noopener">http://www.r-project.org/</a>)<br>GO富集分析：DAVID (<a href="http://david.ncifcrf.gov/" target="_blank" rel="noopener">http://david.ncifcrf.gov/</a>)</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># download Aspera</span><br><span class="line">wget http://download.asperasoft.com/download/sw/connect/3.6.2/aspera-connect-3.6.2.117442-linux-64.tar.gz</span><br><span class="line">tar zxf aspera-connect-3.6.2.117442-linux-64.tar.gz</span><br><span class="line">sh aspera-connect-3.6.2.117442-linux-64.sh</span><br><span class="line">echo &apos;PATH=$PATH:/home/tma/.aspera/connect/bin&apos; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br><span class="line">ascp</span><br><span class="line"># download data</span><br><span class="line">for x in $(seq 48 62);do ascp -T -l 200M -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh --host=ftp-private.ncbi.nlm.nih.gov --user=anonftp --mode=recv /sra/sra-instant/reads/ByStudy/sra/SRP/SRP075/SRP075747/SRR35899&quot;$x&quot;/SRR35899&quot;$x&quot;.sra . ;done</span><br><span class="line"></span><br><span class="line"># sratoolkit prefetch</span><br><span class="line">for x in $(seq 48 62);do prefetch SRR35899&quot;$x&quot;;done</span><br></pre></td></tr></table></figure>
     </main>
     <footer class="post-footer">
       
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
+        
+        
+      </div>
       
     </footer>
   </article>
@@ -172,16 +185,16 @@
   <div class="post-nav">
     
     <div class="post-nav-next post-nav-item">
-      <a href="/2018/04/12/Test1_pandas/" rel="next" title="Test1.pandas part">
+      <a href="/2017/08/09/转录组入门——1/" rel="next" title="转录组入门——1">
         <i class="fas fa-angle-left"></i>
-        <span class="nav-title">Test1.pandas part</span>
+        <span class="nav-title">转录组入门——1</span>
       </a>
     </div>
     
     
     <div class="post-nav-prev post-nav-item">
-      <a href="/2018/04/15/实战4.QQ答疑/" rel="prev" title="">
-        <span class="nav-title"></span>
+      <a href="/2017/08/10/转录组入门——3/" rel="prev" title="转录组入门——3">
+        <span class="nav-title">转录组入门——3</span>
         <i class="fas fa-angle-right"></i>
       </a>
     </div>
@@ -200,7 +213,7 @@
   _hcwp = window._hcwp || [];
   _hcwp.push({ "widget": "Bloggerstream", "widget_id": "tingm831@gmail.com", "selector": ".hc-comment-count", "label": "{\%COUNT%\}" });
   
-  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2018/04/15/L4-链家网房价数据分析/" });
+  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2017/08/09/转录组入门——2/" });
   
   (function() {
     if ("HC_LOAD_INIT" in window) {
@@ -284,6 +297,12 @@
 
 
 
+
+<hr>
+<div class="post-toc sidebar-item" id="toc-div">
+  <p><i class="fas fa-list-ol"></i> Table of Contents</p>
+  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#CentOS-release-6-5-Final"><span class="toc-text">CentOS release 6.5 (Final)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#GEO-SRA数据库的数据存放形式参考"><span class="toc-text">GEO/SRA数据库的数据存放形式参考</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#软件及参数"><span class="toc-text">软件及参数</span></a></li></ol></div>
+</div>
 
 
 

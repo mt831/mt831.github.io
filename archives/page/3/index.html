@@ -42,7 +42,7 @@
     
     
 <link rel="stylesheet" type="text/css" href="/css/page.css">
-<link rel="stylesheet" type="text/css" href="/css/post.css">
+<link rel="stylesheet" type="text/css" href="/css/archive.css">
 
     <link rel="stylesheet" type="text/css" href="/css/custom.css">
     <link rel="stylesheet" type="text/css" href="/css/normalize.css">
@@ -78,7 +78,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>L4.链家网房价数据分析 要点记录 | Hexo</title>
+    <title>Archives | Hexo</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang=""  data-spy="scroll" data-target=".list-group">
     
@@ -121,106 +121,47 @@
         <div class="main-container">
           <div class="content">
             
-<section id="post" class="post">
-  
-  <article class="post-container card " itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/15/L4-链家网房价数据分析/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-       <meta itemprop="name" content="mt">
-       <meta itemprop="description" content="">
-       <meta itemprop="image" content="/images/avatar.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-       <meta itemprop="name" content="Hexo">
-      </span>
+<section id="archive" class="archive">
+  <div class="archive-container">
+    <div class="archive-counter">
+      
+      <p>You have 22 posts!</p>
+      
     </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-       <span class="">L4.链家网房价数据分析 要点记录</span>
-      </h1>
-      <div class="post-meta">
+    
+    
+    
+    
+    <h1 class="archive-title">2017</h1>
+    
+    <article class="archive-post card" itemscope itemtype="http://schema.org/Article">
+      <h2 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2017/08/09/转录组入门——2/" itemprop="url">转录组入门——2</a>
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-15T15:17:30+08:00">2018-04-15</time>
+          <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-08-09T18:58:42+08:00">08-09</time>
         </span>
         
+      </h2>
+    </article>
+    
+    
+    <article class="archive-post card" itemscope itemtype="http://schema.org/Article">
+      <h2 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2017/08/09/转录组入门——1/" itemprop="url">转录组入门——1</a>
         
-        
-        
-        <span class="post-meta-divider"> | </span>
-        
-        
-        <span class="post-comment-count">
-          <i class="far fa-comments"></i> <a href="/2018/04/15/L4-链家网房价数据分析/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/15/L4-链家网房价数据分析/" itemprop="commentsCount"></span></a>
+        <span class="post-date">
+          <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-08-09T16:22:38+08:00">08-09</time>
         </span>
         
-        
-      </div>
-    </header>
-    <main class="post-body" itemprop="articleBody">
-      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#改列名</span><br><span class="line">lj_data.columns = [&apos;district&apos;, &apos;address&apos;...]</span><br><span class="line">#最便宜和最贵</span><br><span class="line">lj_data[lj_data[&apos;price&apos;]==lj_data[&apos;price&apos;].min()] #min()</span><br><span class="line">lj_data.sort_values(by=&apos;price&apos;).head(1) #by和ascending</span><br><span class="line">#to_frame和reset_index</span><br><span class="line">lj_data[&apos;view_num&apos;].value_counts().to_frame().reset_index()</span><br><span class="line">#loc和apply</span><br><span class="line">lj_data.loc[:,&apos;area&apos;] = lj_data[&apos;area&apos;].apply(lambda x:x[:-2]).apply(lambda x:float(x))</span><br><span class="line">#groupby</span><br><span class="line">pop_dire = lj_data.groupby(&apos;direction&apos;)[[&apos;view_num&apos;]].sum().reset_index()</span><br><span class="line">#agg</span><br><span class="line">tmp = lj_data.groupby(&apos;house_type&apos;).agg(&#123;&apos;view_num&apos;:&apos;sum&apos;&#125;).reset_index()</span><br></pre></td></tr></table></figure>
-
-    </main>
-    <footer class="post-footer">
-      
-      
-    </footer>
-  </article>
-  
-  
-  <div class="post-nav">
-    
-    <div class="post-nav-next post-nav-item">
-      <a href="/2018/04/12/Test1_pandas/" rel="next" title="Test1.pandas part">
-        <i class="fas fa-angle-left"></i>
-        <span class="nav-title">Test1.pandas part</span>
-      </a>
-    </div>
-    
-    
-    <div class="post-nav-prev post-nav-item">
-      <a href="/2018/04/15/实战4.QQ答疑/" rel="prev" title="">
-        <span class="nav-title"></span>
-        <i class="fas fa-angle-right"></i>
-      </a>
-    </div>
+      </h2>
+    </article>
     
   </div>
   
-  
-  
-
-<div class="comments" id="comments">
-  
-  
-  <div id="hypercomments_widget"></div>
-  
-  <script type="text/javascript">
-  _hcwp = window._hcwp || [];
-  _hcwp.push({ "widget": "Bloggerstream", "widget_id": "tingm831@gmail.com", "selector": ".hc-comment-count", "label": "{\%COUNT%\}" });
-  
-  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2018/04/15/L4-链家网房价数据分析/" });
-  
-  (function() {
-    if ("HC_LOAD_INIT" in window) {
-      return;
-    }
-    HC_LOAD_INIT = true;
-    var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
-    var hcc = document.createElement("script");
-    hcc.type = "text/javascript";
-    hcc.defer = true;
-    hcc.src = ("https:" === document.location.protocol ? "https" : "http") + "://w.hypercomments.com/widget/hc/tingm831@gmail.com/" + lang + "/widget.js";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hcc, s.nextSibling);
-  })();
-  </script>
-  
-</div>
-
-
-
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/archives/page/2/"><i class="fas fa-angle-left"></i></a><a class="page-number" href="/archives/">1</a><a class="page-number" href="/archives/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
   
 </section>
 
@@ -279,14 +220,6 @@
 
 
   <div class="sidebar-sticky">
-    
-    
-
-
-
-
-
-
     
     
     

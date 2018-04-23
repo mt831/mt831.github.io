@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-23T07:15:28.370Z</updated>
+  <updated>2018-04-23T07:48:53.069Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/04/23/%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD/"/>
     <id>http://yoursite.com/2018/04/23/软件下载/</id>
     <published>2018-04-23T07:05:45.617Z</published>
-    <updated>2018-04-23T07:15:28.370Z</updated>
+    <updated>2018-04-23T07:48:53.069Z</updated>
     
     <summary type="html">
     
@@ -36,50 +36,7 @@
     </summary>
     
     
-  </entry>
-  
-  <entry>
-    <title>转录组入门——2</title>
-    <link href="http://yoursite.com/2018/04/23/%E8%BD%AC%E5%BD%95%E7%BB%84%E5%85%A5%E9%97%A8%E2%80%94%E2%80%942/"/>
-    <id>http://yoursite.com/2018/04/23/转录组入门——2/</id>
-    <published>2018-04-23T06:58:40.038Z</published>
-    <updated>2018-04-23T07:03:41.213Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h5 id=&quot;CentOS-release-6-5-Final&quot;&gt;&lt;a href=&quot;#CentOS-release-6-5-Final&quot; class=&quot;headerlink&quot; title=&quot;CentOS release 6.5 (Final)&quot;&gt;&lt;/a&gt;CentOS
-        
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>转录组入门——1 软件下载</title>
-    <link href="http://yoursite.com/2018/04/23/%E8%BD%AC%E5%BD%95%E7%BB%84%E5%85%A5%E9%97%A8%E2%80%94%E2%80%941%20%E8%BD%AF%E4%BB%B6%E4%B8%8B%E8%BD%BD/"/>
-    <id>http://yoursite.com/2018/04/23/转录组入门——1 软件下载/</id>
-    <published>2018-04-23T06:46:27.624Z</published>
-    <updated>2018-04-23T06:57:18.046Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h5 id=&quot;系统环境&quot;&gt;&lt;a href=&quot;#系统环境&quot; class=&quot;headerlink&quot; title=&quot;系统环境&quot;&gt;&lt;/a&gt;系统环境&lt;/h5&gt;&lt;p&gt;CentOS 6.8（虚拟机之前就已安装好，所以不是推荐安装的ubuntu）&lt;/p&gt;
-&lt;h5 id=&quot;软件安装参考&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
+      <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
     
   </entry>
   
@@ -367,6 +324,153 @@
     
     </summary>
     
+    
+  </entry>
+  
+  <entry>
+    <title>转录组入门——8</title>
+    <link href="http://yoursite.com/2017/08/23/%E8%BD%AC%E5%BD%95%E7%BB%84%E5%85%A5%E9%97%A8%E2%80%94%E2%80%948/"/>
+    <id>http://yoursite.com/2017/08/23/转录组入门——8/</id>
+    <published>2017-08-23T10:02:51.000Z</published>
+    <updated>2018-04-23T08:05:57.514Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;选择p&amp;lt;0.05而且abs(logFC)大于一个与众的基因为显著差异表达基因集，对这个基因集用R包做KEGG/GO超几何分布检验分析。&lt;br&gt;然后把表达矩阵和分组信息分别作出cls和gct文件，导入到GSEA软件分析。&lt;br&gt;基本任务是完成这
+        
+      
+    
+    </summary>
+    
+    
+      <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>转录组入门——7</title>
+    <link href="http://yoursite.com/2017/08/21/%E8%BD%AC%E5%BD%95%E7%BB%84%E5%85%A5%E9%97%A8%E2%80%94%E2%80%947/"/>
+    <id>http://yoursite.com/2017/08/21/转录组入门——7/</id>
+    <published>2017-08-21T08:02:38.000Z</published>
+    <updated>2018-04-23T08:04:57.372Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
+        
+      
+    
+    </summary>
+    
+    
+      <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>转录组入门——6</title>
+    <link href="http://yoursite.com/2017/08/15/%E8%BD%AC%E5%BD%95%E7%BB%84%E5%85%A5%E9%97%A8%E2%80%94%E2%80%946/"/>
+    <id>http://yoursite.com/2017/08/15/转录组入门——6/</id>
+    <published>2017-08-15T12:37:18.000Z</published>
+    <updated>2018-04-23T08:02:13.313Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;实现reads计数的软件教程&quot;&gt;&lt;a href=&quot;#实现reads计数的软件教程&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>转录组入门——5</title>
+    <link href="http://yoursite.com/2017/08/14/%E8%BD%AC%E5%BD%95%E7%BB%84%E5%85%A5%E9%97%A8%E2%80%94%E2%80%945/"/>
+    <id>http://yoursite.com/2017/08/14/转录组入门——5/</id>
+    <published>2017-08-14T10:21:01.000Z</published>
+    <updated>2018-04-23T07:57:07.530Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;比对软件简介&quot;&gt;&lt;a href=&quot;#比对软件简介&quot; class=&quot;headerlink&quot; title=&quot;比对软件简介&quot;&gt;&lt;/a&gt;比对软件简介&lt;/h5&gt;&lt;blockquote&gt;
+&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>转录组入门——4</title>
+    <link href="http://yoursite.com/2017/08/11/%E8%BD%AC%E5%BD%95%E7%BB%84%E5%85%A5%E9%97%A8%E2%80%94%E2%80%944/"/>
+    <id>http://yoursite.com/2017/08/11/转录组入门——4/</id>
+    <published>2017-08-11T14:08:50.000Z</published>
+    <updated>2018-04-23T07:48:40.047Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;参考基因组-hg19-下载&quot;&gt;&lt;a href=&quot;#参考基因组-hg19-下载&quot; class=&quot;headerlink&quot; title=&quot;参考基因组(hg19)下载&quot;&gt;&lt;/a&gt;参考基因组(hg19)下载&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;NCBI    
+        
+      
+    
+    </summary>
+    
+    
+      <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>转录组入门——3</title>
+    <link href="http://yoursite.com/2017/08/10/%E8%BD%AC%E5%BD%95%E7%BB%84%E5%85%A5%E9%97%A8%E2%80%94%E2%80%943/"/>
+    <id>http://yoursite.com/2017/08/10/转录组入门——3/</id>
+    <published>2017-08-10T11:34:02.000Z</published>
+    <updated>2018-04-23T07:48:32.004Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h5 id=&quot;SRA-Toolkit-软件&quot;&gt;&lt;a href=&quot;#SRA-Toolkit-软件&quot; class=&quot;headerlink&quot; title=&quot;SRA Toolkit 软件&quot;&gt;&lt;/a&gt;SRA Toolkit 软件&lt;/h5&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
     
   </entry>
   
