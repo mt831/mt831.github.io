@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-23T08:35:39.388Z</updated>
+  <updated>2018-04-24T11:03:41.418Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Intro And Chapter 1-2</title>
+    <link href="http://yoursite.com/2018/04/24/perl_learning.1/"/>
+    <id>http://yoursite.com/2018/04/24/perl_learning.1/</id>
+    <published>2018-04-24T01:00:00.000Z</published>
+    <updated>2018-04-24T11:03:41.418Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;strong&gt;为学习解决FASTA的一些操作问题开始学习perl&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&quot;Intro-perl版本-v5-10-1&quot;&gt;&lt;a href=&quot;#Intro-perl版本-v5-10-1&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Beginning Perl (free)学习笔记" scheme="http://yoursite.com/categories/Beginning-Perl-free-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="perl" scheme="http://yoursite.com/tags/perl/"/>
+    
+  </entry>
   
   <entry>
     <title>MeDIP-seq,ChIP-seq,RNA-seq结合起来分析</title>
@@ -500,32 +527,6 @@
         
           &lt;blockquote&gt;
 &lt;p&gt;选择p&amp;lt;0.05而且abs(logFC)大于一个与众的基因为显著差异表达基因集，对这个基因集用R包做KEGG/GO超几何分布检验分析。&lt;br&gt;然后把表达矩阵和分组信息分别作出cls和gct文件，导入到GSEA软件分析。&lt;br&gt;基本任务是完成这
-        
-      
-    
-    </summary>
-    
-      <category term="转录组入门" scheme="http://yoursite.com/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E5%85%A5%E9%97%A8/"/>
-    
-    
-      <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>转录组入门——7</title>
-    <link href="http://yoursite.com/2017/08/21/%E8%BD%AC%E5%BD%95%E7%BB%84%E5%85%A5%E9%97%A8%E2%80%94%E2%80%947/"/>
-    <id>http://yoursite.com/2017/08/21/转录组入门——7/</id>
-    <published>2017-08-21T08:02:38.000Z</published>
-    <updated>2018-04-23T08:33:53.124Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
         
       
     
