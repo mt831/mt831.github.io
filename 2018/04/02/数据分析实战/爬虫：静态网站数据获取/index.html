@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    <meta name="keywords" content="python, R, math, bioinformatics">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="mt's blog" type="application/atom+xml" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
+
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>爬虫：静态网站数据获取 | mt's blog</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang=""  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">mt's blog</a></h1>
+        <h2 class="subtitle"></h2>
+      </div>
+      <div class="logo">
+        <img src="/images/ARIA_logo.png" alt="logo">
+      </div>
+    </div>
+    
+<nav id="nav" class="nav">
+  <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
+  <ul id="menu">
+    
+    <li><a href="/">Home</a></li>
+    
+    <li><a href="/archives/">Archives</a></li>
+    
+    <li><a href="/categories/">Categories</a></li>
+    
+    <li><a href="/tags/">Tags</a></li>
+    
+  </ul>
+</nav>
+
+
+  </div>
+</header>
+
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<section id="post" class="post">
+  
+  <article class="post-container card " itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/02/数据分析实战/爬虫：静态网站数据获取/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="mt">
+       <meta itemprop="description" content="">
+       <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="mt's blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+       <span class="">爬虫：静态网站数据获取</span>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-02T18:29:09+08:00">2018-04-02</time>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+        <span class="post-categories">
+          <i class="far fa-folder-open"></i>
+          
+          
+          <span itemprop="about" itemscope itemtype="http://schema.org/Thing"> <a href="/categories/数据科学实训营/" itemprop="url" rel="index"><span itemprop="name">数据科学实训营</span></a></span>
+          
+          
+        </span>
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i> <a href="/2018/04/02/数据分析实战/爬虫：静态网站数据获取/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/02/数据分析实战/爬虫：静态网站数据获取/" itemprop="commentsCount"></span></a>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-body" itemprop="articleBody">
+      <h4 id="XPath"><a href="#XPath" class="headerlink" title="XPath"></a>XPath</h4><h5 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h5><blockquote>
+<p>XML 文档中查信息的语言， XML 文档中对元素和属性进行遍历</p>
+</blockquote>
+<h5 id="七类节点node-XML最小单元"><a href="#七类节点node-XML最小单元" class="headerlink" title="七类节点node XML最小单元"></a>七类节点node XML最小单元</h5><blockquote>
+<p>element、attribute、text、namespace、processing-instruction、comment、root</p>
+</blockquote>
+<h5 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h5><p>选取节点：路径表达式<br><a href="http://www.w3school.com.cn/xpath/index.asp" target="_blank" rel="noopener">XPath教程</a></p>
+<blockquote>
+<p>nodename 选取此node所有子节点<br>/ 文档根下节点 // 文档里任何位置的节点<br>. 当前节点  .. 当前节点父节点<br>@选属性<br>[] 谓语 找特定节点或包含特定值节点<br>星号 匹配任何元素节点 @* 匹配任何属性节点  node() 匹配任何类型节点<br>| 选取若干路径<br>绝对路径和相对路径：前者以“/”起始</p>
+</blockquote>
+<h5 id="查看网页XPath路径记录"><a href="#查看网页XPath路径记录" class="headerlink" title="查看网页XPath路径记录"></a>查看网页XPath路径记录</h5><p>右击标题，选检查，elements下查看，右击copy XPath，ctrl+F，ctrl+V，之前粘贴部分被高亮，高亮部分为XPath路径示例，具体语法参照上面<br>//div[@class=”text”]/em/a/text() 取内容<br>div[@class=”text”] 选取所有拥有名为class=”text” 的属性的div 元素<br>a/@href 取属性</p>
+<h4 id="requesets"><a href="#requesets" class="headerlink" title="requesets"></a>requesets</h4><p>One.请求网页，<a href="https://blog.csdn.net/shanzhizi/article/details/50903748" target="_blank" rel="noopener">requesets详解</a><br>Two.获取返回状态200和网页编码格式’GB2312’ -&gt; .content显示内容 -&gt; import etree;XPath抓取标题;用text-&gt;传递参数wd和rn -&gt; 超时时间 -&gt;添加代理 -&gt;请求头内容<br><a href="https://www.biaodianfu.com/python-lxml-xpath.html" target="_blank" rel="noopener">etree和XPath</a></p>
+<p>豆瓣最热电影评论爬取示例、链家爬取案例练习</p>
+<p><strong><em><a href="www.xiniuedu.com">稀牛学院</a>数据科学实训营 助教寒小阳老师爬虫课程 学习整理</em></strong></p>
+
+    </main>
+    <footer class="post-footer">
+      
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/python/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> python</a>
+        
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <div class="post-nav">
+    
+    <div class="post-nav-next post-nav-item">
+      <a href="/2018/04/01/数据分析实战/实战1-QQ答疑/" rel="next" title="实战1.QQ答疑">
+        <i class="fas fa-angle-left"></i>
+        <span class="nav-title">实战1.QQ答疑</span>
+      </a>
+    </div>
+    
+    
+    <div class="post-nav-prev post-nav-item">
+      <a href="/2018/04/03/数据分析实战/L2.Pandas-Series-DataFrame/" rel="prev" title="L2 Pandas Series & DataFrame 关键点记录">
+        <span class="nav-title">L2 Pandas Series & DataFrame 关键点记录</span>
+        <i class="fas fa-angle-right"></i>
+      </a>
+    </div>
+    
+  </div>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div id="hypercomments_widget"></div>
+  
+  <script type="text/javascript">
+  _hcwp = window._hcwp || [];
+  _hcwp.push({ "widget": "Bloggerstream", "widget_id": "tingm831@gmail.com", "selector": ".hc-comment-count", "label": "{\%COUNT%\}" });
+  
+  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2018/04/02/数据分析实战/爬虫：静态网站数据获取/" });
+  
+  (function() {
+    if ("HC_LOAD_INIT" in window) {
+      return;
+    }
+    HC_LOAD_INIT = true;
+    var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+    var hcc = document.createElement("script");
+    hcc.type = "text/javascript";
+    hcc.defer = true;
+    hcc.src = ("https:" === document.location.protocol ? "https" : "http") + "://w.hypercomments.com/widget/hc/tingm831@gmail.com/" + lang + "/widget.js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hcc, s.nextSibling);
+  })();
+  </script>
+  
+</div>
+
+
+
+  
+</section>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.png" alt="mt">
+  
+  <p class="author-name">mt</p>
+  <p class="author-description"> </p>
+  <div class="site-count">
+    
+    <div class="archives-count">
+      <p>Archives</p>
+      <p><a href="/archives/">28</a></p>
+    </div>
+    
+    
+    
+    <span class="site-count-divider"> | </span>
+    
+    <div class="categories-count">
+      <p>Categories</p>
+      <p><a href="/categories/">4</a></p>
+    </div>
+    
+    
+    
+    <span class="site-count-divider"> | </span>
+    
+    <div class="tags-count">
+      <p>Tags</p>
+      <p><a href="/tags/">3</a></p>
+    </div>
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i> RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+
+
+
+
+<hr>
+<div class="post-toc sidebar-item" id="toc-div">
+  <p><i class="fas fa-list-ol"></i> Table of Contents</p>
+  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#XPath"><span class="toc-text">XPath</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#定义"><span class="toc-text">定义</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#七类节点node-XML最小单元"><span class="toc-text">七类节点node XML最小单元</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#语法"><span class="toc-text">语法</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#查看网页XPath路径记录"><span class="toc-text">查看网页XPath路径记录</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#requesets"><span class="toc-text">requesets</span></a></li></ol></div>
+</div>
+
+
+
+    
+    
+    
+<hr>
+<div class="social-link sidebar-item">
+  <p><i class="far fa-address-card"></i> Social Links</p>
+  <ul>
+    
+    <li><i class="fab fa-github"></i> <a href="https://github.com/mt831" target="_blank">GitHub</a></li>
+    
+  </ul>
+</div>
+
+
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="back-to-top">
+      <a id="back-to-top"><i class="fas fa-angle-double-up"></i></a>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">mt</span>
+          <span class="year"><i class="far fa-copyright"></i> 2018-4-1 - 2018</span>
+          
+        </div>
+        
+        
+<div class="busuanzi">
+  <span id="busuanzi_container_site_pv"><i class="fas fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+  <span id="busuanzi_container_site_uv"><i class="fas fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+  <span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i> <span id="busuanzi_value_page_pv"></span></span>
+</div>
+
+
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+        </div>
+        <div class="powered-by">
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-24T11:03:41.418Z</updated>
+  <updated>2018-04-25T04:10:59.742Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,9 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Chapter 3</title>
+    <link href="http://yoursite.com/2018/04/24/Beginning%20Perl%20(free)%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/perl_learning.2/"/>
+    <id>http://yoursite.com/2018/04/24/Beginning Perl (free)学习笔记/perl_learning.2/</id>
+    <published>2018-04-24T06:00:00.000Z</published>
+    <updated>2018-04-25T04:10:59.742Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;Lists&quot;&gt;&lt;a href=&quot;#Lists&quot; class=&quot;headerlink&quot; title=&quot;Lists&quot;&gt;&lt;/a&gt;Lists&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;if you’re ever printing long strings,
+        
+      
+    
+    </summary>
+    
+      <category term="Beginning Perl (free)学习笔记" scheme="http://yoursite.com/categories/Beginning-Perl-free-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+      <category term="perl" scheme="http://yoursite.com/tags/perl/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Intro And Chapter 1-2</title>
-    <link href="http://yoursite.com/2018/04/24/perl_learning.1/"/>
-    <id>http://yoursite.com/2018/04/24/perl_learning.1/</id>
+    <link href="http://yoursite.com/2018/04/24/Beginning%20Perl%20(free)%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/perl_learning.1/"/>
+    <id>http://yoursite.com/2018/04/24/Beginning Perl (free)学习笔记/perl_learning.1/</id>
     <published>2018-04-24T01:00:00.000Z</published>
     <updated>2018-04-24T11:03:41.418Z</updated>
     
@@ -45,8 +72,8 @@
   
   <entry>
     <title>MeDIP-seq,ChIP-seq,RNA-seq结合起来分析</title>
-    <link href="http://yoursite.com/2018/04/23/MeDIP-seq-ChIP-seq-RNA-seq%E7%BB%93%E5%90%88%E8%B5%B7%E6%9D%A5%E5%88%86%E6%9E%90/"/>
-    <id>http://yoursite.com/2018/04/23/MeDIP-seq-ChIP-seq-RNA-seq结合起来分析/</id>
+    <link href="http://yoursite.com/2018/04/23/seq%E5%AE%9E%E6%88%98/MeDIP-seq-ChIP-seq-RNA-seq%E7%BB%93%E5%90%88%E8%B5%B7%E6%9D%A5%E5%88%86%E6%9E%90/"/>
+    <id>http://yoursite.com/2018/04/23/seq实战/MeDIP-seq-ChIP-seq-RNA-seq结合起来分析/</id>
     <published>2018-04-23T08:10:29.000Z</published>
     <updated>2018-04-23T08:35:39.388Z</updated>
     
@@ -95,8 +122,8 @@
   
   <entry>
     <title>L5.matplotlib可视化</title>
-    <link href="http://yoursite.com/2018/04/22/L5-matplotlib%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
-    <id>http://yoursite.com/2018/04/22/L5-matplotlib可视化/</id>
+    <link href="http://yoursite.com/2018/04/22/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L5-matplotlib%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    <id>http://yoursite.com/2018/04/22/数据分析实战/L5-matplotlib可视化/</id>
     <published>2018-04-22T12:03:08.119Z</published>
     <updated>2018-04-23T08:30:44.736Z</updated>
     
@@ -121,8 +148,8 @@
   
   <entry>
     <title>实战4.QQ答疑</title>
-    <link href="http://yoursite.com/2018/04/15/%E5%AE%9E%E6%88%984.QQ%E7%AD%94%E7%96%91/"/>
-    <id>http://yoursite.com/2018/04/15/实战4.QQ答疑/</id>
+    <link href="http://yoursite.com/2018/04/15/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%984.QQ%E7%AD%94%E7%96%91/"/>
+    <id>http://yoursite.com/2018/04/15/数据分析实战/实战4.QQ答疑/</id>
     <published>2018-04-15T13:21:51.508Z</published>
     <updated>2018-04-23T08:31:49.739Z</updated>
     
@@ -147,8 +174,8 @@
   
   <entry>
     <title>L4.链家网房价数据分析 要点记录</title>
-    <link href="http://yoursite.com/2018/04/15/L4-%E9%93%BE%E5%AE%B6%E7%BD%91%E6%88%BF%E4%BB%B7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    <id>http://yoursite.com/2018/04/15/L4-链家网房价数据分析/</id>
+    <link href="http://yoursite.com/2018/04/15/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L4-%E9%93%BE%E5%AE%B6%E7%BD%91%E6%88%BF%E4%BB%B7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
+    <id>http://yoursite.com/2018/04/15/数据分析实战/L4-链家网房价数据分析/</id>
     <published>2018-04-15T07:17:30.101Z</published>
     <updated>2018-04-23T08:32:01.957Z</updated>
     
@@ -173,8 +200,8 @@
   
   <entry>
     <title>Test1.pandas part</title>
-    <link href="http://yoursite.com/2018/04/12/Test1_pandas/"/>
-    <id>http://yoursite.com/2018/04/12/Test1_pandas/</id>
+    <link href="http://yoursite.com/2018/04/12/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/Test1_pandas/"/>
+    <id>http://yoursite.com/2018/04/12/数据分析实战/Test1_pandas/</id>
     <published>2018-04-12T11:13:50.589Z</published>
     <updated>2018-04-23T08:32:20.726Z</updated>
     
@@ -199,8 +226,8 @@
   
   <entry>
     <title>实战3.QQ答疑</title>
-    <link href="http://yoursite.com/2018/04/11/%E5%AE%9E%E6%88%983-QQ%E7%AD%94%E7%96%91/"/>
-    <id>http://yoursite.com/2018/04/11/实战3-QQ答疑/</id>
+    <link href="http://yoursite.com/2018/04/11/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%983-QQ%E7%AD%94%E7%96%91/"/>
+    <id>http://yoursite.com/2018/04/11/数据分析实战/实战3-QQ答疑/</id>
     <published>2018-04-11T12:33:41.922Z</published>
     <updated>2018-04-23T08:32:33.048Z</updated>
     
@@ -225,8 +252,8 @@
   
   <entry>
     <title>L3.Pandas复杂统计与机器学习特征工程</title>
-    <link href="http://yoursite.com/2018/04/10/L3-Pandas%E5%A4%8D%E6%9D%82%E7%BB%9F%E8%AE%A1%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B/"/>
-    <id>http://yoursite.com/2018/04/10/L3-Pandas复杂统计与机器学习特征工程/</id>
+    <link href="http://yoursite.com/2018/04/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L3-Pandas%E5%A4%8D%E6%9D%82%E7%BB%9F%E8%AE%A1%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B/"/>
+    <id>http://yoursite.com/2018/04/10/数据分析实战/L3-Pandas复杂统计与机器学习特征工程/</id>
     <published>2018-04-10T11:47:17.698Z</published>
     <updated>2018-04-23T08:31:42.851Z</updated>
     
@@ -251,8 +278,8 @@
   
   <entry>
     <title>Test1.python part</title>
-    <link href="http://yoursite.com/2018/04/10/Test1-python-part/"/>
-    <id>http://yoursite.com/2018/04/10/Test1-python-part/</id>
+    <link href="http://yoursite.com/2018/04/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/Test1-python-part/"/>
+    <id>http://yoursite.com/2018/04/10/数据分析实战/Test1-python-part/</id>
     <published>2018-04-10T11:45:01.284Z</published>
     <updated>2018-04-23T08:32:08.853Z</updated>
     
@@ -277,8 +304,8 @@
   
   <entry>
     <title>实战2.python正则讲解</title>
-    <link href="http://yoursite.com/2018/04/04/%E5%AE%9E%E6%88%982-python%E6%AD%A3%E5%88%99%E8%AE%B2%E8%A7%A3/"/>
-    <id>http://yoursite.com/2018/04/04/实战2-python正则讲解/</id>
+    <link href="http://yoursite.com/2018/04/04/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%982-python%E6%AD%A3%E5%88%99%E8%AE%B2%E8%A7%A3/"/>
+    <id>http://yoursite.com/2018/04/04/数据分析实战/实战2-python正则讲解/</id>
     <published>2018-04-04T10:54:01.002Z</published>
     <updated>2018-04-23T08:31:35.485Z</updated>
     
@@ -303,8 +330,8 @@
   
   <entry>
     <title>爬虫：模拟登陆和动态网站抓取 要点记录</title>
-    <link href="http://yoursite.com/2018/04/03/%E7%88%AC%E8%99%AB%EF%BC%9A%E6%A8%A1%E6%8B%9F%E7%99%BB%E9%99%86%E5%92%8C%E5%8A%A8%E6%80%81%E7%BD%91%E7%AB%99%E6%8A%93%E5%8F%96/"/>
-    <id>http://yoursite.com/2018/04/03/爬虫：模拟登陆和动态网站抓取/</id>
+    <link href="http://yoursite.com/2018/04/03/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/%E7%88%AC%E8%99%AB%EF%BC%9A%E6%A8%A1%E6%8B%9F%E7%99%BB%E9%99%86%E5%92%8C%E5%8A%A8%E6%80%81%E7%BD%91%E7%AB%99%E6%8A%93%E5%8F%96/"/>
+    <id>http://yoursite.com/2018/04/03/数据分析实战/爬虫：模拟登陆和动态网站抓取/</id>
     <published>2018-04-03T11:48:07.237Z</published>
     <updated>2018-04-23T08:31:20.588Z</updated>
     
@@ -329,8 +356,8 @@
   
   <entry>
     <title>L2 Pandas Series &amp; DataFrame 关键点记录</title>
-    <link href="http://yoursite.com/2018/04/03/L2.Pandas-Series-DataFrame/"/>
-    <id>http://yoursite.com/2018/04/03/L2.Pandas-Series-DataFrame/</id>
+    <link href="http://yoursite.com/2018/04/03/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L2.Pandas-Series-DataFrame/"/>
+    <id>http://yoursite.com/2018/04/03/数据分析实战/L2.Pandas-Series-DataFrame/</id>
     <published>2018-04-03T11:43:53.533Z</published>
     <updated>2018-04-23T08:31:28.509Z</updated>
     
@@ -355,8 +382,8 @@
   
   <entry>
     <title>爬虫：静态网站数据获取</title>
-    <link href="http://yoursite.com/2018/04/02/%E7%88%AC%E8%99%AB%EF%BC%9A%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96/"/>
-    <id>http://yoursite.com/2018/04/02/爬虫：静态网站数据获取/</id>
+    <link href="http://yoursite.com/2018/04/02/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/%E7%88%AC%E8%99%AB%EF%BC%9A%E9%9D%99%E6%80%81%E7%BD%91%E7%AB%99%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96/"/>
+    <id>http://yoursite.com/2018/04/02/数据分析实战/爬虫：静态网站数据获取/</id>
     <published>2018-04-02T10:29:09.626Z</published>
     <updated>2018-04-23T08:32:15.093Z</updated>
     
@@ -381,8 +408,8 @@
   
   <entry>
     <title>实战1.QQ答疑</title>
-    <link href="http://yoursite.com/2018/04/01/%E5%AE%9E%E6%88%981-QQ%E7%AD%94%E7%96%91/"/>
-    <id>http://yoursite.com/2018/04/01/实战1-QQ答疑/</id>
+    <link href="http://yoursite.com/2018/04/01/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%981-QQ%E7%AD%94%E7%96%91/"/>
+    <id>http://yoursite.com/2018/04/01/数据分析实战/实战1-QQ答疑/</id>
     <published>2018-04-01T13:13:58.757Z</published>
     <updated>2018-04-23T08:32:26.774Z</updated>
     
@@ -407,8 +434,8 @@
   
   <entry>
     <title>来自google的专业python指南</title>
-    <link href="http://yoursite.com/2018/04/01/L1.%E6%9D%A5%E8%87%AAgoogle%E7%9A%84%E4%B8%93%E4%B8%9Apython%E6%8C%87%E5%8D%97/"/>
-    <id>http://yoursite.com/2018/04/01/L1.来自google的专业python指南/</id>
+    <link href="http://yoursite.com/2018/04/01/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L1.%E6%9D%A5%E8%87%AAgoogle%E7%9A%84%E4%B8%93%E4%B8%9Apython%E6%8C%87%E5%8D%97/"/>
+    <id>http://yoursite.com/2018/04/01/数据分析实战/L1.来自google的专业python指南/</id>
     <published>2018-04-01T10:01:46.182Z</published>
     <updated>2018-04-23T08:31:56.091Z</updated>
     
@@ -434,8 +461,8 @@
   
   <entry>
     <title>一个MeDIP-seq实战</title>
-    <link href="http://yoursite.com/2017/09/05/%E4%B8%80%E4%B8%AAMeDIP-seq%E5%AE%9E%E6%88%98/"/>
-    <id>http://yoursite.com/2017/09/05/一个MeDIP-seq实战/</id>
+    <link href="http://yoursite.com/2017/09/05/seq%E5%AE%9E%E6%88%98/%E4%B8%80%E4%B8%AAMeDIP-seq%E5%AE%9E%E6%88%98/"/>
+    <id>http://yoursite.com/2017/09/05/seq实战/一个MeDIP-seq实战/</id>
     <published>2017-09-05T11:10:14.000Z</published>
     <updated>2018-04-23T08:35:15.522Z</updated>
     
@@ -460,8 +487,8 @@
   
   <entry>
     <title>一个ChIP-seq实战</title>
-    <link href="http://yoursite.com/2017/09/02/%E4%B8%80%E4%B8%AAChIP-seq%E5%AE%9E%E6%88%98/"/>
-    <id>http://yoursite.com/2017/09/02/一个ChIP-seq实战/</id>
+    <link href="http://yoursite.com/2017/09/02/seq%E5%AE%9E%E6%88%98/%E4%B8%80%E4%B8%AAChIP-seq%E5%AE%9E%E6%88%98/"/>
+    <id>http://yoursite.com/2017/09/02/seq实战/一个ChIP-seq实战/</id>
     <published>2017-09-02T12:10:00.000Z</published>
     <updated>2018-04-23T08:35:20.541Z</updated>
     
@@ -488,8 +515,8 @@
   
   <entry>
     <title>一个RNA-seq实战</title>
-    <link href="http://yoursite.com/2017/08/28/%E4%B8%80%E4%B8%AARNA-seq%E5%AE%9E%E6%88%98/"/>
-    <id>http://yoursite.com/2017/08/28/一个RNA-seq实战/</id>
+    <link href="http://yoursite.com/2017/08/28/seq%E5%AE%9E%E6%88%98/%E4%B8%80%E4%B8%AARNA-seq%E5%AE%9E%E6%88%98/"/>
+    <id>http://yoursite.com/2017/08/28/seq实战/一个RNA-seq实战/</id>
     <published>2017-08-28T12:09:43.000Z</published>
     <updated>2018-04-23T08:35:27.644Z</updated>
     
@@ -506,33 +533,6 @@
     </summary>
     
       <category term="seq实战" scheme="http://yoursite.com/categories/seq%E5%AE%9E%E6%88%98/"/>
-    
-    
-      <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>转录组入门——8</title>
-    <link href="http://yoursite.com/2017/08/23/%E8%BD%AC%E5%BD%95%E7%BB%84%E5%85%A5%E9%97%A8%E2%80%94%E2%80%948/"/>
-    <id>http://yoursite.com/2017/08/23/转录组入门——8/</id>
-    <published>2017-08-23T10:02:51.000Z</published>
-    <updated>2018-04-23T08:33:07.592Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;blockquote&gt;
-&lt;p&gt;选择p&amp;lt;0.05而且abs(logFC)大于一个与众的基因为显著差异表达基因集，对这个基因集用R包做KEGG/GO超几何分布检验分析。&lt;br&gt;然后把表达矩阵和分组信息分别作出cls和gct文件，导入到GSEA软件分析。&lt;br&gt;基本任务是完成这
-        
-      
-    
-    </summary>
-    
-      <category term="转录组入门" scheme="http://yoursite.com/categories/%E8%BD%AC%E5%BD%95%E7%BB%84%E5%85%A5%E9%97%A8/"/>
     
     
       <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
