@@ -95,13 +95,13 @@
   <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
   <ul id="menu">
     
-    <li><a href="/" class="current">首页</a></li>
+    <li><a href="/" class="current">Home</a></li>
     
-    <li><a href="/archives/">归档</a></li>
+    <li><a href="/archives/">Archives</a></li>
     
-    <li><a href="/categories/">分类</a></li>
+    <li><a href="/categories/">Categories</a></li>
     
-    <li><a href="/tags/">标签</a></li>
+    <li><a href="/tags/">Tags</a></li>
     
   </ul>
 </nav>
@@ -121,6 +121,93 @@
   
   <article class="index-post card" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/26/数据分析实战/L6.seaborn可视化/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="mt">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="mt's blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h2 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2018/04/26/数据分析实战/L6.seaborn可视化/" itemprop="url">L6.seaborn可视化 要点记录</a>
+      </h2>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-26T21:00:00+08:00">2018-04-26</time>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+        <span class="post-categories">
+          <i class="far fa-folder-open"></i>
+          
+          
+          <span itemprop="about" itemscope itemtype="http://schema.org/Thing"> <a href="/categories/数据科学实训营/" itemprop="url" rel="index"><span itemprop="name">数据科学实训营</span></a></span>
+          
+          
+        </span>
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+          
+          <span class="post-comment-count">
+            <i class="far fa-comments"></i> <a href="/2018/04/26/数据分析实战/L6.seaborn可视化/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/26/数据分析实战/L6.seaborn可视化/" itemprop="commentsCount"></span></a>
+          </span>
+          
+        
+      </div>
+    </header>
+    <main class="post-body" itemprop="articleBody">
+      
+      <h4 id="np-random-seed-5"><a href="#np-random-seed-5" class="headerlink" title="np.random.seed(5)"></a>np.random.seed(5)</h4><blockquote>
+<p>One.给随机数对象一个seed值(即test)，用于产生随机序列。<br>Two.对同一个种子值，之后产生的随机数序列一样。<br>Three.通常是把时间秒数等变化值作为种子值，达到每次运行产生的随机系列都不一样。<br>Four.seed() 省略参数，意味着使用当前系统时间生成随机数。<br>Five.设置的seed()值仅一次有效。</p>
+</blockquote>
+<h4 id="np-linspace-0-14-100"><a href="#np-linspace-0-14-100" class="headerlink" title="np.linspace(0, 14, 100)"></a>np.linspace(0, 14, 100)</h4><blockquote>
+<p>linspace(start, stop, num=50, endpoint=True, retstep=False, dtype=None)<br>linspace(样本起始值，样本终止值，样本个数，为真则stop对应值包含在样本中，为真则返回样本及步长，样本数据类型)</p>
+</blockquote>
+<h4 id="整体参数设置"><a href="#整体参数设置" class="headerlink" title="整体参数设置"></a>整体参数设置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sns.set_style(&quot;ticks&quot;) #风格</span><br><span class="line">sns.set_context(&quot;paper&quot;) #尺度</span><br><span class="line">sns.color_palette(&quot;hls&quot;, 10)#颜色</span><br></pre></td></tr></table></figure>
+<h4 id="图形绘制要点"><a href="#图形绘制要点" class="headerlink" title="图形绘制要点"></a>图形绘制要点</h4><h5 id="回归"><a href="#回归" class="headerlink" title="回归"></a>回归</h5><p>sns.lmplot(x=”size”, y=”tip”, data=tips, x_estimator=np.mean)#离散取值上用均值和置信区间代替散点</p>
+<blockquote>
+<p>拟合曲线：lmplot(x, y, data, ci, x_estimator, robust, logistic, order)<br>残差曲线：residplot()<br>子图绘制：lmplot(hue, row, col)<br>尺寸控制：lmplot(col_wrap, size, aspect)</p>
+</blockquote>
+<h5 id="分布"><a href="#分布" class="headerlink" title="分布"></a>分布</h5><blockquote>
+<p>distplot(bins, rug)<br>kdeplot(bw, fit)<br>joinplot(kind)<br>pairplot</p>
+</blockquote>
+<h5 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h5><blockquote>
+<p>swarmplot(data), stripplot(data)<br>boxplot(data), voilinplot(data, scale, split, inner)<br>barplot(data, hue), pointplot(data, hue)<br>factorplot(col, kind)</p>
+</blockquote>
+<p><strong><em>以上来自<a href="www.xiniuedu.com">稀牛学院</a>数据科学实训营 常老师关于seaborn的讲解</em></strong></p>
+
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/python/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> python</a>
+        
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/25/Beginning Perl (free)学习笔记/perl_learning.3/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="mt">
@@ -133,7 +220,7 @@
     </div>
     <header class="post-header">
       <h2 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/04/25/Beginning Perl (free)学习笔记/perl_learning.3/" itemprop="url">Chapter 4</a>
+        <a class="post-title-link post-title-link-external" href="/2018/04/25/Beginning Perl (free)学习笔记/perl_learning.3/" itemprop="url">Chapter 4 & 5</a>
       </h2>
       <div class="post-meta">
         
@@ -184,8 +271,10 @@
 <h4 id="until"><a href="#until" class="headerlink" title="until"></a>until</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">use strict;</span><br><span class="line">my $countdown = 5;</span><br><span class="line">until ($countdown-- == 0) &#123;</span><br><span class="line">        print &quot;Counting down: $countdown\n&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="Controlling-loop-flow"><a href="#Controlling-loop-flow" class="headerlink" title="Controlling loop flow"></a>Controlling loop flow</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">use strict;</span><br><span class="line">my $stopnow = 0; #flag</span><br><span class="line">until ($stopnow) &#123;</span><br><span class="line">print &quot;!enod llA\n&quot;;</span><br><span class="line">        $_ = &lt;STDIN&gt;;</span><br><span class="line">        chomp;</span><br><span class="line">if ($_) &#123;</span><br><span class="line">        my $sdrawkcab = reverse $_;</span><br><span class="line">        print &quot;$sdrawkcab\n&quot;;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">        $stopnow = 1;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line">print &quot;!enod llA\n&quot;;</span><br></pre></td></tr></table></figure>
 <h4 id="Breaking-Out-amp-Going-onto-the-next"><a href="#Breaking-Out-amp-Going-onto-the-next" class="headerlink" title="Breaking Out &amp; Going onto the next"></a>Breaking Out &amp; Going onto the next</h4><p>last &amp; next</p>
+<h4 id="正则Example"><a href="#正则Example" class="headerlink" title="正则Example"></a>正则Example</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">use strict;</span><br><span class="line">$_ = &quot;Nobody wants to hurt you... &apos;cept, I do hurt people sometimes, Case.&quot;;</span><br><span class="line">if ($_ =~ /people/) &#123;</span><br><span class="line">    print &quot;Hooray! Found the word &apos;people&apos;\n&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h4><p>在PERL5中可用字符对\Q和\E来转义，类似\</p>
 <blockquote>
-<p>学习资料<br><a href="https://docs.google.com/viewer?url=http%3A%2F%2Fblob.perl.org%2Fbooks%2Fbeginning-perl%2F3145_Chap04.pdf" target="_blank" rel="noopener">Beginning Perl (free)——Chapter 4: Loops and Decisions</a><br><a href="http://www.cnblogs.com/catch/archive/2013/05/26/3099448.html" target="_blank" rel="noopener">perl 入门介绍(2)</a></p>
+<p>lists&amp;hashs学习资料<br><a href="https://docs.google.com/viewer?url=http%3A%2F%2Fblob.perl.org%2Fbooks%2Fbeginning-perl%2F3145_Chap04.pdf" target="_blank" rel="noopener">Beginning Perl (free)——Chapter 4: Loops and Decisions</a><br><a href="http://www.cnblogs.com/catch/archive/2013/05/26/3099448.html" target="_blank" rel="noopener">perl 入门介绍(2)</a><br>正则学习资料<br><a href="https://docs.google.com/viewer?url=http%3A%2F%2Fblob.perl.org%2Fbooks%2Fbeginning-perl%2F3145_Chap05.pdf" target="_blank" rel="noopener">Beginning Perl (free)——Chapter 5: Regular Expressions</a><br><a href="http://www.cnblogs.com/catch/archive/2013/05/25/3098585.html" target="_blank" rel="noopener">正则表达式的基本用法</a><br><a href="http://www.runoob.com/perl/perl-regular-expressions.html" target="_blank" rel="noopener">Perl 正则表达式</a><br><a href="http://www.runoob.com/perl/perl-special-variables.html" target="_blank" rel="noopener">Perl 特殊变量</a><br><a href="https://qntm.org/files/perl/perl.html" target="_blank" rel="noopener">Learn Perl in about 2 hours 30 minutes</a></p>
 </blockquote>
 
       
@@ -604,7 +693,10 @@
     </header>
     <main class="post-body" itemprop="articleBody">
       
-      <h5 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h5><p>关联分析数值比较：散点图、曲线图<br>分布分析：灰度图、密度图<br>分类分析：柱状图、箱式图<br><a href="http://www.cnblogs.com/nju2014/p/5620776.html" target="_blank" rel="noopener">Matplotlib详解图像各个部分</a><br><strong>写Test2部分加深理解</strong></p>
+      <h5 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h5><blockquote>
+<p>关联分析数值比较：散点图、曲线图<br>分布分析：灰度图、密度图<br>分类分析：柱状图、箱式图</p>
+</blockquote>
+<p><a href="http://www.cnblogs.com/nju2014/p/5620776.html" target="_blank" rel="noopener">Matplotlib详解图像各个部分</a><br><strong>写Test2部分加深理解</strong></p>
 
       
     </main>
@@ -1018,80 +1110,6 @@
     </footer>
   </article>
   
-  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/11/数据分析实战/实战3-QQ答疑/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-        <meta itemprop="name" content="mt">
-        <meta itemprop="description" content="">
-        <meta itemprop="image" content="/images/avatar.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-        <meta itemprop="name" content="mt's blog">
-      </span>
-    </div>
-    <header class="post-header">
-      <h2 class="post-title" itemprop="name headline">
-        <a class="post-title-link post-title-link-external" href="/2018/04/11/数据分析实战/实战3-QQ答疑/" itemprop="url">实战3.QQ答疑</a>
-      </h2>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-11T20:33:41+08:00">2018-04-11</time>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider"> | </span>
-        
-        <span class="post-categories">
-          <i class="far fa-folder-open"></i>
-          
-          
-          <span itemprop="about" itemscope itemtype="http://schema.org/Thing"> <a href="/categories/数据科学实训营/" itemprop="url" rel="index"><span itemprop="name">数据科学实训营</span></a></span>
-          
-          
-        </span>
-        
-        
-        
-        <span class="post-meta-divider"> | </span>
-        
-          
-          <span class="post-comment-count">
-            <i class="far fa-comments"></i> <a href="/2018/04/11/数据分析实战/实战3-QQ答疑/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/11/数据分析实战/实战3-QQ答疑/" itemprop="commentsCount"></span></a>
-          </span>
-          
-        
-      </div>
-    </header>
-    <main class="post-body" itemprop="articleBody">
-      
-      <h5 id="python-amp-pypandas"><a href="#python-amp-pypandas" class="headerlink" title="python &amp; pypandas"></a>python &amp; pypandas</h5><p>Q:用print命令在打印的str后面加一个space应该用什么命令<br>A: print(str + ‘ ‘)<br>Q:感觉transform和apply的功能好类似，这两个函数有什么区别<br>A:<a href="https://blog.csdn.net/fanfanyuzhui/article/details/78503608" target="_blank" rel="noopener">pandas apply vs agg vs transform</a><br>Q:dataframe当中，df.loc与df.ix区别<br>A:ix / loc 可以通过行号和行标签进行索引，而iloc只能通过行号索引。loc 和 ix 大部分时候行为都差不多, 但是当假如某个行的索引标签就是一个 INT 比如 1 的时候,  loc 优先将 df.loc[1] 理解为行标签为 1 的索引, 而 df.ix[1] 优先将其理解为 行号为 1 的索引(就是第二行)为了避免不小心犯错误, 建议:1.当用行号索引的时候, 尽量用 iloc 来进行索引; 2. 而用标签索引的时候用 loc , 3. ix 就别用了<br><a href="https://www.zhihu.com/question/47362048/answer/255165391" target="_blank" rel="noopener">区别</a><br><a href="https://blog.csdn.net/xw_classmate/article/details/51333646" target="_blank" rel="noopener">ix vs loc vs iloc区别</a><br>A:一般我们直接指定对应的 columns 来赋值:<br>df[‘Mjob’] = df.Mjob.applymap(lambda x: x.upper() )<br>df[‘Fjob’] = df.Fjob.applymap(lambda x: x.upper() )<br>一列作为Series 应该用map</p>
-<h5 id="学习"><a href="#学习" class="headerlink" title="学习"></a>学习</h5><p>Q：学习方法<br>A：<a href="https://iphysresearch.github.io/2018/01/MyWay2017/" target="_blank" rel="noopener">https://iphysresearch.github.io/2018/01/MyWay2017/</a></p>
-<h5 id="就业"><a href="#就业" class="headerlink" title="就业"></a>就业</h5><p>Q：转行找数据分析工作，要达到怎样的程度<br>A：不能说要达到怎样的程度，应该说要做过什么东西。竞赛获奖的经历，github 项目经验，参加case项目，写技术博文，自己建项目做数据建模分析，抓住机会积累项目经验~</p>
-<p><strong>亟待升级的粗制滥造博客，mark下，五一有空优化下</strong></p>
-<p><strong><em>以上来自<a href="www.xiniuedu.com">稀牛学院</a>数据科学实训营 助教土豆老师及学员们的QQ答疑</em></strong></p>
-
-      
-    </main>
-    <footer class="post-footer">
-      
-      <div class="post-tags">
-        
-        
-        
-        
-        
-        
-        <a class="post-tag button" href="/tags/python/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> python</a>
-        
-        
-      </div>
-      
-    </footer>
-  </article>
-  
   
   <nav class="pagination">
     <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fas fa-angle-right"></i></a>
@@ -1137,7 +1155,7 @@
   
   <div class="search">
     <div class="form-group">
-      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
     </div>
   </div>
   <div class="search-result-box" id="search-result"></div>
@@ -1152,8 +1170,8 @@
   <div class="site-count">
     
     <div class="archives-count">
-      <p>归档</p>
-      <p><a href="/archives/">29</a></p>
+      <p>Archives</p>
+      <p><a href="/archives/">30</a></p>
     </div>
     
     
@@ -1161,7 +1179,7 @@
     <span class="site-count-divider"> | </span>
     
     <div class="categories-count">
-      <p>分类</p>
+      <p>Categories</p>
       <p><a href="/categories/">4</a></p>
     </div>
     
@@ -1170,7 +1188,7 @@
     <span class="site-count-divider"> | </span>
     
     <div class="tags-count">
-      <p>标签</p>
+      <p>Tags</p>
       <p><a href="/tags/">3</a></p>
     </div>
     
@@ -1189,7 +1207,7 @@
     
 <hr>
 <div class="social-link sidebar-item">
-  <p><i class="far fa-address-card"></i> 社交链接</p>
+  <p><i class="far fa-address-card"></i> Social Links</p>
   <ul>
     
     <li><i class="fab fa-github"></i> <a href="https://github.com/mt831" target="_blank">GitHub</a></li>
@@ -1237,7 +1255,7 @@
           
         </div>
         <div class="powered-by">
-          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
         </div>
       </div>
     </div>

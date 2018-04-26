@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-25T13:38:48.406Z</updated>
+  <updated>2018-04-26T14:00:29.241Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Chapter 4</title>
+    <title>L6.seaborn可视化 要点记录</title>
+    <link href="http://yoursite.com/2018/04/26/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L6.seaborn%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    <id>http://yoursite.com/2018/04/26/数据分析实战/L6.seaborn可视化/</id>
+    <published>2018-04-26T13:00:00.000Z</published>
+    <updated>2018-04-26T14:00:29.241Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;np-random-seed-5&quot;&gt;&lt;a href=&quot;#np-random-seed-5&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="数据科学实训营" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD%E8%90%A5/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Chapter 4 &amp; 5</title>
     <link href="http://yoursite.com/2018/04/25/Beginning%20Perl%20(free)%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/perl_learning.3/"/>
     <id>http://yoursite.com/2018/04/25/Beginning Perl (free)学习笔记/perl_learning.3/</id>
     <published>2018-04-25T04:00:00.000Z</published>
-    <updated>2018-04-25T13:38:48.406Z</updated>
+    <updated>2018-04-26T08:39:03.814Z</updated>
     
     <summary type="html">
     
@@ -151,7 +177,7 @@
     <link href="http://yoursite.com/2018/04/22/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L5-matplotlib%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     <id>http://yoursite.com/2018/04/22/数据分析实战/L5-matplotlib可视化/</id>
     <published>2018-04-22T12:03:08.119Z</published>
-    <updated>2018-04-23T08:30:44.736Z</updated>
+    <updated>2018-04-26T13:56:52.557Z</updated>
     
     <summary type="html">
     
@@ -159,7 +185,7 @@
       
         
         
-          &lt;h5 id=&quot;要点&quot;&gt;&lt;a href=&quot;#要点&quot; class=&quot;headerlink&quot; title=&quot;要点&quot;&gt;&lt;/a&gt;要点&lt;/h5&gt;&lt;p&gt;关联分析数值比较：散点图、曲线图&lt;br&gt;分布分析：灰度图、密度图&lt;br&gt;分类分析：柱状图、箱式图&lt;br&gt;&lt;a
+          &lt;h5 id=&quot;要点&quot;&gt;&lt;a href=&quot;#要点&quot; class=&quot;headerlink&quot;
         
       
     
@@ -499,34 +525,6 @@
         
         
           &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-      <category term="seq实战" scheme="http://yoursite.com/categories/seq%E5%AE%9E%E6%88%98/"/>
-    
-    
-      <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一个ChIP-seq实战</title>
-    <link href="http://yoursite.com/2017/09/02/seq%E5%AE%9E%E6%88%98/%E4%B8%80%E4%B8%AAChIP-seq%E5%AE%9E%E6%88%98/"/>
-    <id>http://yoursite.com/2017/09/02/seq实战/一个ChIP-seq实战/</id>
-    <published>2017-09-02T12:10:00.000Z</published>
-    <updated>2018-04-23T08:35:20.541Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;###软件准备&lt;br&gt;已有sratoolkit,fastqc,bowtie2,samtools,htseq-count,bedtools,R,Rstudio&lt;br&gt;下载macs2,deeptools&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;&lt;a
         
       
     

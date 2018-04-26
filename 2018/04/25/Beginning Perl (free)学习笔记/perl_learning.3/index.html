@@ -78,7 +78,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>Chapter 4 | mt's blog</title>
+    <title>Chapter 4 & 5 | mt's blog</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang=""  data-spy="scroll" data-target=".list-group">
     
@@ -98,13 +98,13 @@
   <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
   <ul id="menu">
     
-    <li><a href="/">首页</a></li>
+    <li><a href="/">Home</a></li>
     
-    <li><a href="/archives/">归档</a></li>
+    <li><a href="/archives/">Archives</a></li>
     
-    <li><a href="/categories/">分类</a></li>
+    <li><a href="/categories/">Categories</a></li>
     
-    <li><a href="/tags/">标签</a></li>
+    <li><a href="/tags/">Tags</a></li>
     
   </ul>
 </nav>
@@ -135,7 +135,7 @@
     </div>
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-       <span class="">Chapter 4</span>
+       <span class="">Chapter 4 & 5</span>
       </h1>
       <div class="post-meta">
         
@@ -185,8 +185,10 @@
 <h4 id="until"><a href="#until" class="headerlink" title="until"></a>until</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">use strict;</span><br><span class="line">my $countdown = 5;</span><br><span class="line">until ($countdown-- == 0) &#123;</span><br><span class="line">        print &quot;Counting down: $countdown\n&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h4 id="Controlling-loop-flow"><a href="#Controlling-loop-flow" class="headerlink" title="Controlling loop flow"></a>Controlling loop flow</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">use strict;</span><br><span class="line">my $stopnow = 0; #flag</span><br><span class="line">until ($stopnow) &#123;</span><br><span class="line">print &quot;!enod llA\n&quot;;</span><br><span class="line">        $_ = &lt;STDIN&gt;;</span><br><span class="line">        chomp;</span><br><span class="line">if ($_) &#123;</span><br><span class="line">        my $sdrawkcab = reverse $_;</span><br><span class="line">        print &quot;$sdrawkcab\n&quot;;</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">        $stopnow = 1;</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line">print &quot;!enod llA\n&quot;;</span><br></pre></td></tr></table></figure>
 <h4 id="Breaking-Out-amp-Going-onto-the-next"><a href="#Breaking-Out-amp-Going-onto-the-next" class="headerlink" title="Breaking Out &amp; Going onto the next"></a>Breaking Out &amp; Going onto the next</h4><p>last &amp; next</p>
+<h4 id="正则Example"><a href="#正则Example" class="headerlink" title="正则Example"></a>正则Example</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">use strict;</span><br><span class="line">$_ = &quot;Nobody wants to hurt you... &apos;cept, I do hurt people sometimes, Case.&quot;;</span><br><span class="line">if ($_ =~ /people/) &#123;</span><br><span class="line">    print &quot;Hooray! Found the word &apos;people&apos;\n&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h4><p>在PERL5中可用字符对\Q和\E来转义，类似\</p>
 <blockquote>
-<p>学习资料<br><a href="https://docs.google.com/viewer?url=http%3A%2F%2Fblob.perl.org%2Fbooks%2Fbeginning-perl%2F3145_Chap04.pdf" target="_blank" rel="noopener">Beginning Perl (free)——Chapter 4: Loops and Decisions</a><br><a href="http://www.cnblogs.com/catch/archive/2013/05/26/3099448.html" target="_blank" rel="noopener">perl 入门介绍(2)</a></p>
+<p>lists&amp;hashs学习资料<br><a href="https://docs.google.com/viewer?url=http%3A%2F%2Fblob.perl.org%2Fbooks%2Fbeginning-perl%2F3145_Chap04.pdf" target="_blank" rel="noopener">Beginning Perl (free)——Chapter 4: Loops and Decisions</a><br><a href="http://www.cnblogs.com/catch/archive/2013/05/26/3099448.html" target="_blank" rel="noopener">perl 入门介绍(2)</a><br>正则学习资料<br><a href="https://docs.google.com/viewer?url=http%3A%2F%2Fblob.perl.org%2Fbooks%2Fbeginning-perl%2F3145_Chap05.pdf" target="_blank" rel="noopener">Beginning Perl (free)——Chapter 5: Regular Expressions</a><br><a href="http://www.cnblogs.com/catch/archive/2013/05/25/3098585.html" target="_blank" rel="noopener">正则表达式的基本用法</a><br><a href="http://www.runoob.com/perl/perl-regular-expressions.html" target="_blank" rel="noopener">Perl 正则表达式</a><br><a href="http://www.runoob.com/perl/perl-special-variables.html" target="_blank" rel="noopener">Perl 特殊变量</a><br><a href="https://qntm.org/files/perl/perl.html" target="_blank" rel="noopener">Learn Perl in about 2 hours 30 minutes</a></p>
 </blockquote>
 
     </main>
@@ -218,6 +220,13 @@
       </a>
     </div>
     
+    
+    <div class="post-nav-prev post-nav-item">
+      <a href="/2018/04/26/数据分析实战/L6.seaborn可视化/" rel="prev" title="L6.seaborn可视化 要点记录">
+        <span class="nav-title">L6.seaborn可视化 要点记录</span>
+        <i class="fas fa-angle-right"></i>
+      </a>
+    </div>
     
   </div>
   
@@ -265,7 +274,7 @@
   
   <div class="search">
     <div class="form-group">
-      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
     </div>
   </div>
   <div class="search-result-box" id="search-result"></div>
@@ -280,8 +289,8 @@
   <div class="site-count">
     
     <div class="archives-count">
-      <p>归档</p>
-      <p><a href="/archives/">29</a></p>
+      <p>Archives</p>
+      <p><a href="/archives/">30</a></p>
     </div>
     
     
@@ -289,7 +298,7 @@
     <span class="site-count-divider"> | </span>
     
     <div class="categories-count">
-      <p>分类</p>
+      <p>Categories</p>
       <p><a href="/categories/">4</a></p>
     </div>
     
@@ -298,7 +307,7 @@
     <span class="site-count-divider"> | </span>
     
     <div class="tags-count">
-      <p>标签</p>
+      <p>Tags</p>
       <p><a href="/tags/">3</a></p>
     </div>
     
@@ -320,8 +329,8 @@
 
 <hr>
 <div class="post-toc sidebar-item" id="toc-div">
-  <p><i class="fas fa-list-ol"></i> 文章目录</p>
-  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#if-amp-unless"><span class="toc-text">if &amp; unless</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#if"><span class="toc-text">if(){}</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Logical-operators-revisited"><span class="toc-text">Logical operators revisited</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Comparing-Numbers"><span class="toc-text">Comparing Numbers</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Comparing-Strings"><span class="toc-text">Comparing Strings</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Logical-Conjunctions"><span class="toc-text">Logical Conjunctions</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Multiple-Choice"><span class="toc-text">Multiple Choice</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Unless"><span class="toc-text">Unless(){}</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Loops"><span class="toc-text">Loops</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#for-amp-foreach"><span class="toc-text">for &amp; foreach</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#注意my"><span class="toc-text">注意my</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#注意"><span class="toc-text">注意$_</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Change-the-iterator-make-a-copy"><span class="toc-text">Change the iterator, make a copy</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ARGV"><span class="toc-text">@ARGV</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#While"><span class="toc-text">While</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#until"><span class="toc-text">until</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Controlling-loop-flow"><span class="toc-text">Controlling loop flow</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Breaking-Out-amp-Going-onto-the-next"><span class="toc-text">Breaking Out &amp; Going onto the next</span></a></li></ol></li></ol></div>
+  <p><i class="fas fa-list-ol"></i> Table of Contents</p>
+  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#if-amp-unless"><span class="toc-text">if &amp; unless</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#if"><span class="toc-text">if(){}</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Logical-operators-revisited"><span class="toc-text">Logical operators revisited</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Comparing-Numbers"><span class="toc-text">Comparing Numbers</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Comparing-Strings"><span class="toc-text">Comparing Strings</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Logical-Conjunctions"><span class="toc-text">Logical Conjunctions</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Multiple-Choice"><span class="toc-text">Multiple Choice</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Unless"><span class="toc-text">Unless(){}</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Loops"><span class="toc-text">Loops</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#for-amp-foreach"><span class="toc-text">for &amp; foreach</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#注意my"><span class="toc-text">注意my</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#注意"><span class="toc-text">注意$_</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Change-the-iterator-make-a-copy"><span class="toc-text">Change the iterator, make a copy</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#ARGV"><span class="toc-text">@ARGV</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#While"><span class="toc-text">While</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#until"><span class="toc-text">until</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Controlling-loop-flow"><span class="toc-text">Controlling loop flow</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Breaking-Out-amp-Going-onto-the-next"><span class="toc-text">Breaking Out &amp; Going onto the next</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#正则Example"><span class="toc-text">正则Example</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#转义字符"><span class="toc-text">转义字符</span></a></li></ol></li></ol></div>
 </div>
 
 
@@ -331,7 +340,7 @@
     
 <hr>
 <div class="social-link sidebar-item">
-  <p><i class="far fa-address-card"></i> 社交链接</p>
+  <p><i class="far fa-address-card"></i> Social Links</p>
   <ul>
     
     <li><i class="fab fa-github"></i> <a href="https://github.com/mt831" target="_blank">GitHub</a></li>
@@ -379,7 +388,7 @@
           
         </div>
         <div class="powered-by">
-          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
         </div>
       </div>
     </div>
