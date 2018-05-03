@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-04-27T13:37:02.320Z</updated>
+  <updated>2018-05-03T01:13:53.283Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Test2.可视化</title>
-    <link href="http://yoursite.com/2018/04/27/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/Test2.%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
-    <id>http://yoursite.com/2018/04/27/数据分析实战/Test2.可视化/</id>
-    <published>2018-04-27T14:00:00.000Z</published>
-    <updated>2018-04-27T13:37:02.320Z</updated>
+    <title>L7.机器学习初识</title>
+    <link href="http://yoursite.com/2018/04/29/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L7.%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%88%9D%E8%AF%86/"/>
+    <id>http://yoursite.com/2018/04/29/数据分析实战/L7.机器学习初识/</id>
+    <published>2018-04-29T05:41:02.000Z</published>
+    <updated>2018-05-03T01:13:53.283Z</updated>
     
     <summary type="html">
     
@@ -29,9 +29,34 @@
       
         
         
-          &lt;p&gt;&lt;strong&gt;继续完成作业&lt;/strong&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;参考资料&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/czl389/article/details/76944504&quot; target=&quot;_blank&quot;
+          &lt;p&gt;记录几个CS229机器学习课程笔记博客&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/sinat_37965706&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Jiahe的博客&lt;/a&gt;&lt;br&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="数据科学实训营" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD%E8%90%A5/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Test2.可视化</title>
+    <link href="http://yoursite.com/2018/04/27/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/Test2.%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    <id>http://yoursite.com/2018/04/27/数据分析实战/Test2.可视化/</id>
+    <published>2018-04-27T14:00:00.000Z</published>
+    <updated>2018-04-29T10:22:15.305Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;blockquote&gt;
+&lt;p&gt;参考资料&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/czl389/article/details/76944504&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Python matplotlib
         
       
     
@@ -49,7 +74,7 @@
     <link href="http://yoursite.com/2018/04/26/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L6.seaborn%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     <id>http://yoursite.com/2018/04/26/数据分析实战/L6.seaborn可视化/</id>
     <published>2018-04-26T13:00:00.000Z</published>
-    <updated>2018-04-26T14:00:29.241Z</updated>
+    <updated>2018-04-28T02:31:55.673Z</updated>
     
     <summary type="html">
     
@@ -205,7 +230,7 @@
     <link href="http://yoursite.com/2018/04/22/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L5-matplotlib%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     <id>http://yoursite.com/2018/04/22/数据分析实战/L5-matplotlib可视化/</id>
     <published>2018-04-22T12:03:08.119Z</published>
-    <updated>2018-04-27T11:09:38.297Z</updated>
+    <updated>2018-04-28T02:14:35.528Z</updated>
     
     <summary type="html">
     
@@ -500,33 +525,6 @@
         
         
           &lt;h4 id=&quot;实战1-一起来打怪之-python-基础与进阶练习题-QQ答疑&quot;&gt;&lt;a href=&quot;#实战1-一起来打怪之-python-基础与进阶练习题-QQ答疑&quot; class=&quot;headerlink&quot; title=&quot;实战1.一起来打怪之 python 基础与进阶练习题
-        
-      
-    
-    </summary>
-    
-      <category term="数据科学实训营" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD%E8%90%A5/"/>
-    
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>来自google的专业python指南</title>
-    <link href="http://yoursite.com/2018/04/01/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L1.%E6%9D%A5%E8%87%AAgoogle%E7%9A%84%E4%B8%93%E4%B8%9Apython%E6%8C%87%E5%8D%97/"/>
-    <id>http://yoursite.com/2018/04/01/数据分析实战/L1.来自google的专业python指南/</id>
-    <published>2018-04-01T10:01:46.182Z</published>
-    <updated>2018-04-23T08:31:56.091Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;前言：课程结构相对于前四期进行调整。one.爬虫（数据获取）直播切录播。Two.机器学习及其依赖的数据处理课时加重。Three.大数据技能后移，希望教给大家大数据处理和机器学习大数据建模的技能。&lt;/p&gt;
-&lt;h4 id=&quot;python使用原因：&quot;&gt;&lt;a
         
       
     
