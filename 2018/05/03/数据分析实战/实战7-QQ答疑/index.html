@@ -78,7 +78,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>Test2.可视化 | mt's blog</title>
+    <title>实战7-QQ答疑 | mt's blog</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang=""  data-spy="scroll" data-target=".list-group">
     
@@ -123,7 +123,7 @@
   
   <article class="post-container card " itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/27/数据分析实战/Test2.可视化/">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/03/数据分析实战/实战7-QQ答疑/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
        <meta itemprop="name" content="mt">
        <meta itemprop="description" content="">
@@ -135,12 +135,12 @@
     </div>
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-       <span class="">Test2.可视化</span>
+       <span class="">实战7-QQ答疑</span>
       </h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-27T22:00:00+08:00">2018-04-27</time>
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-05-03T21:40:00+08:00">2018-05-03</time>
         </span>
         
         
@@ -162,16 +162,19 @@
         
         
         <span class="post-comment-count">
-          <i class="far fa-comments"></i> <a href="/2018/04/27/数据分析实战/Test2.可视化/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/27/数据分析实战/Test2.可视化/" itemprop="commentsCount"></span></a>
+          <i class="far fa-comments"></i> <a href="/2018/05/03/数据分析实战/实战7-QQ答疑/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/05/03/数据分析实战/实战7-QQ答疑/" itemprop="commentsCount"></span></a>
         </span>
         
         
       </div>
     </header>
     <main class="post-body" itemprop="articleBody">
-      <blockquote>
-<p>参考资料<br><a href="https://blog.csdn.net/czl389/article/details/76944504" target="_blank" rel="noopener">Python matplotlib 练习题</a><br><a href="https://blog.csdn.net/czl389/article/details/77074876" target="_blank" rel="noopener">Python可视化seaborn练习题</a><br><a href="https://www.2cto.com/kf/201803/725871.html" target="_blank" rel="noopener">Python数据分析之seaborn常用方法</a></p>
-</blockquote>
+      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">from sklearn import datasets</span><br><span class="line">import numpy as np</span><br><span class="line">import pydotplus</span><br><span class="line">from IPython.display import Image</span><br><span class="line">from IPython.display import display</span><br><span class="line"></span><br><span class="line">if Version(sklearn_version) &gt;= &apos;0.18&apos;:</span><br><span class="line">    try:</span><br><span class="line">        import pydotplus</span><br><span class="line">        dot_data = export_graphviz(</span><br><span class="line">        tree,</span><br><span class="line">        out_file=None,</span><br><span class="line">        feature_names=[&apos;petal length&apos;,&apos;petal length&apos;],</span><br><span class="line">        class_names=[&apos;setosa&apos;,&apos;versicolor&apos;,&apos;virginica&apos;],</span><br><span class="line">        filled=True,</span><br><span class="line">        rounded=True)</span><br><span class="line">        </span><br><span class="line">        graph = pydotplus.graph_from_dot_data(dot_data)</span><br><span class="line">        display(Image(graph.create_png()))</span><br><span class="line">    except ImportError:</span><br><span class="line">        print(&apos;pydotplus is not installed.&apos;)</span><br></pre></td></tr></table></figure>
+<h4 id="NameError-name-‘Version’-is-not-defined"><a href="#NameError-name-‘Version’-is-not-defined" class="headerlink" title="NameError: name ‘Version’ is not defined"></a>NameError: name ‘Version’ is not defined</h4><p><a href="https://stackoverflow.com/questions/28501072/how-to-check-which-version-of-nltk-scikit-learn-installed" target="_blank" rel="noopener">how to check which version of nltk, scikit learn installed?</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import sklearn</span><br><span class="line">if sklearn.__version__ &gt;= &apos;0.18&apos;:</span><br></pre></td></tr></table></figure></p>
+<p>InvocationException: GraphViz’s executables not found<br><a href="https://stackoverflow.com/questions/18438997/why-is-pydot-unable-to-find-graphvizs-executables-in-windows-8" target="_blank" rel="noopener">Why is pydot unable to find GraphViz’s executables in Windows 8?</a><br><a href="https://www.cnblogs.com/onemorepoint/p/8310996.html" target="_blank" rel="noopener">windows下Graphviz安装及入门教程</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">import sys</span><br><span class="line">import os       </span><br><span class="line">os.environ[&quot;PATH&quot;] += os.pathsep + &apos;C:/Program Files (x86)/Graphviz2.38/bin/&apos;</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://www.cnblogs.com/pinard/p/6056319.html" target="_blank" rel="noopener">scikit-learn决策树结果的可视化</a></p>
+<p>在本地notebook上运行可行，在课程平台上InvocationException: GraphViz’s executables not found问题无法解决，没办法操作安装Graphviz</p>
+<p><strong><em><a href="www.xiniuedu.com">稀牛学院</a>数据科学实训营 助教土豆老师QQ答疑*</em></strong></p>
 
     </main>
     <footer class="post-footer">
@@ -196,19 +199,12 @@
   <div class="post-nav">
     
     <div class="post-nav-next post-nav-item">
-      <a href="/2018/04/26/数据分析实战/L6.seaborn可视化/" rel="next" title="L6.seaborn可视化 要点记录">
+      <a href="/2018/04/29/数据分析实战/L7.机器学习初识/" rel="next" title="L7.机器学习初识">
         <i class="fas fa-angle-left"></i>
-        <span class="nav-title">L6.seaborn可视化 要点记录</span>
-      </a>
-    </div>
-    
-    
-    <div class="post-nav-prev post-nav-item">
-      <a href="/2018/04/29/数据分析实战/L7.机器学习初识/" rel="prev" title="L7.机器学习初识">
         <span class="nav-title">L7.机器学习初识</span>
-        <i class="fas fa-angle-right"></i>
       </a>
     </div>
+    
     
   </div>
   
@@ -224,7 +220,7 @@
   _hcwp = window._hcwp || [];
   _hcwp.push({ "widget": "Bloggerstream", "widget_id": "tingm831@gmail.com", "selector": ".hc-comment-count", "label": "{\%COUNT%\}" });
   
-  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2018/04/27/数据分析实战/Test2.可视化/" });
+  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2018/05/03/数据分析实战/实战7-QQ答疑/" });
   
   (function() {
     if ("HC_LOAD_INIT" in window) {
@@ -308,6 +304,12 @@
 
 
 
+
+<hr>
+<div class="post-toc sidebar-item" id="toc-div">
+  <p><i class="fas fa-list-ol"></i> Table of Contents</p>
+  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#NameError-name-‘Version’-is-not-defined"><span class="toc-text">NameError: name ‘Version’ is not defined</span></a></li></ol></div>
+</div>
 
 
 

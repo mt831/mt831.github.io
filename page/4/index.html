@@ -121,6 +121,88 @@
   
   <article class="index-post card" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/10/转录组入门/转录组入门——3/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="mt">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="mt's blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h2 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2017/08/10/转录组入门/转录组入门——3/" itemprop="url">转录组入门——3</a>
+      </h2>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-08-10T19:34:02+08:00">2017-08-10</time>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+        <span class="post-categories">
+          <i class="far fa-folder-open"></i>
+          
+          
+          <span itemprop="about" itemscope itemtype="http://schema.org/Thing"> <a href="/categories/转录组入门/" itemprop="url" rel="index"><span itemprop="name">转录组入门</span></a></span>
+          
+          
+        </span>
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+          
+          <span class="post-comment-count">
+            <i class="far fa-comments"></i> <a href="/2017/08/10/转录组入门/转录组入门——3/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2017/08/10/转录组入门/转录组入门——3/" itemprop="commentsCount"></span></a>
+          </span>
+          
+        
+      </div>
+    </header>
+    <main class="post-body" itemprop="articleBody">
+      
+      <h5 id="SRA-Toolkit-软件"><a href="#SRA-Toolkit-软件" class="headerlink" title="SRA Toolkit 软件"></a>SRA Toolkit 软件</h5><p><a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc" target="_blank" rel="noopener">官方网址</a></p>
+<h5 id="软件下载（CentOS-6-8）"><a href="#软件下载（CentOS-6-8）" class="headerlink" title="软件下载（CentOS 6.8）"></a>软件下载（CentOS 6.8）</h5><p><a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc&amp;f=std#s-2" target="_blank" rel="noopener">官方参考</a><br><a href="http://www.jianshu.com/p/6a4855023330" target="_blank" rel="noopener">中文参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#下载软件包</span><br><span class="line">wget ftp://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2-1/sratoolkit.2.8.2-1-centos_linux64.tar.gz</span><br><span class="line">#解压</span><br><span class="line">tar -zxf sratoolkit.2.8.2-1-centos_linux64.tar.gz </span><br><span class="line">#解压后文件夹移动到biosoft目录下</span><br><span class="line">mv sratoolkit.2.8.2-1-centos_linux64/ biosoft/</span><br><span class="line">#设置绝对路径</span><br><span class="line">echo &apos;PATH=$PATH:~/biosoft/sratoolkit.2.8.2-1-centos_linux64/bin&apos; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br><span class="line">#测试安装</span><br><span class="line">fastq-dump -h</span><br></pre></td></tr></table></figure></p>
+<h5 id="fastq-dump参数"><a href="#fastq-dump参数" class="headerlink" title="fastq-dump参数"></a>fastq-dump参数</h5><p><a href="https://trace.ncbi.nlm.nih.gov/Traces/sra/sra.cgi?view=toolkit_doc&amp;f=fastq-dump" target="_blank" rel="noopener">官方参考</a><br><a href="http://www.biotrainee.com/forum.php?mod=viewthread&amp;tid=1885&amp;fromuid=1685" target="_blank" rel="noopener">中文参考</a><br>–split-3 如果是双端测序数据，则输出两个文件，如果不是则只输出一个文件<br>-O 指定输出路径<br>–gzip 指定输出格式为gzip压缩格式<br>-A –accession 输入sra文件可以是绝对路径</p>
+<h5 id="SRA文件转换为fastq文件-仅关注RNA-Seq数据"><a href="#SRA文件转换为fastq文件-仅关注RNA-Seq数据" class="headerlink" title="SRA文件转换为fastq文件(仅关注RNA-Seq数据)"></a>SRA文件转换为fastq文件(仅关注RNA-Seq数据)</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for i in `seq 56 62`;do fastq-dump --gzip --split-3 -O ~/fastq/ -A ~/ncbi/public/sra/SRR35899$&#123;i&#125;.sra;done</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-f592e2a5c22a432f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="gz"></p>
+<h5 id="生信名词理解"><a href="#生信名词理解" class="headerlink" title="生信名词理解"></a>生信名词理解</h5><p>测序reads：高通量测序平台产生的序列标签就称为reads<br>GC含量：<a href="https://zh.wikipedia.org/wiki/GC%E5%90%AB%E9%87%8F" target="_blank" rel="noopener">中文参考</a><br>质量值：每测一个碱基会有相应的质量值，质量值用于衡量测序准确度<a href="http://www.cnblogs.com/daimakun/p/5092312.html" target="_blank" rel="noopener">中文参考</a><a href="https://en.wikipedia.org/wiki/FASTQ_format" target="_blank" rel="noopener">英文参考</a><br>adapter：接头是一段短的序列已知的核酸链，用于连接序列未知的目标测序片段<br>index：索引序列，是一段很短的寡居核酸链，用于在多个样品混合测序时，标记不同的样品，为区分不同样本而构建<a href="http://www.itwendao.com/article/detail/467548.html" target="_blank" rel="noopener">参考</a></p>
+<h5 id="FastQC-软件"><a href="#FastQC-软件" class="headerlink" title="FastQC 软件"></a>FastQC 软件</h5><p><a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/" target="_blank" rel="noopener">官方网址</a></p>
+<h5 id="软件下载（CentOS-6-8）-1"><a href="#软件下载（CentOS-6-8）-1" class="headerlink" title="软件下载（CentOS 6.8）"></a>软件下载（CentOS 6.8）</h5><p><a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/INSTALL.txt" target="_blank" rel="noopener">官方参考</a><br><a href="http://www.jianshu.com/p/6a4855023330" target="_blank" rel="noopener">中文参考</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br><span class="line">wget http://www.bioinformatics.babraham.ac.uk/projects/fastqc/fastqc_v0.11.5.zip</span><br><span class="line">unzip fastqc_v0.11.5.zip</span><br><span class="line">mv FastQC/ biosoft/</span><br><span class="line">cd ~/biosoft/FastQC</span><br><span class="line">chmod 755 fastqc</span><br><span class="line">echo &apos;PATH=$PATH:~/biosoft/FastQC/&apos; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br><span class="line">fastqc -h</span><br></pre></td></tr></table></figure></p>
+<h5 id="fastqc"><a href="#fastqc" class="headerlink" title="fastqc"></a>fastqc</h5><p>-o 输出目录，需自己创建目录<br>–extract 是否解压输出文件，默认自动解压缩zip文件<br>-f 指定输入文件的类型，支持fastq|bam|sam三种格式的文件，默认自动识别<br>-t 同时处理的文件数目<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fastqc -o fastqc_out --extract *.fastq.gz</span><br></pre></td></tr></table></figure></p>
+<h5 id="fastqc质控结果"><a href="#fastqc质控结果" class="headerlink" title="fastqc质控结果"></a>fastqc质控结果</h5><p><a href="http://www.bioinformatics.babraham.ac.uk/projects/fastqc/Help/3%20Analysis%20Modules/" target="_blank" rel="noopener">官方参考</a><br><a href="http://www.jianshu.com/p/14fd4de54402" target="_blank" rel="noopener">中文参考</a><br><a href="http://fbb84b26.wiz03.com/share/s/3XK4IC0cm4CL22pU-r1HPcQQ2irG2836uQYm2iZAyh1Zwf3_" target="_blank" rel="noopener">中文参考</a></p>
+<h5 id="批量查看MultiQC"><a href="#批量查看MultiQC" class="headerlink" title="批量查看MultiQC"></a>批量查看MultiQC</h5><p><a href="http://multiqc.info/docs/" target="_blank" rel="noopener">官方网址</a><br><a href="http://fbb84b26.wiz03.com/share/s/3XK4IC0cm4CL22pU-r1HPcQQ1iRTvV2GwkwL2AaxYi2fXHP7" target="_blank" rel="noopener">中文参考</a></p>
+<h5 id="软件下载及使用"><a href="#软件下载及使用" class="headerlink" title="软件下载及使用"></a>软件下载及使用</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda install -c bioconda multiqc</span><br><span class="line">#进入对应文件，扫描zip文件，忽略html文件</span><br><span class="line">multiqc ~/fastq/fastqc_out/*fastqc.zip --ignore *.html</span><br></pre></td></tr></table></figure>
+<h5 id="结果查看-重点关注的部分参考"><a href="#结果查看-重点关注的部分参考" class="headerlink" title="结果查看 重点关注的部分参考"></a>结果查看 重点关注的部分参考</h5><p><a href="https://zhuanlan.zhihu.com/p/27985781" target="_blank" rel="noopener">青山屋主 转录组入门3-测序数据质量检查</a></p>
+
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
+        
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
       <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/09/转录组入门/转录组入门——2/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
         <meta itemprop="name" content="mt">
@@ -322,7 +404,7 @@
     
     <div class="archives-count">
       <p>Archives</p>
-      <p><a href="/archives/">32</a></p>
+      <p><a href="/archives/">33</a></p>
     </div>
     
     
