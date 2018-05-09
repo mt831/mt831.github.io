@@ -78,7 +78,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>L3.Pandas复杂统计与机器学习特征工程 | mt's blog</title>
+    <title>Test1 | mt's blog</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang=""  data-spy="scroll" data-target=".list-group">
     
@@ -123,7 +123,7 @@
   
   <article class="post-container card " itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/10/数据分析实战/L3-Pandas复杂统计与机器学习特征工程/">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/09/练习/Test1/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
        <meta itemprop="name" content="mt">
        <meta itemprop="description" content="">
@@ -135,12 +135,12 @@
     </div>
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-       <span class="">L3.Pandas复杂统计与机器学习特征工程</span>
+       <span class="">Test1</span>
       </h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-10T19:47:17+08:00">2018-04-10</time>
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-05-09T17:00:02+08:00">2018-05-09</time>
         </span>
         
         
@@ -151,7 +151,7 @@
           <i class="far fa-folder-open"></i>
           
           
-          <span itemprop="about" itemscope itemtype="http://schema.org/Thing"> <a href="/categories/数据科学实训营/" itemprop="url" rel="index"><span itemprop="name">数据科学实训营</span></a></span>
+          <span itemprop="about" itemscope itemtype="http://schema.org/Thing"> <a href="/categories/Test/" itemprop="url" rel="index"><span itemprop="name">Test</span></a></span>
           
           
         </span>
@@ -162,21 +162,15 @@
         
         
         <span class="post-comment-count">
-          <i class="far fa-comments"></i> <a href="/2018/04/10/数据分析实战/L3-Pandas复杂统计与机器学习特征工程/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/10/数据分析实战/L3-Pandas复杂统计与机器学习特征工程/" itemprop="commentsCount"></span></a>
+          <i class="far fa-comments"></i> <a href="/2018/05/09/练习/Test1/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/05/09/练习/Test1/" itemprop="commentsCount"></span></a>
         </span>
         
         
       </div>
     </header>
     <main class="post-body" itemprop="articleBody">
-      <h5 id="分组groupby-聚合agg"><a href="#分组groupby-聚合agg" class="headerlink" title="分组groupby() 聚合agg()"></a>分组groupby() 聚合agg()</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">group_by_name = salaries.groupby(&apos;Name&apos;) #分组</span><br><span class="line">#分组后统计操作</span><br><span class="line">group_by_name.sum() #求和</span><br><span class="line">group_by_name.mean() #均值</span><br><span class="line">salaries.groupby(&apos;Name&apos;).median() #中位数</span><br><span class="line">salaries.groupby(&apos;Name&apos;).size() #频次</span><br><span class="line">salaries.groupby(&apos;Name&apos;,sort=False).sum() #默认先读到哪个</span><br><span class="line">salaries.groupby(&apos;Name&apos;,sort=True).sum()  #按照Name排序</span><br><span class="line">salaries.groupby(&apos;Name&apos;).describe() #分组查看统计信息</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#继续挑选后统计计算</span><br><span class="line">group_by_name[[&apos;Bonus&apos;,&apos;Salary&apos;]].sum() </span><br><span class="line">salaries.groupby(&apos;Name&apos;).agg([&apos;sum&apos;,&apos;mean&apos;,&apos;std&apos;,&apos;median&apos;]) #分组基础上聚合</span><br><span class="line">salaries.groupby(&apos;Name&apos;)[[&apos;Bonus&apos;,&apos;Salary&apos;]].agg([&apos;sum&apos;,&apos;mean&apos;,&apos;std&apos;,&apos;median&apos;]) #根据名字分组选bouns和salary进行后续统计</span><br><span class="line">salaries.groupby(&apos;Name&apos;)[[&apos;Bonus&apos;,&apos;Salary&apos;]].agg([np.sum,np.mean,np.std,np.median]) #np</span><br><span class="line">salaries.groupby(&apos;Name&apos;)[[&apos;Bonus&apos;]].agg([np.sum,np.mean,np.std,np.median]) #[[&apos;Bonus&apos;]] dataframe</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#实例</span><br><span class="line">nvda = pd.read_csv(&apos;data/NVDA.csv&apos;, index_col=0,parse_dates=[&apos;Date&apos;])</span><br><span class="line">nvda.loc[:,&apos;year&apos;] = nvda.index.year #加入year这一列</span><br><span class="line">nvda[&apos;year&apos;].unique() #某一列有多少不同的取值 对series操作</span><br><span class="line">nvda[&apos;year&apos;].value_counts() #不同取值和出现次数 对series操作</span><br><span class="line">tmp = nvda[&apos;year&apos;].value_counts().to_frame() </span><br><span class="line">tmp = tmp.reset_index()</span><br><span class="line">tmp.columns = [&apos;year&apos;,&apos;count&apos;]</span><br><span class="line">tmp.head()</span><br><span class="line">tmp.sort_values(by=&apos;year&apos;).head()</span><br><span class="line">nvda.groupby(&apos;year&apos;).agg([&apos;mean&apos;,&apos;std&apos;]) #分组统计</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#transform 变换</span><br><span class="line">def my_transform(x):</span><br><span class="line">    return (x - x.mean())/x.std()</span><br><span class="line">tmp_arr = np.array(range(10))</span><br><span class="line">my_transform(tmp_arr)</span><br><span class="line">transformed = nvda.groupby(&apos;year&apos;).transform(my_transform)</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">salaries.loc[:,&apos;new_name&apos;] = salaries[&apos;Name&apos;].apply(lambda x: &apos;HanXiao&apos; if x ==&apos;Han&apos; else x) #apply和匿名函数</span><br></pre></td></tr></table></figure>
-<h5 id="拼接concat-append"><a href="#拼接concat-append" class="headerlink" title="拼接concat append"></a>拼接concat append</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">results = pd.concat([df1,df2,df3])  #列</span><br><span class="line">test1 = pd.concat([df1,df2,df3], axis=1)#行对齐去拼接</span><br><span class="line">test2 = pd.concat([df1,df2,df3], axis=0)#列对齐拼接</span><br><span class="line">df1.append(df1)#append 追加</span><br></pre></td></tr></table></figure>
-<h5 id="合并merge-join"><a href="#合并merge-join" class="headerlink" title="合并merge join"></a>合并merge join</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pd.merge(results,new_df,on=[&apos;new_apts&apos;],how=&apos;inner&apos;) #left right注意区分</span><br><span class="line">.join #基于索引</span><br></pre></td></tr></table></figure>
-<p><strong><em>以上整理自<a href="www.xiniuedu.com">稀牛学院</a>数据科学实训营 寒小阳老师关于pandas的讲解</em></strong></p>
+      <h4 id="有如下json文件，取出http开头dcm结尾的下载链接（python）"><a href="#有如下json文件，取出http开头dcm结尾的下载链接（python）" class="headerlink" title="有如下json文件，取出http开头dcm结尾的下载链接（python）"></a>有如下json文件，取出http开头dcm结尾的下载链接（python）</h4><p><a href="https://pan.baidu.com/s/1nmv5N0XiU8Pr5_aDYHFi1w" target="_blank" rel="noopener">json文件</a><br>网页搜索json在线解析查看规律<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">import json</span><br><span class="line">import io</span><br><span class="line"></span><br><span class="line">def resolve(file_name):</span><br><span class="line">	with io.open(file_name, &apos;r&apos;, encoding=&apos;windows-1252&apos;) as file:</span><br><span class="line">		for line in file:</span><br><span class="line">			Data = json.loads(line)</span><br><span class="line">			return Data</span><br><span class="line"></span><br><span class="line">def write_file(file_name,Data):</span><br><span class="line">	serieslist = Data[&apos;data&apos;][0][&apos;SeriesList&apos;]</span><br><span class="line">	with open(file_name,&quot;a&quot;) as f:</span><br><span class="line">		for series in serieslist:</span><br><span class="line">			imagelist = series[&apos;ImageList&apos;]</span><br><span class="line">			for image in imagelist:</span><br><span class="line">				f.write(image[&apos;ObjectKey&apos;]+&apos;\n&apos;)</span><br><span class="line">	f.close()		</span><br><span class="line"></span><br><span class="line">c = resolve(&quot;c.json&quot;)</span><br><span class="line">write_file(&quot;c_https.txt&quot;,c)</span><br><span class="line">b = resolve(&quot;b.json&quot;)</span><br><span class="line">write_file(&quot;b_https.txt&quot;,b)</span><br></pre></td></tr></table></figure></p>
+<p>shell<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cat c.json | tr &apos;&quot;&apos; &apos;\n&apos; | grep &apos;http:&apos; &gt; c_https.txt</span><br><span class="line">cat b.json | tr &apos;&quot;&apos; &apos;\n&apos; | grep &apos;http:&apos; &gt; b_https.txt</span><br></pre></td></tr></table></figure></p>
 
     </main>
     <footer class="post-footer">
@@ -201,19 +195,12 @@
   <div class="post-nav">
     
     <div class="post-nav-next post-nav-item">
-      <a href="/2018/04/10/数据分析实战/Test1-python-part/" rel="next" title="Test1.python part">
+      <a href="/2018/05/03/数据分析实战/实战7-QQ答疑/" rel="next" title="实战7-QQ答疑">
         <i class="fas fa-angle-left"></i>
-        <span class="nav-title">Test1.python part</span>
+        <span class="nav-title">实战7-QQ答疑</span>
       </a>
     </div>
     
-    
-    <div class="post-nav-prev post-nav-item">
-      <a href="/2018/04/11/数据分析实战/实战3-QQ答疑/" rel="prev" title="实战3.QQ答疑">
-        <span class="nav-title">实战3.QQ答疑</span>
-        <i class="fas fa-angle-right"></i>
-      </a>
-    </div>
     
   </div>
   
@@ -229,7 +216,7 @@
   _hcwp = window._hcwp || [];
   _hcwp.push({ "widget": "Bloggerstream", "widget_id": "tingm831@gmail.com", "selector": ".hc-comment-count", "label": "{\%COUNT%\}" });
   
-  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2018/04/10/数据分析实战/L3-Pandas复杂统计与机器学习特征工程/" });
+  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2018/05/09/练习/Test1/" });
   
   (function() {
     if ("HC_LOAD_INIT" in window) {
@@ -317,7 +304,7 @@
 <hr>
 <div class="post-toc sidebar-item" id="toc-div">
   <p><i class="fas fa-list-ol"></i> Table of Contents</p>
-  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#分组groupby-聚合agg"><span class="toc-text">分组groupby() 聚合agg()</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#拼接concat-append"><span class="toc-text">拼接concat append</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#合并merge-join"><span class="toc-text">合并merge join</span></a></li></ol></div>
+  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#有如下json文件，取出http开头dcm结尾的下载链接（python）"><span class="toc-text">有如下json文件，取出http开头dcm结尾的下载链接（python）</span></a></li></ol></div>
 </div>
 
 
