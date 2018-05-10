@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>L8.机器学习进阶</title>
+      <link href="/2018/05/09/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L8.%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%BF%9B%E9%98%B6/"/>
+      <url>/2018/05/09/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L8.%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%BF%9B%E9%98%B6/</url>
+      <content type="html"><![CDATA[<h4 id="初步了解"><a href="#初步了解" class="headerlink" title="初步了解"></a>初步了解</h4><p>head() info() describe() shape</p><h4 id="缺失值处理"><a href="#缺失值处理" class="headerlink" title="缺失值处理"></a>缺失值处理</h4><p>pd.DataFrame.fillna    sklearn Imputer</p><h4 id="数值型"><a href="#数值型" class="headerlink" title="数值型"></a>数值型</h4><p>幅度变换 apply+numpy    sklearn.preprocessing scaler<br>统计 max min quantile<br>四则运算<br>高次特征与交叉特征 preprocessing.PolynomialFeatures<br>离散化/分箱/分桶 pandas cut    pandas qcut </p><blockquote><p>cut将根据值本身来选择箱子均匀间隔，qcut是根据这些值的频率来选择箱子的均匀间隔</p></blockquote><p>OneHot encoding/独热向量编码 pandas get_dummies    OneHotEncoder()</p><h4 id="时间型"><a href="#时间型" class="headerlink" title="时间型"></a>时间型</h4><p>日期处理 pandas to_datetime<br>取出关键时间信息 dt.month dt.dayofweek dt.dayofyear</p><h4 id="文本型"><a href="#文本型" class="headerlink" title="文本型"></a>文本型</h4><p>词袋模型 CountVectorizer<br>TF-IDF TfidfVectorizer</p><h4 id="特征选择"><a href="#特征选择" class="headerlink" title="特征选择"></a>特征选择</h4><p>过滤式/Filter SelectKBes<br>包裹型/wrapper RFE<br>嵌入式/Embedded SelectFromModel</p><h4 id="网格搜索和交叉验证"><a href="#网格搜索和交叉验证" class="headerlink" title="网格搜索和交叉验证"></a>网格搜索和交叉验证</h4><blockquote><p>网格搜索法算法就是通过交叉验证的方法去寻找最优的模型参数</p></blockquote><p><a href="https://www.cnblogs.com/jasonfreak/p/5448385.html" target="_blank" rel="noopener">使用sklearn做单机特征工程</a><br><a href="http://www.cnblogs.com/sddai/p/6440797.html" target="_blank" rel="noopener">网格搜索（参数选择）</a><br><a href="https://www.davex.pw/2017/09/17/Cross-Validation/" target="_blank" rel="noopener">交叉验证与网格搜索算法</a></p>]]></content>
+      
+      <categories>
+          
+          <category> 数据科学实训营 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>Test1</title>
       <link href="/2018/05/09/%E7%BB%83%E4%B9%A0/Test1/"/>
       <url>/2018/05/09/%E7%BB%83%E4%B9%A0/Test1/</url>
