@@ -95,13 +95,13 @@
   <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
   <ul id="menu">
     
-    <li><a href="/" class="current">首頁</a></li>
+    <li><a href="/" class="current">Home</a></li>
     
-    <li><a href="/archives/">歸檔</a></li>
+    <li><a href="/archives/">Archives</a></li>
     
-    <li><a href="/categories/">分類</a></li>
+    <li><a href="/categories/">Categories</a></li>
     
-    <li><a href="/tags/">標籤</a></li>
+    <li><a href="/tags/">Tags</a></li>
     
   </ul>
 </nav>
@@ -168,9 +168,16 @@
     </header>
     <main class="post-body" itemprop="articleBody">
       
-      <h4 id="问题：下载1-5版本samtools后仍调用1-19版本"><a href="#问题：下载1-5版本samtools后仍调用1-19版本" class="headerlink" title="问题：下载1.5版本samtools后仍调用1.19版本"></a>问题：下载1.5版本samtools后仍调用1.19版本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc 添加1.5版本路径</span><br><span class="line">which samtools 查看调用1.19版本的绝对路径</span><br><span class="line">bash命令优先级:别名(alias)——复合命令——函数——内部命令(help)——缓存命令(hash -r)——外部命令(echo $PATH)    type:确定命令是否为内部命令或外部命令</span><br><span class="line">type samtools 为外部命令samtools is /home/software/bin/samtools 可能外部命令中存在多个samtools路径</span><br><span class="line">export 显示环境变量 echo $PATH 只显示path</span><br><span class="line">export PATH=... 将新版本路径放置在前面</span><br></pre></td></tr></table></figure>
+      <h3 id="问题：下载1-5版本samtools后仍调用1-19版本"><a href="#问题：下载1-5版本samtools后仍调用1-19版本" class="headerlink" title="问题：下载1.5版本samtools后仍调用1.19版本"></a>问题：下载1.5版本samtools后仍调用1.19版本</h3><h4 id="添加1-5版本路径后仍调用旧版本"><a href="#添加1-5版本路径后仍调用旧版本" class="headerlink" title="添加1.5版本路径后仍调用旧版本"></a>添加1.5版本路径后仍调用旧版本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc</span><br><span class="line">PATH=$PATH:/home/tingm/software/samtools-1.5/</span><br></pre></td></tr></table></figure>
+<h4 id="查看调用1-19版本的绝对路径"><a href="#查看调用1-19版本的绝对路径" class="headerlink" title="查看调用1.19版本的绝对路径"></a>查看调用1.19版本的绝对路径</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which samtools</span><br></pre></td></tr></table></figure>
+<h4 id="bash命令优先级"><a href="#bash命令优先级" class="headerlink" title="bash命令优先级"></a>bash命令优先级</h4><p>别名(alias)——复合命令——函数——内部命令(help)——缓存命令(hash -r)——外部命令(echo $PATH)<br>type:确定命令是否为内部命令或外部命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type samtools</span><br></pre></td></tr></table></figure></p>
+<p>外部命令samtools is /home/software/bin/samtools，可能外部命令中存在多个samtools路径，先调用了前面的samtools</p>
+<h4 id="查看PATH"><a href="#查看PATH" class="headerlink" title="查看PATH"></a>查看PATH</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export</span><br><span class="line">echo $PATH</span><br></pre></td></tr></table></figure>
+<h4 id="export添加路径-只针对当前shell"><a href="#export添加路径-只针对当前shell" class="headerlink" title="export添加路径 只针对当前shell"></a>export添加路径 只针对当前shell</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$PATH:新添加的路径</span><br></pre></td></tr></table></figure>
+<h4 id="vim-bash-profile添加路径-永久有效"><a href="#vim-bash-profile添加路径-永久有效" class="headerlink" title="vim ~/.bash_profile添加路径 永久有效"></a>vim ~/.bash_profile添加路径 永久有效</h4><p>查找命令顺序是按环境变量顺序进行，第一次找到查询命令即调用执行。想执行的samtools命令path中有旧版调用，所以<strong>需把新版samtools路径/写在$PATH前面</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=/home/tingm/software/samtools-1.5/:$PATH</span><br></pre></td></tr></table></figure></p>
+<p>python路径可类比更改为python3</p>
 <blockquote>
-<p>参考<br><a href="http://www.cnblogs.com/hongzg1982/articles/2101792.html" target="_blank" rel="noopener">linux关于bashrc与profile的区别</a><br><a href="http://www.cnblogs.com/Jamesliang/articles/1486690.html" target="_blank" rel="noopener">Linux中/usr与/var目录详解</a><br><a href="http://wiki.jikexueyuan.com/project/linux/files-and-directories.html" target="_blank" rel="noopener">Linux 文件与目录管理</a><br><a href="https://www.jianshu.com/p/942a0ba8dafe" target="_blank" rel="noopener">linux（内部、外部、别名、缓存）命令及其优先级</a><br><a href="https://blog.caock.net/zh/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84%E5%8F%8A%E6%BA%90%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%8D%87%E7%BA%A7/" target="_blank" rel="noopener">Linux可执行文件安装路径 环境变量</a><br><a href="https://blog.csdn.net/aguangg_6655_la/article/details/53245642" target="_blank" rel="noopener">Linux环境变量PATH的增添和删除操作</a></p>
+<p>参考<br><a href="http://www.cnblogs.com/hongzg1982/articles/2101792.html" target="_blank" rel="noopener">linux关于bashrc与profile的区别</a><br><a href="https://blog.caock.net/zh/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84%E5%8F%8A%E6%BA%90%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%8D%87%E7%BA%A7/" target="_blank" rel="noopener">Linux可执行文件安装路径 环境变量</a></p>
 </blockquote>
 
       
@@ -958,7 +965,7 @@
   
   <div class="search">
     <div class="form-group">
-      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
     </div>
   </div>
   <div class="search-result-box" id="search-result"></div>
@@ -973,7 +980,7 @@
   <div class="site-count">
     
     <div class="archives-count">
-      <p>歸檔</p>
+      <p>Archives</p>
       <p><a href="/archives/">37</a></p>
     </div>
     
@@ -982,7 +989,7 @@
     <span class="site-count-divider"> | </span>
     
     <div class="categories-count">
-      <p>分類</p>
+      <p>Categories</p>
       <p><a href="/categories/">6</a></p>
     </div>
     
@@ -991,7 +998,7 @@
     <span class="site-count-divider"> | </span>
     
     <div class="tags-count">
-      <p>標籤</p>
+      <p>Tags</p>
       <p><a href="/tags/">4</a></p>
     </div>
     
@@ -1010,7 +1017,7 @@
     
 <hr>
 <div class="social-link sidebar-item">
-  <p><i class="far fa-address-card"></i> 社交鏈接</p>
+  <p><i class="far fa-address-card"></i> Social Links</p>
   <ul>
     
     <li><i class="fab fa-github"></i> <a href="https://github.com/mt831" target="_blank">GitHub</a></li>
@@ -1058,7 +1065,7 @@
           
         </div>
         <div class="powered-by">
-          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 強力驅動 | 主題 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
         </div>
       </div>
     </div>
