@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-11T05:00:24.403Z</updated>
+  <updated>2018-05-11T05:26:47.057Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/05/11/Linux/linux%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98/"/>
     <id>http://yoursite.com/2018/05/11/Linux/linux路径问题/</id>
     <published>2018-05-11T05:00:00.000Z</published>
-    <updated>2018-05-11T05:00:24.403Z</updated>
+    <updated>2018-05-11T05:26:47.057Z</updated>
     
     <summary type="html">
     
@@ -38,7 +38,7 @@
       <category term="Linux基础" scheme="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
     
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+      <category term="Linux，bioinformatics" scheme="http://yoursite.com/tags/Linux%EF%BC%8Cbioinformatics/"/>
     
   </entry>
   
