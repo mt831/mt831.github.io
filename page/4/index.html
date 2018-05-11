@@ -95,13 +95,13 @@
   <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
   <ul id="menu">
     
-    <li><a href="/">首页</a></li>
+    <li><a href="/">Home</a></li>
     
-    <li><a href="/archives/">归档</a></li>
+    <li><a href="/archives/">Archives</a></li>
     
-    <li><a href="/categories/">分类</a></li>
+    <li><a href="/categories/">Categories</a></li>
     
-    <li><a href="/tags/">标签</a></li>
+    <li><a href="/tags/">Tags</a></li>
     
   </ul>
 </nav>
@@ -118,6 +118,83 @@
             
 
 <section id="index" class="index">
+  
+  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/21/转录组入门/转录组入门——7/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="mt">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="mt's blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h2 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2017/08/21/转录组入门/转录组入门——7/" itemprop="url">转录组入门——7</a>
+      </h2>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-08-21T16:02:38+08:00">2017-08-21</time>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+        <span class="post-categories">
+          <i class="far fa-folder-open"></i>
+          
+          
+          <span itemprop="about" itemscope itemtype="http://schema.org/Thing"> <a href="/categories/转录组入门/" itemprop="url" rel="index"><span itemprop="name">转录组入门</span></a></span>
+          
+          
+        </span>
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+          
+          <span class="post-comment-count">
+            <i class="far fa-comments"></i> <a href="/2017/08/21/转录组入门/转录组入门——7/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2017/08/21/转录组入门/转录组入门——7/" itemprop="commentsCount"></span></a>
+          </span>
+          
+        
+      </div>
+    </header>
+    <main class="post-body" itemprop="articleBody">
+      
+      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">.libPaths(&quot;/home/tingm/R/x86_64-pc-linux-gnu-library/3.2&quot;)</span><br><span class="line">  library(limma)</span><br><span class="line">  library(edgeR)</span><br><span class="line">  library(DESeq2)</span><br><span class="line">    #change</span><br><span class="line">    path&lt;-&quot;/home/tingm/fastq/mus_result_count/&quot;</span><br><span class="line">    #change</span><br><span class="line">      samples&lt;-read.table(&quot;samples.list.txt&quot;,header=F,sep=&quot;\t&quot;)</span><br><span class="line">      samples&lt;-samples[,1]</span><br><span class="line">      #change</span><br><span class="line">      data.raw&lt;-read.table(&quot;Mus_SRR3589959.sgeneCounts&quot;,header=F,sep=&quot;\t&quot;,col.names = c(&quot;gene_id&quot;,&quot;Mus_SRR3589959.sgeneCounts&quot;))</span><br><span class="line">      for(sample in samples)</span><br><span class="line">      &#123;</span><br><span class="line">        print(sample)</span><br><span class="line">        file&lt;-paste(path,sample,sep=&quot;&quot;)</span><br><span class="line">        data.new&lt;-read.table(file,header=F,sep=&quot;\t&quot;,col.names = c(&quot;gene_id&quot;,sample))</span><br><span class="line">        data.raw&lt;-merge(data.new,data.raw,by=&quot;gene_id&quot;)</span><br><span class="line">      &#125;</span><br><span class="line">     data.raw&lt;-data.raw[-1:-5,]</span><br><span class="line">        #change</span><br><span class="line">     names(data.raw) &lt;- c(&quot;gene_id&quot;,&quot;Akap95_2&quot;,&quot;control_2&quot;,&quot;Akap95_1&quot;,&quot;control_1&quot;)</span><br><span class="line">     write.table(data.raw,&quot;count.matix.csv&quot;,row.names=F,quote=F)</span><br></pre></td></tr></table></figure>
+<h5 id="使用DESeq2进行差异基因分析-筛选出基因数目不一样"><a href="#使用DESeq2进行差异基因分析-筛选出基因数目不一样" class="headerlink" title="使用DESeq2进行差异基因分析 筛选出基因数目不一样"></a>使用DESeq2进行差异基因分析 筛选出基因数目不一样</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">##数据预处理</span><br><span class="line">database &lt;- read.table(file = &quot;count.matix.csv&quot;, sep = &quot; &quot;, header = T,row.names = 1)</span><br><span class="line">database &lt;- round(as.matrix(database))</span><br><span class="line">##设置分组信息并构建dds对象</span><br><span class="line">condition &lt;- factor(c(&quot;Akap95&quot;,&quot;control&quot;,&quot;Akap95&quot;,&quot;control&quot;), levels = c(&quot;control&quot;, &quot;Akap95&quot;))</span><br><span class="line">coldata &lt;- data.frame(row.names = colnames(database), condition)</span><br><span class="line">dds &lt;- DESeqDataSetFromMatrix(countData=database, colData=coldata, design=~condition)</span><br><span class="line">dds &lt;- dds[ rowSums(counts(dds)) &gt; 1, ]</span><br><span class="line">##使用DESeq函数估计离散度，然后差异分析获得res对象</span><br><span class="line">dds &lt;- DESeq(dds)</span><br><span class="line">res &lt;- results(dds)</span><br><span class="line">#summary(res)</span><br><span class="line">#最后设定阈值，筛选差异基因，导出数据(全部数据。包括标准化后的count数)</span><br><span class="line">res &lt;- res[order(res$padj),]</span><br><span class="line">diff_gene_DESeq2 &lt;- subset(res, padj &lt; 0.05 &amp; (log2FoldChange &gt; 1 | log2FoldChange &lt; -1))</span><br><span class="line">diff_gene_DESeq2 &lt;- row.names(diff_gene_DESeq2)</span><br><span class="line">resdata &lt;- merge(as.data.frame(res), as.data.frame(counts(dds, normalized=TRUE)),by=&quot;row.names&quot;,sort=FALSE)</span><br><span class="line">write.csv(resdata,file = &quot;control_vs_Akap95.csv&quot;,row.names = F)</span><br></pre></td></tr></table></figure>
+<h5 id="使用edgeR进行差异基因分析"><a href="#使用edgeR进行差异基因分析" class="headerlink" title="使用edgeR进行差异基因分析"></a>使用edgeR进行差异基因分析</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">##跟DESeq2一样，导入数据，预处理（用了cpm函数）</span><br><span class="line">exprSet&lt;- read.table(file = &quot;count.matix.csv&quot;, sep = &quot; &quot;, header = TRUE, row.names = 1, stringsAsFactors = FALSE)</span><br><span class="line">group_list &lt;- factor(c(&quot;Akap95&quot;,&quot;control&quot;,&quot;Akap95&quot;,&quot;control&quot;), levels = c(&quot;control&quot;, &quot;Akap95&quot;))</span><br><span class="line">exprSet &lt;- exprSet[rowSums(cpm(exprSet) &gt; 1) &gt;= 2,]</span><br><span class="line">##设置分组信息，并做TMM标准化</span><br><span class="line">exprSet &lt;- DGEList(counts = exprSet, group = group_list)</span><br><span class="line">exprSet &lt;- calcNormFactors(exprSet)</span><br><span class="line">##使用qCML（quantile-adjusted conditional maximum likelihood）估计离散度（只针对单因素实验设计）</span><br><span class="line">exprSet &lt;- estimateCommonDisp(exprSet)</span><br><span class="line">exprSet &lt;- estimateTagwiseDisp(exprSet)</span><br><span class="line">##寻找差异gene(这里的exactTest函数还是基于qCML并且只针对单因素实验设计)，然后按照阈值进行筛选即可</span><br><span class="line">et &lt;- exactTest(exprSet)</span><br><span class="line">tTag &lt;- topTags(et, n=nrow(exprSet))</span><br><span class="line">diff_gene_edgeR &lt;- subset(tTag$table, FDR &lt; 0.05 &amp; (logFC &gt; 1 | logFC &lt; -1))</span><br><span class="line">diff_gene_edgeR &lt;- row.names(diff_gene_edgeR)</span><br><span class="line">write.csv(tTag$table,file = &quot;control_vs_Akap95_edgeR.csv&quot;)</span><br></pre></td></tr></table></figure>
+<h5 id="使用limma进行差异分析-limma的voom流程"><a href="#使用limma进行差异分析-limma的voom流程" class="headerlink" title="使用limma进行差异分析   limma的voom流程"></a>使用limma进行差异分析   limma的voom流程</h5><p>待续</p>
+<h5 id="不同软件包分析结果比较"><a href="#不同软件包分析结果比较" class="headerlink" title="不同软件包分析结果比较"></a>不同软件包分析结果比较</h5><p>待续</p>
+<blockquote>
+<p><a href="http://www.jianshu.com/p/3bfb21d24b74" target="_blank" rel="noopener">转录组入门（7）：差异基因分析</a><br><a href="https://mp.weixin.qq.com/s/1mda7NpOxShbOxZKSJar7Q" target="_blank" rel="noopener">从零开始学转录组（7）：差异基因表达分析</a><br><a href="http://www.biotrainee.com/thread-2018-1-1.html" target="_blank" rel="noopener">转录组入门（7-8）从差异基因到富集分析</a><br><a href="http://www.agctu.org/question/179" target="_blank" rel="noopener">为什么RNA-seq的read数服从泊松分布？</a></p>
+</blockquote>
+
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
+        
+        
+      </div>
+      
+    </footer>
+  </article>
   
   <article class="index-post card" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
@@ -674,7 +751,7 @@
   
   <div class="search">
     <div class="form-group">
-      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
     </div>
   </div>
   <div class="search-result-box" id="search-result"></div>
@@ -689,8 +766,8 @@
   <div class="site-count">
     
     <div class="archives-count">
-      <p>归档</p>
-      <p><a href="/archives/">36</a></p>
+      <p>Archives</p>
+      <p><a href="/archives/">37</a></p>
     </div>
     
     
@@ -698,8 +775,8 @@
     <span class="site-count-divider"> | </span>
     
     <div class="categories-count">
-      <p>分类</p>
-      <p><a href="/categories/">5</a></p>
+      <p>Categories</p>
+      <p><a href="/categories/">6</a></p>
     </div>
     
     
@@ -707,8 +784,8 @@
     <span class="site-count-divider"> | </span>
     
     <div class="tags-count">
-      <p>标签</p>
-      <p><a href="/tags/">3</a></p>
+      <p>Tags</p>
+      <p><a href="/tags/">4</a></p>
     </div>
     
   </div>
@@ -726,7 +803,7 @@
     
 <hr>
 <div class="social-link sidebar-item">
-  <p><i class="far fa-address-card"></i> 社交链接</p>
+  <p><i class="far fa-address-card"></i> Social Links</p>
   <ul>
     
     <li><i class="fab fa-github"></i> <a href="https://github.com/mt831" target="_blank">GitHub</a></li>
@@ -774,7 +851,7 @@
           
         </div>
         <div class="powered-by">
-          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
         </div>
       </div>
     </div>
