@@ -78,7 +78,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>L9.模型优化与融合 | mt's blog</title>
+    <title>Linux路径问题 | mt's blog</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang=""  data-spy="scroll" data-target=".list-group">
     
@@ -123,7 +123,7 @@
   
   <article class="post-container card " itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/10/数据分析实战/L9.模型优化与融合/">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/11/Linux/linux路径问题/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
        <meta itemprop="name" content="mt">
        <meta itemprop="description" content="">
@@ -135,12 +135,12 @@
     </div>
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-       <span class="">L9.模型优化与融合</span>
+       <span class="">Linux路径问题</span>
       </h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-05-10T18:00:02+08:00">2018-05-10</time>
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-05-11T13:00:00+08:00">2018-05-11</time>
         </span>
         
         
@@ -151,7 +151,7 @@
           <i class="far fa-folder-open"></i>
           
           
-          <span itemprop="about" itemscope itemtype="http://schema.org/Thing"> <a href="/categories/数据科学实训营/" itemprop="url" rel="index"><span itemprop="name">数据科学实训营</span></a></span>
+          <span itemprop="about" itemscope itemtype="http://schema.org/Thing"> <a href="/categories/Linux基础/" itemprop="url" rel="index"><span itemprop="name">Linux基础</span></a></span>
           
           
         </span>
@@ -162,15 +162,24 @@
         
         
         <span class="post-comment-count">
-          <i class="far fa-comments"></i> <a href="/2018/05/10/数据分析实战/L9.模型优化与融合/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/05/10/数据分析实战/L9.模型优化与融合/" itemprop="commentsCount"></span></a>
+          <i class="far fa-comments"></i> <a href="/2018/05/11/Linux/linux路径问题/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/05/11/Linux/linux路径问题/" itemprop="commentsCount"></span></a>
         </span>
         
         
       </div>
     </header>
     <main class="post-body" itemprop="articleBody">
-      <h4 id="模型融合"><a href="#模型融合" class="headerlink" title="模型融合"></a>模型融合</h4><p>投票器模型融合、Bagging、RandomForest</p>
-<p><strong>Mark:继续机器学习部分学习，完成作业Test3作业，加深理解，整理笔记</strong></p>
+      <h3 id="问题：下载1-5版本samtools后仍调用1-19版本"><a href="#问题：下载1-5版本samtools后仍调用1-19版本" class="headerlink" title="问题：下载1.5版本samtools后仍调用1.19版本"></a>问题：下载1.5版本samtools后仍调用1.19版本</h3><h4 id="添加1-5版本路径后仍调用旧版本"><a href="#添加1-5版本路径后仍调用旧版本" class="headerlink" title="添加1.5版本路径后仍调用旧版本"></a>添加1.5版本路径后仍调用旧版本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vim ~/.bashrc</span><br><span class="line">PATH=$PATH:/home/tingm/software/samtools-1.5/</span><br></pre></td></tr></table></figure>
+<h4 id="查看调用1-19版本的绝对路径"><a href="#查看调用1-19版本的绝对路径" class="headerlink" title="查看调用1.19版本的绝对路径"></a>查看调用1.19版本的绝对路径</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">which samtools</span><br></pre></td></tr></table></figure>
+<h4 id="bash命令优先级"><a href="#bash命令优先级" class="headerlink" title="bash命令优先级"></a>bash命令优先级</h4><p>别名(alias)——复合命令——函数——内部命令(help)——缓存命令(hash -r)——外部命令(echo $PATH)<br>type:确定命令是否为内部命令或外部命令<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">type samtools</span><br></pre></td></tr></table></figure></p>
+<p>外部命令samtools is /home/software/bin/samtools，可能外部命令中存在多个samtools路径，先调用了前面的samtools</p>
+<h4 id="查看PATH"><a href="#查看PATH" class="headerlink" title="查看PATH"></a>查看PATH</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export</span><br><span class="line">echo $PATH</span><br></pre></td></tr></table></figure>
+<h4 id="export添加路径-只针对当前shell"><a href="#export添加路径-只针对当前shell" class="headerlink" title="export添加路径 只针对当前shell"></a>export添加路径 只针对当前shell</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=$PATH:新添加的路径</span><br></pre></td></tr></table></figure>
+<h4 id="vim-bash-profile添加路径-永久有效"><a href="#vim-bash-profile添加路径-永久有效" class="headerlink" title="vim ~/.bash_profile添加路径 永久有效"></a>vim ~/.bash_profile添加路径 永久有效</h4><p>查找命令顺序是按环境变量顺序进行，第一次找到查询命令即调用执行。想执行的samtools命令path中有旧版调用，所以<strong>需把新版samtools路径/写在$PATH前面</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=/home/tingm/software/samtools-1.5/:$PATH</span><br></pre></td></tr></table></figure></p>
+<p>python路径可类比更改为python3</p>
+<blockquote>
+<p>参考<br><a href="http://www.cnblogs.com/hongzg1982/articles/2101792.html" target="_blank" rel="noopener">linux关于bashrc与profile的区别</a><br><a href="https://blog.caock.net/zh/linux%E5%8F%AF%E6%89%A7%E8%A1%8C%E6%96%87%E4%BB%B6%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84%E5%8F%8A%E6%BA%90%E7%AE%A1%E7%90%86%E8%BD%AF%E4%BB%B6%E7%9A%84%E5%8D%87%E7%BA%A7/" target="_blank" rel="noopener">Linux可执行文件安装路径 环境变量</a></p>
+</blockquote>
 
     </main>
     <footer class="post-footer">
@@ -183,7 +192,7 @@
         
         
         
-        <a class="post-tag button" href="/tags/python/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> python</a>
+        <a class="post-tag button" href="/tags/Linux/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> Linux</a>
         
         
       </div>
@@ -195,19 +204,12 @@
   <div class="post-nav">
     
     <div class="post-nav-next post-nav-item">
-      <a href="/2018/05/09/数据分析实战/L8.机器学习进阶/" rel="next" title="L8.机器学习进阶">
+      <a href="/2018/05/10/数据分析实战/L9.模型优化与融合/" rel="next" title="L9.模型优化与融合">
         <i class="fas fa-angle-left"></i>
-        <span class="nav-title">L8.机器学习进阶</span>
+        <span class="nav-title">L9.模型优化与融合</span>
       </a>
     </div>
     
-    
-    <div class="post-nav-prev post-nav-item">
-      <a href="/2018/05/11/Linux/linux路径问题/" rel="prev" title="Linux路径问题">
-        <span class="nav-title">Linux路径问题</span>
-        <i class="fas fa-angle-right"></i>
-      </a>
-    </div>
     
   </div>
   
@@ -223,7 +225,7 @@
   _hcwp = window._hcwp || [];
   _hcwp.push({ "widget": "Bloggerstream", "widget_id": "tingm831@gmail.com", "selector": ".hc-comment-count", "label": "{\%COUNT%\}" });
   
-  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2018/05/10/数据分析实战/L9.模型优化与融合/" });
+  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2018/05/11/Linux/linux路径问题/" });
   
   (function() {
     if ("HC_LOAD_INIT" in window) {
@@ -311,7 +313,7 @@
 <hr>
 <div class="post-toc sidebar-item" id="toc-div">
   <p><i class="fas fa-list-ol"></i> Table of Contents</p>
-  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#模型融合"><span class="toc-text">模型融合</span></a></li></ol></div>
+  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#问题：下载1-5版本samtools后仍调用1-19版本"><span class="toc-text">问题：下载1.5版本samtools后仍调用1.19版本</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#添加1-5版本路径后仍调用旧版本"><span class="toc-text">添加1.5版本路径后仍调用旧版本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看调用1-19版本的绝对路径"><span class="toc-text">查看调用1.19版本的绝对路径</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#bash命令优先级"><span class="toc-text">bash命令优先级</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看PATH"><span class="toc-text">查看PATH</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#export添加路径-只针对当前shell"><span class="toc-text">export添加路径 只针对当前shell</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#vim-bash-profile添加路径-永久有效"><span class="toc-text">vim ~/.bash_profile添加路径 永久有效</span></a></li></ol></li></ol></div>
 </div>
 
 
