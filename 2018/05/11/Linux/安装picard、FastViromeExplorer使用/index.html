@@ -98,13 +98,13 @@
   <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
   <ul id="menu">
     
-    <li><a href="/">首页</a></li>
+    <li><a href="/">Home</a></li>
     
-    <li><a href="/archives/">归档</a></li>
+    <li><a href="/archives/">Archives</a></li>
     
-    <li><a href="/categories/">分类</a></li>
+    <li><a href="/categories/">Categories</a></li>
     
-    <li><a href="/tags/">标签</a></li>
+    <li><a href="/tags/">Tags</a></li>
     
   </ul>
 </nav>
@@ -163,7 +163,10 @@
 <p><strong>仍旧报错</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Cloning into &apos;picard&apos;...</span><br><span class="line">fatal: unable to access &apos;https://github.com/broadinstitute/picard.git/&apos;: SSL connect error</span><br></pre></td></tr></table></figure></p>
 <h4 id="设置git、添加SSH-keys、git-clone已存在GitHub上的Repository"><a href="#设置git、添加SSH-keys、git-clone已存在GitHub上的Repository" class="headerlink" title="设置git、添加SSH keys、git clone已存在GitHub上的Repository"></a>设置git、添加SSH keys、git clone已存在GitHub上的Repository</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Your Name&quot;</span><br><span class="line">git config --global user.email &quot;youremail@domain.com&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;youremail@163.com&quot;</span><br><span class="line">vim ~/.ssh/id_rsa.pub</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">git clone git@github.com:michaelliao/gitskills.git</span><br></pre></td></tr></table></figure>
 <h4 id="更换下载路径-picard-issues-659"><a href="#更换下载路径-picard-issues-659" class="headerlink" title="更换下载路径 picard/issues/659"></a><strong>更换下载路径</strong> <a href="https://github.com/broadinstitute/picard/issues/659" target="_blank" rel="noopener">picard/issues/659</a></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:broadinstitute/picard.git</span><br><span class="line">cd picard/</span><br><span class="line">./gradlew shadowJar</span><br></pre></td></tr></table></figure>
-<h4 id="picard使用、FastViromeExplorer使用"><a href="#picard使用、FastViromeExplorer使用" class="headerlink" title="picard使用、FastViromeExplorer使用"></a>picard使用、FastViromeExplorer使用</h4><p>java -jar /home/tingm/software/picard/build/libs/picard.jar RevertSam<br>java -cp /home/tingm/software/FastViromeExplorer/bin FastViromeExplorer</p>
+<h4 id="FastViromeExplorer使用"><a href="#FastViromeExplorer使用" class="headerlink" title="FastViromeExplorer使用"></a>FastViromeExplorer使用</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -cp bin FastViromeExplorer -1 /home/tingm/test/test1.fq -2 /home/tingm/test/test2.fq -i /home/tingm/software/FastViromeExplorer/eukaryotic-virus-kallisto-index-k31.idx -o /home/tingm/test/test-output</span><br></pre></td></tr></table></figure>
+<p><strong>问题：如何更改路径，使得不在FastViromeExplorer文件夹下也可运行</strong></p>
+<h4 id="picard-RevertSam"><a href="#picard-RevertSam" class="headerlink" title="picard RevertSam"></a>picard RevertSam</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -jar /home/tingm/software/picard/build/libs/picard.jar RevertSam I=/home/tingm/rna_editing/hbv/results_hisat/SRR6080227_grch38.mapped.bam O=test.bam</span><br></pre></td></tr></table></figure>
+<p>bedtools bamtofastq -i test.bam -fq test.end1.fq -fq2 test.end2.fq</p>
 
     </main>
     <footer class="post-footer">
@@ -259,7 +262,7 @@
   
   <div class="search">
     <div class="form-group">
-      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
     </div>
   </div>
   <div class="search-result-box" id="search-result"></div>
@@ -274,7 +277,7 @@
   <div class="site-count">
     
     <div class="archives-count">
-      <p>归档</p>
+      <p>Archives</p>
       <p><a href="/archives/">38</a></p>
     </div>
     
@@ -283,7 +286,7 @@
     <span class="site-count-divider"> | </span>
     
     <div class="categories-count">
-      <p>分类</p>
+      <p>Categories</p>
       <p><a href="/categories/">6</a></p>
     </div>
     
@@ -292,7 +295,7 @@
     <span class="site-count-divider"> | </span>
     
     <div class="tags-count">
-      <p>标签</p>
+      <p>Tags</p>
       <p><a href="/tags/">8</a></p>
     </div>
     
@@ -314,8 +317,8 @@
 
 <hr>
 <div class="post-toc sidebar-item" id="toc-div">
-  <p><i class="fas fa-list-ol"></i> 文章目录</p>
-  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装picard报错-安装参考"><span class="toc-text">安装picard报错 安装参考</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装2-9-5版本git"><span class="toc-text">安装2.9.5版本git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置git、添加SSH-keys、git-clone已存在GitHub上的Repository"><span class="toc-text">设置git、添加SSH keys、git clone已存在GitHub上的Repository</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#更换下载路径-picard-issues-659"><span class="toc-text">更换下载路径 picard/issues/659</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#picard使用、FastViromeExplorer使用"><span class="toc-text">picard使用、FastViromeExplorer使用</span></a></li></ol></div>
+  <p><i class="fas fa-list-ol"></i> Table of Contents</p>
+  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装picard报错-安装参考"><span class="toc-text">安装picard报错 安装参考</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装2-9-5版本git"><span class="toc-text">安装2.9.5版本git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置git、添加SSH-keys、git-clone已存在GitHub上的Repository"><span class="toc-text">设置git、添加SSH keys、git clone已存在GitHub上的Repository</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#更换下载路径-picard-issues-659"><span class="toc-text">更换下载路径 picard/issues/659</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#FastViromeExplorer使用"><span class="toc-text">FastViromeExplorer使用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#picard-RevertSam"><span class="toc-text">picard RevertSam</span></a></li></ol></div>
 </div>
 
 
@@ -325,7 +328,7 @@
     
 <hr>
 <div class="social-link sidebar-item">
-  <p><i class="far fa-address-card"></i> 社交链接</p>
+  <p><i class="far fa-address-card"></i> Social Links</p>
   <ul>
     
     <li><i class="fab fa-github"></i> <a href="https://github.com/mt831" target="_blank">GitHub</a></li>
@@ -373,7 +376,7 @@
           
         </div>
         <div class="powered-by">
-          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
         </div>
       </div>
     </div>
