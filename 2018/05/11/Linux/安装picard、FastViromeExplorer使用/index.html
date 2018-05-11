@@ -78,7 +78,7 @@
     <script defer type="text/javascript" src="/js/index.js"></script>
     
     <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>爬虫：模拟登陆和动态网站抓取 要点记录 | mt's blog</title>
+    <title>安装picard、FastViromeExplorer使用 | mt's blog</title>
   </head>
   <body itemscope itemtype="http://schema.org/WebPage" lang=""  data-spy="scroll" data-target=".list-group">
     
@@ -123,7 +123,7 @@
   
   <article class="post-container card " itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/03/数据分析实战/爬虫：模拟登陆和动态网站抓取/">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/11/Linux/安装picard、FastViromeExplorer使用/">
       <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
        <meta itemprop="name" content="mt">
        <meta itemprop="description" content="">
@@ -135,26 +135,14 @@
     </div>
     <header class="post-header">
       <h1 class="post-title" itemprop="name headline">
-       <span class="">爬虫：模拟登陆和动态网站抓取 要点记录</span>
+       <span class="">安装picard、FastViromeExplorer使用</span>
       </h1>
       <div class="post-meta">
         
         <span class="post-date">
-          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-03T19:48:07+08:00">2018-04-03</time>
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-05-11T16:54:00+08:00">2018-05-11</time>
         </span>
         
-        
-        
-        <span class="post-meta-divider"> | </span>
-        
-        <span class="post-categories">
-          <i class="far fa-folder-open"></i>
-          
-          
-          <span itemprop="about" itemscope itemtype="http://schema.org/Thing"> <a href="/categories/数据科学实训营/" itemprop="url" rel="index"><span itemprop="name">数据科学实训营</span></a></span>
-          
-          
-        </span>
         
         
         
@@ -162,19 +150,20 @@
         
         
         <span class="post-comment-count">
-          <i class="far fa-comments"></i> <a href="/2018/04/03/数据分析实战/爬虫：模拟登陆和动态网站抓取/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/03/数据分析实战/爬虫：模拟登陆和动态网站抓取/" itemprop="commentsCount"></span></a>
+          <i class="far fa-comments"></i> <a href="/2018/05/11/Linux/安装picard、FastViromeExplorer使用/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/05/11/Linux/安装picard、FastViromeExplorer使用/" itemprop="commentsCount"></span></a>
         </span>
         
         
       </div>
     </header>
     <main class="post-body" itemprop="articleBody">
-      <h5 id="豆瓣模拟登录（google浏览器）"><a href="#豆瓣模拟登录（google浏览器）" class="headerlink" title="豆瓣模拟登录（google浏览器）"></a>豆瓣模拟登录（google浏览器）</h5><p><strong>存在问题？</strong> 登录账号和密码、保持登录状态（跨请求地保持某些参数）、图形验证码<br><strong>操作</strong>：在检查项的Network下查看登录信息，点击login，Header下From data内有表单信息</p>
-<blockquote>
-<p>source: None<br>redir: <a href="https://www.douban.com/" target="_blank" rel="noopener">https://www.douban.com/</a> #登陆页面<br>form_email: test2 #用户邮箱<br>form_password: 111111 #密码<br>captcha-solution: potato #验证码，豆瓣有验证码图库，比对图片ID号<br>captcha-id: tljqzo0Gv3aYUpIarqXaDBAg:en #验证码ID XPath去取<br>login: 登录</p>
-</blockquote>
-<p>captcha_img_url = selector.xpath(‘//img[@id=”captcha_image”]//@src’)<br><strong>结果为空，待解决</strong></p>
-<h5 id="scrapy-命令行端执行脚本"><a href="#scrapy-命令行端执行脚本" class="headerlink" title="scrapy 命令行端执行脚本"></a>scrapy 命令行端执行脚本</h5><p><strong>待练习</strong><br>[Scrapy简单入门及实例讲解][<a href="https://www.cnblogs.com/kongzhagen/p/6549053.html" target="_blank" rel="noopener">https://www.cnblogs.com/kongzhagen/p/6549053.html</a>]<br>[Scrapy安装、爬虫入门教程、爬虫实例（豆瓣电影爬虫）][<a href="http://www.cnblogs.com/Shirlies/p/4536880.html" target="_blank" rel="noopener">http://www.cnblogs.com/Shirlies/p/4536880.html</a>]</p>
+      <h4 id="安装picard报错-安装参考"><a href="#安装picard报错-安装参考" class="headerlink" title="安装picard报错 安装参考"></a>安装picard报错 <a href="http://www.cnblogs.com/zhcncn/p/4030078.html" target="_blank" rel="noopener">安装参考</a></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/broadinstitute/picard.git</span><br></pre></td></tr></table></figure>
+<p><strong>报错如下</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Initialized empty Git repository in /home/tingm/software/picard/.git/</span><br><span class="line">error:  while accessing https://github.com/broadinstitute/picard.git/info/refs</span><br><span class="line">fatal: HTTP request failed</span><br></pre></td></tr></table></figure></p>
+<h4 id="安装2-9-5版本git"><a href="#安装2-9-5版本git" class="headerlink" title="安装2.9.5版本git"></a>安装2.9.5版本git</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">wget https://mirrors.edge.kernel.org/pub/software/scm/git/git-2.9.5.tar.gz</span><br><span class="line">tar zxvf git-2.9.5.tar.gz</span><br><span class="line">cd git-2.9.5/</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line">whereis git 旧版本git</span><br><span class="line">vim ~、.bash_profile 添加路径</span><br></pre></td></tr></table></figure>
+<p><strong>仍旧报错</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Cloning into &apos;picard&apos;...</span><br><span class="line">fatal: unable to access &apos;https://github.com/broadinstitute/picard.git/&apos;: SSL connect error</span><br></pre></td></tr></table></figure></p>
+<h4 id="设置git、添加SSH-keys、git-clone已存在GitHub上的Repository"><a href="#设置git、添加SSH-keys、git-clone已存在GitHub上的Repository" class="headerlink" title="设置git、添加SSH keys、git clone已存在GitHub上的Repository"></a>设置git、添加SSH keys、git clone已存在GitHub上的Repository</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name &quot;Your Name&quot;</span><br><span class="line">git config --global user.email &quot;youremail@domain.com&quot;</span><br><span class="line">ssh-keygen -t rsa -C &quot;youremail@163.com&quot;</span><br><span class="line">vim ~/.ssh/id_rsa.pub</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">git clone git@github.com:michaelliao/gitskills.git</span><br></pre></td></tr></table></figure>
+<h4 id="更换下载路径-picard-issues-659"><a href="#更换下载路径-picard-issues-659" class="headerlink" title="更换下载路径 picard/issues/659"></a><strong>更换下载路径</strong> <a href="https://github.com/broadinstitute/picard/issues/659" target="_blank" rel="noopener">picard/issues/659</a></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:broadinstitute/picard.git</span><br><span class="line">cd picard/</span><br><span class="line">./gradlew shadowJar</span><br></pre></td></tr></table></figure>
+<h4 id="picard使用、FastViromeExplorer使用"><a href="#picard使用、FastViromeExplorer使用" class="headerlink" title="picard使用、FastViromeExplorer使用"></a>picard使用、FastViromeExplorer使用</h4><p>java -jar /home/tingm/software/picard/build/libs/picard.jar RevertSam<br>java -cp /home/tingm/software/FastViromeExplorer/bin FastViromeExplorer</p>
 
     </main>
     <footer class="post-footer">
@@ -187,7 +176,25 @@
         
         
         
-        <a class="post-tag button" href="/tags/python/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> python</a>
+        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
+        
+        
+        
+        <a class="post-tag button" href="/tags/Linux/" style="background: #a3bb54" rel="tag"><i class="fas fa-tags"></i> Linux</a>
+        
+        
+        
+        <a class="post-tag button" href="/tags/picard/" style="background: #47aaff" rel="tag"><i class="fas fa-tags"></i> picard</a>
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/FastViromeExplorer/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> FastViromeExplorer</a>
+        
+        
+        
+        <a class="post-tag button" href="/tags/git/" style="background: #a3bb54" rel="tag"><i class="fas fa-tags"></i> git</a>
         
         
       </div>
@@ -199,19 +206,12 @@
   <div class="post-nav">
     
     <div class="post-nav-next post-nav-item">
-      <a href="/2018/04/03/数据分析实战/L2.Pandas-Series-DataFrame/" rel="next" title="L2 Pandas Series & DataFrame 关键点记录">
+      <a href="/2018/05/11/Linux/linux路径问题/" rel="next" title="Linux路径问题">
         <i class="fas fa-angle-left"></i>
-        <span class="nav-title">L2 Pandas Series & DataFrame 关键点记录</span>
+        <span class="nav-title">Linux路径问题</span>
       </a>
     </div>
     
-    
-    <div class="post-nav-prev post-nav-item">
-      <a href="/2018/04/04/数据分析实战/实战2-python正则讲解/" rel="prev" title="实战2.python正则讲解">
-        <span class="nav-title">实战2.python正则讲解</span>
-        <i class="fas fa-angle-right"></i>
-      </a>
-    </div>
     
   </div>
   
@@ -227,7 +227,7 @@
   _hcwp = window._hcwp || [];
   _hcwp.push({ "widget": "Bloggerstream", "widget_id": "tingm831@gmail.com", "selector": ".hc-comment-count", "label": "{\%COUNT%\}" });
   
-  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2018/04/03/数据分析实战/爬虫：模拟登陆和动态网站抓取/" });
+  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2018/05/11/Linux/安装picard、FastViromeExplorer使用/" });
   
   (function() {
     if ("HC_LOAD_INIT" in window) {
@@ -315,7 +315,7 @@
 <hr>
 <div class="post-toc sidebar-item" id="toc-div">
   <p><i class="fas fa-list-ol"></i> 文章目录</p>
-  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#豆瓣模拟登录（google浏览器）"><span class="toc-text">豆瓣模拟登录（google浏览器）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#scrapy-命令行端执行脚本"><span class="toc-text">scrapy 命令行端执行脚本</span></a></li></ol></div>
+  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装picard报错-安装参考"><span class="toc-text">安装picard报错 安装参考</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#安装2-9-5版本git"><span class="toc-text">安装2.9.5版本git</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#设置git、添加SSH-keys、git-clone已存在GitHub上的Repository"><span class="toc-text">设置git、添加SSH keys、git clone已存在GitHub上的Repository</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#更换下载路径-picard-issues-659"><span class="toc-text">更换下载路径 picard/issues/659</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#picard使用、FastViromeExplorer使用"><span class="toc-text">picard使用、FastViromeExplorer使用</span></a></li></ol></div>
 </div>
 
 

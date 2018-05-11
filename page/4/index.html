@@ -95,13 +95,13 @@
   <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
   <ul id="menu">
     
-    <li><a href="/">Home</a></li>
+    <li><a href="/">首页</a></li>
     
-    <li><a href="/archives/">Archives</a></li>
+    <li><a href="/archives/">归档</a></li>
     
-    <li><a href="/categories/">Categories</a></li>
+    <li><a href="/categories/">分类</a></li>
     
-    <li><a href="/tags/">Tags</a></li>
+    <li><a href="/tags/">标签</a></li>
     
   </ul>
 </nav>
@@ -118,6 +118,87 @@
             
 
 <section id="index" class="index">
+  
+  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/23/转录组入门/转录组入门——8/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="mt">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="mt's blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h2 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2017/08/23/转录组入门/转录组入门——8/" itemprop="url">转录组入门——8</a>
+      </h2>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-08-23T18:02:51+08:00">2017-08-23</time>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+        <span class="post-categories">
+          <i class="far fa-folder-open"></i>
+          
+          
+          <span itemprop="about" itemscope itemtype="http://schema.org/Thing"> <a href="/categories/转录组入门/" itemprop="url" rel="index"><span itemprop="name">转录组入门</span></a></span>
+          
+          
+        </span>
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+          
+          <span class="post-comment-count">
+            <i class="far fa-comments"></i> <a href="/2017/08/23/转录组入门/转录组入门——8/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2017/08/23/转录组入门/转录组入门——8/" itemprop="commentsCount"></span></a>
+          </span>
+          
+        
+      </div>
+    </header>
+    <main class="post-body" itemprop="articleBody">
+      
+      <blockquote>
+<p>选择p&lt;0.05而且abs(logFC)大于一个与众的基因为显著差异表达基因集，对这个基因集用R包做KEGG/GO超几何分布检验分析。<br>然后把表达矩阵和分组信息分别作出cls和gct文件，导入到GSEA软件分析。<br>基本任务是完成这个分析。</p>
+</blockquote>
+<h5 id="GO-KEGG分析-clusterProfiler"><a href="#GO-KEGG分析-clusterProfiler" class="headerlink" title="GO/KEGG分析 clusterProfiler"></a>GO/KEGG分析 clusterProfiler</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">source(&quot;http://bioconductor.org/biocLite.R&quot;)</span><br><span class="line">biocLite(&quot;DOSE&quot;)</span><br><span class="line">require(DOSE)</span><br><span class="line">require(clusterProfiler)</span><br><span class="line">library(org.Mm.eg.db)</span><br><span class="line"></span><br><span class="line">##去除ID的版本号</span><br><span class="line">diff_gene_ENSEMBL &lt;- unlist(lapply(diff_gene, function(x)&#123;strsplit(x, &quot;\\.&quot;)[[1]][1]&#125;))</span><br><span class="line">##GOid mapping + GO富集</span><br><span class="line">## R版本 在服务器上R 无法使用</span><br><span class="line">ego &lt;- enrichGO(gene = diff_gene_ENSEMBL, OrgDb = org.Mm.eg.db,</span><br><span class="line">                                keytype = &quot;ENSEMBL&quot;, ont = &quot;BP&quot;, pAdjustMethod = &quot;BH&quot;,</span><br><span class="line">                                pvalueCutoff = 0.01, qvalueCutoff = 0.05)</span><br><span class="line">##查看富集结果数据</span><br><span class="line">enrich_go &lt;- as.data.frame(ego)</span><br><span class="line">##作图</span><br><span class="line">barplot(ego, showCategory=10)</span><br><span class="line">dotplot(ego)</span><br><span class="line">enrichMap(ego)</span><br><span class="line">plotGOgraph(ego)</span><br><span class="line"></span><br><span class="line">##ID转化</span><br><span class="line">ids &lt;- bitr(diff_gene_ENSEMBL, fromType = &quot;ENSEMBL&quot;, toType = &quot;ENTREZID&quot;, OrgDb = &quot;org.Mm.eg.db&quot;)</span><br><span class="line">kk &lt;- enrichKEGG(gene = ids[,2], organism = &quot;mmu&quot;, keyType = &quot;kegg&quot;,pvalueCutoff = 0.05, pAdjustMethod = &quot;BH&quot;, qvalueCutoff = 0.1)</span><br><span class="line">##查看富集结果数据</span><br><span class="line">enrich_kegg &lt;- as.data.frame(kk)</span><br><span class="line">##作图</span><br><span class="line">dotplot(kk)</span><br></pre></td></tr></table></figure>
+<h5 id="GSEA"><a href="#GSEA" class="headerlink" title="GSEA"></a>GSEA</h5><blockquote>
+<p>基因集富集分析 (Gene Set Enrichment Analysis, GSEA) 的基本思想是使用预定义的基因集（通常来自功能注释或先前实验的结果），将基因按照在两类样本中的差异表达程度排序，然后检验预先设定的基因集合是否在这个排序表的顶端或者底端富集。基因集合富集分析检测基因集合而不是单个基因的表达变化，因此可以包含这些细微的表达变化，预期得到更为理想的结果。</p>
+</blockquote>
+<h5 id="Gene-Set-Enrichment-Analysis（GSEA）"><a href="#Gene-Set-Enrichment-Analysis（GSEA）" class="headerlink" title="Gene Set Enrichment Analysis（GSEA）"></a>Gene Set Enrichment Analysis（GSEA）</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">diff_gene_DESeq2 &lt;- subset(res, padj &lt; 0.05 &amp; (log2FoldChange &gt; 1 | log2FoldChange &lt; -1))</span><br><span class="line">diff_gene_ENSEMBL &lt;- unlist(lapply(rownames(diff_gene_DESeq2), function(x)&#123;strsplit(x, &quot;\\.&quot;)[[1]][1]&#125;))</span><br><span class="line">rownames(diff_gene_DESeq2) &lt;- diff_gene_ENSEMBL</span><br><span class="line">diff_gene_ENTREZID &lt;- select(org.Mm.eg.db,keys = diff_gene_ENSEMBL,columns =&quot;ENTREZID&quot;,keytype = &quot;ENSEMBL&quot;)</span><br><span class="line">diff_gene_DESeq2$ENTREZID &lt;- diff_gene_ENTREZID[,2]</span><br><span class="line"># 获取按照log2FC大小来排序的基因列表</span><br><span class="line">genelist &lt;- diff_gene_DESeq2$log2FoldChange</span><br><span class="line">names(genelist) &lt;- diff_gene_DESeq2$ENTREZID</span><br><span class="line">genelist &lt;- sort(genelist, decreasing = TRUE)</span><br><span class="line"># GSEA分析（具体参数参考：https://mp.weixin.qq.com/s/p-n5jq5Rx2TqDBStS2nzoQ）</span><br><span class="line">gsemf &lt;- gseGO(genelist,OrgDb = org.Mm.eg.db,ont=&quot;MF&quot;)</span><br><span class="line"># 查看大致信息</span><br><span class="line">head(gsemf)</span><br><span class="line"># 画出GSEA图</span><br><span class="line">gseaplot(gsemf, geneSetID=&quot;GO:0000977&quot;)</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-d045f82c5453691f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="go"></p>
+<blockquote>
+<p><a href="http://www.biotrainee.com/thread-2018-1-1.html" target="_blank" rel="noopener">转录组入门（7-8）从差异基因到富集分析</a><br><a href="https://mp.weixin.qq.com/s/p-n5jq5Rx2TqDBStS2nzoQ" target="_blank" rel="noopener">从零开始学转录组（8）：富集分析</a></p>
+</blockquote>
+
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
+        
+        
+      </div>
+      
+    </footer>
+  </article>
   
   <article class="index-post card" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
@@ -751,7 +832,7 @@
   
   <div class="search">
     <div class="form-group">
-      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
+      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
     </div>
   </div>
   <div class="search-result-box" id="search-result"></div>
@@ -766,8 +847,8 @@
   <div class="site-count">
     
     <div class="archives-count">
-      <p>Archives</p>
-      <p><a href="/archives/">37</a></p>
+      <p>归档</p>
+      <p><a href="/archives/">38</a></p>
     </div>
     
     
@@ -775,7 +856,7 @@
     <span class="site-count-divider"> | </span>
     
     <div class="categories-count">
-      <p>Categories</p>
+      <p>分类</p>
       <p><a href="/categories/">6</a></p>
     </div>
     
@@ -784,8 +865,8 @@
     <span class="site-count-divider"> | </span>
     
     <div class="tags-count">
-      <p>Tags</p>
-      <p><a href="/tags/">4</a></p>
+      <p>标签</p>
+      <p><a href="/tags/">8</a></p>
     </div>
     
   </div>
@@ -803,7 +884,7 @@
     
 <hr>
 <div class="social-link sidebar-item">
-  <p><i class="far fa-address-card"></i> Social Links</p>
+  <p><i class="far fa-address-card"></i> 社交链接</p>
   <ul>
     
     <li><i class="fab fa-github"></i> <a href="https://github.com/mt831" target="_blank">GitHub</a></li>
@@ -851,7 +932,7 @@
           
         </div>
         <div class="powered-by">
-          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
         </div>
       </div>
     </div>
