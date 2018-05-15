@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-11T11:42:36.843Z</updated>
+  <updated>2018-05-15T08:28:41.924Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux Tips记录</title>
+    <link href="http://yoursite.com/2018/05/15/Linux/Linux_Tips/"/>
+    <id>http://yoursite.com/2018/05/15/Linux/Linux_Tips/</id>
+    <published>2018-05-15T08:00:00.000Z</published>
+    <updated>2018-05-15T08:28:41.924Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;set&quot;&gt;&lt;a href=&quot;#set&quot; class=&quot;headerlink&quot; title=&quot;set&quot;&gt;&lt;/a&gt;set&lt;/h4&gt;&lt;blockquote&gt;
+&lt;p&gt;set 所有本地定义的Shell变量；env 用来显示环境变量；export
+        
+      
+    
+    </summary>
+    
+      <category term="Linux基础" scheme="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>安装picard、FastViromeExplorer使用</title>
@@ -510,32 +539,6 @@
         
         
           &lt;h5 id=&quot;python-amp-pypandas&quot;&gt;&lt;a href=&quot;#python-amp-pypandas&quot; class=&quot;headerlink&quot; title=&quot;python &amp;amp; pypandas&quot;&gt;&lt;/a&gt;python &amp;amp;
-        
-      
-    
-    </summary>
-    
-      <category term="数据科学实训营" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD%E8%90%A5/"/>
-    
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>L3.Pandas复杂统计与机器学习特征工程</title>
-    <link href="http://yoursite.com/2018/04/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L3-Pandas%E5%A4%8D%E6%9D%82%E7%BB%9F%E8%AE%A1%E4%B8%8E%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B/"/>
-    <id>http://yoursite.com/2018/04/10/数据分析实战/L3-Pandas复杂统计与机器学习特征工程/</id>
-    <published>2018-04-10T11:47:17.698Z</published>
-    <updated>2018-04-23T08:31:42.851Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h5 id=&quot;分组groupby-聚合agg&quot;&gt;&lt;a href=&quot;#分组groupby-聚合agg&quot; class=&quot;headerlink&quot; title=&quot;分组groupby() 聚合agg()&quot;&gt;&lt;/a&gt;分组groupby() 聚合agg()&lt;/h5&gt;&lt;figure
         
       
     

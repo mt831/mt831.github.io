@@ -95,13 +95,13 @@
   <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
   <ul id="menu">
     
-    <li><a href="/">Home</a></li>
+    <li><a href="/">首頁</a></li>
     
-    <li><a href="/archives/">Archives</a></li>
+    <li><a href="/archives/">歸檔</a></li>
     
-    <li><a href="/categories/">Categories</a></li>
+    <li><a href="/categories/">分類</a></li>
     
-    <li><a href="/tags/">Tags</a></li>
+    <li><a href="/tags/">標籤</a></li>
     
   </ul>
 </nav>
@@ -118,6 +118,88 @@
             
 
 <section id="index" class="index">
+  
+  <article class="index-post card" itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/28/seq实战/一个RNA-seq实战/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <meta itemprop="name" content="mt">
+        <meta itemprop="description" content="">
+        <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+        <meta itemprop="name" content="mt's blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h2 class="post-title" itemprop="name headline">
+        <a class="post-title-link post-title-link-external" href="/2017/08/28/seq实战/一个RNA-seq实战/" itemprop="url">一个RNA-seq实战</a>
+      </h2>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-08-28T20:09:43+08:00">2017-08-28</time>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+        <span class="post-categories">
+          <i class="far fa-folder-open"></i>
+          
+          
+          <span itemprop="about" itemscope itemtype="http://schema.org/Thing"> <a href="/categories/seq实战/" itemprop="url" rel="index"><span itemprop="name">seq实战</span></a></span>
+          
+          
+        </span>
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+          
+          <span class="post-comment-count">
+            <i class="far fa-comments"></i> <a href="/2017/08/28/seq实战/一个RNA-seq实战/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2017/08/28/seq实战/一个RNA-seq实战/" itemprop="commentsCount"></span></a>
+          </span>
+          
+        
+      </div>
+    </header>
+    <main class="post-body" itemprop="articleBody">
+      
+      <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#! usr/bin/bash</span><br><span class="line">set -u</span><br><span class="line">set -e</span><br><span class="line">set -o pipefail</span><br><span class="line">hg19_ref=~/fastq/hisat2_index/hg19/genome</span><br><span class="line">for x in `seq 677 680`;do ascp -T -l 200M -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh --host=ftp-private.ncbi.nlm.nih.gov --user=anonftp --mode=recv /sra/sra-instant/reads/ByStudy/sra/SRP/SRP029/SRP029245/SRR957&quot;$x&quot;/SRR957&quot;$x&quot;.sra .;done</span><br><span class="line">##ls *sra |while read id; do fastq-dump --split-3 $id;done</span><br><span class="line">ls *sra |while read id; do fastq-dump --gzip --split-3 -A $id ;done</span><br><span class="line">## ls *fastq |xargs fastqc -t 10</span><br><span class="line">ls *.fastq.gz|while read id;do(hisat2 -t -p 5 -x $hg19_ref -U $id 2&gt;$&#123;id%%.*&#125;.map.log | /home/tingm/software/samtools-1.3.1/samtools view -Sb  - &gt;$&#123;id%%.*&#125;.bam);done</span><br><span class="line">ls *.bam|while read id;do /home/tingm/software/samtools-1.3.1/samtools sort -n -@ 5 $id -o $&#123;id%%.*&#125;.Nsorted.bam;done</span><br><span class="line">ls *.Nsorted.bam |while read id;do htseq-count -f bam -s no -i gene_name $id ~/fastq/refdata/Genecode/gencode.v26lift37.annotation.gff3 1&gt;$&#123;id%%.*&#125;.geneCounts 2&gt;$&#123;id%%.*&#125;.HTseq.log;done</span><br></pre></td></tr></table></figure>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-ef5cc558fa035ea6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="sra"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-ae125a7bba77e247.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="gz"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-4686ec7c0e85f6d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="map.log"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-f6963429b31bd0dd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="bam Nsort.bam"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-db82a63d605483a7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="genecounts"></p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-bcf87ea38bdef212.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="genecounts"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br></pre></td><td class="code"><pre><span class="line">#download deseq</span><br><span class="line">source(&quot;http://bioconductor.org/biocLite.R&quot;)</span><br><span class="line">biocLite(&quot;DESeq&quot;)</span><br><span class="line">#载入R示范数据</span><br><span class="line">biocLite(&quot;pasilla&quot;)</span><br><span class="line">#查看r下载位置</span><br><span class="line">.libPaths()</span><br><span class="line">#转到pasilla下载位置</span><br><span class="line">setwd(&quot;/home/tingm/R/x86_64-pc-linux-gnu-library/3.2/pasilla/&quot;)</span><br><span class="line">#设置路径</span><br><span class="line">datafile =system.file(&quot;extdata/pasilla_gene_counts.tsv&quot;,package=&quot;pasilla&quot;)                                              </span><br><span class="line">#读入数据</span><br><span class="line">pasillaCounttable=read.table(datafile,header=TRUE,row.names=1)  </span><br><span class="line">dim(pasillaCounttable)      </span><br><span class="line">#差异分析</span><br><span class="line">pasillaDesign = data.frame(row.names = colnames(pasillaCounttable),condition = c(&quot;untreated&quot;,&quot;untreated&quot;,&quot;untreated&quot;,&quot;untreated&quot;,&quot;treated&quot;,&quot;treated&quot;,&quot;treated&quot;),libType = c(&quot;single-end&quot;,&quot;single-end&quot;,&quot;paired-end&quot;,&quot;paired-end&quot;,&quot;single-end&quot;,&quot;paired-end&quot;,&quot;paired-end&quot;)) </span><br><span class="line">de = newCountDataSet(pasillaCounttable,pasillaDesign[,1]) </span><br><span class="line">de=estimateSizeFactors(de)</span><br><span class="line">de=estimateDispersions(de)</span><br><span class="line">#res是表达量检测结果</span><br><span class="line">res=nbinomTest(de,&quot;untreated&quot;,&quot;treated&quot;)</span><br><span class="line">uniq=na.omit(res)</span><br><span class="line">#输出差异显著值</span><br><span class="line">sum(na.omit(res$padj&lt;0.05))</span><br><span class="line">#输出表格</span><br><span class="line">write.table(res,file=&quot;file.csv&quot;,sep=&quot;,&quot;)</span><br><span class="line"></span><br><span class="line">#数据分析代码</span><br><span class="line">library(DESeq)</span><br><span class="line">C1=read.table(&quot;control_1.geneCounts&quot;,row.names=1)</span><br><span class="line">C2=read.table(&quot;control_2.geneCounts&quot;,row.names=1)</span><br><span class="line">S1=read.table(&quot;siSUZ12_1.geneCounts&quot;,row.names=1)</span><br><span class="line">S2=read.table(&quot;siSUZ12_2.geneCounts&quot;,row.names=1)</span><br><span class="line">data=cbind(C1,C2,S1,S2)</span><br><span class="line">n=nrow(data)</span><br><span class="line">#删除后四行</span><br><span class="line">data&lt;-data[-c(58523:58527),]</span><br><span class="line">#差异分析</span><br><span class="line">colnames(data)=c(&quot;C1&quot;,&quot;C2&quot;,&quot;S1&quot;,&quot;S2&quot;)</span><br><span class="line">type=rep(c(&quot;C&quot;,&quot;S&quot;),c(2,2))</span><br><span class="line">de=newCountDataSet(data,type)</span><br><span class="line">de=estimateSizeFactors(de)#locfunc = genefilter :: shorth数据集中0太多</span><br><span class="line">de=estimateDispersions(de)</span><br><span class="line">res=nbinomTest(de,&quot;C&quot;,&quot;S&quot;)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># DESeq2 </span><br><span class="line">source(&quot;http://bioconductor.org/biocLite.R&quot;)</span><br><span class="line">biocLite(&quot;DESeq2&quot;)</span><br><span class="line">library(DESeq2)</span><br><span class="line">biocLite(&quot;limma&quot;)</span><br><span class="line">library(limma)</span><br><span class="line">library(pasilla)</span><br><span class="line">data(pasillaGenes)</span><br><span class="line">exprSet=counts(pasillaGenes)  ##做好表达矩阵</span><br><span class="line">group_list=pasillaGenes$condition##做好分组因子即可</span><br><span class="line">colData &lt;- data.frame(row.names=colnames(exprSet), group_list=group_list)</span><br><span class="line">dds &lt;- DESeqDataSetFromMatrix(countData = exprSet,</span><br><span class="line">colData = colData,design = ~ group_list)</span><br><span class="line">dds2 &lt;- DESeq(dds)  ##第二步，直接用DESeq函数即可</span><br><span class="line">resultsNames(dds2)</span><br><span class="line">res &lt;-  results(dds2, contrast=c(&quot;group_list&quot;,&quot;treated&quot;,&quot;untreated&quot;))</span><br><span class="line">## 提取你想要的差异分析结果，我们这里是treated组对untreated组进行比较</span><br><span class="line">resOrdered &lt;- res[order(res$padj),]</span><br><span class="line">resOrdered=as.data.frame(resOrdered)</span><br><span class="line"></span><br><span class="line">#实战数据分析</span><br><span class="line">source(&quot;http://bioconductor.org/biocLite.R&quot;)</span><br><span class="line">biocLite(&quot;org.Hs.eg.db&quot;)</span><br><span class="line">library(org.Hs.eg.db)</span><br><span class="line">keytypes(org.Hs.eg.db)</span><br><span class="line">tmp=select(org.Hs.eg.db,keys=res$id,columns=c(&quot;SYMBOL&quot;,&quot;ENTREZID&quot;,&quot;GENENAME&quot;,&quot;ENSEMBL&quot;), keytype=&quot;SYMBOL&quot;)</span><br><span class="line">#合并res和tmp</span><br><span class="line">res=merge(tmp,res,by.x=&quot;SYMBOL&quot;,by.y=&quot;id&quot;,all=TRUE)</span><br><span class="line">#go</span><br><span class="line">tmp=select(org.Hs.eg.db, keys=res$ENSEMBL, columns=&quot;GO&quot;, keytype=&quot;ENSEMBL&quot;)</span><br><span class="line">ensembl_go=unlist(tapply(tmp[,2],as.factor(tmp[,1]),function(x) paste(x,collapse =&quot;|&quot;),simplify =F))</span><br><span class="line">#为res加入go注释，</span><br><span class="line">res$go=ensembl_go[res$ENSEMBL]#为res加入一列go</span><br><span class="line">#写入all——data</span><br><span class="line">all_res=res</span><br><span class="line">write.csv(res,file=&quot;all_data.csv&quot;,row.names =F)</span><br><span class="line">uniq=na.omit(res)#删除无效基因</span><br><span class="line">sort_uniq=uniq[order(uniq$padj),]#按照矫正p值排序</span><br><span class="line">#写入排序后的all_data</span><br><span class="line">write.csv(res,file=&quot;all_data.csv&quot;,row.names =F)</span><br><span class="line">#标记上下调基因</span><br><span class="line">sort_uniq$up_down=ifelse(sort_uniq$baseMeanA&gt;sort_uniq$baseMeanB,&quot;up&quot;,&quot;down&quot;)</span><br><span class="line">#交换上下调基因列位置</span><br><span class="line">final_res=sort_uniq[,c(12,1:11)]</span><br><span class="line">#写出最后数据</span><br><span class="line">write.csv(final_res,file=&quot;final_annotation_gene_bedtools_sort_uniq.csv&quot;,row.names =F)</span><br><span class="line">#然后挑选出padj值小于0.05的数据来做富集</span><br><span class="line">tmp=select(org.Hs.eg.db, keys=sort_uniq[sort_uniq$padj&lt;0.05,1], columns=&quot;ENTREZID&quot;, keytype=&quot;SYMBOL&quot;)</span><br><span class="line">diff_ENTREZID=tmp$ENTREZID</span><br><span class="line">diff_SYMBOL=tmp$SYMBOL</span><br><span class="line">source(&quot;http://bioconductor.org/biocLite.R&quot;)</span><br><span class="line">biocLite(&quot;DOSE&quot;)</span><br><span class="line">biocLite(&quot;clusterProfiler&quot;)</span><br><span class="line">require(DOSE)</span><br><span class="line">require(clusterProfiler)</span><br><span class="line">diff_ENTREZID=na.omit(diff_ENTREZID)</span><br><span class="line">diff_SYMBOL=na.omit(diff_SYMBOL)</span><br><span class="line">ego &lt;-enrichGO(gene=diff_ENTREZID,OrgDb=org.Hs.eg.db,ont=&quot;CC&quot;,pvalueCutoff=0.05)  ##error</span><br><span class="line">ekk &lt;- enrichKEGG(gene=diff_ENTREZID,organism = &apos;hsa&apos;,pvalueCutoff = 0.05)</span><br><span class="line">write.csv(summary(ekk),&quot;KEGG-enrich.csv&quot;,row.names =F)</span><br><span class="line">write.csv(summary(ego),&quot;GO-enrich.csv&quot;,row.names =F)</span><br></pre></td></tr></table></figure>
+<p>###goenrich有错误 后续差异分析如何进行得到的结果？</p>
+<p><img src="http://upload-images.jianshu.io/upload_images/2116382-5b18f8068dc254cb.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
+<blockquote>
+<p>R语言DESeq找差异基因 <a href="http://www.bio-info-trainee.com/741.html" target="_blank" rel="noopener">http://www.bio-info-trainee.com/741.html</a><br>用DESeq进行差异分析的源代码 <a href="http://www.bio-info-trainee.com/867.html" target="_blank" rel="noopener">http://www.bio-info-trainee.com/867.html</a><br>用R语言的DESeq2包来对RNA-seq数据做差异分析 <a href="http://www.bio-info-trainee.com/1533.html#more-1533" target="_blank" rel="noopener">http://www.bio-info-trainee.com/1533.html#more-1533</a><br>Bioconductor annotation packages <a href="https://davetang.org/muse/2013/12/16/bioconductor-annotation-packages/" target="_blank" rel="noopener">https://davetang.org/muse/2013/12/16/bioconductor-annotation-packages/</a><br>clusterProfiler <a href="https://bioconductor.org/packages/release/bioc/vignettes/clusterProfiler/inst/doc/clusterProfiler.html" target="_blank" rel="noopener">https://bioconductor.org/packages/release/bioc/vignettes/clusterProfiler/inst/doc/clusterProfiler.html</a></p>
+</blockquote>
+
+      
+    </main>
+    <footer class="post-footer">
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
+        
+        
+      </div>
+      
+    </footer>
+  </article>
   
   <article class="index-post card" itemscope itemtype="http://schema.org/Article">
     <div class="post-block">
@@ -832,7 +914,7 @@
   
   <div class="search">
     <div class="form-group">
-      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="Search" class="form-control"/>
+      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
     </div>
   </div>
   <div class="search-result-box" id="search-result"></div>
@@ -847,8 +929,8 @@
   <div class="site-count">
     
     <div class="archives-count">
-      <p>Archives</p>
-      <p><a href="/archives/">38</a></p>
+      <p>歸檔</p>
+      <p><a href="/archives/">39</a></p>
     </div>
     
     
@@ -856,7 +938,7 @@
     <span class="site-count-divider"> | </span>
     
     <div class="categories-count">
-      <p>Categories</p>
+      <p>分類</p>
       <p><a href="/categories/">6</a></p>
     </div>
     
@@ -865,7 +947,7 @@
     <span class="site-count-divider"> | </span>
     
     <div class="tags-count">
-      <p>Tags</p>
+      <p>標籤</p>
       <p><a href="/tags/">8</a></p>
     </div>
     
@@ -884,7 +966,7 @@
     
 <hr>
 <div class="social-link sidebar-item">
-  <p><i class="far fa-address-card"></i> Social Links</p>
+  <p><i class="far fa-address-card"></i> 社交鏈接</p>
   <ul>
     
     <li><i class="fab fa-github"></i> <a href="https://github.com/mt831" target="_blank">GitHub</a></li>
@@ -932,7 +1014,7 @@
           
         </div>
         <div class="powered-by">
-          Proudly Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> | Theme is <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 強力驅動 | 主題 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
         </div>
       </div>
     </div>
