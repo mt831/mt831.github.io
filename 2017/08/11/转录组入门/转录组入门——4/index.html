@@ -1,45 +1,397 @@
-extends base
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    <meta name="keywords" content="python, R, math, bioinformatics">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="mt's blog" type="application/atom+xml" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
 
-block title
-  title= page.title + ' | ' + config.title
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>转录组入门——4 | mt's blog - 学习记录</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">mt's blog</a></h1>
+        <h2 class="subtitle">学习记录</h2>
+      </div>
+      <div class="logo">
+        <img src="/images/ARIA_logo.png" alt="logo">
+      </div>
+    </div>
+    
+<nav id="nav" class="nav">
+  <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
+  <ul id="menu">
+    
+    <li><a href="/">首页</a></li>
+    
+    <li><a href="/archives/">归档</a></li>
+    
+    <li><a href="/categories/">分类</a></li>
+    
+    <li><a href="/tags/">标签</a></li>
+    
+  </ul>
+</nav>
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta
-      if theme.comment
-        include _partial/comment_count
-        +comment-count(page.path)
-      p
-        span.date= page.date.format(theme.date_formats.post)
-        if page.categories.length > 0
-          span
-            for category in page.categories.toArray()
-              a.category(href=url_for(category.path))= category.name 
-        if theme.busuanzi == true
-          span
-            i#busuanzi_container_page_pv
-              i#busuanzi_value_page_pv
-              i= '' + __('hits')
-    .post-content
-      != page.content
-    include _partial/tag
-    .post-share
-      include _partial/share
-    include _partial/post_nav
-    #comments
-      include _partial/comments
 
-block tocmodel
-  if theme.toc.enable == true 
-    .widget(id='toc')
-      .widget-title
-        i(class='fa fa-fei')= __('contents')
-      != toc(page.content, {list_number: theme.toc.number})
+  </div>
+</header>
 
-block pageOnly
-  if theme.toc.enable == true 
-    script(type='text/javascript', src=url_for(theme.js) + '/toctotop.js' + '?v=' + theme.version, async)
-  else 
-    script(type='text/javascript', src=url_for(theme.js) + '/totop.js' + '?v=' + theme.version, async)
-  include _partial/comments_js
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<section id="post" class="post">
+  
+  <article class="post-container card " itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/11/转录组入门/转录组入门——4/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="mt">
+       <meta itemprop="description" content="">
+       <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="mt's blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+       <span class="">转录组入门——4</span>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-08-11T22:08:50+08:00">2017-08-11</time>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+        <span class="post-categories">
+          <i class="far fa-folder-open"></i>
+          
+          
+          <span itemprop="about" itemscope itemtype="http://schema.org/Thing"> <a href="/categories/转录组入门/" itemprop="url" rel="index"><span itemprop="name">转录组入门</span></a></span>
+          
+          
+        </span>
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i> <a href="/2017/08/11/转录组入门/转录组入门——4/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2017/08/11/转录组入门/转录组入门——4/" itemprop="commentsCount"></span></a>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-body" itemprop="articleBody">
+      <h4 id="参考基因组-hg19-下载"><a href="#参考基因组-hg19-下载" class="headerlink" title="参考基因组(hg19)下载"></a>参考基因组(hg19)下载</h4><blockquote>
+<p>NCBI     UCSC   ENSEMBL数据库 对应关系<br>GRCh36  hg18     ENSEMBL release_52<br>GRCh37  hg19     ENSEMBL release_59/61/64/68/69/75<br>GRCh38  hg38     ENSEMBL  release_76/77/78/80/81/82</p>
+</blockquote>
+<h5 id="NCBI"><a href="#NCBI" class="headerlink" title="NCBI"></a>NCBI</h5><p><a href="https://ftp.ncbi.nlm.nih.gov/genomes/H_sapiens/ARCHIVE/BUILD.37.3/Assembled_chromosomes/seq/" target="_blank" rel="noopener">https://ftp.ncbi.nlm.nih.gov/genomes/H_sapiens/ARCHIVE/BUILD.37.3/Assembled_chromosomes/seq/</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#! /bin/bash</span><br><span class="line">file=$1</span><br><span class="line">chrs=`awk &apos;&#123;print $1&#125;&apos; $file`</span><br><span class="line">for i in $&#123;chrs[@]&#125;;</span><br><span class="line">do echo $i;</span><br><span class="line">wget https://ftp.ncbi.nlm.nih.gov/genomes/H_sapiens/ARCHIVE/BUILD.37.3/Assembled_chromosomes/seq/hs_ref_GRCh37.p5_$&#123;i&#125;.fa.gz;</span><br><span class="line">done</span><br><span class="line">gunzip *.gz</span><br><span class="line">for i in $&#123;chrs[@]&#125;;</span><br><span class="line">do cat hs_ref_GRCh37.p5_$&#123;i&#125;.fa &gt;&gt; hg19.fasta;</span><br><span class="line">done</span><br><span class="line">rm -fr *.fa</span><br></pre></td></tr></table></figure></p>
+<h5 id="Emsembl-过于大-应该为3G大小？"><a href="#Emsembl-过于大-应该为3G大小？" class="headerlink" title="Emsembl 过于大 应该为3G大小？"></a>Emsembl 过于大 应该为3G大小？</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nohup wget ftp://ftp.ensembl.org/pub/release-75/fasta/homo_sapiens/dna/Homo_sapiens.GRCh37.75.dna.toplevel.fa.gz &amp;</span><br></pre></td></tr></table></figure>
+<h5 id="UCSC"><a href="#UCSC" class="headerlink" title="UCSC"></a>UCSC</h5><p><a href="https://www.jianshu.com/p/f101c9238fc5" target="_blank" rel="noopener">lxmic 转录组入门（4）：了解参考基因组及基因注释</a><br><img src="http://upload-images.jianshu.io/upload_images/2116382-88c008789cd1dd51.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 1 select Downloads —&gt; select genome data"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-2e1ade36ab2e236d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 2-1 choose hg38"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-d94fcaa75393bf9c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 2-2 download"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-f4d4898048b1b2a5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 3-1 choose hg19"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-9ab848763bf29e4f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Figure 3-2 download"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">nohup wget http://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/chromFa.tar.gz &amp;</span><br><span class="line">jobs</span><br><span class="line">fg %1</span><br><span class="line">bg %1</span><br><span class="line">kill %1</span><br><span class="line">tar -zxvf chromFa.tar.gz</span><br><span class="line">cat *.fa &gt; hg19.fa</span><br><span class="line">rm -rf chr*</span><br></pre></td></tr></table></figure></p>
+<h4 id="参考基因组注释下载"><a href="#参考基因组注释下载" class="headerlink" title="参考基因组注释下载"></a>参考基因组注释下载</h4><h5 id="NCBI-1"><a href="#NCBI-1" class="headerlink" title="NCBI"></a>NCBI</h5><p><img src="http://upload-images.jianshu.io/upload_images/2116382-02d615eeeb235c1b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="进入NCBI的Genome数据库"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-30b4ca74609e930f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Download/FTP"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-75b1fba61ea288b8.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="选择物种：人"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-98122c5892131b89.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="进入下载hg38GTF注释文件"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-40eefc8f0afdd683.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="hg38GTF注释文件"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-eedc1feedef01e9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="其他版本"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nohup wget https://ftp.ncbi.nlm.nih.gov/genomes/H_sapiens/GFF/ref_GRCh38.p7_top_level.gff3.gz &amp;</span><br><span class="line">gzip -d ref_GRCh38.p7_top_level.gff3.gz</span><br></pre></td></tr></table></figure></p>
+<h5 id="Ensembl"><a href="#Ensembl" class="headerlink" title="Ensembl"></a>Ensembl</h5><p><a href="http://www.bio-info-trainee.com/1469.html" target="_blank" rel="noopener">生信菜鸟团 基因组各种版本对应关系</a><br><img src="http://upload-images.jianshu.io/upload_images/2116382-78260f48c383e5d9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Downloads"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-8e63dca8af3c1054.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="select"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-64ee6b0553666966.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="FTP site"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-45b8166f6b848095.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="release-75"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-7b9911c2b8cd58ba.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="GTF"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-27b6ef4681c23204.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Homo sapiens"><br><img src="http://upload-images.jianshu.io/upload_images/2116382-6a2c9ddd309802a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="download"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nohup wget ftp://ftp.ensembl.org/pub/release-75/gtf/homo_sapiens/Homo_sapiens.GRCh37.75.gtf.gz &amp;</span><br><span class="line">gzip -d Homo_sapiens.GRCh37.75.gtf.gz</span><br></pre></td></tr></table></figure></p>
+<h5 id="UCSC-1"><a href="#UCSC-1" class="headerlink" title="UCSC"></a>UCSC</h5><p><img src="http://upload-images.jianshu.io/upload_images/2116382-5cf747fa93b9d9b0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="choose Table Browser"></p>
+<blockquote>
+<p>Navigate to <a href="http://genome.ucsc.edu/cgi-bin/hgTables" target="_blank" rel="noopener">http://genome.ucsc.edu/cgi-bin/hgTables</a><br>Select the following options:<br>clade: Mammal<br>genome: Human<br>assembly: Feb. 2009 (GRCh37/hg19)<br>group: Genes and Gene Predictions<br>track: UCSC Genes<br>table: knownGene<br>region: Select “genome” for the entire genome.<br>output format: GTF - gene transfer format<br>output file: enter a file name to save your results to a file, or leave blank to display results in the browser<br>Click ‘get output’.</p>
+</blockquote>
+<h5 id="Genecode"><a href="#Genecode" class="headerlink" title="Genecode"></a>Genecode</h5><p><a href="http://www.jianshu.com/p/f101c9238fc5" target="_blank" rel="noopener">转录组入门4-了解参考基因组及基因注释</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget ftp://ftp.sanger.ac.uk/pub/gencode/Gencode_human/release_26/GRCh37_mapping/gencode.v26lift37.annotation.gtf.gz</span><br><span class="line">wget ftp://ftp.sanger.ac.uk/pub/gencode/Gencode_human/release_26/GRCh37_mapping/gencode.v26lift37.annotation.gff3.gz</span><br><span class="line">gunzip *.gz </span><br><span class="line">rm -rf *.gz</span><br></pre></td></tr></table></figure></p>
+<h5 id="IGV"><a href="#IGV" class="headerlink" title="IGV"></a>IGV</h5><p><a href="http://www.biotrainee.com/thread-1998-1-1.html" target="_blank" rel="noopener">转录组作业（四）：来自零基础的小白</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">![软件自带基因组-TP53](http://upload-images.jianshu.io/upload_images/2116382-35124fbd81c8bdab.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</span><br><span class="line">![hg19.fa 蓝色带没有变化？？](http://upload-images.jianshu.io/upload_images/2116382-75961165acf84dd2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)</span><br><span class="line"></span><br><span class="line">***问题：linux服务器未安装上IGV；自行下载的hg19比对结果和软件自带不一致***</span><br></pre></td></tr></table></figure></p>
+<p>sudo apt-get install glib-networking-common<br>```</p>
+<blockquote>
+<p>其他参考资料<br><a href="http://blog.sina.com.cn/s/blog_3d37a5690100wne7.html" target="_blank" rel="noopener">ncbi中的基因组genome全序列下载 </a><br><a href="http://www.bio-info-trainee.com/1985.html" target="_blank" rel="noopener">参考基因组下载及index建立</a><br><a href="http://www.bio-info-trainee.com/1469.html" target="_blank" rel="noopener">基因组各种版本对应关系</a><br><a href="https://www.yaolibio.com/2016/09/01/retrieve-genome-data-from-ucsc/" target="_blank" rel="noopener">从UCSC获取基因组序列及基因注释</a><br><a href="http://www.jianshu.com/p/f101c9238fc5" target="_blank" rel="noopener">转录组入门4-了解参考基因组及基因注释</a><br><a href="http://www.cnblogs.com/Demo1589/p/6950196.html" target="_blank" rel="noopener">关于基因组注释文件GTF的解释</a><br><a href="http://www.jianshu.com/p/48b5a0972301" target="_blank" rel="noopener">GTF/GFF文件的差异及其看相互转换</a><br><a href="http://mp.weixin.qq.com/s/mq--yW_vmm2C2ZpnYiPq-A" target="_blank" rel="noopener">ensembel及NCBI注释文件下载</a></p>
+</blockquote>
+
+    </main>
+    <footer class="post-footer">
+      
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
+        
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <div class="post-nav">
+    
+    <div class="post-nav-next post-nav-item">
+      <a href="/2017/08/10/转录组入门/转录组入门——3/" rel="next" title="转录组入门——3">
+        <i class="fas fa-angle-left"></i>
+        <span class="nav-title">转录组入门——3</span>
+      </a>
+    </div>
+    
+    
+    <div class="post-nav-prev post-nav-item">
+      <a href="/2017/08/14/转录组入门/转录组入门——5/" rel="prev" title="转录组入门——5">
+        <span class="nav-title">转录组入门——5</span>
+        <i class="fas fa-angle-right"></i>
+      </a>
+    </div>
+    
+  </div>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div id="hypercomments_widget"></div>
+  
+  <script type="text/javascript">
+  _hcwp = window._hcwp || [];
+  _hcwp.push({ "widget": "Bloggerstream", "widget_id": "tingm831@gmail.com", "selector": ".hc-comment-count", "label": "{\%COUNT%\}" });
+  
+  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2017/08/11/转录组入门/转录组入门——4/" });
+  
+  (function() {
+    if ("HC_LOAD_INIT" in window) {
+      return;
+    }
+    HC_LOAD_INIT = true;
+    var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+    var hcc = document.createElement("script");
+    hcc.type = "text/javascript";
+    hcc.defer = true;
+    hcc.src = ("https:" === document.location.protocol ? "https" : "http") + "://w.hypercomments.com/widget/hc/tingm831@gmail.com/" + lang + "/widget.js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hcc, s.nextSibling);
+  })();
+  </script>
+  
+</div>
+
+
+
+  
+</section>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.png" alt="mt">
+  
+  <p class="author-name">mt</p>
+  <p class="author-description"> </p>
+  <div class="site-count">
+    
+    <div class="archives-count">
+      <p>归档</p>
+      <p><a href="/archives/">40</a></p>
+    </div>
+    
+    
+    
+    <span class="site-count-divider"> | </span>
+    
+    <div class="categories-count">
+      <p>分类</p>
+      <p><a href="/categories/">6</a></p>
+    </div>
+    
+    
+    
+    <span class="site-count-divider"> | </span>
+    
+    <div class="tags-count">
+      <p>标签</p>
+      <p><a href="/tags/">8</a></p>
+    </div>
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i> RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+
+
+
+
+<hr>
+<div class="post-toc sidebar-item" id="toc-div">
+  <p><i class="fas fa-list-ol"></i> 文章目录</p>
+  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#参考基因组-hg19-下载"><span class="toc-text">参考基因组(hg19)下载</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#NCBI"><span class="toc-text">NCBI</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Emsembl-过于大-应该为3G大小？"><span class="toc-text">Emsembl 过于大 应该为3G大小？</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#UCSC"><span class="toc-text">UCSC</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#参考基因组注释下载"><span class="toc-text">参考基因组注释下载</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#NCBI-1"><span class="toc-text">NCBI</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Ensembl"><span class="toc-text">Ensembl</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#UCSC-1"><span class="toc-text">UCSC</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Genecode"><span class="toc-text">Genecode</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#IGV"><span class="toc-text">IGV</span></a></li></ol></li></ol></div>
+</div>
+
+
+
+    
+    
+    
+<hr>
+<div class="social-link sidebar-item">
+  <p><i class="far fa-address-card"></i> 社交链接</p>
+  <ul>
+    
+    <li><i class="fab fa-github"></i> <a href="https://github.com/mt831" target="_blank">GitHub</a></li>
+    
+  </ul>
+</div>
+
+
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="back-to-top">
+      <a id="back-to-top"><i class="fas fa-angle-double-up"></i></a>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">mt</span>
+          <span class="year"><i class="far fa-copyright"></i> 2018-4-1 - 2018</span>
+          
+        </div>
+        
+        
+<div class="busuanzi">
+  <span id="busuanzi_container_site_pv"><i class="fas fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+  <span id="busuanzi_container_site_uv"><i class="fas fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+  <span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i> <span id="busuanzi_value_page_pv"></span></span>
+</div>
+
+
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>

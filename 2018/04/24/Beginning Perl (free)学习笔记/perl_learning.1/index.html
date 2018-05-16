@@ -1,45 +1,422 @@
-extends base
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#33363b">
+    <meta name="msapplication-TileColor" content="#33363b">
+    
+    
+    
+    <meta name="keywords" content="python, R, math, bioinformatics">
+    
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
+    
+    
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
+    
+    
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
+    
+    
+    <link rel="manifest" href="/favicons/site.webmanifest">
+    
+    
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
+    
+    
+    <link rel="alternate" href="/atom.xml" title="mt's blog" type="application/atom+xml" />
+    
+    <link rel="stylesheet" type="text/css" href="/css/index.css">
+    
+    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
+    
+    
+<link rel="stylesheet" type="text/css" href="/css/page.css">
+<link rel="stylesheet" type="text/css" href="/css/post.css">
 
-block title
-  title= page.title + ' | ' + config.title
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
+    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
+    <script type="text/javascript" src="/js/jquery.min.js"></script>
+    <script defer type="text/javascript" src="/js/util.js"></script>
+    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
+    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
+    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
+    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
+    
+    <script defer src="/js/busuanzi.pure.mini.js"></script>
+    
+    
+    <script defer type="text/javascript" src="/js/search.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      var searchPath = "search.xml";
+      if (searchPath.length === 0) {
+        searchPath = "search.xml";
+      }
+      var path = "/" + searchPath;
+      searchFunc(path, "search-input", "search-result");
+    });
+    </script>
+    
+    
+    <script defer type="text/javascript" src="/js/index.js"></script>
+    
+    <script defer type="text/javascript" src="/js/custom.js"></script>
+    <title>Intro And Chapter 1-2 | mt's blog - 学习记录</title>
+  </head>
+  <body itemscope itemtype="http://schema.org/WebPage" lang="CN"  data-spy="scroll" data-target=".list-group">
+    
+<header id="header" class="header">
+  <div class="container">
+    <div class="header-container">
+      <div class="header-title">
+        <h1 class="title"><a href="/">mt's blog</a></h1>
+        <h2 class="subtitle">学习记录</h2>
+      </div>
+      <div class="logo">
+        <img src="/images/ARIA_logo.png" alt="logo">
+      </div>
+    </div>
+    
+<nav id="nav" class="nav">
+  <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
+  <ul id="menu">
+    
+    <li><a href="/">首页</a></li>
+    
+    <li><a href="/archives/">归档</a></li>
+    
+    <li><a href="/categories/">分类</a></li>
+    
+    <li><a href="/tags/">标签</a></li>
+    
+  </ul>
+</nav>
 
-block content
-  .post
-    h1.post-title= page.title
-    .post-meta
-      if theme.comment
-        include _partial/comment_count
-        +comment-count(page.path)
-      p
-        span.date= page.date.format(theme.date_formats.post)
-        if page.categories.length > 0
-          span
-            for category in page.categories.toArray()
-              a.category(href=url_for(category.path))= category.name 
-        if theme.busuanzi == true
-          span
-            i#busuanzi_container_page_pv
-              i#busuanzi_value_page_pv
-              i= '' + __('hits')
-    .post-content
-      != page.content
-    include _partial/tag
-    .post-share
-      include _partial/share
-    include _partial/post_nav
-    #comments
-      include _partial/comments
 
-block tocmodel
-  if theme.toc.enable == true 
-    .widget(id='toc')
-      .widget-title
-        i(class='fa fa-fei')= __('contents')
-      != toc(page.content, {list_number: theme.toc.number})
+  </div>
+</header>
 
-block pageOnly
-  if theme.toc.enable == true 
-    script(type='text/javascript', src=url_for(theme.js) + '/toctotop.js' + '?v=' + theme.version, async)
-  else 
-    script(type='text/javascript', src=url_for(theme.js) + '/totop.js' + '?v=' + theme.version, async)
-  include _partial/comments_js
+
+    <main id="main" class="main">
+      <div class="container">
+        <div class="main-container">
+          <div class="content">
+            
+<section id="post" class="post">
+  
+  <article class="post-container card " itemscope itemtype="http://schema.org/Article">
+    <div class="post-block">
+      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/24/Beginning Perl (free)学习笔记/perl_learning.1/">
+      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+       <meta itemprop="name" content="mt">
+       <meta itemprop="description" content="">
+       <meta itemprop="image" content="/images/avatar.png">
+      </span>
+      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+       <meta itemprop="name" content="mt's blog">
+      </span>
+    </div>
+    <header class="post-header">
+      <h1 class="post-title" itemprop="name headline">
+       <span class="">Intro And Chapter 1-2</span>
+      </h1>
+      <div class="post-meta">
+        
+        <span class="post-date">
+          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2018-04-24T09:00:00+08:00">2018-04-24</time>
+        </span>
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+        <span class="post-categories">
+          <i class="far fa-folder-open"></i>
+          
+          
+          <span itemprop="about" itemscope itemtype="http://schema.org/Thing"> <a href="/categories/Beginning-Perl-free-学习笔记/" itemprop="url" rel="index"><span itemprop="name">Beginning Perl (free)学习笔记</span></a></span>
+          
+          
+        </span>
+        
+        
+        
+        <span class="post-meta-divider"> | </span>
+        
+        
+        <span class="post-comment-count">
+          <i class="far fa-comments"></i> <a href="/2018/04/24/Beginning Perl (free)学习笔记/perl_learning.1/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2018/04/24/Beginning Perl (free)学习笔记/perl_learning.1/" itemprop="commentsCount"></span></a>
+        </span>
+        
+        
+      </div>
+    </header>
+    <main class="post-body" itemprop="articleBody">
+      <p><strong>为学习解决FASTA的一些操作问题开始学习perl</strong></p>
+<h2 id="Intro-perl版本-v5-10-1"><a href="#Intro-perl版本-v5-10-1" class="headerlink" title="Intro(perl版本 v5.10.1)"></a>Intro(perl版本 v5.10.1)</h2><h3 id="how-to-get-help"><a href="#how-to-get-help" class="headerlink" title="how to get help"></a>how to get help</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">perldoc -h </span><br><span class="line">#Display this help message</span><br><span class="line">man perldoc</span><br><span class="line">#see information of function</span><br><span class="line">perldoc -f print</span><br><span class="line">#search frequently questions</span><br><span class="line">perldoc -q print</span><br><span class="line">#modules: files</span><br><span class="line">perldoc Text::wrap</span><br></pre></td></tr></table></figure>
+<h2 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h2><h3 id="First-perl-program"><a href="#First-perl-program" class="headerlink" title="First perl program"></a>First perl program</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl -w</span><br><span class="line">print &quot;Hello, world.\n&quot;;</span><br><span class="line">&gt;perl hello1.plx</span><br></pre></td></tr></table></figure>
+<h3 id="For-Perl-5-6-x-and-higher-w-gt-use-warnings"><a href="#For-Perl-5-6-x-and-higher-w-gt-use-warnings" class="headerlink" title="For Perl 5.6.x and higher -w -&gt; use warnings;"></a>For Perl 5.6.x and higher -w -&gt; use warnings;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl </span><br><span class="line">use warnings;</span><br><span class="line">print &quot;Hello, world.\n&quot;;</span><br><span class="line">&gt;perl hello2.plx</span><br><span class="line">print &quot;Here &quot;,&quot;we &quot;,&quot;print &quot;,&quot;several &quot;,&quot;strings.\n&quot;;</span><br><span class="line">print(&quot;Here &quot;,&quot;we &quot;,&quot;print &quot;,&quot;several &quot;,&quot;strings.\n&quot;);</span><br></pre></td></tr></table></figure>
+<h3 id="交互式"><a href="#交互式" class="headerlink" title="交互式"></a>交互式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">perl -e &apos;print &quot;Hello World\n&quot;&apos;</span><br></pre></td></tr></table></figure>
+<h2 id="Chapter-2"><a href="#Chapter-2" class="headerlink" title="Chapter 2"></a>Chapter 2</h2><h3 id="Types-of-data"><a href="#Types-of-data" class="headerlink" title="Types of data"></a>Types of data</h3><h4 id="Numbers-integers-and-floating-point-numbers"><a href="#Numbers-integers-and-floating-point-numbers" class="headerlink" title="Numbers: integers and floating-point numbers"></a>Numbers: integers and floating-point numbers</h4><h5 id="For-very-large-integers-like-25-000-000"><a href="#For-very-large-integers-like-25-000-000" class="headerlink" title="For very large integers like 25,000,000"></a>For very large integers like 25,000,000</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">print 25_000_000,&quot; &quot;,-4,&quot;\n&quot;;</span><br></pre></td></tr></table></figure>
+<h5 id="进制"><a href="#进制" class="headerlink" title="进制"></a>进制</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#!usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">$var0 = 0b11111111; # 二进制</span><br><span class="line">$var1 = 0377;    # 八进制</span><br><span class="line">$var2 = 0xFF;   # 十六进制</span><br><span class="line">print $var0,&quot; &quot;,$var1,&quot; &quot;,$var2,&quot;\n&quot;;</span><br></pre></td></tr></table></figure>
+<h5 id="For-floating-point-numbers-what-we-put-in-is-only-good-to-14-decimal-places"><a href="#For-floating-point-numbers-what-we-put-in-is-only-good-to-14-decimal-places" class="headerlink" title="For floating-point numbers: what we put in is only good to 14 decimal places"></a>For floating-point numbers: what we put in is only good to 14 decimal places</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">print 3.141592653589793238462643383279,&quot; &quot;,-4,&quot;\n&quot;;</span><br></pre></td></tr></table></figure>
+<h4 id="Strings"><a href="#Strings" class="headerlink" title="Strings"></a>Strings</h4><h5 id="One-“”和’’的区别"><a href="#One-“”和’’的区别" class="headerlink" title="One. “”和’’的区别"></a>One. “”和’’的区别</h5><p>The double-quoted string will have its escape sequences processed, and the single-quoted string will not. </p>
+<h5 id="Two-注意特例"><a href="#Two-注意特例" class="headerlink" title="Two. 注意特例"></a>Two. 注意特例</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">print &apos;ex\\ er\\&apos; , &apos; ci\&apos; se\&apos;&apos; , &quot;\n&quot;;</span><br></pre></td></tr></table></figure>
+<h5 id="Aternative-delimiters-qq"><a href="#Aternative-delimiters-qq" class="headerlink" title="Aternative delimiters: qq"></a>Aternative delimiters: qq</h5><p>内容需要内嵌引号（单引号或双引号）时，不需要加转义符<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">print qq/&apos;&quot;Hi,&quot;said Jack&apos;\n/;</span><br><span class="line">print qq|&apos;&quot;Hi,&quot;said Jack&apos;\n|;</span><br><span class="line">print qq#&apos;&quot;Hi,&quot;said Jack&apos;\n#;</span><br><span class="line">print qq(&apos;&quot;Hi,&quot;said Jack&apos;\n);</span><br><span class="line">print qq&lt;&apos;&quot;Hi,&quot;said Jack&apos;\n&gt;;</span><br></pre></td></tr></table></figure></p>
+<h4 id="Here-documents"><a href="#Here-documents" class="headerlink" title="Here-documents"></a>Here-documents</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">$a = 10;</span><br><span class="line">$var = &lt;&lt;&quot;EOF&quot;;</span><br><span class="line">使用双引号</span><br><span class="line">a = $a</span><br><span class="line">EOF</span><br><span class="line">print &quot;$var\n&quot;;</span><br><span class="line"> </span><br><span class="line">$var = &lt;&lt;&apos;EOF&apos;;</span><br><span class="line">使用单引号</span><br><span class="line">a = $a</span><br><span class="line">EOF</span><br><span class="line">print &quot;$var\n&quot;;</span><br></pre></td></tr></table></figure>
+<h4 id="Converting-between-nums-and-strings"><a href="#Converting-between-nums-and-strings" class="headerlink" title="Converting between nums and strings"></a>Converting between nums and strings</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">print &quot;0x30\n&quot;;</span><br><span class="line">print &quot;030\n&quot;;</span><br><span class="line">print hex(&quot;0x30&quot;),&quot;\n&quot;;</span><br><span class="line">print oct(&quot;030&quot;),&quot;\n&quot;;</span><br></pre></td></tr></table></figure>
+<h3 id="Operators"><a href="#Operators" class="headerlink" title="Operators"></a>Operators</h3><h4 id="Bitwise-operator"><a href="#Bitwise-operator" class="headerlink" title="Bitwise operator"></a>Bitwise operator</h4><p>&amp; ‘and’    | ‘or’    ^ ‘exclusive or’    ~ ‘not’<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">perl -e &apos;print ~85,&quot;\n&quot;&apos;</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>get a much bigger number, it’s because the computer represents numbers internally with 64 bits<br>instead of 32, and Perl has been configured to take advantage of this.</p>
+</blockquote>
+<h4 id="Truth-or-Falsehood"><a href="#Truth-or-Falsehood" class="headerlink" title="Truth or Falsehood"></a>Truth or Falsehood</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">perl -e &apos;print 2==2,&quot;\n&quot;&apos; #1</span><br><span class="line">#!/usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">print 6 &lt;=&gt; 9,&quot;\n&quot;; #-1</span><br><span class="line">print 6 &lt;=&gt; 6,&quot;\n&quot;; #0</span><br><span class="line">print 9 &lt;=&gt; 6,&quot;\n&quot;; #1</span><br></pre></td></tr></table></figure>
+<h4 id="Boolean-Operators"><a href="#Boolean-Operators" class="headerlink" title="Boolean Operators"></a>Boolean Operators</h4><blockquote>
+<p>&amp;&amp; ‘and’    || ‘or’    ! ‘not’<br>Perl uses a technique called lazy evaluation.</p>
+</blockquote>
+<h4 id="String-Operators"><a href="#String-Operators" class="headerlink" title="String Operators"></a>String Operators</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">print&quot;Four sevens are &quot;. 4*7 .&quot;\n&quot;; #number and string</span><br><span class="line">print &quot;GO! &quot;x3, &quot;\n&quot;; #x repetition</span><br></pre></td></tr></table></figure>
+<h5 id="Converting-Strings-to-Numbers"><a href="#Converting-Strings-to-Numbers" class="headerlink" title="Converting Strings to Numbers"></a>Converting Strings to Numbers</h5><p>+自动将左右转换为数字，.自动将左右转换为字符串<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">#use warnings;</span><br><span class="line">print&quot;12 monkeys&quot; + 0, &quot;\n&quot;;</span><br><span class="line">print &quot;Eleven to fly&quot; + 0, &quot;\n&quot;;</span><br><span class="line">print &quot;UB40&quot; + 0, &quot;\n&quot;;</span><br><span class="line">print &quot;-20 10&quot; + 0, &quot;\n&quot;;</span><br><span class="line">print &quot;0x30&quot; + 0, &quot;\n&quot;;</span><br><span class="line">print &quot;030&quot; + 0,&quot;\n&quot;;</span><br></pre></td></tr></table></figure></p>
+<h5 id="Converting-Numbers-to-Strings"><a href="#Converting-Numbers-to-Strings" class="headerlink" title="Converting Numbers to Strings"></a>Converting Numbers to Strings</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">$foo = v102.111.111;</span><br><span class="line">$martin = v77.97.114.116.105.110;</span><br><span class="line">print &quot;foo = $foo\n&quot;;</span><br><span class="line">print &quot;martin = $martin\n&quot;;</span><br></pre></td></tr></table></figure>
+<h5 id="String-Comparison"><a href="#String-Comparison" class="headerlink" title="String Comparison"></a>String Comparison</h5><blockquote>
+<p>One. ord() function, which tells us where in the (ASCII) order it comes.<br>Two. less than, lt. greater than, gt. equal to, . not equal, ne. ge and le for ‘greater than or equal to’ and ‘less than and equal to’. The three-way-comparison becomes cmp.<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">#use warnings;</span><br><span class="line">print ord(&quot;chicken&quot;),&quot; &quot;,ord(&quot;egg&quot;),&quot; &quot;,&quot;chicken&quot; cmp &quot;egg&quot;,&quot;\n&quot;;</span><br><span class="line">print ord(&quot;dog&quot;),&quot; &quot;,ord(&quot;cat&quot;),&quot; &quot;,&quot;dog&quot; gt &quot;cat&quot;,&quot;\n&quot;;</span><br><span class="line">print ord(&quot;^&quot;),&quot; &quot;,ord(&quot;+&quot;),&quot; &quot;,&quot;^&quot; lt &quot;+&quot;,&quot;\n&quot;;</span><br><span class="line">print ord(&quot;four&quot;),&quot; &quot;,ord(&quot;six&quot;),&quot; &quot;,&quot;four&quot; eq &quot;six&quot;,&quot;\n&quot;;</span><br><span class="line">print ord(&quot;four&quot;),&quot; &quot;,ord(&quot;six&quot;),&quot; &quot;,&quot;four&quot; == &quot;six&quot;,&quot;\n&quot;; #convert to 0</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h3 id="Variables"><a href="#Variables" class="headerlink" title="Variables"></a>Variables</h3><h4 id="Scalars"><a href="#Scalars" class="headerlink" title="Scalars"></a>Scalars</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">$a = 6 * 9;</span><br><span class="line">print &quot;Six nines are &quot;, $a, &quot;\n&quot;;</span><br><span class="line">$a = $a + 3;</span><br><span class="line">print &quot;Plus three is &quot;, $a, &quot;\n&quot;;</span><br><span class="line">$a = $a / 3;</span><br><span class="line">print &quot;All over three is &quot;, $a, &quot;\n&quot;;</span><br><span class="line">$a = $a + 1;</span><br><span class="line">print &quot;Add one is &quot;, $a, &quot;\n&quot;;</span><br></pre></td></tr></table></figure>
+<h5 id="and-–"><a href="#and-–" class="headerlink" title="++ and –"></a>++ and –</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">$a=4;</span><br><span class="line">$b=10;</span><br><span class="line">print &quot;Our variables are &quot;, $a, &quot; and &quot;, $b, &quot;\n&quot;;</span><br><span class="line">$b=$a++;</span><br><span class="line">print &quot;After incrementing, we have &quot;, $a, &quot; and &quot;, $b, &quot;\n&quot;;</span><br><span class="line">$b=++$a*2;</span><br><span class="line">print &quot;Now, we have &quot;, $a, &quot; and &quot;, $b, &quot;\n&quot;;</span><br><span class="line">$a=--$b+4;</span><br><span class="line">print &quot;Finally, we have &quot;, $a, &quot; and &quot;, $b, &quot;\n&quot;;</span><br></pre></td></tr></table></figure>
+<h5 id="可用于字符串"><a href="#可用于字符串" class="headerlink" title="++可用于字符串"></a>++可用于字符串</h5><blockquote>
+<p>One. 结尾字符为’z’、 ‘Z’、 ‘9’时进位<br>Two. If there are no more digits to the left, either an ‘a’ or an ‘A’ is created<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">$a = &quot;A9&quot;; print ++$a, &quot;\n&quot;;</span><br><span class="line">$a = &quot;BA9&quot;; print ++$a, &quot;\n&quot;;</span><br><span class="line">$a = &quot;Zz&quot;; print ++$a, &quot;\n&quot;;</span><br><span class="line">$a = &quot;z9&quot;; print ++$a, &quot;\n&quot;;</span><br><span class="line">$a = &quot;9z&quot;; print ++$a, &quot;\n&quot;; #???</span><br><span class="line">$a = &quot;a9z&quot;; print ++$a, &quot;\n&quot;;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h5 id="Mutiple-Assignments"><a href="#Mutiple-Assignments" class="headerlink" title="Mutiple Assignments"></a>Mutiple Assignments</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">$b = 4 + ($a = 1); #注意括号</span><br><span class="line">print $b,&quot; &quot;,$a,&quot;\n&quot;;</span><br></pre></td></tr></table></figure>
+<h4 id="Scoping"><a href="#Scoping" class="headerlink" title="Scoping"></a>Scoping</h4><blockquote>
+<p>To tell perl that a variable is lexical, we say ‘my $variable;’</p>
+</blockquote>
+<h4 id="Variable-Interpolation"><a href="#Variable-Interpolation" class="headerlink" title="Variable Interpolation"></a>Variable Interpolation</h4><blockquote>
+<p>One. Interpolation happens for scalar variables and arrays but not for hashes<br>Two. Note that this doesn’t happen with single-quoted strings<br>Three. It happens every time we construct a string<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">use strict;</span><br><span class="line">my $times = 8;</span><br><span class="line">print &quot;This is the $&#123;times&#125;th time.\n&quot;;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h5 id="Currency-Converter"><a href="#Currency-Converter" class="headerlink" title="Currency Converter"></a>Currency Converter</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#!/usr/bin/perl</span><br><span class="line">use warnings;</span><br><span class="line">use strict;</span><br><span class="line">print &quot;Currency converter\n\nPlease enter the exchange rate: &quot;;</span><br><span class="line">my $yen = &lt;STDIN&gt;;</span><br><span class="line">print &quot;49518 Yen is &quot;, (49_518/$yen), &quot; pounds\n&quot;;</span><br><span class="line">print &quot;360 Yen is &quot;, ( 360/$yen), &quot; pounds\n&quot;;</span><br><span class="line">print &quot;30510 Yen is &quot;, (30_510/$yen), &quot; pounds\n&quot;;</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>学习资料<br><a href="https://docs.google.com/viewer?url=http%3A%2F%2Fblob.perl.org%2Fbooks%2Fbeginning-perl%2F3145_Intro.pdf" target="_blank" rel="noopener">Beginning Perl–Introduction</a><br><a href="https://docs.google.com/viewer?url=http%3A%2F%2Fblob.perl.org%2Fbooks%2Fbeginning-perl%2F3145_Chap01.pdf" target="_blank" rel="noopener">Beginning Perl–Chapter 1: First Steps In Perl</a><br><a href="https://docs.google.com/viewer?url=http%3A%2F%2Fblob.perl.org%2Fbooks%2Fbeginning-perl%2F3145_Chap02.pdf" target="_blank" rel="noopener">Beginning Perl–Chapter 2: Working with Simple Values</a><br><a href="https://blog.csdn.net/zhangjikuan/article/details/52199059#perl%E8%AF%AD%E8%A8%80%E5%85%A5%E9%97%A8" target="_blank" rel="noopener">Perl语言入门</a></p>
+</blockquote>
+
+    </main>
+    <footer class="post-footer">
+      
+      
+      <div class="post-tags">
+        
+        
+        
+        
+        
+        
+        <a class="post-tag button" href="/tags/perl/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> perl</a>
+        
+        
+      </div>
+      
+    </footer>
+  </article>
+  
+  
+  <div class="post-nav">
+    
+    <div class="post-nav-next post-nav-item">
+      <a href="/2018/04/23/seq实战/MeDIP-seq-ChIP-seq-RNA-seq结合起来分析/" rel="next" title="MeDIP-seq,ChIP-seq,RNA-seq结合起来分析">
+        <i class="fas fa-angle-left"></i>
+        <span class="nav-title">MeDIP-seq,ChIP-seq,RNA-seq结合起来分析</span>
+      </a>
+    </div>
+    
+    
+    <div class="post-nav-prev post-nav-item">
+      <a href="/2018/04/24/Beginning Perl (free)学习笔记/perl_learning.2/" rel="prev" title="Chapter 3">
+        <span class="nav-title">Chapter 3</span>
+        <i class="fas fa-angle-right"></i>
+      </a>
+    </div>
+    
+  </div>
+  
+  
+  
+
+<div class="comments" id="comments">
+  
+  
+  <div id="hypercomments_widget"></div>
+  
+  <script type="text/javascript">
+  _hcwp = window._hcwp || [];
+  _hcwp.push({ "widget": "Bloggerstream", "widget_id": "tingm831@gmail.com", "selector": ".hc-comment-count", "label": "{\%COUNT%\}" });
+  
+  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2018/04/24/Beginning Perl (free)学习笔记/perl_learning.1/" });
+  
+  (function() {
+    if ("HC_LOAD_INIT" in window) {
+      return;
+    }
+    HC_LOAD_INIT = true;
+    var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
+    var hcc = document.createElement("script");
+    hcc.type = "text/javascript";
+    hcc.defer = true;
+    hcc.src = ("https:" === document.location.protocol ? "https" : "http") + "://w.hypercomments.com/widget/hc/tingm831@gmail.com/" + lang + "/widget.js";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hcc, s.nextSibling);
+  })();
+  </script>
+  
+</div>
+
+
+
+  
+</section>
+
+          </div>
+          
+          
+          
+<aside class="sidebar" id="sidebar">
+  
+  <div class="search">
+    <div class="form-group">
+      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
+    </div>
+  </div>
+  <div class="search-result-box" id="search-result"></div>
+  
+  
+<div class="info sidebar-item" id="info">
+  
+  <img class="author-avatar" src="/images/avatar.png" alt="mt">
+  
+  <p class="author-name">mt</p>
+  <p class="author-description"> </p>
+  <div class="site-count">
+    
+    <div class="archives-count">
+      <p>归档</p>
+      <p><a href="/archives/">40</a></p>
+    </div>
+    
+    
+    
+    <span class="site-count-divider"> | </span>
+    
+    <div class="categories-count">
+      <p>分类</p>
+      <p><a href="/categories/">6</a></p>
+    </div>
+    
+    
+    
+    <span class="site-count-divider"> | </span>
+    
+    <div class="tags-count">
+      <p>标签</p>
+      <p><a href="/tags/">8</a></p>
+    </div>
+    
+  </div>
+  
+  <div class="rss">
+    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i> RSS</a>
+  </div>
+  
+</div>
+
+
+  <div class="sidebar-sticky">
+    
+    
+
+
+
+
+<hr>
+<div class="post-toc sidebar-item" id="toc-div">
+  <p><i class="fas fa-list-ol"></i> 文章目录</p>
+  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Intro-perl版本-v5-10-1"><span class="toc-text">Intro(perl版本 v5.10.1)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#how-to-get-help"><span class="toc-text">how to get help</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter-1"><span class="toc-text">Chapter 1</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#First-perl-program"><span class="toc-text">First perl program</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#For-Perl-5-6-x-and-higher-w-gt-use-warnings"><span class="toc-text">For Perl 5.6.x and higher -w -&gt; use warnings;</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#交互式"><span class="toc-text">交互式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Chapter-2"><span class="toc-text">Chapter 2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Types-of-data"><span class="toc-text">Types of data</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Numbers-integers-and-floating-point-numbers"><span class="toc-text">Numbers: integers and floating-point numbers</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#For-very-large-integers-like-25-000-000"><span class="toc-text">For very large integers like 25,000,000</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#进制"><span class="toc-text">进制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#For-floating-point-numbers-what-we-put-in-is-only-good-to-14-decimal-places"><span class="toc-text">For floating-point numbers: what we put in is only good to 14 decimal places</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Strings"><span class="toc-text">Strings</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#One-“”和’’的区别"><span class="toc-text">One. “”和’’的区别</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Two-注意特例"><span class="toc-text">Two. 注意特例</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Aternative-delimiters-qq"><span class="toc-text">Aternative delimiters: qq</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Here-documents"><span class="toc-text">Here-documents</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Converting-between-nums-and-strings"><span class="toc-text">Converting between nums and strings</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Operators"><span class="toc-text">Operators</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Bitwise-operator"><span class="toc-text">Bitwise operator</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Truth-or-Falsehood"><span class="toc-text">Truth or Falsehood</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Boolean-Operators"><span class="toc-text">Boolean Operators</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#String-Operators"><span class="toc-text">String Operators</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Converting-Strings-to-Numbers"><span class="toc-text">Converting Strings to Numbers</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Converting-Numbers-to-Strings"><span class="toc-text">Converting Numbers to Strings</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#String-Comparison"><span class="toc-text">String Comparison</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Variables"><span class="toc-text">Variables</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Scalars"><span class="toc-text">Scalars</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#and-–"><span class="toc-text">++ and –</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#可用于字符串"><span class="toc-text">++可用于字符串</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#Mutiple-Assignments"><span class="toc-text">Mutiple Assignments</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Scoping"><span class="toc-text">Scoping</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Variable-Interpolation"><span class="toc-text">Variable Interpolation</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#Currency-Converter"><span class="toc-text">Currency Converter</span></a></li></ol></li></ol></li></ol></li></ol></div>
+</div>
+
+
+
+    
+    
+    
+<hr>
+<div class="social-link sidebar-item">
+  <p><i class="far fa-address-card"></i> 社交链接</p>
+  <ul>
+    
+    <li><i class="fab fa-github"></i> <a href="https://github.com/mt831" target="_blank">GitHub</a></li>
+    
+  </ul>
+</div>
+
+
+    
+    
+  </div>
+</aside>
+
+
+          
+        </div>
+      </div>
+    </main>
+    
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="back-to-top">
+      <a id="back-to-top"><i class="fas fa-angle-double-up"></i></a>
+    </div>
+    <div class="footer-container">
+      <div class="footer-left">
+        <div class="copyright">
+          <span class="author">mt</span>
+          <span class="year"><i class="far fa-copyright"></i> 2018-4-1 - 2018</span>
+          
+        </div>
+        
+        
+<div class="busuanzi">
+  <span id="busuanzi_container_site_pv"><i class="fas fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
+  <span id="busuanzi_container_site_uv"><i class="fas fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
+  <span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i> <span id="busuanzi_value_page_pv"></span></span>
+</div>
+
+
+        
+      </div>
+      <div class="footer-right">
+        <div class="custom-info">
+          
+        </div>
+        <div class="powered-by">
+          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  </body>
+</html>
