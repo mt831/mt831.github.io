@@ -3,11 +3,25 @@
   
     
     <entry>
-      <title></title>
+      <title>samtools</title>
       <link href="/2018/05/16/Linux/samtools%E5%91%BD%E4%BB%A4/"/>
       <url>/2018/05/16/Linux/samtools%E5%91%BD%E4%BB%A4/</url>
-      <content type="html"><![CDATA[<h4 id="samtools"><a href="#samtools" class="headerlink" title="samtools"></a>samtools</h4><p>samtools view -f 4 file.bam &gt; unmapped.sam<br>samtools view -b -f 4 file.bam &gt; unmapped.bam<br>samtools view -b -F 4 file.bam &gt; mapped.bam</p><p><a href="https://www.biostars.org/p/56246/" target="_blank" rel="noopener">Question: How To Filter Mapped Reads With Samtools</a></p>]]></content>
+      <content type="html"><![CDATA[<h4 id="samtools"><a href="#samtools" class="headerlink" title="samtools"></a>samtools</h4><p>samtools view -f 4 file.bam &gt; unmapped.sam<br>samtools view -b -f 4 file.bam &gt; unmapped.bam<br>samtools view -b -F 4 file.bam &gt; mapped.bam</p><p><a href="https://www.biostars.org/p/56246/" target="_blank" rel="noopener">Question: How To Filter Mapped Reads With Samtools</a><br><a href="http://www.cnblogs.com/emanlee/p/4316581.html" target="_blank" rel="noopener">samtools命令讲解</a><br><a href="https://wiki2.org/en/List_of_RNA-Seq_bioinformatics_tools" target="_blank" rel="noopener">List_of_RNA-Seq_bioinformatics_tools</a></p>]]></content>
       
+      <categories>
+          
+          <category> Linux基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> bioinformatics </tag>
+            
+            <tag> samtools </tag>
+            
+        </tags>
       
     </entry>
     

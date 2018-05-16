@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-16T08:55:19.127Z</updated>
+  <updated>2018-05-16T11:41:10.803Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>samtools</title>
     <link href="http://yoursite.com/2018/05/16/Linux/samtools%E5%91%BD%E4%BB%A4/"/>
     <id>http://yoursite.com/2018/05/16/Linux/samtools命令/</id>
-    <published>2018-05-16T08:55:18.935Z</published>
-    <updated>2018-05-16T08:55:19.127Z</updated>
+    <published>2018-05-16T12:00:00.000Z</published>
+    <updated>2018-05-16T11:41:10.803Z</updated>
     
     <summary type="html">
     
@@ -35,6 +35,12 @@
     
     </summary>
     
+      <category term="Linux基础" scheme="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
+    
+      <category term="samtools" scheme="http://yoursite.com/tags/samtools/"/>
     
   </entry>
   
