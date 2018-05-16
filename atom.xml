@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>mt&#39;s blog</title>
   
-  
+  <subtitle>学习记录</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-15T08:28:41.924Z</updated>
+  <updated>2018-05-16T08:55:19.127Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2018/05/16/Linux/samtools%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2018/05/16/Linux/samtools命令/</id>
+    <published>2018-05-16T08:55:18.935Z</published>
+    <updated>2018-05-16T08:55:19.127Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;samtools&quot;&gt;&lt;a href=&quot;#samtools&quot; class=&quot;headerlink&quot; title=&quot;samtools&quot;&gt;&lt;/a&gt;samtools&lt;/h4&gt;&lt;p&gt;samtools view -f 4 file.bam &amp;gt;
+        
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Linux Tips记录</title>
@@ -513,32 +535,6 @@
         
         
           &lt;h4 id=&quot;Test1-pandas部分&quot;&gt;&lt;a href=&quot;#Test1-pandas部分&quot; class=&quot;headerlink&quot; title=&quot;Test1 pandas部分&quot;&gt;&lt;/a&gt;Test1 pandas部分&lt;/h4&gt;&lt;h3 id=&quot;步骤1-载入需要的库&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="数据科学实训营" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD%E8%90%A5/"/>
-    
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>实战3.QQ答疑</title>
-    <link href="http://yoursite.com/2018/04/11/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%983-QQ%E7%AD%94%E7%96%91/"/>
-    <id>http://yoursite.com/2018/04/11/数据分析实战/实战3-QQ答疑/</id>
-    <published>2018-04-11T12:33:41.922Z</published>
-    <updated>2018-04-23T08:32:33.048Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h5 id=&quot;python-amp-pypandas&quot;&gt;&lt;a href=&quot;#python-amp-pypandas&quot; class=&quot;headerlink&quot; title=&quot;python &amp;amp; pypandas&quot;&gt;&lt;/a&gt;python &amp;amp;
         
       
     

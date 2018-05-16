@@ -3,6 +3,15 @@
   
     
     <entry>
+      <title></title>
+      <link href="/2018/05/16/Linux/samtools%E5%91%BD%E4%BB%A4/"/>
+      <url>/2018/05/16/Linux/samtools%E5%91%BD%E4%BB%A4/</url>
+      <content type="html"><![CDATA[<h4 id="samtools"><a href="#samtools" class="headerlink" title="samtools"></a>samtools</h4><p>samtools view -f 4 file.bam &gt; unmapped.sam<br>samtools view -b -f 4 file.bam &gt; unmapped.bam<br>samtools view -b -F 4 file.bam &gt; mapped.bam</p><p><a href="https://www.biostars.org/p/56246/" target="_blank" rel="noopener">Question: How To Filter Mapped Reads With Samtools</a></p>]]></content>
+      
+      
+    </entry>
+    
+    <entry>
       <title>Linux Tips记录</title>
       <link href="/2018/05/15/Linux/Linux_Tips/"/>
       <url>/2018/05/15/Linux/Linux_Tips/</url>
@@ -827,16 +836,16 @@
   
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     

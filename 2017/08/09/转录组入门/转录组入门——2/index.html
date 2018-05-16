@@ -1,381 +1,45 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <meta name="theme-color" content="#33363b">
-    <meta name="msapplication-TileColor" content="#33363b">
-    
-    
-    
-    <meta name="keywords" content="python, R, math, bioinformatics">
-    
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicons/apple-touch-icon.png">
-    
-    
-    <link rel="icon" type="image/png" sizes="192x192" href="/favicons/android-chrome-192x192.png">
-    
-    
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicons/favicon-32x32.png">
-    
-    
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicons/favicon-16x16.png">
-    
-    
-    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#33363b">
-    
-    
-    <link rel="manifest" href="/favicons/site.webmanifest">
-    
-    
-    <meta name="msapplication-config" content="/favicons/browserconfig.xml">
-    
-    
-    <link rel="alternate" href="/atom.xml" title="mt's blog" type="application/atom+xml" />
-    
-    <link rel="stylesheet" type="text/css" href="/css/index.css">
-    
-    <link rel="stylesheet" type="text/css" href="/css/sidebar.css">
-    
-    
-<link rel="stylesheet" type="text/css" href="/css/page.css">
-<link rel="stylesheet" type="text/css" href="/css/post.css">
+extends base
 
-    <link rel="stylesheet" type="text/css" href="/css/custom.css">
-    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="/css/atom-one-dark.css">
-    <link rel="stylesheet" type="text/css" href="/css/lightgallery.min.css">
-    <script type="text/javascript" src="/js/jquery.min.js"></script>
-    <script defer type="text/javascript" src="/js/util.js"></script>
-    <script defer type="text/javascript" src="/js/scrollspy.js"></script>
-    <script defer type="text/javascript" src="/js/fontawesome-all.min.js"></script>
-    <script defer type="text/javascript" src="/js/lightgallery.min.js"></script>
-    <script defer type="text/javascript" src="/js/lg-fullscreen.min.js"></script>
-    <script defer type="text/javascript" src="/js/lg-hash.min.js"></script>
-    <script defer type="text/javascript" src="/js/lg-pager.min.js"></script>
-    <script defer type="text/javascript" src="/js/lg-thumbnail.min.js"></script>
-    <script defer type="text/javascript" src="/js/lg-zoom.min.js"></script>
-    
-    <script defer src="/js/busuanzi.pure.mini.js"></script>
-    
-    
-    <script defer type="text/javascript" src="/js/search.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function () {
-      var searchPath = "search.xml";
-      if (searchPath.length === 0) {
-        searchPath = "search.xml";
-      }
-      var path = "/" + searchPath;
-      searchFunc(path, "search-input", "search-result");
-    });
-    </script>
-    
-    
-    <script defer type="text/javascript" src="/js/index.js"></script>
-    
-    <script defer type="text/javascript" src="/js/custom.js"></script>
-    <title>转录组入门——2 | mt's blog</title>
-  </head>
-  <body itemscope itemtype="http://schema.org/WebPage" lang=""  data-spy="scroll" data-target=".list-group">
-    
-<header id="header" class="header">
-  <div class="container">
-    <div class="header-container">
-      <div class="header-title">
-        <h1 class="title"><a href="/">mt's blog</a></h1>
-        <h2 class="subtitle"></h2>
-      </div>
-      <div class="logo">
-        <img src="/images/ARIA_logo.png" alt="logo">
-      </div>
-    </div>
-    
-<nav id="nav" class="nav">
-  <a id="nav-toggle" class="nav-toggle"><i class="fas fa-bars"></i></a>
-  <ul id="menu">
-    
-    <li><a href="/">首頁</a></li>
-    
-    <li><a href="/archives/">歸檔</a></li>
-    
-    <li><a href="/categories/">分類</a></li>
-    
-    <li><a href="/tags/">標籤</a></li>
-    
-  </ul>
-</nav>
+block title
+  title= page.title + ' | ' + config.title
 
+block content
+  .post
+    h1.post-title= page.title
+    .post-meta
+      if theme.comment
+        include _partial/comment_count
+        +comment-count(page.path)
+      p
+        span.date= page.date.format(theme.date_formats.post)
+        if page.categories.length > 0
+          span
+            for category in page.categories.toArray()
+              a.category(href=url_for(category.path))= category.name 
+        if theme.busuanzi == true
+          span
+            i#busuanzi_container_page_pv
+              i#busuanzi_value_page_pv
+              i= '' + __('hits')
+    .post-content
+      != page.content
+    include _partial/tag
+    .post-share
+      include _partial/share
+    include _partial/post_nav
+    #comments
+      include _partial/comments
 
-  </div>
-</header>
+block tocmodel
+  if theme.toc.enable == true 
+    .widget(id='toc')
+      .widget-title
+        i(class='fa fa-fei')= __('contents')
+      != toc(page.content, {list_number: theme.toc.number})
 
-
-    <main id="main" class="main">
-      <div class="container">
-        <div class="main-container">
-          <div class="content">
-            
-<section id="post" class="post">
-  
-  <article class="post-container card " itemscope itemtype="http://schema.org/Article">
-    <div class="post-block">
-      <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/08/09/转录组入门/转录组入门——2/">
-      <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-       <meta itemprop="name" content="mt">
-       <meta itemprop="description" content="">
-       <meta itemprop="image" content="/images/avatar.png">
-      </span>
-      <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-       <meta itemprop="name" content="mt's blog">
-      </span>
-    </div>
-    <header class="post-header">
-      <h1 class="post-title" itemprop="name headline">
-       <span class="">转录组入门——2</span>
-      </h1>
-      <div class="post-meta">
-        
-        <span class="post-date">
-          <i class="far fa-calendar-plus"></i> <time title="post-date" itemprop="dateCreated datePublished" datetime="2017-08-09T18:58:42+08:00">2017-08-09</time>
-        </span>
-        
-        
-        
-        <span class="post-meta-divider"> | </span>
-        
-        <span class="post-categories">
-          <i class="far fa-folder-open"></i>
-          
-          
-          <span itemprop="about" itemscope itemtype="http://schema.org/Thing"> <a href="/categories/转录组入门/" itemprop="url" rel="index"><span itemprop="name">转录组入门</span></a></span>
-          
-          
-        </span>
-        
-        
-        
-        <span class="post-meta-divider"> | </span>
-        
-        
-        <span class="post-comment-count">
-          <i class="far fa-comments"></i> <a href="/2017/08/09/转录组入门/转录组入门——2/#comments" itemprop="discussionUrl"><span class="post-comment-count hc-comment-count" data-xid="2017/08/09/转录组入门/转录组入门——2/" itemprop="commentsCount"></span></a>
-        </span>
-        
-        
-      </div>
-    </header>
-    <main class="post-body" itemprop="articleBody">
-      <h5 id="CentOS-release-6-5-Final"><a href="#CentOS-release-6-5-Final" class="headerlink" title="CentOS release 6.5 (Final)"></a>CentOS release 6.5 (Final)</h5><h5 id="GEO-SRA数据库的数据存放形式参考"><a href="#GEO-SRA数据库的数据存放形式参考" class="headerlink" title="GEO/SRA数据库的数据存放形式参考"></a>GEO/SRA数据库的数据存放形式参考</h5><p><a href="http://www.biotrainee.com/forum.php?mod=viewthread&amp;tid=1884&amp;fromuid=1685" target="_blank" rel="noopener">青山屋主 转录组入门(2)-作业</a><br><a href="http://www.biotrainee.com/forum.php?mod=viewthread&amp;tid=1829&amp;fromuid=1685" target="_blank" rel="noopener">hoptop 转录组入门（二）读文献下数据</a></p>
-<h5 id="软件及参数"><a href="#软件及参数" class="headerlink" title="软件及参数"></a>软件及参数</h5><p>比对：TopHat (v2.0.13) 参考基因组：GRCh37/hg19 GTF文件：GTF version GRCh37.70 去除MQ&gt;30的reads<br>计算平均插入大小和标准差：Picard-tools（v1.126）<br>计算reads count：HTSeq (v0.6.0)<br>差异表达：DESeq (v3.0) 差异外显子：DEXSeq (v3.1)<br>normalize Bigwig files to per million reads：BEDTools (v2.17.0), bedGraphToBigWig tool (v4)<br>统计分析和作图： R (v3.1.1) (<a href="http://www.r-project.org/" target="_blank" rel="noopener">http://www.r-project.org/</a>)<br>GO富集分析：DAVID (<a href="http://david.ncifcrf.gov/" target="_blank" rel="noopener">http://david.ncifcrf.gov/</a>)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># download Aspera</span><br><span class="line">wget http://download.asperasoft.com/download/sw/connect/3.6.2/aspera-connect-3.6.2.117442-linux-64.tar.gz</span><br><span class="line">tar zxf aspera-connect-3.6.2.117442-linux-64.tar.gz</span><br><span class="line">sh aspera-connect-3.6.2.117442-linux-64.sh</span><br><span class="line">echo &apos;PATH=$PATH:/home/tma/.aspera/connect/bin&apos; &gt;&gt; ~/.bashrc</span><br><span class="line">source ~/.bashrc</span><br><span class="line">ascp</span><br><span class="line"># download data</span><br><span class="line">for x in $(seq 48 62);do ascp -T -l 200M -i ~/.aspera/connect/etc/asperaweb_id_dsa.openssh --host=ftp-private.ncbi.nlm.nih.gov --user=anonftp --mode=recv /sra/sra-instant/reads/ByStudy/sra/SRP/SRP075/SRP075747/SRR35899&quot;$x&quot;/SRR35899&quot;$x&quot;.sra . ;done</span><br><span class="line"></span><br><span class="line"># sratoolkit prefetch</span><br><span class="line">for x in $(seq 48 62);do prefetch SRR35899&quot;$x&quot;;done</span><br></pre></td></tr></table></figure>
-    </main>
-    <footer class="post-footer">
-      
-      
-      <div class="post-tags">
-        
-        
-        
-        
-        
-        
-        <a class="post-tag button" href="/tags/bioinformatics/" style="background: #fc6423" rel="tag"><i class="fas fa-tags"></i> bioinformatics</a>
-        
-        
-      </div>
-      
-    </footer>
-  </article>
-  
-  
-  <div class="post-nav">
-    
-    <div class="post-nav-next post-nav-item">
-      <a href="/2017/08/09/转录组入门/转录组入门——1/" rel="next" title="转录组入门——1">
-        <i class="fas fa-angle-left"></i>
-        <span class="nav-title">转录组入门——1</span>
-      </a>
-    </div>
-    
-    
-    <div class="post-nav-prev post-nav-item">
-      <a href="/2017/08/10/转录组入门/转录组入门——3/" rel="prev" title="转录组入门——3">
-        <span class="nav-title">转录组入门——3</span>
-        <i class="fas fa-angle-right"></i>
-      </a>
-    </div>
-    
-  </div>
-  
-  
-  
-
-<div class="comments" id="comments">
-  
-  
-  <div id="hypercomments_widget"></div>
-  
-  <script type="text/javascript">
-  _hcwp = window._hcwp || [];
-  _hcwp.push({ "widget": "Bloggerstream", "widget_id": "tingm831@gmail.com", "selector": ".hc-comment-count", "label": "{\%COUNT%\}" });
-  
-  _hcwp.push({ "widget": "Stream", "widget_id": "tingm831@gmail.com", "xid": "2017/08/09/转录组入门/转录组入门——2/" });
-  
-  (function() {
-    if ("HC_LOAD_INIT" in window) {
-      return;
-    }
-    HC_LOAD_INIT = true;
-    var lang = (navigator.language || navigator.systemLanguage || navigator.userLanguage || "en").substr(0, 2).toLowerCase();
-    var hcc = document.createElement("script");
-    hcc.type = "text/javascript";
-    hcc.defer = true;
-    hcc.src = ("https:" === document.location.protocol ? "https" : "http") + "://w.hypercomments.com/widget/hc/tingm831@gmail.com/" + lang + "/widget.js";
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(hcc, s.nextSibling);
-  })();
-  </script>
-  
-</div>
-
-
-
-  
-</section>
-
-          </div>
-          
-          
-          
-<aside class="sidebar" id="sidebar">
-  
-  <div class="search">
-    <div class="form-group">
-      <i class="fas fa-search"></i> <input type="text" id="search-input" name="q" results="0" placeholder="搜索" class="form-control"/>
-    </div>
-  </div>
-  <div class="search-result-box" id="search-result"></div>
-  
-  
-<div class="info sidebar-item" id="info">
-  
-  <img class="author-avatar" src="/images/avatar.png" alt="mt">
-  
-  <p class="author-name">mt</p>
-  <p class="author-description"> </p>
-  <div class="site-count">
-    
-    <div class="archives-count">
-      <p>歸檔</p>
-      <p><a href="/archives/">39</a></p>
-    </div>
-    
-    
-    
-    <span class="site-count-divider"> | </span>
-    
-    <div class="categories-count">
-      <p>分類</p>
-      <p><a href="/categories/">6</a></p>
-    </div>
-    
-    
-    
-    <span class="site-count-divider"> | </span>
-    
-    <div class="tags-count">
-      <p>標籤</p>
-      <p><a href="/tags/">8</a></p>
-    </div>
-    
-  </div>
-  
-  <div class="rss">
-    <a class="rss-link button sidebar-item" href="/atom.xml"><i class="fas fa-rss"></i> RSS</a>
-  </div>
-  
-</div>
-
-
-  <div class="sidebar-sticky">
-    
-    
-
-
-
-
-<hr>
-<div class="post-toc sidebar-item" id="toc-div">
-  <p><i class="fas fa-list-ol"></i> 文章目錄</p>
-  <div class="post-toc-content"><ol class="toc"><li class="toc-item toc-level-5"><a class="toc-link" href="#CentOS-release-6-5-Final"><span class="toc-text">CentOS release 6.5 (Final)</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#GEO-SRA数据库的数据存放形式参考"><span class="toc-text">GEO/SRA数据库的数据存放形式参考</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#软件及参数"><span class="toc-text">软件及参数</span></a></li></ol></div>
-</div>
-
-
-
-    
-    
-    
-<hr>
-<div class="social-link sidebar-item">
-  <p><i class="far fa-address-card"></i> 社交鏈接</p>
-  <ul>
-    
-    <li><i class="fab fa-github"></i> <a href="https://github.com/mt831" target="_blank">GitHub</a></li>
-    
-  </ul>
-</div>
-
-
-    
-    
-  </div>
-</aside>
-
-
-          
-        </div>
-      </div>
-    </main>
-    
-<footer id="footer" class="footer">
-  <div class="container">
-    <div class="back-to-top">
-      <a id="back-to-top"><i class="fas fa-angle-double-up"></i></a>
-    </div>
-    <div class="footer-container">
-      <div class="footer-left">
-        <div class="copyright">
-          <span class="author">mt</span>
-          <span class="year"><i class="far fa-copyright"></i> 2018-4-1 - 2018</span>
-          
-        </div>
-        
-        
-<div class="busuanzi">
-  <span id="busuanzi_container_site_pv"><i class="fas fa-eye"></i> <span id="busuanzi_value_site_pv"></span></span>
-  <span id="busuanzi_container_site_uv"><i class="fas fa-user"></i> <span id="busuanzi_value_site_uv"></span></span>
-  <span id="busuanzi_container_page_pv"><i class="far fa-file-alt"></i> <span id="busuanzi_value_page_pv"></span></span>
-</div>
-
-
-        
-      </div>
-      <div class="footer-right">
-        <div class="custom-info">
-          
-        </div>
-        <div class="powered-by">
-          由 <a href="https://hexo.io/" target="_blank">Hexo</a> 強力驅動 | 主題 <a href="https://github.com/AlynxZhou/hexo-theme-aria/" target="_blank">ARIA</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-
-  </body>
-</html>
+block pageOnly
+  if theme.toc.enable == true 
+    script(type='text/javascript', src=url_for(theme.js) + '/toctotop.js' + '?v=' + theme.version, async)
+  else 
+    script(type='text/javascript', src=url_for(theme.js) + '/totop.js' + '?v=' + theme.version, async)
+  include _partial/comments_js
