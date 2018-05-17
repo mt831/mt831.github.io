@@ -49,7 +49,7 @@
     <link href="http://yoursite.com/2018/05/15/Linux/Linux_Tips/"/>
     <id>http://yoursite.com/2018/05/15/Linux/Linux_Tips/</id>
     <published>2018-05-15T08:00:00.000Z</published>
-    <updated>2018-05-15T08:28:41.924Z</updated>
+    <updated>2018-05-17T07:33:49.935Z</updated>
     
     <summary type="html">
     
@@ -129,9 +129,9 @@
     
       <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
     
-      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
-    
       <category term="samtools" scheme="http://yoursite.com/tags/samtools/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
   </entry>
   
