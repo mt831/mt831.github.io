@@ -129,9 +129,9 @@
     
       <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
     
-      <category term="samtools" scheme="http://yoursite.com/tags/samtools/"/>
-    
       <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="samtools" scheme="http://yoursite.com/tags/samtools/"/>
     
   </entry>
   

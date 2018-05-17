@@ -88,9 +88,9 @@
             
             <tag> bioinformatics </tag>
             
-            <tag> samtools </tag>
-            
             <tag> Linux </tag>
+            
+            <tag> samtools </tag>
             
         </tags>
       
@@ -860,6 +860,13 @@
       <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
+      <title>about</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
