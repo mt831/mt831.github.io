@@ -3,6 +3,31 @@
   
     
     <entry>
+      <title>giremi下载使用</title>
+      <link href="/2018/06/04/Linux/giremi%E4%B8%8B%E8%BD%BD/"/>
+      <url>/2018/06/04/Linux/giremi%E4%B8%8B%E8%BD%BD/</url>
+      <content type="html"><![CDATA[<h4 id="giremi下载后使用报错"><a href="#giremi下载后使用报错" class="headerlink" title="giremi下载后使用报错"></a>giremi下载后使用报错</h4><p>one. 从<a href="https://www.ibp.ucla.edu/research/xiao/GIREMI.html" target="_blank" rel="noopener">Giremi官网</a>下载giremi的zip文件并解压<br>two. 加入 ~/.bashrc路径<br>three. giremi命令报错: giremi: /lib64/libc.so.6: version `GLIBC_2.14’ not found (required by giremi)</p><h4 id="查看系统glibc支持的版本"><a href="#查看系统glibc支持的版本" class="headerlink" title="查看系统glibc支持的版本"></a>查看系统glibc支持的版本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">strings /lib64/libc.so.6 |grep GLIBC_ </span><br><span class="line">rpm -qa |grep glibc</span><br></pre></td></tr></table></figure><p>最高支持GLIBC_2.12</p><h4 id="下载glibc-2-14"><a href="#下载glibc-2-14" class="headerlink" title="下载glibc-2.14"></a>下载glibc-2.14</h4><p><a href="http://www.cnblogs.com/trying/archive/2013/06/07/3123577.html" target="_blank" rel="noopener">设置 Linux 的 LD_LIBRARY_PATH 变量</a><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export LD_LIBRARY_PATH=/usr/local/lib</span><br></pre></td></tr></table></figure></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">tar xvf glibc-2.14.tar.gz</span><br><span class="line">cd glibc-2.14</span><br><span class="line">mkdir build </span><br><span class="line">cd build</span><br><span class="line">../configure --prefix=/home/tingm/bin</span><br><span class="line">make -j4</span><br><span class="line">make install</span><br><span class="line">export LD_LIBRARY_PATH=&quot;/home/tingm/bin/lib&quot;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      <categories>
+          
+          <category> Linux基础 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> bioinformatics </tag>
+            
+            <tag> Linux </tag>
+            
+            <tag> giremi </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>samtools</title>
       <link href="/2018/05/16/Linux/samtools%E5%91%BD%E4%BB%A4/"/>
       <url>/2018/05/16/Linux/samtools%E5%91%BD%E4%BB%A4/</url>
@@ -857,16 +882,16 @@
     </entry>
     
     <entry>
-      <title>about</title>
-      <link href="/about/index.html"/>
-      <url>/about/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>about</title>
+      <link href="/about/index.html"/>
+      <url>/about/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     

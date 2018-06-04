@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-16T11:41:10.803Z</updated>
+  <updated>2018-06-04T04:31:29.560Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>giremi下载使用</title>
+    <link href="http://yoursite.com/2018/06/04/Linux/giremi%E4%B8%8B%E8%BD%BD/"/>
+    <id>http://yoursite.com/2018/06/04/Linux/giremi下载/</id>
+    <published>2018-06-04T04:30:00.000Z</published>
+    <updated>2018-06-04T04:31:29.560Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;giremi下载后使用报错&quot;&gt;&lt;a href=&quot;#giremi下载后使用报错&quot; class=&quot;headerlink&quot; title=&quot;giremi下载后使用报错&quot;&gt;&lt;/a&gt;giremi下载后使用报错&lt;/h4&gt;&lt;p&gt;one. 从&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="Linux基础" scheme="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+      <category term="giremi" scheme="http://yoursite.com/tags/giremi/"/>
+    
+  </entry>
   
   <entry>
     <title>samtools</title>
@@ -515,32 +545,6 @@
         
         
           &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
-        
-      
-    
-    </summary>
-    
-      <category term="数据科学实训营" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD%E8%90%A5/"/>
-    
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Test1.pandas part</title>
-    <link href="http://yoursite.com/2018/04/12/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/Test1_pandas/"/>
-    <id>http://yoursite.com/2018/04/12/数据分析实战/Test1_pandas/</id>
-    <published>2018-04-12T11:13:50.589Z</published>
-    <updated>2018-04-23T08:32:20.726Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h4 id=&quot;Test1-pandas部分&quot;&gt;&lt;a href=&quot;#Test1-pandas部分&quot; class=&quot;headerlink&quot; title=&quot;Test1 pandas部分&quot;&gt;&lt;/a&gt;Test1 pandas部分&lt;/h4&gt;&lt;h3 id=&quot;步骤1-载入需要的库&quot;&gt;&lt;a
         
       
     
