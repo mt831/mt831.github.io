@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-04T04:31:29.560Z</updated>
+  <updated>2018-06-06T08:57:24.144Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>giremi下载使用</title>
-    <link href="http://yoursite.com/2018/06/04/Linux/giremi%E4%B8%8B%E8%BD%BD/"/>
-    <id>http://yoursite.com/2018/06/04/Linux/giremi下载/</id>
+    <title>giremi, gatk下载使用</title>
+    <link href="http://yoursite.com/2018/06/04/Linux/giremi%E5%8F%8Agatk%E4%B8%8B%E8%BD%BD/"/>
+    <id>http://yoursite.com/2018/06/04/Linux/giremi及gatk下载/</id>
     <published>2018-06-04T04:30:00.000Z</published>
-    <updated>2018-06-04T04:31:29.560Z</updated>
+    <updated>2018-06-06T08:57:24.144Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;h4 id=&quot;giremi下载后使用报错&quot;&gt;&lt;a href=&quot;#giremi下载后使用报错&quot; class=&quot;headerlink&quot; title=&quot;giremi下载后使用报错&quot;&gt;&lt;/a&gt;giremi下载后使用报错&lt;/h4&gt;&lt;p&gt;one. 从&lt;a
+          &lt;h3 id=&quot;giremi&quot;&gt;&lt;a href=&quot;#giremi&quot; class=&quot;headerlink&quot; title=&quot;giremi&quot;&gt;&lt;/a&gt;giremi&lt;/h3&gt;&lt;h4 id=&quot;giremi下载后使用报错&quot;&gt;&lt;a href=&quot;#giremi下载后使用报错&quot;
         
       
     
@@ -43,6 +43,8 @@
       <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
     
       <category term="giremi" scheme="http://yoursite.com/tags/giremi/"/>
+    
+      <category term="gatk" scheme="http://yoursite.com/tags/gatk/"/>
     
   </entry>
   
