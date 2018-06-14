@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-07T06:59:22.609Z</updated>
+  <updated>2018-06-14T01:55:04.215Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>trim.aln.count.sh &amp; find_virus_filt.sh</title>
+    <link href="http://yoursite.com/2018/06/14/Linux/trim.aln.count%20&amp;%20find_virus_filt/"/>
+    <id>http://yoursite.com/2018/06/14/Linux/trim.aln.count &amp; find_virus_filt/</id>
+    <published>2018-06-14T01:53:00.000Z</published>
+    <updated>2018-06-14T01:55:04.215Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h3 id=&quot;trim-aln-count-sh&quot;&gt;&lt;a href=&quot;#trim-aln-count-sh&quot; class=&quot;headerlink&quot; title=&quot;trim.aln.count.sh&quot;&gt;&lt;/a&gt;trim.aln.count.sh&lt;/h3&gt;&lt;figure
+        
+      
+    
+    </summary>
+    
+      <category term="Linux基础" scheme="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
+    
+      <category term="FastViromeExplorer" scheme="http://yoursite.com/tags/FastViromeExplorer/"/>
+    
+      <category term="trim_galore" scheme="http://yoursite.com/tags/trim-galore/"/>
+    
+      <category term="hisat2" scheme="http://yoursite.com/tags/hisat2/"/>
+    
+      <category term="HTSeq" scheme="http://yoursite.com/tags/HTSeq/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>star.gatk.sh</title>
+    <link href="http://yoursite.com/2018/06/14/Linux/star.gatk/"/>
+    <id>http://yoursite.com/2018/06/14/Linux/star.gatk/</id>
+    <published>2018-06-14T01:53:00.000Z</published>
+    <updated>2018-06-14T02:12:05.358Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;gatk call SNV 为金标准，然而时间较长。GATK目前为4.0版本。&lt;br&gt;目前商业软件&lt;a href=&quot;https://www.sentieon.com/products/&quot; target=&quot;_blank&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="Linux基础" scheme="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
+    
+    
+      <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
+    
+      <category term="gatk" scheme="http://yoursite.com/tags/gatk/"/>
+    
+      <category term="star" scheme="http://yoursite.com/tags/star/"/>
+    
+  </entry>
   
   <entry>
     <title>giremi, gatk下载使用</title>
@@ -495,58 +559,6 @@
         
         
           &lt;h5 id=&quot;要点&quot;&gt;&lt;a href=&quot;#要点&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="数据科学实训营" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD%E8%90%A5/"/>
-    
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>实战4.QQ答疑</title>
-    <link href="http://yoursite.com/2018/04/15/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%984.QQ%E7%AD%94%E7%96%91/"/>
-    <id>http://yoursite.com/2018/04/15/数据分析实战/实战4.QQ答疑/</id>
-    <published>2018-04-15T13:21:51.508Z</published>
-    <updated>2018-04-23T08:31:49.739Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h5 id=&quot;Q1-有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格&quot;&gt;&lt;a href=&quot;#Q1-有如下5列n行表格，其中后三列元素每列均相同，想去除重复行并统计重复行出现的次数得到新表格&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="数据科学实训营" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD%E8%90%A5/"/>
-    
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>L4.链家网房价数据分析 要点记录</title>
-    <link href="http://yoursite.com/2018/04/15/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L4-%E9%93%BE%E5%AE%B6%E7%BD%91%E6%88%BF%E4%BB%B7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/"/>
-    <id>http://yoursite.com/2018/04/15/数据分析实战/L4-链家网房价数据分析/</id>
-    <published>2018-04-15T07:17:30.101Z</published>
-    <updated>2018-04-23T08:32:01.957Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span
         
       
     
