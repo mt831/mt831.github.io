@@ -4,8 +4,106 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/06/20/Linux/RTG-tools%E5%AE%89%E8%A3%85/</loc>
-    <lastmod>2018-06-20T08:26:46.321Z</lastmod>
+    <loc>http://yoursite.com/2018/06/28/project/nanopolish/</loc>
+    <lastmod>2018-06-28T01:08:23.618Z</lastmod>
+    <data>
+        <display>
+        <title>nanopolish</title>
+        <pubTime>2018-06-28T01:59:00.000Z</pubTime>
+        
+        <tag>bioinformatics</tag>
+         
+        <tag>nanopolish</tag>
+         
+         
+           
+             
+              <breadCrumb title="project" url="http://yoursite.com/categories/project/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/05/11/project/%E5%AE%89%E8%A3%85picard%E3%80%81FastViromeExplorer%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2018-06-28T00:56:18.050Z</lastmod>
+    <data>
+        <display>
+        <title>安装picard、FastViromeExplorer使用</title>
+        <pubTime>2018-05-11T08:54:00.000Z</pubTime>
+        
+        <tag>bioinformatics</tag>
+         
+        <tag>FastViromeExplorer</tag>
+         
+        <tag>picard</tag>
+         
+        <tag>git</tag>
+         
+         
+           
+             
+              <breadCrumb title="project" url="http://yoursite.com/categories/project/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/05/16/project/samtools%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2018-06-28T00:55:19.304Z</lastmod>
+    <data>
+        <display>
+        <title>samtools</title>
+        <pubTime>2018-05-16T12:00:00.000Z</pubTime>
+        
+        <tag>bioinformatics</tag>
+         
+        <tag>samtools</tag>
+         
+         
+           
+             
+              <breadCrumb title="project" url="http://yoursite.com/categories/project/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/06/14/project/trim.aln.count%20&%20find_virus_filt/</loc>
+    <lastmod>2018-06-28T00:54:57.353Z</lastmod>
+    <data>
+        <display>
+        <title>trim.aln.count.sh & find_virus_filt.sh</title>
+        <pubTime>2018-06-14T01:53:00.000Z</pubTime>
+        
+        <tag>bioinformatics</tag>
+         
+        <tag>trim_galore</tag>
+         
+        <tag>hisat2</tag>
+         
+        <tag>HTSeq</tag>
+         
+        <tag>FastViromeExplorer</tag>
+         
+         
+           
+             
+              <breadCrumb title="project" url="http://yoursite.com/categories/project/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/06/20/project/RTG-tools%E5%AE%89%E8%A3%85/</loc>
+    <lastmod>2018-06-28T00:54:43.372Z</lastmod>
     <data>
         <display>
         <title>RTG-tools安装</title>
@@ -18,7 +116,7 @@
          
            
              
-              <breadCrumb title="Linux基础" url="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
+              <breadCrumb title="project" url="http://yoursite.com/categories/project/"/>
           
         </display>
     </data>
@@ -26,8 +124,8 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/06/14/Linux/ann.giremi/</loc>
-    <lastmod>2018-06-14T04:12:17.414Z</lastmod>
+    <loc>http://yoursite.com/2018/06/14/project/ann.giremi/</loc>
+    <lastmod>2018-06-28T00:54:26.878Z</lastmod>
     <data>
         <display>
         <title>ann.giremi.sh</title>
@@ -35,14 +133,14 @@
         
         <tag>bioinformatics</tag>
          
-        <tag>giremi</tag>
-         
         <tag>SnpEff</tag>
+         
+        <tag>giremi</tag>
          
          
            
              
-              <breadCrumb title="Linux基础" url="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
+              <breadCrumb title="project" url="http://yoursite.com/categories/project/"/>
           
         </display>
     </data>
@@ -50,8 +148,32 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/06/14/Linux/star.gatk/</loc>
-    <lastmod>2018-06-14T03:12:29.186Z</lastmod>
+    <loc>http://yoursite.com/2018/06/04/project/giremi%E5%8F%8Agatk%E4%B8%8B%E8%BD%BD/</loc>
+    <lastmod>2018-06-28T00:54:11.211Z</lastmod>
+    <data>
+        <display>
+        <title>giremi, gatk下载使用</title>
+        <pubTime>2018-06-04T04:30:00.000Z</pubTime>
+        
+        <tag>bioinformatics</tag>
+         
+        <tag>giremi</tag>
+         
+        <tag>gatk</tag>
+         
+         
+           
+             
+              <breadCrumb title="project" url="http://yoursite.com/categories/project/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2018/06/14/project/star.gatk/</loc>
+    <lastmod>2018-06-28T00:53:33.335Z</lastmod>
     <data>
         <display>
         <title>star.gatk.sh</title>
@@ -66,61 +188,7 @@
          
            
              
-              <breadCrumb title="Linux基础" url="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/06/14/Linux/trim.aln.count%20&%20find_virus_filt/</loc>
-    <lastmod>2018-06-14T01:55:04.215Z</lastmod>
-    <data>
-        <display>
-        <title>trim.aln.count.sh & find_virus_filt.sh</title>
-        <pubTime>2018-06-14T01:53:00.000Z</pubTime>
-        
-        <tag>bioinformatics</tag>
-         
-        <tag>FastViromeExplorer</tag>
-         
-        <tag>trim_galore</tag>
-         
-        <tag>hisat2</tag>
-         
-        <tag>HTSeq</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux基础" url="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/06/04/Linux/giremi%E5%8F%8Agatk%E4%B8%8B%E8%BD%BD/</loc>
-    <lastmod>2018-06-07T06:59:22.609Z</lastmod>
-    <data>
-        <display>
-        <title>giremi, gatk下载使用</title>
-        <pubTime>2018-06-04T04:30:00.000Z</pubTime>
-        
-        <tag>bioinformatics</tag>
-         
-        <tag>Linux</tag>
-         
-        <tag>giremi</tag>
-         
-        <tag>gatk</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux基础" url="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
+              <breadCrumb title="project" url="http://yoursite.com/categories/project/"/>
           
         </display>
     </data>
@@ -162,53 +230,6 @@
              
               <breadCrumb title="Linux基础" url="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/05/16/Linux/samtools%E5%91%BD%E4%BB%A4/</loc>
-    <lastmod>2018-05-16T11:41:10.803Z</lastmod>
-    <data>
-        <display>
-        <title>samtools</title>
-        <pubTime>2018-05-16T12:00:00.000Z</pubTime>
-        
-        <tag>bioinformatics</tag>
-         
-        <tag>samtools</tag>
-         
-         
-           
-             
-              <breadCrumb title="Linux基础" url="http://yoursite.com/categories/Linux%E5%9F%BA%E7%A1%80/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2018/05/11/Linux/%E5%AE%89%E8%A3%85picard%E3%80%81FastViromeExplorer%E4%BD%BF%E7%94%A8/</loc>
-    <lastmod>2018-05-11T11:42:36.843Z</lastmod>
-    <data>
-        <display>
-        <title>安装picard、FastViromeExplorer使用</title>
-        <pubTime>2018-05-11T08:54:00.000Z</pubTime>
-        
-        <tag>bioinformatics</tag>
-         
-        <tag>Linux</tag>
-         
-        <tag>picard</tag>
-         
-        <tag>FastViromeExplorer</tag>
-         
-        <tag>git</tag>
-         
-         
-           
         </display>
     </data>
     </url>
