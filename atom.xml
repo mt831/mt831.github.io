@@ -49,7 +49,7 @@
     <link href="http://yoursite.com/2018/08/06/SQL/sql_1/"/>
     <id>http://yoursite.com/2018/08/06/SQL/sql_1/</id>
     <published>2018-08-06T14:00:00.000Z</published>
-    <updated>2018-08-06T13:15:30.089Z</updated>
+    <updated>2018-08-06T13:38:48.183Z</updated>
     
     <summary type="html">
     
@@ -152,9 +152,9 @@
     
       <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
     
-      <category term="giremi" scheme="http://yoursite.com/tags/giremi/"/>
-    
       <category term="SnpEff" scheme="http://yoursite.com/tags/SnpEff/"/>
+    
+      <category term="giremi" scheme="http://yoursite.com/tags/giremi/"/>
     
   </entry>
   
@@ -212,13 +212,13 @@
     
       <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
     
-      <category term="FastViromeExplorer" scheme="http://yoursite.com/tags/FastViromeExplorer/"/>
-    
       <category term="trim_galore" scheme="http://yoursite.com/tags/trim-galore/"/>
     
       <category term="hisat2" scheme="http://yoursite.com/tags/hisat2/"/>
     
       <category term="HTSeq" scheme="http://yoursite.com/tags/HTSeq/"/>
+    
+      <category term="FastViromeExplorer" scheme="http://yoursite.com/tags/FastViromeExplorer/"/>
     
   </entry>
   
@@ -333,9 +333,9 @@
     
       <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
     
-      <category term="picard" scheme="http://yoursite.com/tags/picard/"/>
-    
       <category term="FastViromeExplorer" scheme="http://yoursite.com/tags/FastViromeExplorer/"/>
+    
+      <category term="picard" scheme="http://yoursite.com/tags/picard/"/>
     
       <category term="git" scheme="http://yoursite.com/tags/git/"/>
     
