@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-06-28T04:22:56.795Z</updated>
+  <updated>2018-08-06T13:15:14.935Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,62 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mysql学习记录--Part.2</title>
+    <link href="http://yoursite.com/2018/08/07/SQL/sql_2/"/>
+    <id>http://yoursite.com/2018/08/07/SQL/sql_2/</id>
+    <published>2018-08-07T14:00:00.000Z</published>
+    <updated>2018-08-06T13:15:14.935Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;模拟银行转账系统&quot;&gt;&lt;a href=&quot;#模拟银行转账系统&quot; class=&quot;headerlink&quot; title=&quot;模拟银行转账系统&quot;&gt;&lt;/a&gt;模拟银行转账系统&lt;/h4&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="mysql学习记录" scheme="http://yoursite.com/categories/mysql%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    
+    
+      <category term="sql" scheme="http://yoursite.com/tags/sql/"/>
+    
+      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql学习记录--Part.1</title>
+    <link href="http://yoursite.com/2018/08/06/SQL/sql_1/"/>
+    <id>http://yoursite.com/2018/08/06/SQL/sql_1/</id>
+    <published>2018-08-06T14:00:00.000Z</published>
+    <updated>2018-08-06T13:15:30.089Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;mysql安装（windows）&quot;&gt;&lt;a href=&quot;#mysql安装（windows）&quot; class=&quot;headerlink&quot; title=&quot;mysql安装（windows）&quot;&gt;&lt;/a&gt;mysql安装（windows）&lt;/h4&gt;&lt;p&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="mysql学习记录" scheme="http://yoursite.com/categories/mysql%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    
+    
+      <category term="sql" scheme="http://yoursite.com/tags/sql/"/>
+    
+      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>nanopolish</title>
@@ -156,13 +212,13 @@
     
       <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
     
+      <category term="FastViromeExplorer" scheme="http://yoursite.com/tags/FastViromeExplorer/"/>
+    
       <category term="trim_galore" scheme="http://yoursite.com/tags/trim-galore/"/>
     
       <category term="hisat2" scheme="http://yoursite.com/tags/hisat2/"/>
     
       <category term="HTSeq" scheme="http://yoursite.com/tags/HTSeq/"/>
-    
-      <category term="FastViromeExplorer" scheme="http://yoursite.com/tags/FastViromeExplorer/"/>
     
   </entry>
   
@@ -277,9 +333,9 @@
     
       <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
     
-      <category term="FastViromeExplorer" scheme="http://yoursite.com/tags/FastViromeExplorer/"/>
-    
       <category term="picard" scheme="http://yoursite.com/tags/picard/"/>
+    
+      <category term="FastViromeExplorer" scheme="http://yoursite.com/tags/FastViromeExplorer/"/>
     
       <category term="git" scheme="http://yoursite.com/tags/git/"/>
     
@@ -513,60 +569,6 @@
         
         
           &lt;h3 id=&quot;if-amp-unless&quot;&gt;&lt;a href=&quot;#if-amp-unless&quot; class=&quot;headerlink&quot; title=&quot;if &amp;amp; unless&quot;&gt;&lt;/a&gt;if &amp;amp; unless&lt;/h3&gt;&lt;h4 id=&quot;if&quot;&gt;&lt;a
-        
-      
-    
-    </summary>
-    
-      <category term="Beginning Perl (free)学习笔记" scheme="http://yoursite.com/categories/Beginning-Perl-free-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="perl" scheme="http://yoursite.com/tags/perl/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Chapter 3</title>
-    <link href="http://yoursite.com/2018/04/24/Beginning%20Perl%20(free)%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/perl_learning.2/"/>
-    <id>http://yoursite.com/2018/04/24/Beginning Perl (free)学习笔记/perl_learning.2/</id>
-    <published>2018-04-24T06:00:00.000Z</published>
-    <updated>2018-04-25T04:52:18.881Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h3 id=&quot;Lists&quot;&gt;&lt;a href=&quot;#Lists&quot; class=&quot;headerlink&quot; title=&quot;Lists&quot;&gt;&lt;/a&gt;Lists&lt;/h3&gt;&lt;blockquote&gt;
-&lt;p&gt;if you’re ever printing long strings,
-        
-      
-    
-    </summary>
-    
-      <category term="Beginning Perl (free)学习笔记" scheme="http://yoursite.com/categories/Beginning-Perl-free-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-      <category term="perl" scheme="http://yoursite.com/tags/perl/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Intro And Chapter 1-2</title>
-    <link href="http://yoursite.com/2018/04/24/Beginning%20Perl%20(free)%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/perl_learning.1/"/>
-    <id>http://yoursite.com/2018/04/24/Beginning Perl (free)学习笔记/perl_learning.1/</id>
-    <published>2018-04-24T01:00:00.000Z</published>
-    <updated>2018-04-24T11:03:41.418Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;&lt;strong&gt;为学习解决FASTA的一些操作问题开始学习perl&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&quot;Intro-perl版本-v5-10-1&quot;&gt;&lt;a href=&quot;#Intro-perl版本-v5-10-1&quot; class=&quot;headerlink&quot;
         
       
     
