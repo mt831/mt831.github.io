@@ -6,7 +6,7 @@
       <title>mysql学习记录--Part.2</title>
       <link href="/2018/08/07/SQL/sql_2/"/>
       <url>/2018/08/07/SQL/sql_2/</url>
-      <content type="html"><![CDATA[<h4 id="模拟银行转账系统"><a href="#模拟银行转账系统" class="headerlink" title="模拟银行转账系统"></a>模拟银行转账系统</h4><p><a href="https://blog.csdn.net/xunalove/article/details/76691196" target="_blank" rel="noopener">实践项目：模拟银行转账系统（python+mysql)</a></p>]]></content>
+      <content type="html"><![CDATA[<h4 id="PHP基础"><a href="#PHP基础" class="headerlink" title="PHP基础"></a>PHP基础</h4><p><a href="http://www.runoob.com/php/php-tutorial.html" target="_blank" rel="noopener">中文在线学习参考</a><br>思维导图：<a href="http://naotu.baidu.com/file/29c230533a920a5a0b5f74fde69aa541?token=bbc92d5659a4a1fd" target="_blank" rel="noopener">http://naotu.baidu.com/file/29c230533a920a5a0b5f74fde69aa541?token=bbc92d5659a4a1fd</a><br>密码：55hi</p>]]></content>
       
       <categories>
           
@@ -17,9 +17,7 @@
       
         <tags>
             
-            <tag> sql </tag>
-            
-            <tag> mysql </tag>
+            <tag> php </tag>
             
         </tags>
       
@@ -1057,16 +1055,16 @@
     </entry>
     
     <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
+      <title>tags</title>
+      <link href="/tags/index.html"/>
+      <url>/tags/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
     <entry>
-      <title>tags</title>
-      <link href="/tags/index.html"/>
-      <url>/tags/index.html</url>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     

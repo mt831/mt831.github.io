@@ -4,16 +4,14 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/08/06/SQL/sql_1/</loc>
-    <lastmod>2018-08-06T13:38:48.183Z</lastmod>
+    <loc>http://yoursite.com/2018/08/07/SQL/sql_2/</loc>
+    <lastmod>2018-08-07T02:39:44.490Z</lastmod>
     <data>
         <display>
-        <title>mysql学习记录--Part.1</title>
-        <pubTime>2018-08-06T14:00:00.000Z</pubTime>
+        <title>mysql学习记录--Part.2</title>
+        <pubTime>2018-08-07T14:00:00.000Z</pubTime>
         
-        <tag>sql</tag>
-         
-        <tag>mysql</tag>
+        <tag>php</tag>
          
          
            
@@ -26,12 +24,12 @@
 
     
   <url>
-    <loc>http://yoursite.com/2018/08/07/SQL/sql_2/</loc>
-    <lastmod>2018-08-06T13:15:14.935Z</lastmod>
+    <loc>http://yoursite.com/2018/08/06/SQL/sql_1/</loc>
+    <lastmod>2018-08-06T13:38:48.183Z</lastmod>
     <data>
         <display>
-        <title>mysql学习记录--Part.2</title>
-        <pubTime>2018-08-07T14:00:00.000Z</pubTime>
+        <title>mysql学习记录--Part.1</title>
+        <pubTime>2018-08-06T14:00:00.000Z</pubTime>
         
         <tag>sql</tag>
          

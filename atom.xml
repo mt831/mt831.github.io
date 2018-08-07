@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-08-06T13:15:14.935Z</updated>
+  <updated>2018-08-07T02:39:44.490Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2018/08/07/SQL/sql_2/"/>
     <id>http://yoursite.com/2018/08/07/SQL/sql_2/</id>
     <published>2018-08-07T14:00:00.000Z</published>
-    <updated>2018-08-06T13:15:14.935Z</updated>
+    <updated>2018-08-07T02:39:44.490Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,7 @@
       
         
         
-          &lt;h4 id=&quot;模拟银行转账系统&quot;&gt;&lt;a href=&quot;#模拟银行转账系统&quot; class=&quot;headerlink&quot; title=&quot;模拟银行转账系统&quot;&gt;&lt;/a&gt;模拟银行转账系统&lt;/h4&gt;&lt;p&gt;&lt;a
+          &lt;h4 id=&quot;PHP基础&quot;&gt;&lt;a href=&quot;#PHP基础&quot; class=&quot;headerlink&quot; title=&quot;PHP基础&quot;&gt;&lt;/a&gt;PHP基础&lt;/h4&gt;&lt;p&gt;&lt;a href=&quot;http://www.runoob.com/php/php-tutorial.html&quot;
         
       
     
@@ -38,9 +38,7 @@
       <category term="mysql学习记录" scheme="http://yoursite.com/categories/mysql%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
     
     
-      <category term="sql" scheme="http://yoursite.com/tags/sql/"/>
-    
-      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
+      <category term="php" scheme="http://yoursite.com/tags/php/"/>
     
   </entry>
   
