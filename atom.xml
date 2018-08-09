@@ -176,9 +176,9 @@
     
       <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
     
-      <category term="SnpEff" scheme="http://yoursite.com/tags/SnpEff/"/>
-    
       <category term="giremi" scheme="http://yoursite.com/tags/giremi/"/>
+    
+      <category term="SnpEff" scheme="http://yoursite.com/tags/SnpEff/"/>
     
   </entry>
   
