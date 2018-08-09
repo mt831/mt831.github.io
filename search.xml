@@ -3,6 +3,27 @@
   
     
     <entry>
+      <title>算法学习记录--Part.1</title>
+      <link href="/2018/08/07/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95/"/>
+      <url>/2018/08/07/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95/</url>
+      <content type="html"><![CDATA[<p>#### </p>]]></content>
+      
+      <categories>
+          
+          <category> 算法学习记录 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 算法 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    <entry>
       <title>mysql学习记录--Part.2</title>
       <link href="/2018/08/07/SQL/sql_2/"/>
       <url>/2018/08/07/SQL/sql_2/</url>
@@ -1048,6 +1069,13 @@
   
     
     <entry>
+      <title>categories</title>
+      <link href="/categories/index.html"/>
+      <url>/categories/index.html</url>
+      <content type="html"><![CDATA[]]></content>
+    </entry>
+    
+    <entry>
       <title>about</title>
       <link href="/about/index.html"/>
       <url>/about/index.html</url>
@@ -1058,13 +1086,6 @@
       <title>tags</title>
       <link href="/tags/index.html"/>
       <url>/tags/index.html</url>
-      <content type="html"><![CDATA[]]></content>
-    </entry>
-    
-    <entry>
-      <title>categories</title>
-      <link href="/categories/index.html"/>
-      <url>/categories/index.html</url>
       <content type="html"><![CDATA[]]></content>
     </entry>
     
