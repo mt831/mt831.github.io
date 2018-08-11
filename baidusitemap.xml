@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://yoursite.com/2018/08/10/%E7%88%AC%E8%99%AB/%E6%8B%89%E5%8B%BE%E7%BD%91.Part1/</loc>
-    <lastmod>2018-08-11T04:55:19.818Z</lastmod>
+    <lastmod>2018-08-11T05:13:25.605Z</lastmod>
     <data>
         <display>
         <title>拉勾网.Part-1</title>
@@ -117,9 +117,9 @@
         
         <tag>bioinformatics</tag>
          
-        <tag>FastViromeExplorer</tag>
-         
         <tag>picard</tag>
+         
+        <tag>FastViromeExplorer</tag>
          
         <tag>git</tag>
          
@@ -165,13 +165,13 @@
         
         <tag>bioinformatics</tag>
          
+        <tag>FastViromeExplorer</tag>
+         
         <tag>trim_galore</tag>
          
         <tag>hisat2</tag>
          
         <tag>HTSeq</tag>
-         
-        <tag>FastViromeExplorer</tag>
          
          
            
