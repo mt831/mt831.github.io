@@ -43,32 +43,6 @@
   </entry>
   
   <entry>
-    <title>算法学习记录--Part.1</title>
-    <link href="http://yoursite.com/2018/08/07/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0/%E7%AE%97%E6%B3%95/"/>
-    <id>http://yoursite.com/2018/08/07/算法学习/算法/</id>
-    <published>2018-08-07T14:00:00.000Z</published>
-    <updated>2018-08-07T02:57:27.300Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;####
-        
-      
-    
-    </summary>
-    
-      <category term="算法学习记录" scheme="http://yoursite.com/categories/%E7%AE%97%E6%B3%95%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
-    
-    
-      <category term="算法" scheme="http://yoursite.com/tags/%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>mysql学习记录--Part.2</title>
     <link href="http://yoursite.com/2018/08/07/SQL/sql_2/"/>
     <id>http://yoursite.com/2018/08/07/SQL/sql_2/</id>
@@ -567,6 +541,32 @@
         
           &lt;blockquote&gt;
 &lt;p&gt;参考资料&lt;br&gt;&lt;a href=&quot;https://blog.csdn.net/czl389/article/details/76944504&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Python matplotlib
+        
+      
+    
+    </summary>
+    
+      <category term="数据科学实训营" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD%E8%90%A5/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>L6.seaborn可视化 要点记录</title>
+    <link href="http://yoursite.com/2018/04/26/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L6.seaborn%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    <id>http://yoursite.com/2018/04/26/数据分析实战/L6.seaborn可视化/</id>
+    <published>2018-04-26T13:00:00.000Z</published>
+    <updated>2018-04-28T02:31:55.673Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h4 id=&quot;np-random-seed-5&quot;&gt;&lt;a href=&quot;#np-random-seed-5&quot; class=&quot;headerlink&quot;
         
       
     
