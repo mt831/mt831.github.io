@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>mt&#39;s blog</title>
+  <title>blog</title>
   
   <subtitle>学习记录</subtitle>
   <link href="/atom.xml" rel="self"/>
@@ -176,9 +176,9 @@
     
       <category term="bioinformatics" scheme="http://yoursite.com/tags/bioinformatics/"/>
     
-      <category term="SnpEff" scheme="http://yoursite.com/tags/SnpEff/"/>
-    
       <category term="giremi" scheme="http://yoursite.com/tags/giremi/"/>
+    
+      <category term="SnpEff" scheme="http://yoursite.com/tags/SnpEff/"/>
     
   </entry>
   
@@ -400,7 +400,7 @@
     <link href="http://yoursite.com/2018/05/10/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L9.%E6%A8%A1%E5%9E%8B%E4%BC%98%E5%8C%96%E4%B8%8E%E8%9E%8D%E5%90%88/"/>
     <id>http://yoursite.com/2018/05/10/数据分析实战/L9.模型优化与融合/</id>
     <published>2018-05-10T10:00:02.000Z</published>
-    <updated>2018-05-10T12:19:11.539Z</updated>
+    <updated>2018-09-22T10:36:20.346Z</updated>
     
     <summary type="html">
     
@@ -414,7 +414,7 @@
     
     </summary>
     
-      <category term="数据科学实训营" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD%E8%90%A5/"/>
+      <category term="数据科学实训" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD/"/>
     
     
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
@@ -426,7 +426,7 @@
     <link href="http://yoursite.com/2018/05/09/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L8.%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E8%BF%9B%E9%98%B6/"/>
     <id>http://yoursite.com/2018/05/09/数据分析实战/L8.机器学习进阶/</id>
     <published>2018-05-09T10:00:02.000Z</published>
-    <updated>2018-05-10T03:11:02.854Z</updated>
+    <updated>2018-09-22T10:36:05.624Z</updated>
     
     <summary type="html">
     
@@ -441,7 +441,7 @@
     
     </summary>
     
-      <category term="数据科学实训营" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD%E8%90%A5/"/>
+      <category term="数据科学实训" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD/"/>
     
     
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
@@ -475,11 +475,11 @@
   </entry>
   
   <entry>
-    <title>实战7-QQ答疑</title>
+    <title>实战7-答疑</title>
     <link href="http://yoursite.com/2018/05/03/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/%E5%AE%9E%E6%88%987-QQ%E7%AD%94%E7%96%91/"/>
     <id>http://yoursite.com/2018/05/03/数据分析实战/实战7-QQ答疑/</id>
     <published>2018-05-03T13:40:00.000Z</published>
-    <updated>2018-05-04T00:43:18.032Z</updated>
+    <updated>2018-09-22T10:35:47.535Z</updated>
     
     <summary type="html">
     
@@ -493,7 +493,7 @@
     
     </summary>
     
-      <category term="数据科学实训营" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD%E8%90%A5/"/>
+      <category term="数据科学实训" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD/"/>
     
     
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
@@ -505,7 +505,7 @@
     <link href="http://yoursite.com/2018/04/29/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L7.%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%88%9D%E8%AF%86/"/>
     <id>http://yoursite.com/2018/04/29/数据分析实战/L7.机器学习初识/</id>
     <published>2018-04-29T05:41:02.000Z</published>
-    <updated>2018-05-08T07:55:59.158Z</updated>
+    <updated>2018-09-22T10:35:56.802Z</updated>
     
     <summary type="html">
     
@@ -519,7 +519,7 @@
     
     </summary>
     
-      <category term="数据科学实训营" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD%E8%90%A5/"/>
+      <category term="数据科学实训" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD/"/>
     
     
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
@@ -531,7 +531,7 @@
     <link href="http://yoursite.com/2018/04/27/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/Test2.%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     <id>http://yoursite.com/2018/04/27/数据分析实战/Test2.可视化/</id>
     <published>2018-04-27T14:00:00.000Z</published>
-    <updated>2018-04-29T10:22:15.305Z</updated>
+    <updated>2018-09-22T10:35:36.987Z</updated>
     
     <summary type="html">
     
@@ -546,7 +546,7 @@
     
     </summary>
     
-      <category term="数据科学实训营" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD%E8%90%A5/"/>
+      <category term="数据科学实训" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD/"/>
     
     
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
@@ -558,7 +558,7 @@
     <link href="http://yoursite.com/2018/04/26/%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E5%AE%9E%E6%88%98/L6.seaborn%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     <id>http://yoursite.com/2018/04/26/数据分析实战/L6.seaborn可视化/</id>
     <published>2018-04-26T13:00:00.000Z</published>
-    <updated>2018-04-28T02:31:55.673Z</updated>
+    <updated>2018-09-22T10:35:26.691Z</updated>
     
     <summary type="html">
     
@@ -572,7 +572,7 @@
     
     </summary>
     
-      <category term="数据科学实训营" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD%E8%90%A5/"/>
+      <category term="数据科学实训" scheme="http://yoursite.com/categories/%E6%95%B0%E6%8D%AE%E7%A7%91%E5%AD%A6%E5%AE%9E%E8%AE%AD/"/>
     
     
       <category term="python" scheme="http://yoursite.com/tags/python/"/>
